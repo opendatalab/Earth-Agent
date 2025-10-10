@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Primary Meta Tags -->
+  <!-- TODO: Replace with your paper title and author names -->
+  <meta name="title" content="Earth-Agent: Unlocking the Full Landscape of Earth Observation with Agents - Peilin Feng, Zhutao Lv, Junyan Ye, Xiaolei Wang, Xinjie Huo, Jinhua Yu, Wanghan Xu, Wenlong Zhang, Lei Bai,Conghui He, Weijia Li">
+  <!-- TODO: Write a compelling 150-160 character description of your research -->
+  <meta name="description" content="Earth-Agent unifies RGB and spectral EO data with an MCP-based tool ecosystem, enabling cross-modal reasoning and scientific tasks, supported by the Earth-Bench benchmark.">
+  <!-- TODO: Add 5-10 relevant keywords for your research area -->
+  <meta name="keywords" content="earth, agent, benchmark, machine learning, computer vision, AI">
+  <!-- TODO: List all authors -->
+  <meta name="author" content="Peilin Feng, Zhutao Lv, Junyan Ye, Xiaolei Wang, Xinjie Huo, Jinhua Yu, Wanghan Xu, Wenlong Zhang, Lei Bai,Conghui He, Weijia Li"">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <!-- TODO: Same as paper title above -->
+  <meta property="og:title" content="Earth-Agent: Unlocking the Full Landscape of Earth Observation with Agents">
+  <!-- TODO: Same as description above -->
+  <meta property="og:description" content="Earth-Agent unifies RGB and spectral EO data with an MCP-based tool ecosystem, enabling cross-modal reasoning and scientific tasks, supported by the Earth-Bench benchmark.">
+  <!-- TODO: Replace with your actual website URL -->
+  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
+  <!-- TODO: Create a 1200x630px preview image and update path -->
+  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/logo.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
+  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
+  <meta property="article:author" content="FIRST_AUTHOR_NAME">
+  <meta property="article:section" content="Research">
+  <meta property="article:tag" content="KEYWORD1">
+  <meta property="article:tag" content="KEYWORD2">
+
+  <!-- Academic/Research Specific -->
+  <meta name="citation_title" content="PAPER_TITLE">
+  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
+  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
+  <meta name="citation_publication_date" content="2024">
+  <meta name="citation_conference_title" content="CONFERENCE_NAME">
+  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
+
+
+  <!-- TODO: Replace with your paper title and authors -->
+  <title>Earth-Agent</title>
+  
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/x-icon" href="static/images/logo.png">
+  <link rel="apple-touch-icon" href="static/images/logo.png">
+  
+  <!-- Critical CSS - Load synchronously -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  
+  <!-- Non-critical CSS - Load asynchronously -->
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  <!-- Fallback for browsers that don't support preload -->
+  <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+  
+  <!-- Fonts - Optimized loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Defer non-critical JavaScript -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+  
+  <!-- Structured Data for Academic Papers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "PAPER_TITLE",
+    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
+    "author": [
+      {
+        "@type": "Person",
+        "name": "FIRST_AUTHOR_NAME",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "INSTITUTION_NAME"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "SECOND_AUTHOR_NAME",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "INSTITUTION_NAME"
+        }
+      }
+    ],
+    "datePublished": "2024-01-01",
+    "publisher": {
+      "@type": "Organization",
+      "name": "CONFERENCE_OR_JOURNAL_NAME"
+    },
+    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
+    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
+    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
+    "abstract": "FULL_ABSTRACT_TEXT_HERE",
+    "citation": "BIBTEX_CITATION_HERE",
+    "isAccessibleForFree": true,
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "mainEntity": {
+      "@type": "WebPage",
+      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "RESEARCH_AREA_1"
+      },
+      {
+        "@type": "Thing", 
+        "name": "RESEARCH_AREA_2"
+      }
+    ]
+  }
+  </script>
+  
+  <!-- Website/Organization Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "INSTITUTION_OR_LAB_NAME",
+    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
+    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
+    "sameAs": [
+      "https://twitter.com/YOUR_TWITTER_HANDLE",
+      "https://github.com/YOUR_GITHUB_USERNAME"
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="static/css/case-chat.css">
+  <script defer src="static/js/case-chat.js"></script>
+</head>
+<body>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <main id="main-content">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <!-- TODO: Replace with your paper title -->
+            <h1 class="title is-1 publication-title">Earth-Agent: Unlocking the Full Landscape of Earth Observation with Agents</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- TODO: Replace with your paper authors and their personal links -->
+              <span class="author-block">
+                <a href="https://peilin-ff.github.io" target="_blank">Peilin Feng</a><sup>1<math xmlns="http://www.w3.org/1998/Math/MathML"><mo>*</mo></math></sup>,</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=aGJ7T4YAAAAJ&hl=zh-CN&oi=ao" target="_blank">Zhutao Lv</a><sup>2,1<math xmlns="http://www.w3.org/1998/Math/MathML"><mo>*</mo></math></sup>,</span>
+              <span class="author-block">
+                <a href="https://yejy53.github.io" target="_blank">Junyan Ye</a><sup>2,1<math xmlns="http://www.w3.org/1998/Math/MathML"></math></sup>,</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=8wbcPvcAAAAJ&hl=zh-CN&oi=sra" target="_blank">Xiaolei Wang</a><sup>2<math xmlns="http://www.w3.org/1998/Math/MathML"></math></sup>,</span>
+              <span class="author-block">
+                <!-- <a href="" target="_blank">Xinjie Huo</a><sup>1<math xmlns="http://www.w3.org/1998/Math/MathML"></math></sup>,</span> -->
+                <a href="https://scholar.google.com/citations?user=0osg1poAAAAJ&hl=zh-CN&oi=ao" target="_blank">Xinjie Huo</a><sup>2<math xmlns="http://www.w3.org/1998/Math/MathML"></math></sup>,</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=radsfXwAAAAJ&hl=zh-CN&oi=ao" target="_blank">Jinhua Yu</a><sup>2<math xmlns="http://www.w3.org/1998/Math/MathML"></math></sup>,</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=lmCL5xQAAAAJ&hl=zh-CN&oi=ao" target="_blank">Wanghan Xu</a><sup>1<math xmlns="http://www.w3.org/1998/Math/MathML"></math></sup>,</span>
+              <span class="author-block">
+                <a href="https://wenlongzhang0517.github.io" target="_blank">Wenlong Zhang</a><sup>1<math xmlns="http://www.w3.org/1998/Math/MathML"></math></sup>,</span>
+              <span class="author-block">
+                <a href="http://leibai.site" target="_blank">Lei Bai</a><sup>1<math xmlns="http://www.w3.org/1998/Math/MathML"></math></sup>,</span>
+              <span class="author-block">
+                <a href="https://conghui.github.io" target="_blank">Conghui He</a><sup>1<math xmlns="http://www.w3.org/1998/Math/MathML"></math></sup>,</span>
+              <span class="author-block">
+                <a href="https://liweijia.github.io" target="_blank">Weijia Li</a><sup>2,1<math xmlns="http://www.w3.org/1998/Math/MathML"><mo>†</mo></math></sup>,</span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Shanghai Artificial Intelligence Laboratory</span>
+              <span class="author-block"><sup>2</sup>Sun Yat-Sen University </span>
+            </div>
+            <h4><sup><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>*</mo></math></sup>Equal Contribution<sup></h4>
+            <h4><sup><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>†</mo></math></sup>Correspondence<sup></h4>
+
+            <!-- <!!!!!!!!!!!!!!!!!!!!!!!!!!Replace Links!!!!!!!!!!!!!!!!!!!!!!> -->
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- TODO: Update with your arXiv paper ID -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/2509.23141.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- TODO: Add your supplementary material PDF or remove this section -->
+                    <!-- <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span> -->
+
+                  <!-- TODO: Replace with your GitHub repository URL -->
+                  <span class="link-block">
+                    <a href="https://github.com/Peilin-FF/Earth-Agent" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- TODO: Update with your arXiv paper ID -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2509.23141" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+      
+    </div>
+    <div class="container is-max-desktop">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <!-- TODO: Add poster image for better preview -->
+          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
+            <!-- Your video file here -->
+            <source src="static/videos/case1_1080p.mov" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <!-- TODO: Add poster image for better preview -->
+          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
+            <!-- Your video file here -->
+            <source src="static/videos/case2_1080p.mov" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <!-- TODO: Add poster image for better preview -->
+          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
+            <!-- Your video file here -->
+            <source src="static/videos/case3_1080p.mov" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <!-- TODO: Replace with your paper abstract -->
+          <p>
+            Earth observation (EO) is essential for understanding the evolving states of the Earth system.  Although recent MLLMs have advanced EO research, they still lack the capability to tackle complex tasks that require multi-step reasoning and the use of domain-specific tools. Agent-based methods offer a promising direction, but current attempts remain in their infancy, confined to RGB perception, shallow reasoning, and lacking systematic evaluation protocols.
+            To overcome these limitations, we introduce Earth-Agent, the first agentic framework that unifies RGB and spectral EO data within an MCP-based tool ecosystem, enabling cross-modal, multi-step, and quantitative spatiotemporal reasoning beyond pretrained MLLMs. Earth-Agent supports complex scientific tasks such as geophysical parameter retrieval and quantitative spatiotemporal analysis by dynamically invoking expert tools and models across modalities. To support comprehensive evaluation, we further propose Earth-Bench, a benchmark of 248 expert-curated tasks with 13,729 images, spanning spectrum, products and RGB modalities, and equipped with a dual-level evaluation protocol that assesses both reasoning trajectories and final outcomes. We conduct comprehensive experiments varying different LLM backbones, comparisons with general agent frameworks, and comparisons with MLLMs on remote sensing benchmarks, demonstrating both the effectiveness and potential of Earth-Agent. Earth-Agent establishes a new paradigm for EO analysis, moving the field toward scientifically grounded, next-generation applications of LLMs in Earth observation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Agent -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-fifths">
+        <h2 class="title is-3">
+          <img src="static/images/earth-agent.png" style="max-width: 5%; height: auto"/>
+          Earth-Agent
+        </h2>
+        <div class="content has-text-justified">
+          <div class="column is-centered has-text-centered">
+            <img src="static/images/Figure1.png" style="max-width: 100%; height: auto"/>
+            <!-- <object data="static/images/earthagent.pdf" type="application/pdf" width="100%" height="800px"></object> -->
+            <!-- <embed src="static/images/earthagent.pdf" type="application/pdf" width="100%" height="800px" /> -->
+            <!-- <iframe src="static/images/earthagent.png" width="100%" height="800px"></iframe> -->
+          </div>
+          <div class="has-text-justified" style="font-size: 20px; margin-bottom: 20px;" >
+            We introduce <strong>Earth-Agent</strong>, an EO agent framework cast as a ReAct-style Partially Observable Markov Decision Process (POMDP). The LLM serves as the policy, iterating a loop of tool calling, memory update, deliberation, and action to solve tasks conditioned on goal and interaction history. Besides, Earth-Agent integrates <strong>104 specialized tools across five functional kits, i.e. Index, Inversion, Perception, Analysis, and Statistics</strong>, spanning perceptual and spectral analysis. To evaluate both outcomes and reasoning, we adopt a dual-level protocol: end-to-end assessment of final Accuracy and trajectory Efficiency, and step-by-step checks of Tool-Any-Order, Tool-In-Order, Tool-Exact-Match, and Parameter Accuracy to characterize the completeness and fidelity of reasoning trajectories.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Benchmark -->
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-fifth-fifths">
+        <h2 class="title is-3">
+          <img src="static/images/earth-bench.png" style="max-width: 5%; height: auto"/>
+          Earth-Bench
+        </h2>
+        <div class="content has-text-justified">
+          <div class="column is-centered has-text-centered">
+            <img src="static/images/Dataset.png" style="max-width: 100%; height: auto"/>
+          </div>
+          <div class="has-text-justified" style="font-size: 20px; margin-bottom: 20px;" >
+            We propose <strong>Earth-Agent Benchmark (Earth-Bench)</strong>, a dataset designed to evaluate tool-augmented EO agents in realistic Earth science analysis scenarios. The benchmark integrates three major types of Earth observation data: <strong>RGB Imagery (RGB), Raw Spectral Data (Spectrum), and Processed Earth Products (Products)</strong>. It supports 14 representative tasks, including classification, detection, temperature monitoring, weather forecasting, etc., with a particular emphasis on scientific analysis that requires quantitative reasoning rather than qualitative description. Besides, Earth-Bench incorporates both regimes: <strong>Auto-Planning</strong> corresponds to the step-implicit setting and evaluates the agent's ability to autonomously plan its solution trajectory, while <strong>Instruction-Following</strong> corresponds to the step-explicit setting and evaluates the agent's ability to follow and translate human instructions into executable actions.
+          </div>
+          <div class="has-text-justified" style="font-size: 20px">
+            Compared to previous datasets, <strong>Earth-Bench</strong> addresses key drawbacks and offers:
+            <ul>
+              <li>
+                <strong>Beyond MLLM Benchmarks:</strong></i> Existing MLLM benchmarks (e.g., RSVQA-HR, EarthVQA, VRSBench, Geo-Bench) are limited to single-step RGB perception without tool use or quantitative reasoning. In contrast, Earth-Bench introduces cross-modality integration, tool-augmented analysis, and multi-step reasoning to address these limitations.
+              </li>
+              <li>
+                <strong>Advancing Agent Benchmarks:</strong></i> Unlike PEACE, Thinkgeo, and UnivEarth, Earth-Bench scales up with 13K+ samples, 104 tools, and an average of >5 reasoning steps, emphasizing quantitative analysis and trajectory diagnostics.
+              </li>
+              <li>
+                Overall, Earth-Bench systematically evaluates EO agents on quantitative scientific reasoning and reasoning trajectory reproducibility, providing a valuable benchmark for advancing tool-augmented EO intelligence.
+              </li>
+            </ul>
+          </div>          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Result1 -->
+
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-fifths">
+        <h2 class="title is-3">
+          <img src="static/images/artificial-intelligence.png " style="max-width: 5%; height: auto"/>
+          Earth-Agent with different LLM backbone
+        </h2>
+        <div class="content has-text-justified">
+          <div class="column is-centered has-text-centered">
+            <img src="static/images/result_all.png" style="max-width: 100%; height: auto"/>
+          </div>
+          <div class="has-text-justified" style="font-size: 20px; margin-bottom: 20px;" >
+            <strong>We evaluate 3 closed-source and 10 leading open-source LLMs</strong>. For closed-source models, we consider GPT-5, GPT-4o, and Gemini-2.5. For open-source models, including Deepseek-V3.1, Kimik2, Qwen3-max-Preview, Qwen3-32B and InternVL3.5, which represent the smartest open LLMs available to date.
+          </div>
+          <div class="has-text-justified" style="font-size: 20px">
+            Our key findings are as follows:
+            <ul>
+              <li>
+                Closed-source LLMs achieve <strong>higher final accuracy</strong>, while open-source models excel in <strong>tool-use accuracy and reasoning alignment</strong>.
+              </li>
+              <li>
+                Instruction-following improves tool calling but <strong>does not always raise final accuracy</strong>, and in some advanced models it can even reduce it.
+              </li>
+              <li>
+                Models identify correct tools reliably, but <strong>irrelevant reasoning steps hinder exact matching and parameter execution</strong>, which is key bottlenecks for accurate EO data processing.
+              </li>
+            </ul>
+          </div>          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Result2 -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-fifth-fifths">
+        <h2 class="title is-3">
+          <img src="static/images/virtual-assistant.png " style="max-width: 5%; height: auto"/>
+          Comparison with general agents
+        </h2>
+        <div class="content has-text-justified">
+          <div class="column is-centered has-text-centered">
+            <img src="static/images/result_agent.png" style="max-width: 100%; height: auto"/>
+          </div>
+          <div class="has-text-justified" style="font-size: 20px; margin-bottom: 20px;" >
+            Since many Earth-Bench tasks involve processing hundreds of images, existing open-source agent frameworks cannot handle these questions due to input size constraints. To enable fair comparison, we construct <strong>Earth-Bench-Lite</strong>, a reduced yet representative subset that preserves modality diversity while remaining within the capacity of general-purpose agents. It consists of 60 questions evenly distributed across the three EO modalities: Spectrum, Products, and RGB.
+          </div>      
+          <div class="has-text-justified" style="font-size: 20px; margin-bottom: 20px;" >
+            By comparison, <strong>general agents show limited modality coverage</strong>. They can handle relatively simple Spectrum tasks by writing ad-hoc code, but perform poorly on Products tasks due to the lack of domain-specific spatiotemporal analysis tools. For the RGB modality, MGX and Coze even fail to complete any tasks. <strong>In contrast, by interacting with 104 predefined geoscience tools, Earth-Agent consistently achieves superior performance across all three modalities, whether driven by the closed-source GPT-5 or the open-source DeepSeek-V3.1.</strong>
+          </div>          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Result3 -->
+
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-fifths">
+        <h2 class="title is-3">
+          <img src="static/images/ai.png " style="max-width: 5%; height: auto"/>
+          Comparison with MLLM-based EO methods
+        </h2>
+        <div class="content has-text-justified">
+          <div class="column is-centered has-text-centered">
+            <img src="static/images/result_vlm.png" style="max-width: 100%; height: auto"/>
+          </div>
+          <div class="has-text-justified" style="font-size: 20px; margin-bottom: 20px;" >
+            We further compare Earth-Agent with <strong>remote sensing large models</strong> on classification, detection, and segmentation tasks.
+          </div>      
+          <div class="has-text-justified" style="font-size: 20px; margin-bottom: 20px;" >
+            <strong>Earth-Agent outperforms existing MLLMs</strong> on classification, detection, and segmentation benchmarks. Prior MLLM-based systems show limited generalization, for instance, LHRS-Bot performs well on classification but fails on detection and grounding, while VHM achieves high classification accuracy yet cannot handle detection or segmentation. In contrast, Earth-Agent leverages a predefined toolkit of 104 geoscience functions and expert models, enabling adaptive tool use and robust performance across modalities. <strong>This modular design overcomes the limited extensibility of previous approaches.</strong>
+          </div>  
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Image carousel -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-five-fifths">
+          <h2 class="title is-3">
+        <img src="static/images/research.png " style="max-width: 5%; height: auto"/>
+        Earth-Agent With Different LLM Backbones
+      </h2>
+        </div>
+      </div>
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item" style="text-align: center;">
+        <!-- TODO: Replace with your research result images -->
+        <img src="static/images/Spec_Cli_AP.png" style="width: auto; max-height: 1000px" alt="Example of Climate Analysis with Spectrum Data under the Auto-Planning Regime." loading="lazy"/>
+        <!-- TODO: Replace with description of this result -->
+        <h2 class="subtitle has-text-centered">
+          Example of Climate Analysis with Spectrum Data under the Auto-Planning Regime.
+        </h2>
+      </div>
+      <!--  -->
+      <div class="item" style="text-align: center;">
+        <!-- TODO: Replace with your research result images -->
+        <img src="static/images/Spec_Cli_IF.png" style="width: auto; max-height: 1000px" alt="Example of Climate Analysis with Spectrum Data under the Instruction-Following Regime." loading="lazy"/>
+        <!-- TODO: Replace with description of this result -->
+        <h2 class="subtitle has-text-centered">
+          Example of Climate Analysis with Spectrum Data under the Instruction-Following Regime.
+        </h2>
+      </div>
+      <!--  -->
+      <div class="item" style="text-align: center;">
+        <!-- TODO: Replace with your research result images -->
+        <img src="static/images/Spec_Disaster_AP.png" style="width: auto; max-height: 1000px" alt="Example of Disaster Judgement with Spectrum Data under the Auto-Planning Regime." loading="lazy"/>
+        <!-- TODO: Replace with description of this result -->
+        <h2 class="subtitle has-text-centered">
+          Example of Disaster Judgement with Spectrum Data under the Auto-Planning Regime.
+        </h2>
+      </div>
+      <div class="item" style="text-align: center;">
+        <!-- TODO: Replace with your research result images -->
+        <img src="static/images/Spec_Disaster_IF.png" style="width: auto; max-height: 1000px" alt="Example of Disaster Judgement with Spectrum Data under the Instruction-Following Regime." loading="lazy"/>
+        <!-- TODO: Replace with description of this result -->
+        <h2 class="subtitle has-text-centered">
+          Example of Disaster Judgement with Spectrum Data under the Instruction-Following Regime.
+        </h2>
+      </div>
+      <!--  -->
+      <div class="item" style="text-align: center;">
+        <!-- TODO: Replace with your research result images -->
+        <img src="static/images/Spec_TEMP_AP.png" style="width: auto; max-height: 1000px" alt="Example of Temperature Monitoring with Spectrum Data under the Auto-Planning Regime." loading="lazy"/>
+        <!-- TODO: Replace with description of this result -->
+        <h2 class="subtitle has-text-centered">
+          Example of Temperature Monitoring with Spectrum Data under the Auto-Planning Regime.
+        </h2>
+      </div>
+      <div class="item" style="text-align: center;">
+        <!-- TODO: Replace with your research result images -->
+        <img src="static/images/Spec_TEMP_IF.png" style="width: auto; max-height: 1000px" alt="Example of Temperature Monitoring with Spectrum Data under the Instruction-Following Regime." loading="lazy"/>
+        <!-- TODO: Replace with description of this result -->
+        <h2 class="subtitle has-text-centered">
+          Example of Temperature Monitoring with Spectrum Data under the Instruction-Following Regime.
+        </h2>
+      </div>
+      <!--  -->
+      <div class="item" style="text-align: center;">
+        <!-- TODO: Replace with your research result images -->
+        <img src="static/images/Spec_Urban_AP.png" style="width: auto; max-height: 1000px" alt="Example of Urban Management with Spectrum Data under the Auto-Planning Regime." loading="lazy"/>
+        <!-- TODO: Replace with description of this result -->
+        <h2 class="subtitle has-text-centered">
+          Example of Urban Management with Spectrum Data under the Auto-Planning Regime.
+        </h2>
+      </div>
+      <div class="item" style="text-align: center;">
+        <!-- TODO: Replace with your research result images -->
+        <img src="static/images/Spec_Urban_IF.png" style="width: auto; max-height: 1000px" alt="Example of Urban Management with Spectrum Data under the Instruction-Following Regime." loading="lazy"/>
+        <!-- TODO: Replace with description of this result -->
+        <h2 class="subtitle has-text-centered">
+          Example of Urban Management with Spectrum Data under the Instruction-Following Regime.
+        </h2>
+      </div>
+      <!--  -->
+      <div class="item" style="text-align: center;">
+        <!-- TODO: Replace with your research result images -->
+        <img src="static/images/Spec_Veg_AP.png" style="width: auto; max-height: 1000px" alt="Example of Vegetation Monitoring with Spectrum Data under the Auto-Planning Regime." loading="lazy"/>
+        <!-- TODO: Replace with description of this result -->
+        <h2 class="subtitle has-text-centered">
+          Example of Vegetation Monitoring with Spectrum Data under the Auto-Planning Regime.
+        </h2>
+      </div>
+      <div class="item" style="text-align: center;">
+        <!-- TODO: Replace with your research result images -->
+        <img src="static/images/Spec_Veg_IF.png" style="width: auto; max-height: 1000px" alt="Example of Vegetation Monitoring with Spectrum Data under the Instruction-Following Regime." loading="lazy"/>
+        <!-- TODO: Replace with description of this result -->
+        <h2 class="subtitle has-text-centered">
+          Example of Vegetation Monitoring with Spectrum Data under the Instruction-Following Regime.
+        </h2>
+      </div>
+      <!--  -->
+      <div class="item" style="text-align: center;">
+        <!-- TODO: Replace with your research result images -->
+        <img src="static/images/Prod_Poll_AP.png" style="width: auto; max-height: 1000px" alt="Example of Pollution Regulation with Products Data under the Auto-Planning Regime." loading="lazy"/>
+        <!-- TODO: Replace with description of this result -->
+        <h2 class="subtitle has-text-centered">
+          Example of Pollution Regulation with Products Data under the Auto-Planning Regime.
+        </h2>
+      </div>
+      <div class="item" style="text-align: center;">
+        <!-- TODO: Replace with your research result images -->
+        <img src="static/images/Prod_Poll_IF.png" style="width: auto; max-height: 1000px" alt="Example of Pollution Regulation with Products Data under the Instruction-Following Regime." loading="lazy"/>
+        <!-- TODO: Replace with description of this result -->
+        <h2 class="subtitle has-text-centered">
+          Example of Pollution Regulation with Products Data under the Instruction-Following Regime.
+        </h2>
+      </div>
+      
+      <div class="item" style="text-align: center;">
+        <!-- TODO: Replace with your research result images -->
+        <img src="static/images/Prod_Wat_AP.png" style="width: auto; max-height: 1000px" alt="Example of Water Management with Products Data under the Auto-Planning Regime." loading="lazy"/>
+        <!-- TODO: Replace with description of this result -->
+        <h2 class="subtitle has-text-centered">
+          Example of Water Management with Products Data under the Auto-Planning Regime.
+        </h2>
+      </div>
+      <div class="item" style="text-align: center;">
+        <!-- TODO: Replace with your research result images -->
+        <img src="static/images/Prod_Wat_IF.png" style="width: auto; max-height: 1000px" alt="Example of Water Management with Products Data under the Instruction-Following Regime." loading="lazy"/>
+        <!-- TODO: Replace with description of this result -->
+        <h2 class="subtitle has-text-centered">
+          Example of Water Management with Products Data under the Instruction-Following Regime.
+        </h2>
+      </div>
+      <!--  -->
+      <div class="item" style="text-align: center;">
+        <!-- TODO: Replace with your research result images -->
+        <img src="static/images/Prod_Wea_AP.png" style="width: auto; max-height: 1000px" alt="Example of Weather Management with Products Data under the Auto-Planning Regime." loading="lazy"/>
+        <!-- TODO: Replace with description of this result -->
+        <h2 class="subtitle has-text-centered">
+          Example of Weather Management with Products Data under the Auto-Planning Regime.
+        </h2>
+      </div>
+      <div class="item" style="text-align: center;">
+        <!-- TODO: Replace with your research result images -->
+        <img src="static/images/Prod_Wea_IF.png" style="width: auto; max-height: 1000px" alt="Example of Weather Management with Products Data under the Instruction-Following Regime." loading="lazy"/>
+        <!-- TODO: Replace with description of this result -->
+        <h2 class="subtitle has-text-centered">
+          Example of Weather Management with Products Data under the Instruction-Following Regime.
+        </h2>
+      </div>
+      <!--  -->
+      <div class="item" style="text-align: center;">
+        <!-- TODO: Replace with your research result images -->
+        <img src="static/images/RGB_Change_AP.png" style="width: auto; max-height: 1000px" alt="Example of Change Detection with RGB Data under the Instruction-Following Regime." loading="lazy"/>
+        <!-- TODO: Replace with description of this result -->
+        <h2 class="subtitle has-text-centered">
+          Example of Change Detection with RGB Data under the Auto-Planning Regime.
+        </h2>
+      </div>
+      <div class="item" style="text-align: center;">
+        <!-- TODO: Replace with your research result images -->
+        <img src="static/images/RGB_Change_IF.png" style="width: auto; max-height: 1000px" alt="Example of Change Detection with RGB Data under the Instruction-Following Regime." loading="lazy"/>
+        <!-- TODO: Replace with description of this result -->
+        <h2 class="subtitle has-text-centered">
+          Example of Change Detection with RGB Data under the Instruction-Following Regime.
+        </h2>
+      </div>
+      <!--  -->
+      <div class="item" style="text-align: center;">
+        <!-- TODO: Replace with your research result images -->
+        <img src="static/images/RGB_Class_AP.png" style="width: auto; max-height: 1000px" alt="Example of Classification with RGB Data under the Auto-Planning Regime." loading="lazy"/>
+        <!-- TODO: Replace with description of this result -->
+        <h2 class="subtitle has-text-centered">
+          Example of Classification with RGB Data under the Auto-Planning Regime.
+        </h2>
+      </div>
+      <div class="item" style="text-align: center;">
+        <!-- TODO: Replace with your research result images -->
+        <img src="static/images/RGB_Class_IF.png" style="width: auto; max-height: 1000px" alt="Example of Classification with RGB Data under the Instruction-Following Regime." loading="lazy"/>
+        <!-- TODO: Replace with description of this result -->
+        <h2 class="subtitle has-text-centered">
+          Example of Classification with RGB Data under the Instruction-Following Regime.
+        </h2>
+      </div>
+      <!--  -->
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-five-fifths">
+      <h2 class="title is-3">
+        <img src="static/images/research-2.png " style="max-width: 5%; height: auto"/>
+        Case Study: Compare With Other Agents
+      </h2>
+    </div>
+  </div>
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item" style="text-align: center;">
+        <img src="static/images/Prod_Urban.png" style="width: auto; max-height: 800px" alt="A Question Case of the Urban Management Task using Products Data with Responses from Different Agent." loading="lazy"/>
+        <h2 class="subtitle has-text-centered">
+          A Question Case of the Urban Management Task using Products Data with Responses from Different Agent.
+        </h2>
+      </div>
+      <!--  -->
+      <div class="item" style="text-align: center;">
+        <img src="static/images/Prod_Urban2.png" style="width: auto; max-height: 800px" alt="A Question Case of the Urban Management Task using Products Data with Responses from Different Agent." loading="lazy"/>
+        <h2 class="subtitle has-text-centered">
+          A Question Case of the Urban Management Task using Products Data with Responses from Different Agent.
+        </h2>
+      </div>
+      <!--  -->
+      <div class="item" style="text-align: center;">
+        <img src="static/images/RGB_Change.png" style="width: auto; max-height: 800px" alt="A Question Case of the Change Detection Task using RGB Data with Responses from Different Agent." loading="lazy"/>
+        <h2 class="subtitle has-text-centered">
+          A Question Case of the Change Detection Task using RGB Data with Responses from Different Agent.
+        </h2>
+      </div>
+      <!--  -->
+      <div class="item" style="text-align: center;">
+        <img src="static/images/RGB_Class.png" style="width: auto; max-height: 800px" alt="A Question Case of the Classification Task using RGB Data with Responses from Different Agent." loading="lazy"/>
+        <h2 class="subtitle has-text-centered">
+          A Question Case of the Classification Task using RGB Data with Responses from Different Agent.
+        </h2>
+      </div>
+      <!--  -->
+      <div class="item" style="text-align: center;">
+        <img src="static/images/RGB_Class2.png" style="width: auto; max-height: 800px" alt="A Question Case of the Classification Task using RGB Data with Responses from Different Agent." loading="lazy"/>
+        <h2 class="subtitle has-text-centered">
+          A Question Case of the Classification Task using RGB Data with Responses from Different Agent.
+        </h2>
+      </div>
+      <!--  -->
+      <div class="item" style="text-align: center;">
+        <img src="static/images/RGB_Detect.png" style="width: auto; max-height: 800px" alt="A Question Case of the Detection Task using RGB Data with Responses from Different Agent." loading="lazy"/>
+        <h2 class="subtitle has-text-centered">
+          A Question Case of the Detection Task using RGB Data with Responses from Different Agent.
+        </h2>
+      </div>
+      <!--  -->
+      <div class="item" style="text-align: center;">
+        <img src="static/images/RGB_Grounding.png" style="width: auto; max-height: 800px" alt="A Question Case of the Visual Grounding Task using RGB Data with Responses from Different Agent." loading="lazy"/>
+        <h2 class="subtitle has-text-centered">
+          A Question Case of the Visual Grounding Task using RGB Data with Responses from Different Agent.
+        </h2>
+      </div>
+      <!--  -->
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title">BibTeX</h2>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <pre id="bibtex-code"><code>@misc{feng2025earthagentunlockinglandscapeearth,
+        title={Earth-Agent: Unlocking the Full Landscape of Earth Observation with Agents}, 
+        author={Peilin Feng and Zhutao Lv and Junyan Ye and Xiaolei Wang and Xinjie Huo and Jinhua Yu and Wanghan Xu and Wenlong Zhang and Lei Bai and Conghui He and Weijia Li},
+        year={2025},
+        eprint={2509.23141},
+        archivePrefix={arXiv},
+        primaryClass={cs.CV},
+        url={https://arxiv.org/abs/2509.23141}, 
+  }</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+</body>
+</html>
