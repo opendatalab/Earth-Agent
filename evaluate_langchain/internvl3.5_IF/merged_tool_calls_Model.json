@@ -1,0 +1,3605 @@
+[
+  {
+    "question_index": "1",
+    "tool_calls": []
+  },
+  {
+    "question_index": "2",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question2"
+        },
+        "output": "[\"Sichuan_2021-07-12_LST.tif\",\"Sichuan_2021-07-12_NDVI.tif\"]"
+      },
+      {
+        "name": "compute_tvdi",
+        "arguments": {
+          "ndvi_path": [
+            "Sichuan_2021-07-12_NDVI.tif",
+            "benchmark/data/question2/Sichuan_2021-07-12_NDVI.tif"
+          ],
+          "lst_path": [
+            "Sichuan_2021-07-12_LST.tif",
+            "benchmark/data/question2/Sichuan_2021-07-12_LST.tif"
+          ],
+          "output_path": [
+            "tvdi_result.tif",
+            "tvdi_result.tif"
+          ]
+        },
+        "output": [
+          "Error: ToolException(\"Error calling tool 'compute_tvdi': Sichuan_2021-07-12_NDVI.tif: No such file or directory\")\n Please fix your mistakes.",
+          "Result saved at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/tvdi_result.tif"
+        ]
+      },
+      {
+        "name": "calculate_threshold_ratio",
+        "input": {
+          "image_paths": "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/tvdi_result.tif",
+          "threshold": 0.75
+        },
+        "output": "28.070092264494612"
+      }
+    ]
+  },
+  {
+    "question_index": "3",
+    "tool_calls": []
+  },
+  {
+    "question_index": "4",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question4"
+        },
+        "output": "[\"Chengdu_2022-08-13_LST.tif\",\"Chengdu_2022-08-13_NDVI.tif\"]"
+      },
+      {
+        "name": "compute_tvdi",
+        "input": {
+          "ndvi_path": "benchmark/data/question4/Chengdu_2022-08-13_NDVI.tif",
+          "lst_path": "benchmark/data/question4/Chengdu_2022-08-13_LST.tif",
+          "output_path": "TVDI_result.tif"
+        },
+        "output": "Result saved at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/TVDI_result.tif"
+      },
+      {
+        "name": "calculate_threshold_ratio",
+        "arguments": {
+          "image_paths": [
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/TVDI_result.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/TVDI_result.tif"
+          ],
+          "threshold": [
+            0.75,
+            0.75
+          ],
+          "band_index": [
+            0,
+            0
+          ],
+          "return_type": [
+            "ratio"
+          ]
+        },
+        "output": [
+          "Error: ToolException(\"Error calling tool 'calculate_threshold_ratio': 1 validation error for call[calculate_threshold_ratio]\\nreturn_type\\n  Unexpected keyword argument [type=unexpected_keyword_argument, input_value='ratio', input_type=str]\\n    For further information visit https://errors.pydantic.dev/2.11/v/unexpected_keyword_argument\")\n Please fix your mistakes.",
+          "14.981845082199078"
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "5",
+    "tool_calls": []
+  },
+  {
+    "question_index": "6",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question6"
+        },
+        "output": "[\"New York_2018-01-06_BT10.tif\",\"New York_2018-01-06_b4.tif\",\"New York_2018-01-06_b5.tif\",\"New York_2018-01-15_BT10.tif\",\"New York_2018-01-15_b4.tif\",\"New York_2018-01-15_b5.tif\",\"New York_2018-01-22_BT10.tif\",\"New York_2018-01-22_b4.tif\",\"New York_2018-01-22_b5.tif\",\"New York_2018-01-31_BT10.tif\",\"New York_2018-01-31_b4.tif\",\"New York_2018-01-31_b5.tif\",\"New York_2018-03-11_BT10.tif\",\"New York_2018-03-11_b4.tif\",\"New York_2018-03-11_b5.tif\",\"New York_2018-03-27_BT10.tif\",\"New York_2018-03-27_b4.tif\",\"New York_2018-03-27_b5.tif\",\"New York_2018-04-05_BT10.tif\",\"New York_2018-04-05_b4.tif\",\"New York_2018-04-05_b5.tif\",\"New York_2018-04-12_BT10.tif\",\"New York_2018-04-12_b4.tif\",\"New York_2018-04-12_b5.tif\",\"New York_2018-04-21_BT10.tif\",\"New York_2018-04-21_b4.tif\",\"New York_2018-04-21_b5.tif\",\"New York_2018-04-28_BT10.tif\",\"New York_2018-04-28_b4.tif\",\"New York_2018-04-28_b5.tif\",\"New York_2018-05-07_BT10.tif\",\"New York_2018-05-07_b4.tif\",\"New York_2018-05-07_b5.tif\",\"New York_2018-05-14_BT10.tif\",\"New York_2018-05-14_b4.tif\",\"New York_2018-05-14_b5.tif\",\"New York_2018-05-23_BT10.tif\",\"New York_2018-05-23_b4.tif\",\"New York_2018-05-23_b5.tif\",\"New York_2018-05-30_BT10.tif\",\"New York_2018-05-30_b4.tif\",\"New York_2018-05-30_b5.tif\",\"New York_2018-06-08_BT10.tif\",\"New York_2018-06-08_b4.tif\",\"New York_2018-06-08_b5.tif\",\"New York_2018-06-15_BT10.tif\",\"New York_2018-06-15_b4.tif\",\"New York_2018-06-15_b5.tif\",\"New York_2018-06-24_BT10.tif\",\"New York_2018-06-24_b4.tif\",\"New York_2018-06-24_b5.tif\",\"New York_2018-07-01_BT10.tif\",\"New York_2018-07-01_b4.tif\",\"New York_2018-07-01_b5.tif\",\"New York_2018-07-10_BT10.tif\",\"New York_2018-07-10_b4.tif\",\"New York_2018-07-10_b5.tif\",\"New York_2018-07-17_BT10.tif\",\"New York_2018-07-17_b4.tif\",\"New York_2018-07-17_b5.tif\",\"New York_2018-07-26_BT10.tif\",\"New York_2018-07-26_b4.tif\",\"New York_2018-07-26_b5.tif\",\"New York_2018-08-02_BT10.tif\",\"New York_2018-08-02_b4.tif\",\"New York_2018-08-02_b5.tif\",\"New York_2018-08-11_BT10.tif\",\"New York_2018-08-11_b4.tif\",\"New York_2018-08-11_b5.tif\",\"New York_2018-08-18_BT10.tif\",\"New York_2018-08-18_b4.tif\",\"New York_2018-08-18_b5.tif\",\"New York_2018-08-27_BT10.tif\",\"New York_2018-08-27_b4.tif\",\"New York_2018-08-27_b5.tif\",\"New York_2018-09-03_BT10.tif\",\"New York_2018-09-03_b4.tif\",\"New York_2018-09-03_b5.tif\",\"New York_2018-09-19_BT10.tif\",\"New York_2018-09-19_b4.tif\",\"New York_2018-09-19_b5.tif\",\"New York_2018-10-05_BT10.tif\",\"New York_2018-10-05_b4.tif\",\"New York_2018-10-05_b5.tif\",\"New York_2018-10-14_BT10.tif\",\"New York_2018-10-14_b4.tif\",\"New York_2018-10-14_b5.tif\",\"New York_2018-10-21_BT10.tif\",\"New York_2018-10-21_b4.tif\",\"New York_2018-10-21_b5.tif\",\"New York_2018-10-30_BT10.tif\",\"New York_2018-10-30_b4.tif\",\"New York_2018-10-30_b5.tif\",\"New York_2018-11-22_BT10.tif\",\"New York_2018-11-22_b4.tif\",\"New York_2018-11-22_b5.tif\",\"New York_2018-12-01_BT10.tif\",\"New York_2018-12-01_b4.tif\",\"New York_2018-12-01_b5.tif\",\"New York_2018-12-08_BT10.tif\",\"New York_2018-12-08_b4.tif\",\"New York_2018-12-08_b5.tif\",\"New York_2018-12-17_BT10.tif\",\"New York_2018-12-17_b4.tif\",\"New York_2018-12-17_b5.tif\",\"New York_2018-12-24_BT10.tif\",\"New York_2018-12-24_b4.tif\",\"New York_2018-12-24_b5.tif\",\"New York_2019-01-02_BT10.tif\",\"New York_2019-01-02_b4.tif\",\"New York_2019-01-02_b5.tif\",\"New York_2019-01-09_BT10.tif\",\"New York_2019-01-09_b4.tif\",\"New York_2019-01-09_b5.tif\",\"New York_2019-01-25_BT10.tif\",\"New York_2019-01-25_b4.tif\",\"New York_2019-01-25_b5.tif\",\"New York_2019-02-03_BT10.tif\",\"New York_2019-02-03_b4.tif\",\"New York_2019-02-03_b5.tif\",\"New York_2019-02-10_BT10.tif\",\"New York_2019-02-10_b4.tif\",\"New York_2019-02-10_b5.tif\",\"New York_2019-02-19_BT10.tif\",\"New York_2019-02-19_b4.tif\",\"New York_2019-02-19_b5.tif\",\"New York_2019-02-26_BT10.tif\",\"New York_2019-02-26_b4.tif\",\"New York_2019-02-26_b5.tif\",\"New York_2019-03-07_BT10.tif\",\"New York_2019-03-07_b4.tif\",\"New York_2019-03-07_b5.tif\",\"New York_2019-03-14_BT10.tif\",\"New York_2019-03-14_b4.tif\",\"New York_2019-03-14_b5.tif\",\"New York_2019-03-23_BT10.tif\",\"New York_2019-03-23_b4.tif\",\"New York_2019-03-23_b5.tif\",\"New York_2019-03-30_BT10.tif\",\"New York_2019-03-30_b4.tif\",\"New York_2019-03-30_b5.tif\",\"New York_2019-04-08_BT10.tif\",\"New York_2019-04-08_b4.tif\",\"New York_2019-04-08_b5.tif\",\"New York_2019-04-15_BT10.tif\",\"New York_2019-04-15_b4.tif\",\"New York_2019-04-15_b5.tif\",\"New York_2019-04-24_BT10.tif\",\"New York_2019-04-24_b4.tif\",\"New York_2019-04-24_b5.tif\",\"New York_2019-05-17_BT10.tif\",\"New York_2019-05-17_b4.tif\",\"New York_2019-05-17_b5.tif\",\"New York_2019-05-26_BT10.tif\",\"New York_2019-05-26_b4.tif\",\"New York_2019-05-26_b5.tif\",\"New York_2019-06-02_BT10.tif\",\"New York_2019-06-02_b4.tif\",\"New York_2019-06-02_b5.tif\",\"New York_2019-06-11_BT10.tif\",\"New York_2019-06-11_b4.tif\",\"New York_2019-06-11_b5.tif\",\"New York_2019-06-27_BT10.tif\",\"New York_2019-06-27_b4.tif\",\"New York_2019-06-27_b5.tif\",\"New York_2019-07-04_BT10.tif\",\"New York_2019-07-04_b4.tif\",\"New York_2019-07-04_b5.tif\",\"New York_2019-07-13_BT10.tif\",\"New York_2019-07-13_b4.tif\",\"New York_2019-07-13_b5.tif\",\"New York_2019-07-20_BT10.tif\",\"New York_2019-07-20_b4.tif\",\"New York_2019-07-20_b5.tif\",\"New York_2019-07-29_BT10.tif\",\"New York_2019-07-29_b4.tif\",\"New York_2019-07-29_b5.tif\",\"New York_2019-08-05_BT10.tif\",\"New York_2019-08-05_b4.tif\",\"New York_2019-08-05_b5.tif\",\"New York_2019-08-14_BT10.tif\",\"New York_2019-08-14_b4.tif\",\"New York_2019-08-14_b5.tif\",\"New York_2019-08-21_BT10.tif\",\"New York_2019-08-21_b4.tif\",\"New York_2019-08-21_b5.tif\",\"New York_2019-08-30_BT10.tif\",\"New York_2019-08-30_b4.tif\",\"New York_2019-08-30_b5.tif\",\"New York_2019-09-15_BT10.tif\",\"New York_2019-09-15_b4.tif\",\"New York_2019-09-15_b5.tif\",\"New York_2019-09-22_BT10.tif\",\"New York_2019-09-22_b4.tif\",\"New York_2019-09-22_b5.tif\",\"New York_2019-10-01_BT10.tif\",\"New York_2019-10-01_b4.tif\",\"New York_2019-10-01_b5.tif\",\"New York_2019-10-08_BT10.tif\",\"New York_2019-10-08_b4.tif\",\"New York_2019-10-08_b5.tif\",\"New York_2019-10-17_BT10.tif\",\"New York_2019-10-17_b4.tif\",\"New York_2019-10-17_b5.tif\",\"New York_2019-10-24_BT10.tif\",\"New York_2019-10-24_b4.tif\",\"New York_2019-10-24_b5.tif\",\"New York_2019-11-02_BT10.tif\",\"New York_2019-11-02_b4.tif\",\"New York_2019-11-02_b5.tif\",\"New York_2019-11-09_BT10.tif\",\"New York_2019-11-09_b4.tif\",\"New York_2019-11-09_b5.tif\",\"New York_2019-11-25_BT10.tif\",\"New York_2019-11-25_b4.tif\",\"New York_2019-11-25_b5.tif\",\"New York_2019-12-11_BT10.tif\",\"New York_2019-12-11_b4.tif\",\"New York_2019-12-11_b5.tif\",\"New York_2019-12-27_BT10.tif\",\"New York_2019-12-27_b4.tif\",\"New York_2019-12-27_b5.tif\",\"New York_2020-01-05_BT10.tif\",\"New York_2020-01-05_b4.tif\",\"New York_2020-01-05_b5.tif\",\"New York_2020-01-12_BT10.tif\",\"New York_2020-01-12_b4.tif\",\"New York_2020-01-12_b5.tif\",\"New York_2020-01-21_BT10.tif\",\"New York_2020-01-21_b4.tif\",\"New York_2020-01-21_b5.tif\",\"New York_2020-01-28_BT10.tif\",\"New York_2020-01-28_b4.tif\",\"New York_2020-01-28_b5.tif\",\"New York_2020-02-22_BT10.tif\",\"New York_2020-02-22_b4.tif\",\"New York_2020-02-22_b5.tif\",\"New York_2020-02-29_BT10.tif\",\"New York_2020-02-29_b4.tif\",\"New York_2020-02-29_b5.tif\",\"New York_2020-03-09_BT10.tif\",\"New York_2020-03-09_b4.tif\",\"New York_2020-03-09_b5.tif\",\"New York_2020-03-16_BT10.tif\",\"New York_2020-03-16_b4.tif\",\"New York_2020-03-16_b5.tif\",\"New York_2020-04-01_BT10.tif\",\"New York_2020-04-01_b4.tif\",\"New York_2020-04-01_b5.tif\",\"New York_2020-04-10_BT10.tif\",\"New York_2020-04-10_b4.tif\",\"New York_2020-04-10_b5.tif\",\"New York_2020-04-17_BT10.tif\",\"New York_2020-04-17_b4.tif\",\"New York_2020-04-17_b5.tif\",\"New York_2020-05-03_BT10.tif\",\"New York_2020-05-03_b4.tif\",\"New York_2020-05-03_b5.tif\",\"New York_2020-05-12_BT10.tif\",\"New York_2020-05-12_b4.tif\",\"New York_2020-05-12_b5.tif\",\"New York_2020-05-19_BT10.tif\",\"New York_2020-05-19_b4.tif\",\"New York_2020-05-19_b5.tif\",\"New York_2020-06-04_BT10.tif\",\"New York_2020-06-04_b4.tif\",\"New York_2020-06-04_b5.tif\",\"New York_2020-06-13_BT10.tif\",\"New York_2020-06-13_b4.tif\",\"New York_2020-06-13_b5.tif\",\"New York_2020-06-20_BT10.tif\",\"New York_2020-06-20_b4.tif\",\"New York_2020-06-20_b5.tif\",\"New York_2020-06-29_BT10.tif\",\"New York_2020-06-29_b4.tif\",\"New York_2020-06-29_b5.tif\",\"New York_2020-07-06_BT10.tif\",\"New York_2020-07-06_b4.tif\",\"New York_2020-07-06_b5.tif\",\"New York_2020-07-15_BT10.tif\",\"New York_2020-07-15_b4.tif\",\"New York_2020-07-15_b5.tif\",\"New York_2020-07-22_BT10.tif\",\"New York_2020-07-22_b4.tif\",\"New York_2020-07-22_b5.tif\",\"New York_2020-08-07_BT10.tif\",\"New York_2020-08-07_b4.tif\",\"New York_2020-08-07_b5.tif\",\"New York_2020-08-23_BT10.tif\",\"New York_2020-08-23_b4.tif\",\"New York_2020-08-23_b5.tif\",\"New York_2020-09-01_BT10.tif\",\"New York_2020-09-01_b4.tif\",\"New York_2020-09-01_b5.tif\",\"New York_2020-09-08_BT10.tif\",\"New York_2020-09-08_b4.tif\",\"New York_2020-09-08_b5.tif\",\"New York_2020-09-17_BT10.tif\",\"New York_2020-09-17_b4.tif\",\"New York_2020-09-17_b5.tif\",\"New York_2020-09-24_BT10.tif\",\"New York_2020-09-24_b4.tif\",\"New York_2020-09-24_b5.tif\",\"New York_2020-10-03_BT10.tif\",\"New York_2020-10-03_b4.tif\",\"New York_2020-10-03_b5.tif\",\"New York_2020-10-10_BT10.tif\",\"New York_2020-10-10_b4.tif\",\"New York_2020-10-10_b5.tif\",\"New York_2020-10-19_BT10.tif\",\"New York_2020-10-19_b4.tif\",\"New York_2020-10-19_b5.tif\",\"New York_2020-11-20_BT10.tif\",\"New York_2020-11-20_b4.tif\",\"New York_2020-11-20_b5.tif\",\"New York_2020-11-27_BT10.tif\",\"New York_2020-11-27_b4.tif\",\"New York_2020-11-27_b5.tif\",\"New York_2020-12-06_BT10.tif\",\"New York_2020-12-06_b4.tif\",\"New York_2020-12-06_b5.tif\",\"New York_2020-12-13_BT10.tif\",\"New York_2020-12-13_b4.tif\",\"New York_2020-12-13_b5.tif\",\"New York_2020-12-22_BT10.tif\",\"New York_2020-12-22_b4.tif\",\"New York_2020-12-22_b5.tif\",\"New York_2020-12-29_BT10.tif\",\"New York_2020-12-29_b4.tif\",\"New York_2020-12-29_b5.tif\",\"New York_2021-01-07_BT10.tif\",\"New York_2021-01-07_b4.tif\",\"New York_2021-01-07_b5.tif\",\"New York_2021-01-14_BT10.tif\",\"New York_2021-01-14_b4.tif\",\"New York_2021-01-14_b5.tif\",\"New York_2021-01-23_BT10.tif\",\"New York_2021-01-23_b4.tif\",\"New York_2021-01-23_b5.tif\",\"New York_2021-01-30_BT10.tif\",\"New York_2021-01-30_b4.tif\",\"New York_2021-01-30_b5.tif\",\"New York_2021-02-08_BT10.tif\",\"New York_2021-02-08_b4.tif\",\"New York_2021-02-08_b5.tif\",\"New York_2021-02-24_BT10.tif\",\"New York_2021-02-24_b4.tif\",\"New York_2021-02-24_b5.tif\",\"New York_2021-03-03_BT10.tif\",\"New York_2021-03-03_b4.tif\",\"New York_2021-03-03_b5.tif\",\"New York_2021-03-12_BT10.tif\",\"New York_2021-03-12_b4.tif\",\"New York_2021-03-12_b5.tif\",\"New York_2021-03-19_BT10.tif\",\"New York_2021-03-19_b4.tif\",\"New York_2021-03-19_b5.tif\",\"New York_2021-04-04_BT10.tif\",\"New York_2021-04-04_b4.tif\",\"New York_2021-04-04_b5.tif\",\"New York_2021-04-13_BT10.tif\",\"New York_2021-04-13_b4.tif\",\"New York_2021-04-13_b5.tif\",\"New York_2021-04-20_BT10.tif\",\"New York_2021-04-20_b4.tif\",\"New York_2021-04-20_b5.tif\",\"New York_2021-05-06_BT10.tif\",\"New York_2021-05-06_b4.tif\",\"New York_2021-05-06_b5.tif\",\"New York_2021-05-15_BT10.tif\",\"New York_2021-05-15_b4.tif\",\"New York_2021-05-15_b5.tif\",\"New York_2021-05-22_BT10.tif\",\"New York_2021-05-22_b4.tif\",\"New York_2021-05-22_b5.tif\",\"New York_2021-06-07_BT10.tif\",\"New York_2021-06-07_b4.tif\",\"New York_2021-06-07_b5.tif\",\"New York_2021-06-16_BT10.tif\",\"New York_2021-06-16_b4.tif\",\"New York_2021-06-16_b5.tif\",\"New York_2021-06-23_BT10.tif\",\"New York_2021-06-23_b4.tif\",\"New York_2021-06-23_b5.tif\",\"New York_2021-07-09_BT10.tif\",\"New York_2021-07-09_b4.tif\",\"New York_2021-07-09_b5.tif\",\"New York_2021-07-18_BT10.tif\",\"New York_2021-07-18_b4.tif\",\"New York_2021-07-18_b5.tif\",\"New York_2021-07-25_BT10.tif\",\"New York_2021-07-25_b4.tif\",\"New York_2021-07-25_b5.tif\",\"New York_2021-08-10_BT10.tif\",\"New York_2021-08-10_b4.tif\",\"New York_2021-08-10_b5.tif\",\"New York_2021-08-19_BT10.tif\",\"New York_2021-08-19_b4.tif\",\"New York_2021-08-19_b5.tif\",\"New York_2021-08-26_BT10.tif\",\"New York_2021-08-26_b4.tif\",\"New York_2021-08-26_b5.tif\",\"New York_2021-09-04_BT10.tif\",\"New York_2021-09-04_b4.tif\",\"New York_2021-09-04_b5.tif\",\"New York_2021-09-11_BT10.tif\",\"New York_2021-09-11_b4.tif\",\"New York_2021-09-11_b5.tif\",\"New York_2021-09-20_BT10.tif\",\"New York_2021-09-20_b4.tif\",\"New York_2021-09-20_b5.tif\",\"New York_2021-09-27_BT10.tif\",\"New York_2021-09-27_b4.tif\",\"New York_2021-09-27_b5.tif\",\"New York_2021-10-06_BT10.tif\",\"New York_2021-10-06_b4.tif\",\"New York_2021-10-06_b5.tif\",\"New York_2021-10-22_BT10.tif\",\"New York_2021-10-22_b4.tif\",\"New York_2021-10-22_b5.tif\",\"New York_2021-11-07_BT10.tif\",\"New York_2021-11-07_b4.tif\",\"New York_2021-11-07_b5.tif\",\"New York_2021-11-14_BT10.tif\",\"New York_2021-11-14_b4.tif\",\"New York_2021-11-14_b5.tif\",\"New York_2021-11-23_BT10.tif\",\"New York_2021-11-23_b4.tif\",\"New York_2021-11-23_b5.tif\",\"New York_2021-12-09_BT10.tif\",\"New York_2021-12-09_b4.tif\",\"New York_2021-12-09_b5.tif\",\"New York_2021-12-16_BT10.tif\",\"New York_2021-12-16_b4.tif\",\"New York_2021-12-16_b5.tif\",\"New York_2022-01-10_BT10.tif\",\"New York_2022-01-10_b4.tif\",\"New York_2022-01-10_b5.tif\",\"New York_2022-01-26_BT10.tif\",\"New York_2022-01-26_b4.tif\",\"New York_2022-01-26_b5.tif\",\"New York_2022-02-02_BT10.tif\",\"New York_2022-02-02_b4.tif\",\"New York_2022-02-02_b5.tif\",\"New York_2022-02-11_BT10.tif\",\"New York_2022-02-11_b4.tif\",\"New York_2022-02-11_b5.tif\",\"New York_2022-02-18_BT10.tif\",\"New York_2022-02-18_b4.tif\",\"New York_2022-02-18_b5.tif\",\"New York_2022-02-27_BT10.tif\",\"New York_2022-02-27_b4.tif\",\"New York_2022-02-27_b5.tif\",\"New York_2022-03-15_BT10.tif\",\"New York_2022-03-15_b4.tif\",\"New York_2022-03-15_b5.tif\",\"New York_2022-03-22_BT10.tif\",\"New York_2022-03-22_b4.tif\",\"New York_2022-03-22_b5.tif\",\"New York_2022-03-31_BT10.tif\",\"New York_2022-03-31_b4.tif\",\"New York_2022-03-31_b5.tif\",\"New York_2022-04-16_BT10.tif\",\"New York_2022-04-16_b4.tif\",\"New York_2022-04-16_b5.tif\",\"New York_2022-04-23_BT10.tif\",\"New York_2022-04-23_b4.tif\",\"New York_2022-04-23_b5.tif\",\"New York_2022-05-09_BT10.tif\",\"New York_2022-05-09_b4.tif\",\"New York_2022-05-09_b5.tif\",\"New York_2022-05-18_BT10.tif\",\"New York_2022-05-18_b4.tif\",\"New York_2022-05-18_b5.tif\",\"New York_2022-05-25_BT10.tif\",\"New York_2022-05-25_b4.tif\",\"New York_2022-05-25_b5.tif\",\"New York_2022-06-03_BT10.tif\",\"New York_2022-06-03_b4.tif\",\"New York_2022-06-03_b5.tif\",\"New York_2022-06-10_BT10.tif\",\"New York_2022-06-10_b4.tif\",\"New York_2022-06-10_b5.tif\",\"New York_2022-06-19_BT10.tif\",\"New York_2022-06-19_b4.tif\",\"New York_2022-06-19_b5.tif\",\"New York_2022-06-26_BT10.tif\",\"New York_2022-06-26_b4.tif\",\"New York_2022-06-26_b5.tif\",\"New York_2022-07-05_BT10.tif\",\"New York_2022-07-05_b4.tif\",\"New York_2022-07-05_b5.tif\",\"New York_2022-07-12_BT10.tif\",\"New York_2022-07-12_b4.tif\",\"New York_2022-07-12_b5.tif\",\"New York_2022-07-21_BT10.tif\",\"New York_2022-07-21_b4.tif\",\"New York_2022-07-21_b5.tif\",\"New York_2022-07-28_BT10.tif\",\"New York_2022-07-28_b4.tif\",\"New York_2022-07-28_b5.tif\",\"New York_2022-08-06_BT10.tif\",\"New York_2022-08-06_b4.tif\",\"New York_2022-08-06_b5.tif\",\"New York_2022-08-13_BT10.tif\",\"New York_2022-08-13_b4.tif\",\"New York_2022-08-13_b5.tif\",\"New York_2022-08-29_BT10.tif\",\"New York_2022-08-29_b4.tif\",\"New York_2022-08-29_b5.tif\",\"New York_2022-09-14_BT10.tif\",\"New York_2022-09-14_b4.tif\",\"New York_2022-09-14_b5.tif\",\"New York_2022-09-23_BT10.tif\",\"New York_2022-09-23_b4.tif\",\"New York_2022-09-23_b5.tif\",\"New York_2022-09-30_BT10.tif\",\"New York_2022-09-30_b4.tif\",\"New York_2022-09-30_b5.tif\",\"New York_2022-10-09_BT10.tif\",\"New York_2022-10-09_b4.tif\",\"New York_2022-10-09_b5.tif\",\"New York_2022-10-16_BT10.tif\",\"New York_2022-10-16_b4.tif\",\"New York_2022-10-16_b5.tif\",\"New York_2022-10-25_BT10.tif\",\"New York_2022-10-25_b4.tif\",\"New York_2022-10-25_b5.tif\",\"New York_2022-11-01_BT10.tif\",\"New York_2022-11-01_b4.tif\",\"New York_2022-11-01_b5.tif\",\"New York_2022-11-10_BT10.tif\",\"New York_2022-11-10_b4.tif\",\"New York_2022-11-10_b5.tif\",\"New York_2022-11-17_BT10.tif\",\"New York_2022-11-17_b4.tif\",\"New York_2022-11-17_b5.tif\",\"New York_2022-11-26_BT10.tif\",\"New York_2022-11-26_b4.tif\",\"New York_2022-11-26_b5.tif\",\"New York_2022-12-12_BT10.tif\",\"New York_2022-12-12_b4.tif\",\"New York_2022-12-12_b5.tif\",\"New York_2022-12-19_BT10.tif\",\"New York_2022-12-19_b4.tif\",\"New York_2022-12-19_b5.tif\",\"New York_2022-12-28_BT10.tif\",\"New York_2022-12-28_b4.tif\",\"New York_2022-12-28_b5.tif\"]"
+      },
+      {
+        "name": "lst_single_channel",
+        "arguments": {
+          "bt_path": [
+            "New York_2018-01-06_BT10.tif",
+            "benchmark/data/question6/New York_2018-01-06_BT10.tif"
+          ],
+          "red_path": [
+            "New York_2018-01-06_b4.tif",
+            "benchmark/data/question6/New York_2018-01-06_b4.tif"
+          ],
+          "nir_path": [
+            "New York_2018-01-06_b5.tif",
+            "benchmark/data/question6/New York_2018-01-06_b5.tif"
+          ],
+          "output_path": [
+            "lst_2018-01-06.tif",
+            "lst_2018-01-06.tif"
+          ]
+        },
+        "output": [
+          "Error: ToolException(\"Error calling tool 'lst_single_channel': New York_2018-01-06_BT10.tif: No such file or directory\")\n Please fix your mistakes.",
+          "Result saved at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/lst_2018-01-06.tif"
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "7",
+    "tool_calls": []
+  },
+  {
+    "question_index": "8",
+    "tool_calls": []
+  },
+  {
+    "question_index": "9",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question9"
+        },
+        "output": "[\"Chicago_2021-01-06_BT10.tif\",\"Chicago_2021-01-06_b4.tif\",\"Chicago_2021-01-06_b5.tif\",\"Chicago_2021-01-13_BT10.tif\",\"Chicago_2021-01-13_b4.tif\",\"Chicago_2021-01-13_b5.tif\",\"Chicago_2021-01-22_BT10.tif\",\"Chicago_2021-01-22_b4.tif\",\"Chicago_2021-01-22_b5.tif\",\"Chicago_2021-01-29_BT10.tif\",\"Chicago_2021-01-29_b4.tif\",\"Chicago_2021-01-29_b5.tif\",\"Chicago_2021-02-07_BT10.tif\",\"Chicago_2021-02-07_b4.tif\",\"Chicago_2021-02-07_b5.tif\",\"Chicago_2021-02-14_BT10.tif\",\"Chicago_2021-02-14_b4.tif\",\"Chicago_2021-02-14_b5.tif\",\"Chicago_2021-02-23_BT10.tif\",\"Chicago_2021-02-23_b4.tif\",\"Chicago_2021-02-23_b5.tif\",\"Chicago_2021-03-02_BT10.tif\",\"Chicago_2021-03-02_b4.tif\",\"Chicago_2021-03-02_b5.tif\",\"Chicago_2021-03-11_BT10.tif\",\"Chicago_2021-03-11_b4.tif\",\"Chicago_2021-03-11_b5.tif\",\"Chicago_2021-03-18_BT10.tif\",\"Chicago_2021-03-18_b4.tif\",\"Chicago_2021-03-18_b5.tif\",\"Chicago_2021-03-27_BT10.tif\",\"Chicago_2021-03-27_b4.tif\",\"Chicago_2021-03-27_b5.tif\",\"Chicago_2021-04-03_BT10.tif\",\"Chicago_2021-04-03_BT10.tif.enp\",\"Chicago_2021-04-03_b4.tif\",\"Chicago_2021-04-03_b5.tif\",\"Chicago_2021-04-12_BT10.tif\",\"Chicago_2021-04-12_b4.tif\",\"Chicago_2021-04-12_b5.tif\",\"Chicago_2021-05-05_BT10.tif\",\"Chicago_2021-05-05_b4.tif\",\"Chicago_2021-05-05_b5.tif\",\"Chicago_2021-05-14_BT10.tif\",\"Chicago_2021-05-14_b4.tif\",\"Chicago_2021-05-14_b5.tif\",\"Chicago_2021-05-21_BT10.tif\",\"Chicago_2021-05-21_b4.tif\",\"Chicago_2021-05-21_b5.tif\",\"Chicago_2021-05-30_BT10.tif\",\"Chicago_2021-05-30_b4.tif\",\"Chicago_2021-05-30_b5.tif\",\"Chicago_2021-06-06_BT10.tif\",\"Chicago_2021-06-06_b4.tif\",\"Chicago_2021-06-06_b5.tif\",\"Chicago_2021-06-15_BT10.tif\",\"Chicago_2021-06-15_b4.tif\",\"Chicago_2021-06-15_b5.tif\",\"Chicago_2021-06-22_BT10.tif\",\"Chicago_2021-06-22_b4.tif\",\"Chicago_2021-06-22_b5.tif\",\"Chicago_2021-07-01_BT10.tif\",\"Chicago_2021-07-01_b4.tif\",\"Chicago_2021-07-01_b5.tif\",\"Chicago_2021-07-17_BT10.tif\",\"Chicago_2021-07-17_b4.tif\",\"Chicago_2021-07-17_b5.tif\",\"Chicago_2021-07-24_BT10.tif\",\"Chicago_2021-07-24_b4.tif\",\"Chicago_2021-07-24_b5.tif\",\"Chicago_2021-08-02_BT10.tif\",\"Chicago_2021-08-02_b4.tif\",\"Chicago_2021-08-02_b5.tif\",\"Chicago_2021-08-09_BT10.tif\",\"Chicago_2021-08-09_b4.tif\",\"Chicago_2021-08-09_b5.tif\",\"Chicago_2021-08-18_BT10.tif\",\"Chicago_2021-08-18_b4.tif\",\"Chicago_2021-08-18_b5.tif\",\"Chicago_2021-08-25_BT10.tif\",\"Chicago_2021-08-25_b4.tif\",\"Chicago_2021-08-25_b5.tif\",\"Chicago_2021-09-03_BT10.tif\",\"Chicago_2021-09-03_b4.tif\",\"Chicago_2021-09-03_b5.tif\",\"Chicago_2021-09-10_BT10.tif\",\"Chicago_2021-09-10_b4.tif\",\"Chicago_2021-09-10_b5.tif\",\"Chicago_2021-09-19_BT10.tif\",\"Chicago_2021-09-19_b4.tif\",\"Chicago_2021-09-19_b5.tif\",\"Chicago_2021-09-26_BT10.tif\",\"Chicago_2021-09-26_b4.tif\",\"Chicago_2021-09-26_b5.tif\",\"Chicago_2021-10-12_BT10.tif\",\"Chicago_2021-10-12_b4.tif\",\"Chicago_2021-10-12_b5.tif\",\"Chicago_2021-11-06_BT10.tif\",\"Chicago_2021-11-06_b4.tif\",\"Chicago_2021-11-06_b5.tif\",\"Chicago_2021-11-22_BT10.tif\",\"Chicago_2021-11-22_b4.tif\",\"Chicago_2021-11-22_b5.tif\",\"Chicago_2021-12-08_BT10.tif\",\"Chicago_2021-12-08_b4.tif\",\"Chicago_2021-12-08_b5.tif\"]"
+      },
+      {
+        "name": "count_images_exceeding_threshold_ratio",
+        "arguments": {
+          "image_paths": [
+            [
+              "Chicago_2021-01-06_BT10.tif",
+              "Chicago_2021-01-13_BT10.tif",
+              "Chicago_2021-01-22_BT10.tif",
+              "Chicago_2021-01-29_BT10.tif",
+              "Chicago_2021-02-07_BT10.tif",
+              "Chicago_2021-02-14_BT10.tif",
+              "Chicago_2021-02-23_BT10.tif",
+              "Chicago_2021-03-02_BT10.tif",
+              "Chicago_2021-03-11_BT10.tif",
+              "Chicago_2021-03-18_BT10.tif",
+              "Chicago_2021-03-27_BT10.tif",
+              "Chicago_2021-04-03_BT10.tif",
+              "Chicago_2021-04-12_BT10.tif",
+              "Chicago_2021-05-05_BT10.tif",
+              "Chicago_2021-05-14_BT10.tif",
+              "Chicago_2021-05-21_BT10.tif",
+              "Chicago_2021-05-30_BT10.tif",
+              "Chicago_2021-06-06_BT10.tif",
+              "Chicago_2021-06-15_BT10.tif",
+              "Chicago_2021-06-22_BT10.tif",
+              "Chicago_2021-07-01_BT10.tif",
+              "Chicago_2021-07-17_BT10.tif",
+              "Chicago_2021-07-24_BT10.tif",
+              "Chicago_2021-08-02_BT10.tif",
+              "Chicago_2021-08-09_BT10.tif",
+              "Chicago_2021-08-18_BT10.tif",
+              "Chicago_2021-08-25_BT10.tif",
+              "Chicago_2021-09-03_BT10.tif",
+              "Chicago_2021-09-10_BT10.tif",
+              "Chicago_2021-09-19_BT10.tif",
+              "Chicago_2021-09-26_BT10.tif",
+              "Chicago_2021-10-12_BT10.tif",
+              "Chicago_2021-11-06_BT10.tif",
+              "Chicago_2021-11-22_BT10.tif",
+              "Chicago_2021-12-08_BT10.tif"
+            ],
+            [
+              "benchmark/data/question9/Chicago_2021-01-06_BT10.tif",
+              "benchmark/data/question9/Chicago_2021-01-13_BT10.tif",
+              "benchmark/data/question9/Chicago_2021-01-22_BT10.tif",
+              "benchmark/data/question9/Chicago_2021-01-29_BT10.tif",
+              "benchmark/data/question9/Chicago_2021-02-07_BT10.tif",
+              "benchmark/data/question9/Chicago_2021-02-14_BT10.tif",
+              "benchmark/data/question9/Chicago_2021-02-23_BT10.tif",
+              "benchmark/data/question9/Chicago_2021-03-02_BT10.tif",
+              "benchmark/data/question9/Chicago_2021-03-11_BT10.tif",
+              "benchmark/data/question9/Chicago_2021-03-18_BT10.tif",
+              "benchmark/data/question9/Chicago_2021-03-27_BT10.tif",
+              "benchmark/data/question9/Chicago_2021-04-03_BT10.tif",
+              "benchmark/data/question9/Chicago_2021-04-12_BT10.tif",
+              "benchmark/data/question9/Chicago_2021-05-05_BT10.tif",
+              "benchmark/data/question9/Chicago_2021-05-14_BT10.tif",
+              "benchmark/data/question9/Chicago_2021-05-21_BT10.tif",
+              "benchmark/data/question9/Chicago_2021-05-30_BT10.tif",
+              "benchmark/data/question9/Chicago_2021-06-06_BT10.tif",
+              "benchmark/data/question9/Chicago_2021-06-15_BT10.tif",
+              "benchmark/data/question9/Chicago_2021-06-22_BT10.tif",
+              "benchmark/data/question9/Chicago_2021-07-01_BT10.tif",
+              "benchmark/data/question9/Chicago_2021-07-17_BT10.tif",
+              "benchmark/data/question9/Chicago_2021-07-24_BT10.tif",
+              "benchmark/data/question9/Chicago_2021-08-02_BT10.tif",
+              "benchmark/data/question9/Chicago_2021-08-09_BT10.tif",
+              "benchmark/data/question9/Chicago_2021-08-18_BT10.tif",
+              "benchmark/data/question9/Chicago_2021-08-25_BT10.tif",
+              "benchmark/data/question9/Chicago_2021-09-03_BT10.tif",
+              "benchmark/data/question9/Chicago_2021-09-10_BT10.tif",
+              "benchmark/data/question9/Chicago_2021-09-19_BT10.tif",
+              "benchmark/data/question9/Chicago_2021-09-26_BT10.tif",
+              "benchmark/data/question9/Chicago_2021-10-12_BT10.tif",
+              "benchmark/data/question9/Chicago_2021-11-06_BT10.tif",
+              "benchmark/data/question9/Chicago_2021-11-22_BT10.tif",
+              "benchmark/data/question9/Chicago_2021-12-08_BT10.tif"
+            ]
+          ],
+          "value_threshold": [
+            300,
+            300
+          ],
+          "ratio_threshold": [
+            25,
+            25
+          ],
+          "mode": [
+            "above",
+            "above"
+          ]
+        },
+        "output": [
+          "Error: ToolException(\"Error calling tool 'count_images_exceeding_threshold_ratio': Chicago_2021-01-06_BT10.tif: No such file or directory\")\n Please fix your mistakes.",
+          "4"
+        ]
+      },
+      {
+        "name": "lst_single_channel",
+        "input": {
+          "bt_path": "benchmark/data/question9/Chicago_2021-01-06_BT10.tif",
+          "red_path": "benchmark/data/question9/Chicago_2021-01-06_b4.tif",
+          "nir_path": "benchmark/data/question9/Chicago_2021-01-06_b5.tif",
+          "output_path": "lst_2021-01-06.tif"
+        },
+        "output": "Result saved at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/lst_2021-01-06.tif"
+      },
+      {
+        "name": "calculate_threshold_ratio",
+        "input": {
+          "image_paths": "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/lst_2021-01-06.tif",
+          "threshold": 300
+        },
+        "output": "0.0"
+      }
+    ]
+  },
+  {
+    "question_index": "10",
+    "tool_calls": []
+  },
+  {
+    "question_index": "11",
+    "tool_calls": []
+  },
+  {
+    "question_index": "12",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question12"
+        },
+        "output": "[\"2023_01_01_0050_BT_31.tif\",\"2023_01_01_0050_BT_32.tif\",\"2023_01_01_1250_BT_31.tif\",\"2023_01_01_1250_BT_32.tif\",\"2023_01_01_2355_BT_31.tif\",\"2023_01_01_2355_BT_32.tif\",\"2023_01_02_1155_BT_31.tif\",\"2023_01_02_1155_BT_32.tif\",\"2023_01_02_1335_BT_31.tif\",\"2023_01_02_1335_BT_32.tif\",\"2023_01_03_0035_BT_31.tif\",\"2023_01_03_0035_BT_32.tif\",\"2023_01_03_1235_BT_31.tif\",\"2023_01_03_1235_BT_32.tif\",\"2023_01_03_2335_BT_31.tif\",\"2023_01_03_2335_BT_32.tif\",\"2023_01_04_1315_BT_31.tif\",\"2023_01_04_1315_BT_32.tif\",\"2023_01_05_0020_BT_31.tif\",\"2023_01_05_0020_BT_32.tif\",\"2023_01_05_1220_BT_31.tif\",\"2023_01_05_1220_BT_32.tif\",\"2023_01_05_2320_BT_31.tif\",\"2023_01_05_2320_BT_32.tif\",\"2023_01_06_1300_BT_31.tif\",\"2023_01_06_1300_BT_32.tif\",\"2023_01_07_0000_BT_31.tif\",\"2023_01_07_0000_BT_32.tif\",\"2023_01_08_0045_BT_31.tif\",\"2023_01_08_0045_BT_32.tif\",\"2023_01_08_1245_BT_31.tif\",\"2023_01_08_1245_BT_32.tif\",\"2023_01_08_2345_BT_31.tif\",\"2023_01_08_2345_BT_32.tif\",\"2023_01_09_1325_BT_31.tif\",\"2023_01_09_1325_BT_32.tif\",\"2023_01_10_0025_BT_31.tif\",\"2023_01_10_0025_BT_32.tif\",\"2023_01_10_1230_BT_31.tif\",\"2023_01_10_1230_BT_32.tif\",\"2023_01_10_2330_BT_31.tif\",\"2023_01_10_2330_BT_32.tif\",\"2023_01_11_1310_BT_31.tif\",\"2023_01_11_1310_BT_32.tif\",\"2023_01_12_0010_BT_31.tif\",\"2023_01_12_0010_BT_32.tif\",\"2023_01_12_1215_BT_31.tif\",\"2023_01_12_1215_BT_32.tif\",\"2023_01_12_2315_BT_31.tif\",\"2023_01_12_2315_BT_32.tif\",\"2023_01_13_0050_BT_31.tif\",\"2023_01_13_0050_BT_32.tif\",\"2023_01_13_0055_BT_31.tif\",\"2023_01_13_0055_BT_32.tif\",\"2023_01_13_1255_BT_31.tif\",\"2023_01_13_1255_BT_32.tif\",\"2023_01_13_2355_BT_31.tif\",\"2023_01_13_2355_BT_32.tif\",\"2023_01_14_1200_BT_31.tif\",\"2023_01_14_1200_BT_32.tif\",\"2023_01_14_1335_BT_31.tif\",\"2023_01_14_1335_BT_32.tif\",\"2023_01_15_0035_BT_31.tif\",\"2023_01_15_0035_BT_32.tif\",\"2023_01_15_1240_BT_31.tif\",\"2023_01_15_1240_BT_32.tif\",\"2023_01_15_2340_BT_31.tif\",\"2023_01_15_2340_BT_32.tif\",\"2023_01_16_1320_BT_31.tif\",\"2023_01_16_1320_BT_32.tif\",\"2023_01_17_0020_BT_31.tif\",\"2023_01_17_0020_BT_32.tif\",\"2023_01_17_1225_BT_31.tif\",\"2023_01_17_1225_BT_32.tif\",\"2023_01_17_2325_BT_31.tif\",\"2023_01_17_2325_BT_32.tif\",\"2023_01_18_1305_BT_31.tif\",\"2023_01_18_1305_BT_32.tif\",\"2023_01_19_0005_BT_31.tif\",\"2023_01_19_0005_BT_32.tif\",\"2023_01_19_1205_BT_31.tif\",\"2023_01_19_1205_BT_32.tif\",\"2023_01_19_2310_BT_31.tif\",\"2023_01_19_2310_BT_32.tif\",\"2023_01_20_0045_BT_31.tif\",\"2023_01_20_0045_BT_32.tif\",\"2023_01_20_1250_BT_31.tif\",\"2023_01_20_1250_BT_32.tif\",\"2023_01_20_2350_BT_31.tif\",\"2023_01_20_2350_BT_32.tif\",\"2023_01_21_1150_BT_31.tif\",\"2023_01_21_1150_BT_32.tif\",\"2023_01_21_1330_BT_31.tif\",\"2023_01_21_1330_BT_32.tif\",\"2023_01_22_0030_BT_31.tif\",\"2023_01_22_0030_BT_32.tif\",\"2023_01_22_1230_BT_31.tif\",\"2023_01_22_1230_BT_32.tif\",\"2023_01_22_2335_BT_31.tif\",\"2023_01_22_2335_BT_32.tif\",\"2023_01_23_1315_BT_31.tif\",\"2023_01_23_1315_BT_32.tif\",\"2023_01_24_0015_BT_31.tif\",\"2023_01_24_0015_BT_32.tif\",\"2023_01_24_1215_BT_31.tif\",\"2023_01_24_1215_BT_32.tif\",\"2023_01_24_2315_BT_31.tif\",\"2023_01_24_2315_BT_32.tif\",\"2023_01_25_1255_BT_31.tif\",\"2023_01_25_1255_BT_32.tif\",\"2023_01_26_0000_BT_31.tif\",\"2023_01_26_0000_BT_32.tif\",\"2023_01_26_1200_BT_31.tif\",\"2023_01_26_1200_BT_32.tif\",\"2023_01_26_1340_BT_31.tif\",\"2023_01_26_1340_BT_32.tif\",\"2023_01_27_0040_BT_31.tif\",\"2023_01_27_0040_BT_32.tif\",\"2023_01_27_1240_BT_31.tif\",\"2023_01_27_1240_BT_32.tif\",\"2023_01_27_2340_BT_31.tif\",\"2023_01_27_2340_BT_32.tif\",\"2023_01_28_1320_BT_31.tif\",\"2023_01_28_1320_BT_32.tif\",\"2023_01_29_0025_BT_31.tif\",\"2023_01_29_0025_BT_32.tif\",\"2023_01_29_1225_BT_31.tif\",\"2023_01_29_1225_BT_32.tif\",\"2023_01_29_2325_BT_31.tif\",\"2023_01_29_2325_BT_32.tif\",\"2023_01_30_1305_BT_31.tif\",\"2023_01_30_1305_BT_32.tif\",\"2023_01_31_0005_BT_31.tif\",\"2023_01_31_0005_BT_32.tif\",\"2023_01_31_1210_BT_31.tif\",\"2023_01_31_1210_BT_32.tif\",\"2023_01_31_2310_BT_31.tif\",\"2023_01_31_2310_BT_32.tif\"]"
+      }
+    ]
+  },
+  {
+    "question_index": "13",
+    "tool_calls": []
+  },
+  {
+    "question_index": "14",
+    "tool_calls": []
+  },
+  {
+    "question_index": "15",
+    "tool_calls": []
+  },
+  {
+    "question_index": "16",
+    "tool_calls": []
+  },
+  {
+    "question_index": "17",
+    "tool_calls": []
+  },
+  {
+    "question_index": "18",
+    "tool_calls": []
+  },
+  {
+    "question_index": "19",
+    "tool_calls": []
+  },
+  {
+    "question_index": "20",
+    "tool_calls": []
+  },
+  {
+    "question_index": "21",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/supported_data/question21"
+        },
+        "output": "[\"answer_21.py\",\"lst_tes_result.tif\"]"
+      },
+      {
+        "name": "calculate_multi_band_threshold_ratio",
+        "input": {
+          "image_path": "benchmark/supported_data/question21/lst_tes_result.tif",
+          "band_conditions": [
+            [
+              0,
+              300,
+              "above"
+            ],
+            [
+              1,
+              0.96,
+              "below"
+            ]
+          ]
+        },
+        "output": "41.13315833506345"
+      }
+    ]
+  },
+  {
+    "question_index": "22",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/supported_data/question22"
+        },
+        "output": "[\"answer_22.py\",\"lst_tes_result.tif\"]"
+      },
+      {
+        "name": "count_pixels_satisfying_conditions",
+        "input": {
+          "image_path": "benchmark/supported_data/question22/lst_tes_result.tif",
+          "band_conditions": [
+            [
+              0,
+              310,
+              "above"
+            ],
+            [
+              2,
+              0.08,
+              "above"
+            ]
+          ]
+        },
+        "output": "931"
+      }
+    ]
+  },
+  {
+    "question_index": "23",
+    "tool_calls": []
+  },
+  {
+    "question_index": "24",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question24"
+        },
+        "output": "[\"2020_03_24_BT_10.tif\",\"2020_03_24_BT_11.tif\",\"2020_03_24_BT_12.tif\",\"2020_03_24_BT_13.tif\",\"2020_03_24_BT_14.tif\"]"
+      },
+      {
+        "name": "temperature_emissivity_separation",
+        "input": {
+          "tir_band_paths": [
+            "benchmark/data/question24/2020_03_24_BT_10.tif",
+            "benchmark/data/question24/2020_03_24_BT_11.tif",
+            "benchmark/data/question24/2020_03_24_BT_12.tif",
+            "benchmark/data/question24/2020_03_24_BT_13.tif",
+            "benchmark/data/question24/2020_03_24_BT_14.tif"
+          ],
+          "representative_band_index": 3,
+          "output_path": "question24/tes_output.tif"
+        },
+        "output": "Result saved at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/question24/tes_output.tif"
+      },
+      {
+        "name": "calculate_threshold_ratio",
+        "input": {
+          "image_paths": "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/question24/tes_output.tif",
+          "threshold": 288.5,
+          "band_index": 0
+        },
+        "output": "25.998352641306084"
+      }
+    ]
+  },
+  {
+    "question_index": "25",
+    "tool_calls": []
+  },
+  {
+    "question_index": "26",
+    "tool_calls": []
+  },
+  {
+    "question_index": "27",
+    "tool_calls": []
+  },
+  {
+    "question_index": "28",
+    "tool_calls": []
+  },
+  {
+    "question_index": "29",
+    "tool_calls": []
+  },
+  {
+    "question_index": "30",
+    "tool_calls": []
+  },
+  {
+    "question_index": "31",
+    "tool_calls": []
+  },
+  {
+    "question_index": "32",
+    "tool_calls": []
+  },
+  {
+    "question_index": "33",
+    "tool_calls": [
+      {
+        "name": "split_window",
+        "arguments": {
+          "band31_path": [
+            "benchmark/data/question33/band31.tif",
+            "benchmark/data/question33/band31.tif"
+          ],
+          "band32_path": [
+            "benchmark/data/question33/band32.tif",
+            "benchmark/data/question33/band32.tif"
+          ],
+          "emissivity31_path": [
+            "benchmark/data/question33/emissivity31.tif",
+            "benchmark/data/question33/emissivity31.tif"
+          ],
+          "emissivity32_path": [
+            "benchmark/data/question33/emissivity32.tif",
+            "benchmark/data/question33/emissivity32.tif"
+          ],
+          "parameter": [
+            "LST",
+            "LST"
+          ],
+          "output_path": [
+            "temp/lst.tif",
+            "temp/lst.tif"
+          ]
+        },
+        "output": [
+          "Error: ToolException(\"Error calling tool 'split_window': benchmark/data/question33/band31.tif: No such file or directory\")\n Please fix your mistakes.",
+          "Error: ToolException(\"Error calling tool 'split_window': benchmark/data/question33/band31.tif: No such file or directory\")\n Please fix your mistakes."
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "34",
+    "tool_calls": []
+  },
+  {
+    "question_index": "35",
+    "tool_calls": []
+  },
+  {
+    "question_index": "36",
+    "tool_calls": []
+  },
+  {
+    "question_index": "37",
+    "tool_calls": []
+  },
+  {
+    "question_index": "38",
+    "tool_calls": []
+  },
+  {
+    "question_index": "39",
+    "tool_calls": []
+  },
+  {
+    "question_index": "40",
+    "tool_calls": []
+  },
+  {
+    "question_index": "41",
+    "tool_calls": []
+  },
+  {
+    "question_index": "42",
+    "tool_calls": []
+  },
+  {
+    "question_index": "43",
+    "tool_calls": []
+  },
+  {
+    "question_index": "44",
+    "tool_calls": []
+  },
+  {
+    "question_index": "45",
+    "tool_calls": []
+  },
+  {
+    "question_index": "46",
+    "tool_calls": []
+  },
+  {
+    "question_index": "47",
+    "tool_calls": []
+  },
+  {
+    "question_index": "48",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question48"
+        },
+        "output": "[\"Yellow River basin_2023-06-10_LST.tif\",\"Yellow River basin_2023-06-10_NDVI.tif\",\"Yellow River basin_2023-06-26_LST.tif\",\"Yellow River basin_2023-06-26_NDVI.tif\",\"Yellow River basin_2023-07-12_LST.tif\",\"Yellow River basin_2023-07-12_NDVI.tif\",\"Yellow River basin_2023-07-28_LST.tif\",\"Yellow River basin_2023-07-28_NDVI.tif\",\"Yellow River basin_2023-08-13_LST.tif\",\"Yellow River basin_2023-08-13_NDVI.tif\",\"Yellow River basin_2023-08-29_LST.tif\",\"Yellow River basin_2023-08-29_NDVI.tif\",\"Yellow River basin_2023-09-14_LST.tif\",\"Yellow River basin_2023-09-14_NDVI.tif\"]"
+      },
+      {
+        "name": "compute_tvdi",
+        "input": {
+          "ndvi_path": "benchmark/data/question48/Yellow River basin_2023-06-10_NDVI.tif",
+          "lst_path": "benchmark/data/question48/Yellow River basin_2023-06-10_LST.tif",
+          "output_path": "question48/tvdi_2023-06-10.tif"
+        },
+        "output": "Result saved at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/question48/tvdi_2023-06-10.tif"
+      },
+      {
+        "name": "compute_linear_trend",
+        "input": {
+          "y": [
+            0.3,
+            0.35,
+            0.42,
+            0.46
+          ],
+          "x": [
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        "output": "[0.05499999999999999,-0.029999999999999895]"
+      }
+    ]
+  },
+  {
+    "question_index": "49",
+    "tool_calls": []
+  },
+  {
+    "question_index": "50",
+    "tool_calls": []
+  },
+  {
+    "question_index": "51",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question51"
+        },
+        "output": "[\"New York_2022-01-10_BT10.tif\",\"New York_2022-01-10_b4.tif\",\"New York_2022-01-10_b5.tif\",\"New York_2022-01-26_BT10.tif\",\"New York_2022-01-26_b4.tif\",\"New York_2022-01-26_b5.tif\",\"New York_2022-02-02_BT10.tif\",\"New York_2022-02-02_b4.tif\",\"New York_2022-02-02_b5.tif\",\"New York_2022-02-11_BT10.tif\",\"New York_2022-02-11_b4.tif\",\"New York_2022-02-11_b5.tif\",\"New York_2022-02-18_BT10.tif\",\"New York_2022-02-18_b4.tif\",\"New York_2022-02-18_b5.tif\",\"New York_2022-02-27_BT10.tif\",\"New York_2022-02-27_b4.tif\",\"New York_2022-02-27_b5.tif\",\"New York_2022-03-15_BT10.tif\",\"New York_2022-03-15_b4.tif\",\"New York_2022-03-15_b5.tif\",\"New York_2022-03-22_BT10.tif\",\"New York_2022-03-22_b4.tif\",\"New York_2022-03-22_b5.tif\",\"New York_2022-03-31_BT10.tif\",\"New York_2022-03-31_b4.tif\",\"New York_2022-03-31_b5.tif\",\"New York_2022-04-16_BT10.tif\",\"New York_2022-04-16_b4.tif\",\"New York_2022-04-16_b5.tif\",\"New York_2022-04-23_BT10.tif\",\"New York_2022-04-23_b4.tif\",\"New York_2022-04-23_b5.tif\",\"New York_2022-05-09_BT10.tif\",\"New York_2022-05-09_b4.tif\",\"New York_2022-05-09_b5.tif\",\"New York_2022-05-18_BT10.tif\",\"New York_2022-05-18_b4.tif\",\"New York_2022-05-18_b5.tif\",\"New York_2022-05-25_BT10.tif\",\"New York_2022-05-25_b4.tif\",\"New York_2022-05-25_b5.tif\",\"New York_2022-06-03_BT10.tif\",\"New York_2022-06-03_b4.tif\",\"New York_2022-06-03_b5.tif\",\"New York_2022-06-10_BT10.tif\",\"New York_2022-06-10_b4.tif\",\"New York_2022-06-10_b5.tif\",\"New York_2022-06-19_BT10.tif\",\"New York_2022-06-19_b4.tif\",\"New York_2022-06-19_b5.tif\",\"New York_2022-06-26_BT10.tif\",\"New York_2022-06-26_b4.tif\",\"New York_2022-06-26_b5.tif\",\"New York_2022-07-05_BT10.tif\",\"New York_2022-07-05_b4.tif\",\"New York_2022-07-05_b5.tif\",\"New York_2022-07-12_BT10.tif\",\"New York_2022-07-12_b4.tif\",\"New York_2022-07-12_b5.tif\",\"New York_2022-07-21_BT10.tif\",\"New York_2022-07-21_b4.tif\",\"New York_2022-07-21_b5.tif\",\"New York_2022-07-28_BT10.tif\",\"New York_2022-07-28_b4.tif\",\"New York_2022-07-28_b5.tif\",\"New York_2022-08-06_BT10.tif\",\"New York_2022-08-06_b4.tif\",\"New York_2022-08-06_b5.tif\",\"New York_2022-08-13_BT10.tif\",\"New York_2022-08-13_b4.tif\",\"New York_2022-08-13_b5.tif\",\"New York_2022-08-29_BT10.tif\",\"New York_2022-08-29_b4.tif\",\"New York_2022-08-29_b5.tif\",\"New York_2022-09-14_BT10.tif\",\"New York_2022-09-14_b4.tif\",\"New York_2022-09-14_b5.tif\",\"New York_2022-09-23_BT10.tif\",\"New York_2022-09-23_b4.tif\",\"New York_2022-09-23_b5.tif\",\"New York_2022-09-30_BT10.tif\",\"New York_2022-09-30_b4.tif\",\"New York_2022-09-30_b5.tif\",\"New York_2022-10-09_BT10.tif\",\"New York_2022-10-09_b4.tif\",\"New York_2022-10-09_b5.tif\",\"New York_2022-10-16_BT10.tif\",\"New York_2022-10-16_b4.tif\",\"New York_2022-10-16_b5.tif\",\"New York_2022-10-25_BT10.tif\",\"New York_2022-10-25_b4.tif\",\"New York_2022-10-25_b5.tif\",\"New York_2022-11-01_BT10.tif\",\"New York_2022-11-01_b4.tif\",\"New York_2022-11-01_b5.tif\",\"New York_2022-11-10_BT10.tif\",\"New York_2022-11-10_b4.tif\",\"New York_2022-11-10_b5.tif\",\"New York_2022-11-17_BT10.tif\",\"New York_2022-11-17_b4.tif\",\"New York_2022-11-17_b5.tif\",\"New York_2022-11-26_BT10.tif\",\"New York_2022-11-26_b4.tif\",\"New York_2022-11-26_b5.tif\",\"New York_2022-12-12_BT10.tif\",\"New York_2022-12-12_b4.tif\",\"New York_2022-12-12_b5.tif\",\"New York_2022-12-19_BT10.tif\",\"New York_2022-12-19_b4.tif\",\"New York_2022-12-19_b5.tif\",\"New York_2022-12-28_BT10.tif\",\"New York_2022-12-28_b4.tif\",\"New York_2022-12-28_b5.tif\"]"
+      },
+      {
+        "name": "calculate_batch_ndvi",
+        "arguments": {
+          "input_nir_paths": [
+            [
+              "New York_2022-01-10_b5.tif",
+              "New York_2022-01-26_b5.tif",
+              "New York_2022-02-02_b5.tif",
+              "New York_2022-02-11_b5.tif",
+              "New York_2022-02-18_b5.tif",
+              "New York_2022-02-27_b5.tif",
+              "New York_2022-03-15_b5.tif",
+              "New York_2022-03-22_b5.tif",
+              "New York_2022-03-31_b5.tif",
+              "New York_2022-04-16_b5.tif",
+              "New York_2022-04-23_b5.tif",
+              "New York_2022-05-09_b5.tif",
+              "New York_2022-05-18_b5.tif",
+              "New York_2022-05-25_b5.tif",
+              "New York_2022-06-03_b5.tif",
+              "New York_2022-06-10_b5.tif",
+              "New York_2022-06-19_b5.tif",
+              "New York_2022-06-26_b5.tif",
+              "New York_2022-07-05_b5.tif",
+              "New York_2022-07-12_b5.tif",
+              "New York_2022-07-21_b5.tif",
+              "New York_2022-07-28_b5.tif",
+              "New York_2022-08-06_b5.tif",
+              "New York_2022-08-13_b5.tif",
+              "New York_2022-08-29_b5.tif",
+              "New York_2022-09-14_b5.tif",
+              "New York_2022-09-23_b5.tif",
+              "New York_2022-09-30_b5.tif",
+              "New York_2022-10-09_b5.tif",
+              "New York_2022-10-16_b5.tif",
+              "New York_2022-10-25_b5.tif",
+              "New York_2022-11-01_b5.tif",
+              "New York_2022-11-10_b5.tif",
+              "New York_2022-11-17_b5.tif",
+              "New York_2022-11-26_b5.tif",
+              "New York_2022-12-12_b5.tif",
+              "New York_2022-12-19_b5.tif",
+              "New York_2022-12-28_b5.tif"
+            ],
+            [
+              "New York_2022-01-10_b5.tif",
+              "New York_2022-01-26_b5.tif",
+              "New York_2022-02-02_b5.tif",
+              "New York_2022-02-11_b5.tif",
+              "New York_2022-02-18_b5.tif",
+              "New York_2022-02-27_b5.tif",
+              "New York_2022-03-15_b5.tif",
+              "New York_2022-03-22_b5.tif",
+              "New York_2022-03-31_b5.tif",
+              "New York_2022-04-16_b5.tif",
+              "New York_2022-04-23_b5.tif",
+              "New York_2022-05-09_b5.tif",
+              "New York_2022-05-18_b5.tif",
+              "New York_2022-05-25_b5.tif",
+              "New York_2022-06-03_b5.tif",
+              "New York_2022-06-10_b5.tif",
+              "New York_2022-06-19_b5.tif",
+              "New York_2022-06-26_b5.tif",
+              "New York_2022-07-05_b5.tif",
+              "New York_2022-07-12_b5.tif",
+              "New York_2022-07-21_b5.tif",
+              "New York_2022-07-28_b5.tif",
+              "New York_2022-08-06_b5.tif",
+              "New York_2022-08-13_b5.tif",
+              "New York_2022-08-29_b5.tif",
+              "New York_2022-09-14_b5.tif",
+              "New York_2022-09-23_b5.tif",
+              "New York_2022-09-30_b5.tif",
+              "New York_2022-10-09_b5.tif",
+              "New York_2022-10-16_b5.tif",
+              "New York_2022-10-25_b5.tif",
+              "New York_2022-11-01_b5.tif",
+              "New York_2022-11-10_b5.tif",
+              "New York_2022-11-17_b5.tif",
+              "New York_2022-11-26_b5.tif",
+              "New York_2022-12-12_b5.tif",
+              "New York_2022-12-19_b5.tif",
+              "New York_2022-12-28_b5.tif"
+            ],
+            [
+              "benchmark/data/question51/New York_2022-01-10_b5.tif",
+              "benchmark/data/question51/New York_2022-01-26_b5.tif",
+              "benchmark/data/question51/New York_2022-02-02_b5.tif",
+              "benchmark/data/question51/New York_2022-02-11_b5.tif",
+              "benchmark/data/question51/New York_2022-02-18_b5.tif",
+              "benchmark/data/question51/New York_2022-02-27_b5.tif",
+              "benchmark/data/question51/New York_2022-03-15_b5.tif",
+              "benchmark/data/question51/New York_2022-03-22_b5.tif",
+              "benchmark/data/question51/New York_2022-03-31_b5.tif",
+              "benchmark/data/question51/New York_2022-04-16_b5.tif",
+              "benchmark/data/question51/New York_2022-04-23_b5.tif",
+              "benchmark/data/question51/New York_2022-05-09_b5.tif",
+              "benchmark/data/question51/New York_2022-05-18_b5.tif",
+              "benchmark/data/question51/New York_2022-05-25_b5.tif",
+              "benchmark/data/question51/New York_2022-06-03_b5.tif",
+              "benchmark/data/question51/New York_2022-06-10_b5.tif",
+              "benchmark/data/question51/New York_2022-06-19_b5.tif",
+              "benchmark/data/question51/New York_2022-06-26_b5.tif",
+              "benchmark/data/question51/New York_2022-07-05_b5.tif",
+              "benchmark/data/question51/New York_2022-07-12_b5.tif",
+              "benchmark/data/question51/New York_2022-07-21_b5.tif",
+              "benchmark/data/question51/New York_2022-07-28_b5.tif",
+              "benchmark/data/question51/New York_2022-08-06_b5.tif",
+              "benchmark/data/question51/New York_2022-08-13_b5.tif",
+              "benchmark/data/question51/New York_2022-08-29_b5.tif",
+              "benchmark/data/question51/New York_2022-09-14_b5.tif",
+              "benchmark/data/question51/New York_2022-09-23_b5.tif",
+              "benchmark/data/question51/New York_2022-09-30_b5.tif",
+              "benchmark/data/question51/New York_2022-10-09_b5.tif",
+              "benchmark/data/question51/New York_2022-10-16_b5.tif",
+              "benchmark/data/question51/New York_2022-10-25_b5.tif",
+              "benchmark/data/question51/New York_2022-11-01_b5.tif",
+              "benchmark/data/question51/New York_2022-11-10_b5.tif",
+              "benchmark/data/question51/New York_2022-11-17_b5.tif",
+              "benchmark/data/question51/New York_2022-11-26_b5.tif",
+              "benchmark/data/question51/New York_2022-12-12_b5.tif",
+              "benchmark/data/question51/New York_2022-12-19_b5.tif",
+              "benchmark/data/question51/New York_2022-12-28_b5.tif"
+            ]
+          ],
+          "input_red_paths": [
+            [
+              "New York_2022-01-10_b4.tif",
+              "New York_2022-01-26_b4.tif",
+              "New York_2022-02-02_b4.tif",
+              "New York_2022-02-11_b4.tif",
+              "New York_2022-02-18_b4.tif",
+              "New York_2022-02-27_b4.tif",
+              "New York_2022-03-15_b4.tif",
+              "New York_2022-03-22_b4.tif",
+              "New York_2022-03-31_b4.tif",
+              "New York_2022-04-16_b4.tif",
+              "New York_2022-04-23_b4.tif",
+              "New York_2022-05-09_b4.tif",
+              "New York_2022-05-18_b4.tif",
+              "New York_2022-05-25_b4.tif",
+              "New York_2022-06-03_b4.tif",
+              "New York_2022-06-10_b4.tif",
+              "New York_2022-06-19_b4.tif",
+              "New York_2022-06-26_b4.tif",
+              "New York_2022-07-05_b4.tif",
+              "New York_2022-07-12_b4.tif",
+              "New York_2022-07-21_b4.tif",
+              "New York_2022-07-28_b4.tif",
+              "New York_2022-08-06_b4.tif",
+              "New York_2022-08-13_b4.tif",
+              "New York_2022-08-29_b4.tif",
+              "New York_2022-09-14_b4.tif",
+              "New York_2022-09-23_b4.tif",
+              "New York_2022-09-30_b4.tif",
+              "New York_2022-10-09_b4.tif",
+              "New York_2022-10-16_b4.tif",
+              "New York_2022-10-25_b4.tif",
+              "New York_2022-11-01_b4.tif",
+              "New York_2022-11-10_b4.tif",
+              "New York_2022-11-17_b4.tif",
+              "New York_2022-11-26_b4.tif",
+              "New York_2022-12-12_b4.tif",
+              "New York_2022-12-19_b4.tif",
+              "New York_2022-12-28_b4.tif"
+            ],
+            [
+              "New York_2022-01-10_b4.tif",
+              "New York_2022-01-26_b4.tif",
+              "New York_2022-02-02_b4.tif",
+              "New York_2022-02-11_b4.tif",
+              "New York_2022-02-18_b4.tif",
+              "New York_2022-02-27_b4.tif",
+              "New York_2022-03-15_b4.tif",
+              "New York_2022-03-22_b4.tif",
+              "New York_2022-03-31_b4.tif",
+              "New York_2022-04-16_b4.tif",
+              "New York_2022-04-23_b4.tif",
+              "New York_2022-05-09_b4.tif",
+              "New York_2022-05-18_b4.tif",
+              "New York_2022-05-25_b4.tif",
+              "New York_2022-06-03_b4.tif",
+              "New York_2022-06-10_b4.tif",
+              "New York_2022-06-19_b4.tif",
+              "New York_2022-06-26_b4.tif",
+              "New York_2022-07-05_b4.tif",
+              "New York_2022-07-12_b4.tif",
+              "New York_2022-07-21_b4.tif",
+              "New York_2022-07-28_b4.tif",
+              "New York_2022-08-06_b4.tif",
+              "New York_2022-08-13_b4.tif",
+              "New York_2022-08-29_b4.tif",
+              "New York_2022-09-14_b4.tif",
+              "New York_2022-09-23_b4.tif",
+              "New York_2022-09-30_b4.tif",
+              "New York_2022-10-09_b4.tif",
+              "New York_2022-10-16_b4.tif",
+              "New York_2022-10-25_b4.tif",
+              "New York_2022-11-01_b4.tif",
+              "New York_2022-11-10_b4.tif",
+              "New York_2022-11-17_b4.tif",
+              "New York_2022-11-26_b4.tif",
+              "New York_2022-12-12_b4.tif",
+              "New York_2022-12-19_b4.tif",
+              "New York_2022-12-28_b4.tif"
+            ],
+            [
+              "benchmark/data/question51/New York_2022-01-10_b4.tif",
+              "benchmark/data/question51/New York_2022-01-26_b4.tif",
+              "benchmark/data/question51/New York_2022-02-02_b4.tif",
+              "benchmark/data/question51/New York_2022-02-11_b4.tif",
+              "benchmark/data/question51/New York_2022-02-18_b4.tif",
+              "benchmark/data/question51/New York_2022-02-27_b4.tif",
+              "benchmark/data/question51/New York_2022-03-15_b4.tif",
+              "benchmark/data/question51/New York_2022-03-22_b4.tif",
+              "benchmark/data/question51/New York_2022-03-31_b4.tif",
+              "benchmark/data/question51/New York_2022-04-16_b4.tif",
+              "benchmark/data/question51/New York_2022-04-23_b4.tif",
+              "benchmark/data/question51/New York_2022-05-09_b4.tif",
+              "benchmark/data/question51/New York_2022-05-18_b4.tif",
+              "benchmark/data/question51/New York_2022-05-25_b4.tif",
+              "benchmark/data/question51/New York_2022-06-03_b4.tif",
+              "benchmark/data/question51/New York_2022-06-10_b4.tif",
+              "benchmark/data/question51/New York_2022-06-19_b4.tif",
+              "benchmark/data/question51/New York_2022-06-26_b4.tif",
+              "benchmark/data/question51/New York_2022-07-05_b4.tif",
+              "benchmark/data/question51/New York_2022-07-12_b4.tif",
+              "benchmark/data/question51/New York_2022-07-21_b4.tif",
+              "benchmark/data/question51/New York_2022-07-28_b4.tif",
+              "benchmark/data/question51/New York_2022-08-06_b4.tif",
+              "benchmark/data/question51/New York_2022-08-13_b4.tif",
+              "benchmark/data/question51/New York_2022-08-29_b4.tif",
+              "benchmark/data/question51/New York_2022-09-14_b4.tif",
+              "benchmark/data/question51/New York_2022-09-23_b4.tif",
+              "benchmark/data/question51/New York_2022-09-30_b4.tif",
+              "benchmark/data/question51/New York_2022-10-09_b4.tif",
+              "benchmark/data/question51/New York_2022-10-16_b4.tif",
+              "benchmark/data/question51/New York_2022-10-25_b4.tif",
+              "benchmark/data/question51/New York_2022-11-01_b4.tif",
+              "benchmark/data/question51/New York_2022-11-10_b4.tif",
+              "benchmark/data/question51/New York_2022-11-17_b4.tif",
+              "benchmark/data/question51/New York_2022-11-26_b4.tif",
+              "benchmark/data/question51/New York_2022-12-12_b4.tif",
+              "benchmark/data/question51/New York_2022-12-19_b4.tif",
+              "benchmark/data/question51/New York_2022-12-28_b4.tif"
+            ]
+          ],
+          "output_paths": [
+            [
+              "ndvi_2022-01-10.tif",
+              "ndvi_2022-01-26.tif",
+              "ndvi_2022-02-02.tif",
+              "ndvi_2022-02-11.tif",
+              "ndvi_2022-02-18.tif",
+              "ndvi_2022-02-27.tif",
+              "ndvi_2022-03-15.tif",
+              "ndvi_2022-03-22.tif",
+              "ndvi_2022-03-31.tif",
+              "ndvi_2022-04-16.tif",
+              "ndvi_2022-04-23.tif",
+              "ndvi_2022-05-09.tif",
+              "ndvi_2022-05-18.tif",
+              "ndvi_2022-05-25.tif",
+              "ndvi_2022-06-03.tif",
+              "ndvi_2022-06-10.tif",
+              "ndvi_2022-06-19.tif",
+              "ndvi_2022-06-26.tif",
+              "ndvi_2022-07-05.tif",
+              "ndvi_2022-07-12.tif",
+              "ndvi_2022-07-21.tif",
+              "ndvi_2022-07-28.tif",
+              "ndvi_2022-08-06.tif",
+              "ndvi_2022-08-13.tif",
+              "ndvi_2022-08-29.tif",
+              "ndvi_2022-09-14.tif",
+              "ndvi_2022-09-23.tif",
+              "ndvi_2022-09-30.tif",
+              "ndvi_2022-10-09.tif",
+              "ndvi_2022-10-16.tif",
+              "ndvi_2022-10-25.tif",
+              "ndvi_2022-11-01.tif",
+              "ndvi_2022-11-10.tif",
+              "ndvi_2022-11-17.tif",
+              "ndvi_2022-11-26.tif",
+              "ndvi_2022-12-12.tif",
+              "ndvi_2022-12-19.tif",
+              "ndvi_2022-12-28.tif"
+            ],
+            [
+              "ndvi_2022-01-10.tif",
+              "ndvi_2022-01-26.tif",
+              "ndvi_2022-02-02.tif",
+              "ndvi_2022-02-11.tif",
+              "ndvi_2022-02-18.tif",
+              "ndvi_2022-02-27.tif",
+              "ndvi_2022-03-15.tif",
+              "ndvi_2022-03-22.tif",
+              "ndvi_2022-03-31.tif",
+              "ndvi_2022-04-16.tif",
+              "ndvi_2022-04-23.tif",
+              "ndvi_2022-05-09.tif",
+              "ndvi_2022-05-18.tif",
+              "ndvi_2022-05-25.tif",
+              "ndvi_2022-06-03.tif",
+              "ndvi_2022-06-10.tif",
+              "ndvi_2022-06-19.tif",
+              "ndvi_2022-06-26.tif",
+              "ndvi_2022-07-05.tif",
+              "ndvi_2022-07-12.tif",
+              "ndvi_2022-07-21.tif",
+              "ndvi_2022-07-28.tif",
+              "ndvi_2022-08-06.tif",
+              "ndvi_2022-08-13.tif",
+              "ndvi_2022-08-29.tif",
+              "ndvi_2022-09-14.tif",
+              "ndvi_2022-09-23.tif",
+              "ndvi_2022-09-30.tif",
+              "ndvi_2022-10-09.tif",
+              "ndvi_2022-10-16.tif",
+              "ndvi_2022-10-25.tif",
+              "ndvi_2022-11-01.tif",
+              "ndvi_2022-11-10.tif",
+              "ndvi_2022-11-17.tif",
+              "ndvi_2022-11-26.tif",
+              "ndvi_2022-12-12.tif",
+              "ndvi_2022-12-19.tif",
+              "ndvi_2022-12-28.tif"
+            ],
+            [
+              "ndvi_2022-01-10.tif",
+              "ndvi_2022-01-26.tif",
+              "ndvi_2022-02-02.tif",
+              "ndvi_2022-02-11.tif",
+              "ndvi_2022-02-18.tif",
+              "ndvi_2022-02-27.tif",
+              "ndvi_2022-03-15.tif",
+              "ndvi_2022-03-22.tif",
+              "ndvi_2022-03-31.tif",
+              "ndvi_2022-04-16.tif",
+              "ndvi_2022-04-23.tif",
+              "ndvi_2022-05-09.tif",
+              "ndvi_2022-05-18.tif",
+              "ndvi_2022-05-25.tif",
+              "ndvi_2022-06-03.tif",
+              "ndvi_2022-06-10.tif",
+              "ndvi_2022-06-19.tif",
+              "ndvi_2022-06-26.tif",
+              "ndvi_2022-07-05.tif",
+              "ndvi_2022-07-12.tif",
+              "ndvi_2022-07-21.tif",
+              "ndvi_2022-07-28.tif",
+              "ndvi_2022-08-06.tif",
+              "ndvi_2022-08-13.tif",
+              "ndvi_2022-08-29.tif",
+              "ndvi_2022-09-14.tif",
+              "ndvi_2022-09-23.tif",
+              "ndvi_2022-09-30.tif",
+              "ndvi_2022-10-09.tif",
+              "ndvi_2022-10-16.tif",
+              "ndvi_2022-10-25.tif",
+              "ndvi_2022-11-01.tif",
+              "ndvi_2022-11-10.tif",
+              "ndvi_2022-11-17.tif",
+              "ndvi_2022-11-26.tif",
+              "ndvi_2022-12-12.tif",
+              "ndvi_2022-12-19.tif",
+              "ndvi_2022-12-28.tif"
+            ]
+          ]
+        },
+        "output": [
+          "Error: ToolException(\"Error calling tool 'calculate_batch_ndvi': New York_2022-01-10_b5.tif: No such file or directory\")\n Please fix your mistakes.",
+          "Error: ToolException(\"Error calling tool 'calculate_batch_ndvi': New York_2022-01-10_b5.tif: No such file or directory\")\n Please fix your mistakes.",
+          "[\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndvi_2022-01-10.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndvi_2022-01-26.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndvi_2022-02-02.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndvi_2022-02-11.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndvi_2022-02-18.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndvi_2022-02-27.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndvi_2022-03-15.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndvi_2022-03-22.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndvi_2022-03-31.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndvi_2022-04-16.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndvi_2022-04-23.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndvi_2022-05-09.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndvi_2022-05-18.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndvi_2022-05-25.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndvi_2022-06-03.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndvi_2022-06-10.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndvi_2022-06-19.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndvi_2022-06-26.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndvi_2022-07-05.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndvi_2022-07-12.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndvi_2022-07-21.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndvi_2022-07-28.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndvi_2022-08-06.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndvi_2022-08-13.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndvi_2022-08-29.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndvi_2022-09-14.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndvi_2022-09-23.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndvi_2022-09-30.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndvi_2022-10-09.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndvi_2022-10-16.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndvi_2022-10-25.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndvi_2022-11-01.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndvi_2022-11-10.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndvi_2022-11-17.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndvi_2022-11-26.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndvi_2022-12-12.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndvi_2022-12-19.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndvi_2022-12-28.tif\"]"
+        ]
+      },
+      {
+        "name": "lst_single_channel",
+        "input": {
+          "bt_path": "benchmark/data/question51/New York_2022-06-03_BT10.tif",
+          "red_path": "benchmark/data/question51/New York_2022-06-03_b4.tif",
+          "nir_path": "benchmark/data/question51/New York_2022-06-03_b5.tif",
+          "output_path": "lst_2022-06-03.tif"
+        },
+        "output": "Result saved at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/lst_2022-06-03.tif"
+      },
+      {
+        "name": "calculate_batch_image_mean",
+        "input": {
+          "file_list": [
+            "lst_2022-06-03.tif",
+            "lst_2022-06-10.tif",
+            "lst_2022-06-19.tif",
+            "lst_2022-06-26.tif",
+            "lst_2022-07-05.tif",
+            "lst_2022-07-12.tif",
+            "lst_2022-07-21.tif",
+            "lst_2022-07-28.tif",
+            "lst_2022-08-06.tif",
+            "lst_2022-08-13.tif",
+            "lst_2022-08-29.tif",
+            "lst_2022-09-14.tif",
+            "lst_2022-09-23.tif",
+            "lst_2022-09-30.tif",
+            "lst_2022-10-09.tif",
+            "lst_2022-10-16.tif",
+            "lst_2022-10-25.tif",
+            "lst_2022-11-01.tif",
+            "lst_2022-11-10.tif",
+            "lst_2022-11-17.tif",
+            "lst_2022-11-26.tif"
+          ],
+          "uint8": false
+        },
+        "output": "Error: calculate_batch_image_mean is not a valid tool, try one of [compute_linear_trend, mann_kendall_test, sens_slope, stl_decompose, detect_change_points, autocorrelation_function, detect_seasonality_acf, getis_ord_gi_star, analyze_hotspot_direction, coefficient_of_variation, skewness, kurtosis, calc_batch_image_mean, calc_batch_image_std, calc_batch_image_median, calc_batch_image_min, calc_batch_image_max, calc_batch_image_skewness, calc_batch_image_kurtosis, calc_batch_image_sum, calc_batch_image_hotspot_percentage, calc_batch_image_hotspot_tif, difference, division, percentage_change, kelvin_to_celsius, celsius_to_kelvin, max_value_and_index, min_value_and_index, count_above_threshold, calculate_bbox_area, ceil_number, count_skeleton_contours, multiply, bboxes2centroids, centroid_distance_extremes, get_list_object_via_indexes, mean, calculate_threshold_ratio, calc_batch_fire_pixels, create_fire_increase_map, identify_fire_prone_areas, get_percentile_value_from_image, image_division_mean, calculate_intersection_percentage, calc_batch_image_mean_mean, calc_batch_image_mean_max, calc_batch_image_mean_max_min, calc_batch_image_mean_threshold, calculate_multi_band_threshold_ratio, count_pixels_satisfying_conditions, count_images_exceeding_threshold_ratio, average_ratio_exceeding_threshold, count_images_exceeding_mean_multiplier, count_spikes_from_values, calculate_band_mean_by_condition, calc_threshold_value_mean, calc_extreme_snow_loss_percentage_from_binary_map, calculate_tif_average, calculate_tif_difference, subtract, calculate_area, grayscale_to_colormap, MSCN, RemoteCLIP, Strip_R_CNN, SM3Det, RemoteSAM, InstructSAM, SAM2, ChangeOS, calculate_batch_ndvi, calculate_batch_ndwi, calculate_batch_ndbi, calculate_batch_evi, calculate_batch_nbr, calculate_batch_fvc, calculate_batch_wri, calculate_batch_ndti, calculate_batch_frp, calculate_batch_ndsi, threshold_segmentation, bbox_expansion, calculate_mean_lst_by_ndvi, calculate_max_lst_by_ndvi, get_filelist, radiometric_correction_sr, apply_cloud_mask, band_ratio, lst_single_channel, lst_multi_channel, split_window, temperature_emissivity_separation, modis_day_night_lst, ttm_lst, compute_tvdi, ATI, dual_polarization_differential, dual_frequency_diff, multi_freq_bt, chang_single_param_inversion, nasa_team_sea_ice_concentration, dual_polarization_ratio, calculate_water_turbidity_ntu]."
+      },
+      {
+        "name": "calc_batch_image_mean",
+        "input": {
+          "file_list": [
+            "lst_2022-06-03.tif",
+            "lst_2022-06-10.tif",
+            "lst_2022-06-19.tif",
+            "lst_2022-06-26.tif",
+            "lst_2022-07-05.tif",
+            "lst_2022-07-12.tif",
+            "lst_2022-07-21.tif",
+            "lst_2022-07-28.tif",
+            "lst_2022-08-06.tif",
+            "lst_2022-08-13.tif",
+            "lst_2022-08-29.tif"
+          ],
+          "uint8": false
+        },
+        "output": "Error: ToolException(\"Error calling tool 'calc_batch_image_mean': Failed to open lst_2022-06-03.tif\")\n Please fix your mistakes."
+      }
+    ]
+  },
+  {
+    "question_index": "52",
+    "tool_calls": []
+  },
+  {
+    "question_index": "53",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question53"
+        },
+        "output": "[\"Okavango Delta_2021-08-11_BT10.tif\",\"Okavango Delta_2021-08-11_b4.tif\",\"Okavango Delta_2021-08-11_b5.tif\"]"
+      },
+      {
+        "name": "calculate_ndvi",
+        "input": {
+          "input_red_paths": [
+            "benchmark/data/question53/Okavango Delta_2021-08-11_b4.tif"
+          ],
+          "input_nir_paths": [
+            "benchmark/data/question53/Okavango Delta_2021-08-11_b5.tif"
+          ],
+          "output_paths": [
+            "question53_ndvi.tif"
+          ]
+        },
+        "output": "Error: calculate_ndvi is not a valid tool, try one of [compute_linear_trend, mann_kendall_test, sens_slope, stl_decompose, detect_change_points, autocorrelation_function, detect_seasonality_acf, getis_ord_gi_star, analyze_hotspot_direction, coefficient_of_variation, skewness, kurtosis, calc_batch_image_mean, calc_batch_image_std, calc_batch_image_median, calc_batch_image_min, calc_batch_image_max, calc_batch_image_skewness, calc_batch_image_kurtosis, calc_batch_image_sum, calc_batch_image_hotspot_percentage, calc_batch_image_hotspot_tif, difference, division, percentage_change, kelvin_to_celsius, celsius_to_kelvin, max_value_and_index, min_value_and_index, count_above_threshold, calculate_bbox_area, ceil_number, count_skeleton_contours, multiply, bboxes2centroids, centroid_distance_extremes, get_list_object_via_indexes, mean, calculate_threshold_ratio, calc_batch_fire_pixels, create_fire_increase_map, identify_fire_prone_areas, get_percentile_value_from_image, image_division_mean, calculate_intersection_percentage, calc_batch_image_mean_mean, calc_batch_image_mean_max, calc_batch_image_mean_max_min, calc_batch_image_mean_threshold, calculate_multi_band_threshold_ratio, count_pixels_satisfying_conditions, count_images_exceeding_threshold_ratio, average_ratio_exceeding_threshold, count_images_exceeding_mean_multiplier, count_spikes_from_values, calculate_band_mean_by_condition, calc_threshold_value_mean, calc_extreme_snow_loss_percentage_from_binary_map, calculate_tif_average, calculate_tif_difference, subtract, calculate_area, grayscale_to_colormap, MSCN, RemoteCLIP, Strip_R_CNN, SM3Det, RemoteSAM, InstructSAM, SAM2, ChangeOS, calculate_batch_ndvi, calculate_batch_ndwi, calculate_batch_ndbi, calculate_batch_evi, calculate_batch_nbr, calculate_batch_fvc, calculate_batch_wri, calculate_batch_ndti, calculate_batch_frp, calculate_batch_ndsi, threshold_segmentation, bbox_expansion, calculate_mean_lst_by_ndvi, calculate_max_lst_by_ndvi, get_filelist, radiometric_correction_sr, apply_cloud_mask, band_ratio, lst_single_channel, lst_multi_channel, split_window, temperature_emissivity_separation, modis_day_night_lst, ttm_lst, compute_tvdi, ATI, dual_polarization_differential, dual_frequency_diff, multi_freq_bt, chang_single_param_inversion, nasa_team_sea_ice_concentration, dual_polarization_ratio, calculate_water_turbidity_ntu]."
+      },
+      {
+        "name": "calculate_batch_ndvi",
+        "input": {
+          "input_red_paths": [
+            "benchmark/data/question53/Okavango Delta_2021-08-11_b4.tif"
+          ],
+          "input_nir_paths": [
+            "benchmark/data/question53/Okavango Delta_2021-08-11_b5.tif"
+          ],
+          "output_paths": [
+            "question53_ndvi.tif"
+          ]
+        },
+        "output": "[\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/question53_ndvi.tif\"]"
+      },
+      {
+        "name": "lst_single_channel",
+        "input": {
+          "bt_path": "benchmark/data/question53/Okavango Delta_2021-08-11_BT10.tif",
+          "red_path": "benchmark/data/question53/Okavango Delta_2021-08-11_b4.tif",
+          "nir_path": "benchmark/data/question53/Okavango Delta_2021-08-11_b5.tif",
+          "output_path": "question53_lst.tif"
+        },
+        "output": "Result saved at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/question53_lst.tif"
+      },
+      {
+        "name": "calculate_threshold_ratio",
+        "input": {
+          "image_paths": "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/question53_lst.tif",
+          "threshold": 305
+        },
+        "output": "6.337726735886568"
+      }
+    ]
+  },
+  {
+    "question_index": "54",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question54"
+        },
+        "output": "[\"Chicago_2021-06-06_BT10.tif\",\"Chicago_2021-06-06_b4.tif\",\"Chicago_2021-06-06_b5.tif\",\"Chicago_2021-06-15_BT10.tif\",\"Chicago_2021-06-15_b4.tif\",\"Chicago_2021-06-15_b5.tif\",\"Chicago_2021-06-22_BT10.tif\",\"Chicago_2021-06-22_b4.tif\",\"Chicago_2021-06-22_b5.tif\",\"Chicago_2021-07-01_BT10.tif\",\"Chicago_2021-07-01_b4.tif\",\"Chicago_2021-07-01_b5.tif\",\"Chicago_2021-07-17_BT10.tif\",\"Chicago_2021-07-17_b4.tif\",\"Chicago_2021-07-17_b5.tif\",\"Chicago_2021-07-24_BT10.tif\",\"Chicago_2021-07-24_b4.tif\",\"Chicago_2021-07-24_b5.tif\",\"Chicago_2021-08-02_BT10.tif\",\"Chicago_2021-08-02_b4.tif\",\"Chicago_2021-08-02_b5.tif\",\"Chicago_2021-08-09_BT10.tif\",\"Chicago_2021-08-09_b4.tif\",\"Chicago_2021-08-09_b5.tif\",\"Chicago_2021-08-18_BT10.tif\",\"Chicago_2021-08-18_b4.tif\",\"Chicago_2021-08-18_b5.tif\",\"Chicago_2021-08-25_BT10.tif\",\"Chicago_2021-08-25_b4.tif\",\"Chicago_2021-08-25_b5.tif\"]"
+      }
+    ]
+  },
+  {
+    "question_index": "55",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question55"
+        },
+        "output": "[\"Germany_2021-07-29_BT10.tif\",\"Germany_2021-07-29_b4.tif\",\"Germany_2021-07-29_b5.tif\"]"
+      },
+      {
+        "name": "calculate_ndvi",
+        "input": {
+          "input_red_paths": [
+            "benchmark/data/question55/Germany_2021-07-29_b4.tif"
+          ],
+          "input_nir_paths": [
+            "benchmark/data/question55/Germany_2021-07-29_b5.tif"
+          ],
+          "output_paths": [
+            "ndvi_result.tif"
+          ]
+        },
+        "output": "Error: calculate_ndvi is not a valid tool, try one of [compute_linear_trend, mann_kendall_test, sens_slope, stl_decompose, detect_change_points, autocorrelation_function, detect_seasonality_acf, getis_ord_gi_star, analyze_hotspot_direction, coefficient_of_variation, skewness, kurtosis, calc_batch_image_mean, calc_batch_image_std, calc_batch_image_median, calc_batch_image_min, calc_batch_image_max, calc_batch_image_skewness, calc_batch_image_kurtosis, calc_batch_image_sum, calc_batch_image_hotspot_percentage, calc_batch_image_hotspot_tif, difference, division, percentage_change, kelvin_to_celsius, celsius_to_kelvin, max_value_and_index, min_value_and_index, count_above_threshold, calculate_bbox_area, ceil_number, count_skeleton_contours, multiply, bboxes2centroids, centroid_distance_extremes, get_list_object_via_indexes, mean, calculate_threshold_ratio, calc_batch_fire_pixels, create_fire_increase_map, identify_fire_prone_areas, get_percentile_value_from_image, image_division_mean, calculate_intersection_percentage, calc_batch_image_mean_mean, calc_batch_image_mean_max, calc_batch_image_mean_max_min, calc_batch_image_mean_threshold, calculate_multi_band_threshold_ratio, count_pixels_satisfying_conditions, count_images_exceeding_threshold_ratio, average_ratio_exceeding_threshold, count_images_exceeding_mean_multiplier, count_spikes_from_values, calculate_band_mean_by_condition, calc_threshold_value_mean, calc_extreme_snow_loss_percentage_from_binary_map, calculate_tif_average, calculate_tif_difference, subtract, calculate_area, grayscale_to_colormap, MSCN, RemoteCLIP, Strip_R_CNN, SM3Det, RemoteSAM, InstructSAM, SAM2, ChangeOS, calculate_batch_ndvi, calculate_batch_ndwi, calculate_batch_ndbi, calculate_batch_evi, calculate_batch_nbr, calculate_batch_fvc, calculate_batch_wri, calculate_batch_ndti, calculate_batch_frp, calculate_batch_ndsi, threshold_segmentation, bbox_expansion, calculate_mean_lst_by_ndvi, calculate_max_lst_by_ndvi, get_filelist, radiometric_correction_sr, apply_cloud_mask, band_ratio, lst_single_channel, lst_multi_channel, split_window, temperature_emissivity_separation, modis_day_night_lst, ttm_lst, compute_tvdi, ATI, dual_polarization_differential, dual_frequency_diff, multi_freq_bt, chang_single_param_inversion, nasa_team_sea_ice_concentration, dual_polarization_ratio, calculate_water_turbidity_ntu]."
+      },
+      {
+        "name": "lst_single_channel",
+        "input": {
+          "bt_path": "benchmark/data/question55/Germany_2021-07-29_BT10.tif",
+          "red_path": "benchmark/data/question55/Germany_2021-07-29_b4.tif",
+          "nir_path": "benchmark/data/question55/Germany_2021-07-29_b5.tif",
+          "output_path": "lst_result.tif"
+        },
+        "output": "Result saved at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/lst_result.tif"
+      },
+      {
+        "name": "calculate_max_lst_by_ndvi",
+        "arguments": {
+          "red_path": [
+            "benchmark/data/question55/Germany_2021-07-29_b4.tif",
+            "benchmark/data/question55/Germany_2021-07-29_b4.tif"
+          ],
+          "nir_path": [
+            "benchmark/data/question55/Germany_2021-07-29_b5.tif",
+            "benchmark/data/question55/Germany_2021-07-29_b5.tif"
+          ],
+          "lst_path": [
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/lst_result.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/lst_result.tif"
+          ],
+          "ndvi_threshold": [
+            0.7,
+            0.2
+          ],
+          "mode": [
+            "above",
+            "below"
+          ]
+        },
+        "output": [
+          "299.40057373046875",
+          "303.22784423828125"
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "56",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question56"
+        },
+        "output": "[\"2022_08_10_0110_BT_31.tif\",\"2022_08_10_0110_BT_32.tif\"]"
+      },
+      {
+        "name": "split_window",
+        "input": {
+          "band31_path": "benchmark/data/question56/2022_08_10_0110_BT_31.tif",
+          "band32_path": "benchmark/data/question56/2022_08_10_0110_BT_32.tif",
+          "emissivity31_path": "benchmark/data/question56/emissivity31.tif",
+          "emissivity32_path": "benchmark/data/question56/emissivity32.tif",
+          "parameter": "LST",
+          "output_path": "benchmark/data/question56/lst_output.tif"
+        },
+        "output": "Error: ToolException(\"Error calling tool 'split_window': benchmark/data/question56/emissivity31.tif: No such file or directory\")\n Please fix your mistakes."
+      },
+      {
+        "name": "calculate_threshold_ratio",
+        "input": {
+          "image_paths": "benchmark/data/question56/lst_output.tif",
+          "threshold": 300,
+          "above": false
+        },
+        "output": "Error: ToolException(\"Error calling tool 'calculate_threshold_ratio': 1 validation error for call[calculate_threshold_ratio]\\nabove\\n  Unexpected keyword argument [type=unexpected_keyword_argument, input_value=False, input_type=bool]\\n    For further information visit https://errors.pydantic.dev/2.11/v/unexpected_keyword_argument\")\n Please fix your mistakes."
+      }
+    ]
+  },
+  {
+    "question_index": "57",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question57"
+        },
+        "output": "[\"2023_01_01_0050_BT_31.tif\",\"2023_01_01_0050_BT_32.tif\",\"2023_01_01_1250_BT_31.tif\",\"2023_01_01_1250_BT_32.tif\",\"2023_01_01_2355_BT_31.tif\",\"2023_01_01_2355_BT_32.tif\",\"2023_01_02_1155_BT_31.tif\",\"2023_01_02_1155_BT_32.tif\",\"2023_01_02_1335_BT_31.tif\",\"2023_01_02_1335_BT_32.tif\",\"2023_01_03_0035_BT_31.tif\",\"2023_01_03_0035_BT_32.tif\",\"2023_01_03_1235_BT_31.tif\",\"2023_01_03_1235_BT_32.tif\",\"2023_01_03_2335_BT_31.tif\",\"2023_01_03_2335_BT_32.tif\",\"2023_01_04_1315_BT_31.tif\",\"2023_01_04_1315_BT_32.tif\",\"2023_01_05_0020_BT_31.tif\",\"2023_01_05_0020_BT_32.tif\",\"2023_01_05_1220_BT_31.tif\",\"2023_01_05_1220_BT_32.tif\",\"2023_01_05_2320_BT_31.tif\",\"2023_01_05_2320_BT_32.tif\",\"2023_01_06_1300_BT_31.tif\",\"2023_01_06_1300_BT_32.tif\",\"2023_01_07_0000_BT_31.tif\",\"2023_01_07_0000_BT_32.tif\",\"2023_01_08_0045_BT_31.tif\",\"2023_01_08_0045_BT_32.tif\",\"2023_01_08_1245_BT_31.tif\",\"2023_01_08_1245_BT_32.tif\",\"2023_01_08_2345_BT_31.tif\",\"2023_01_08_2345_BT_32.tif\",\"2023_01_09_1325_BT_31.tif\",\"2023_01_09_1325_BT_32.tif\",\"2023_01_10_0025_BT_31.tif\",\"2023_01_10_0025_BT_32.tif\",\"2023_01_10_1230_BT_31.tif\",\"2023_01_10_1230_BT_32.tif\",\"2023_01_10_2330_BT_31.tif\",\"2023_01_10_2330_BT_32.tif\",\"2023_01_11_1310_BT_31.tif\",\"2023_01_11_1310_BT_32.tif\",\"2023_01_12_0010_BT_31.tif\",\"2023_01_12_0010_BT_32.tif\",\"2023_01_12_1215_BT_31.tif\",\"2023_01_12_1215_BT_32.tif\",\"2023_01_12_2315_BT_31.tif\",\"2023_01_12_2315_BT_32.tif\",\"2023_01_13_0050_BT_31.tif\",\"2023_01_13_0050_BT_32.tif\",\"2023_01_13_0055_BT_31.tif\",\"2023_01_13_0055_BT_32.tif\",\"2023_01_13_1255_BT_31.tif\",\"2023_01_13_1255_BT_32.tif\",\"2023_01_13_2355_BT_31.tif\",\"2023_01_13_2355_BT_32.tif\",\"2023_01_14_1200_BT_31.tif\",\"2023_01_14_1200_BT_32.tif\",\"2023_01_14_1335_BT_31.tif\",\"2023_01_14_1335_BT_32.tif\",\"2023_01_15_0035_BT_31.tif\",\"2023_01_15_0035_BT_32.tif\",\"2023_01_15_1240_BT_31.tif\",\"2023_01_15_1240_BT_32.tif\",\"2023_01_15_2340_BT_31.tif\",\"2023_01_15_2340_BT_32.tif\",\"2023_01_16_1320_BT_31.tif\",\"2023_01_16_1320_BT_32.tif\",\"2023_01_17_0020_BT_31.tif\",\"2023_01_17_0020_BT_32.tif\",\"2023_01_17_1225_BT_31.tif\",\"2023_01_17_1225_BT_32.tif\",\"2023_01_17_2325_BT_31.tif\",\"2023_01_17_2325_BT_32.tif\",\"2023_01_18_1305_BT_31.tif\",\"2023_01_18_1305_BT_32.tif\",\"2023_01_19_0005_BT_31.tif\",\"2023_01_19_0005_BT_32.tif\",\"2023_01_19_1205_BT_31.tif\",\"2023_01_19_1205_BT_32.tif\",\"2023_01_19_2310_BT_31.tif\",\"2023_01_19_2310_BT_32.tif\",\"2023_01_20_0045_BT_31.tif\",\"2023_01_20_0045_BT_32.tif\",\"2023_01_20_1250_BT_31.tif\",\"2023_01_20_1250_BT_32.tif\",\"2023_01_20_2350_BT_31.tif\",\"2023_01_20_2350_BT_32.tif\",\"2023_01_21_1150_BT_31.tif\",\"2023_01_21_1150_BT_32.tif\",\"2023_01_21_1330_BT_31.tif\",\"2023_01_21_1330_BT_32.tif\",\"2023_01_22_0030_BT_31.tif\",\"2023_01_22_0030_BT_32.tif\",\"2023_01_22_1230_BT_31.tif\",\"2023_01_22_1230_BT_32.tif\",\"2023_01_22_2335_BT_31.tif\",\"2023_01_22_2335_BT_32.tif\",\"2023_01_23_1315_BT_31.tif\",\"2023_01_23_1315_BT_32.tif\",\"2023_01_24_0015_BT_31.tif\",\"2023_01_24_0015_BT_32.tif\",\"2023_01_24_1215_BT_31.tif\",\"2023_01_24_1215_BT_32.tif\",\"2023_01_24_2315_BT_31.tif\",\"2023_01_24_2315_BT_32.tif\",\"2023_01_25_1255_BT_31.tif\",\"2023_01_25_1255_BT_32.tif\",\"2023_01_26_0000_BT_31.tif\",\"2023_01_26_0000_BT_32.tif\",\"2023_01_26_1200_BT_31.tif\",\"2023_01_26_1200_BT_32.tif\",\"2023_01_26_1340_BT_31.tif\",\"2023_01_26_1340_BT_32.tif\",\"2023_01_27_0040_BT_31.tif\",\"2023_01_27_0040_BT_32.tif\",\"2023_01_27_1240_BT_31.tif\",\"2023_01_27_1240_BT_32.tif\",\"2023_01_27_2340_BT_31.tif\",\"2023_01_27_2340_BT_32.tif\",\"2023_01_28_1320_BT_31.tif\",\"2023_01_28_1320_BT_32.tif\",\"2023_01_29_0025_BT_31.tif\",\"2023_01_29_0025_BT_32.tif\",\"2023_01_29_1225_BT_31.tif\",\"2023_01_29_1225_BT_32.tif\",\"2023_01_29_2325_BT_31.tif\",\"2023_01_29_2325_BT_32.tif\",\"2023_01_30_1305_BT_31.tif\",\"2023_01_30_1305_BT_32.tif\",\"2023_01_31_0005_BT_31.tif\",\"2023_01_31_0005_BT_32.tif\",\"2023_01_31_1210_BT_31.tif\",\"2023_01_31_1210_BT_32.tif\",\"2023_01_31_2310_BT_31.tif\",\"2023_01_31_2310_BT_32.tif\"]"
+      }
+    ]
+  },
+  {
+    "question_index": "58",
+    "tool_calls": []
+  },
+  {
+    "question_index": "59",
+    "tool_calls": []
+  },
+  {
+    "question_index": "60",
+    "tool_calls": []
+  },
+  {
+    "question_index": "61",
+    "tool_calls": []
+  },
+  {
+    "question_index": "62",
+    "tool_calls": []
+  },
+  {
+    "question_index": "63",
+    "tool_calls": []
+  },
+  {
+    "question_index": "64",
+    "tool_calls": []
+  },
+  {
+    "question_index": "65",
+    "tool_calls": []
+  },
+  {
+    "question_index": "66",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/supported_data/question66"
+        },
+        "output": "[\"answer_66.py\",\"lst_tes_result.tif\"]"
+      },
+      {
+        "name": "temperature_emissivity_separation",
+        "input": {
+          "tir_band_paths": [
+            "benchmark/supported_data/question66/band_10.tif",
+            "benchmark/supported_data/question66/band_11.tif",
+            "benchmark/supported_data/question66/band_12.tif",
+            "benchmark/supported_data/question66/band_13.tif",
+            "benchmark/supported_data/question66/band_14.tif"
+          ],
+          "representative_band_index": 3,
+          "output_path": "benchmark/supported_data/question66/tes_output.tif"
+        },
+        "output": "Error: ToolException(\"Error calling tool 'temperature_emissivity_separation': benchmark/supported_data/question66/band_13.tif: No such file or directory\")\n Please fix your mistakes."
+      },
+      {
+        "name": "calculate_multi_band_threshold_ratio",
+        "input": {
+          "image_path": "benchmark/supported_data/question66/lst_tes_result.tif",
+          "band_conditions": [
+            [
+              0,
+              300,
+              "above"
+            ],
+            [
+              1,
+              0.96,
+              "below"
+            ]
+          ]
+        },
+        "output": "41.13315833506345"
+      }
+    ]
+  },
+  {
+    "question_index": "67",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/supported_data/question67"
+        },
+        "output": "[\"answer_67.py\",\"lst_tes_result.tif\"]"
+      },
+      {
+        "name": "temperature_emissivity_separation",
+        "input": {
+          "tir_band_paths": [
+            "benchmark/supported_data/question67/aster_band10.tif",
+            "benchmark/supported_data/question67/aster_band11.tif",
+            "benchmark/supported_data/question67/aster_band12.tif",
+            "benchmark/supported_data/question67/aster_band13.tif",
+            "benchmark/supported_data/question67/aster_band14.tif"
+          ],
+          "representative_band_index": 3,
+          "output_path": "benchmark/supported_data/question67/tir_result.tif"
+        },
+        "output": "Error: ToolException(\"Error calling tool 'temperature_emissivity_separation': benchmark/supported_data/question67/aster_band13.tif: No such file or directory\")\n Please fix your mistakes."
+      },
+      {
+        "name": "division",
+        "input": {
+          "a": "benchmark/supported_data/question67/lst_tes_result.tif",
+          "b": "benchmark/supported_data/question67/lst_tes_result.tif"
+        },
+        "output": "Error: ToolException(\"Input validation error: 'benchmark/supported_data/question67/lst_tes_result.tif' is not of type 'number'\")\n Please fix your mistakes."
+      },
+      {
+        "name": "image_division_mean",
+        "input": {
+          "image_path1": "benchmark/supported_data/question67/lst_tes_result.tif",
+          "band1": 1,
+          "image_path2": "benchmark/supported_data/question67/lst_tes_result.tif",
+          "band2": 2
+        },
+        "output": "1.0"
+      }
+    ]
+  },
+  {
+    "question_index": "68",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question68"
+        },
+        "output": "[\"2020_03_24_BT_10.tif\",\"2020_03_24_BT_11.tif\",\"2020_03_24_BT_12.tif\",\"2020_03_24_BT_13.tif\",\"2020_03_24_BT_14.tif\"]"
+      },
+      {
+        "name": "temperature_emissivity_separation",
+        "input": {
+          "tir_band_paths": [
+            "benchmark/data/question68/2020_03_24_BT_10.tif",
+            "benchmark/data/question68/2020_03_24_BT_11.tif",
+            "benchmark/data/question68/2020_03_24_BT_12.tif",
+            "benchmark/data/question68/2020_03_24_BT_13.tif",
+            "benchmark/data/question68/2020_03_24_BT_14.tif"
+          ],
+          "representative_band_index": 3,
+          "output_path": "question68/tes_result.tif"
+        },
+        "output": "Result saved at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/question68/tes_result.tif"
+      },
+      {
+        "name": "calculate_threshold_ratio",
+        "arguments": {
+          "image_path": [
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/question68/tes_result.tif"
+          ],
+          "threshold": [
+            0.07,
+            0.07
+          ],
+          "band_index": [
+            2,
+            2
+          ]
+        },
+        "output": [
+          "Error: ToolException(\"Input validation error: 'image_paths' is a required property\")\n Please fix your mistakes.",
+          "100.0"
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "69",
+    "tool_calls": []
+  },
+  {
+    "question_index": "70",
+    "tool_calls": []
+  },
+  {
+    "question_index": "71",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question71"
+        },
+        "output": "[\"2022_12_23_BT_10.tif\",\"2022_12_23_BT_11.tif\",\"2022_12_23_BT_12.tif\",\"2022_12_23_BT_13.tif\",\"2022_12_23_BT_14.tif\"]"
+      },
+      {
+        "name": "ttm_lst",
+        "input": {
+          "tir_band_paths": [
+            "benchmark/data/question71/2022_12_23_BT_10.tif",
+            "benchmark/data/question71/2022_12_23_BT_11.tif",
+            "benchmark/data/question71/2022_12_23_BT_12.tif"
+          ],
+          "output_path": "ttm_lst_result.tif"
+        },
+        "output": "Result saved at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ttm_lst_result.tif"
+      },
+      {
+        "name": "get_percentile_value_from_image",
+        "input": {
+          "image_path": "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ttm_lst_result.tif",
+          "percentile": 70
+        },
+        "output": "277.900146484375"
+      }
+    ]
+  },
+  {
+    "question_index": "72",
+    "tool_calls": []
+  },
+  {
+    "question_index": "73",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question73"
+        },
+        "output": "[\"2020_06_28_BT_10.tif\",\"2020_06_28_BT_11.tif\",\"2020_06_28_BT_12.tif\",\"2020_06_28_BT_13.tif\",\"2020_06_28_BT_14.tif\"]"
+      },
+      {
+        "name": "ttm_lst",
+        "input": {
+          "tir_band_paths": [
+            "benchmark/data/question73/2020_06_28_BT_10.tif",
+            "benchmark/data/question73/2020_06_28_BT_11.tif",
+            "benchmark/data/question73/2020_06_28_BT_12.tif"
+          ],
+          "output_path": "ttm_result.tif"
+        },
+        "output": "Result saved at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ttm_result.tif"
+      },
+      {
+        "name": "calc_batch_image_max",
+        "input": {
+          "file_list": [
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ttm_result.tif"
+          ],
+          "uint8": false
+        },
+        "output": "[307.6957092285156]"
+      }
+    ]
+  },
+  {
+    "question_index": "74",
+    "tool_calls": []
+  },
+  {
+    "question_index": "75",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question75"
+        },
+        "output": "[\"2020_08_01_BT_10.tif\",\"2020_08_01_BT_11.tif\",\"2020_08_01_BT_12.tif\",\"2020_08_01_BT_13.tif\",\"2020_08_01_BT_14.tif\"]"
+      },
+      {
+        "name": "ttm_lst",
+        "input": {
+          "tir_band_paths": [
+            "benchmark/data/question75/2020_08_01_BT_10.tif",
+            "benchmark/data/question75/2020_08_01_BT_11.tif",
+            "benchmark/data/question75/2020_08_01_BT_12.tif"
+          ],
+          "output_path": "ttm_lst_result.tif"
+        },
+        "output": "Result saved at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ttm_lst_result.tif"
+      },
+      {
+        "name": "calc_batch_image_mean",
+        "input": {
+          "file_list": [
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ttm_lst_result.tif"
+          ],
+          "uint8": false
+        },
+        "output": "[98.40218353271484]"
+      }
+    ]
+  },
+  {
+    "question_index": "76",
+    "tool_calls": []
+  },
+  {
+    "question_index": "77",
+    "tool_calls": []
+  },
+  {
+    "question_index": "78",
+    "tool_calls": []
+  },
+  {
+    "question_index": "79",
+    "tool_calls": []
+  },
+  {
+    "question_index": "80",
+    "tool_calls": []
+  },
+  {
+    "question_index": "81",
+    "tool_calls": []
+  },
+  {
+    "question_index": "82",
+    "tool_calls": []
+  },
+  {
+    "question_index": "83",
+    "tool_calls": []
+  },
+  {
+    "question_index": "84",
+    "tool_calls": []
+  },
+  {
+    "question_index": "85",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question85"
+        },
+        "output": "[\"2015_07_01_0950_BT_31_Night.tif\",\"2015_07_01_1915_BT_31_Day.tif\",\"2015_07_02_1030_BT_31_Night.tif\",\"2015_07_02_1820_BT_31_Day.tif\",\"2015_07_03_0935_BT_31_Night.tif\",\"2015_07_03_1900_BT_31_Day.tif\",\"2015_07_03_1905_BT_31_Day.tif\",\"2015_07_04_1020_BT_31_Night.tif\",\"2015_07_04_1805_BT_31_Day.tif\",\"2015_07_04_1945_BT_31_Day.tif\",\"2015_07_05_0925_BT_31_Night.tif\",\"2015_07_05_1850_BT_31_Day.tif\",\"2015_07_06_1005_BT_31_Night.tif\",\"2015_07_06_1010_BT_31_Night.tif\",\"2015_07_06_1935_BT_31_Day.tif\",\"2015_07_07_0910_BT_31_Night.tif\",\"2015_07_07_1050_BT_31_Night.tif\",\"2015_07_07_1840_BT_31_Day.tif\",\"2015_07_08_0955_BT_31_Night.tif\",\"2015_07_08_1920_BT_31_Day.tif\",\"2015_07_09_1040_BT_31_Night.tif\",\"2015_07_09_1825_BT_31_Day.tif\",\"2015_07_10_0945_BT_31_Night.tif\",\"2015_07_10_1910_BT_31_Day.tif\",\"2015_07_11_1025_BT_31_Night.tif\",\"2015_07_11_1815_BT_31_Day.tif\",\"2015_07_11_1950_BT_31_Day.tif\",\"2015_07_12_0930_BT_31_Night.tif\",\"2015_07_12_1855_BT_31_Day.tif\",\"2015_07_13_1015_BT_31_Night.tif\",\"2015_07_13_1800_BT_31_Day.tif\",\"2015_07_13_1940_BT_31_Day.tif\",\"2015_07_14_0920_BT_31_Night.tif\",\"2015_07_14_1055_BT_31_Night.tif\",\"2015_07_14_1845_BT_31_Day.tif\",\"2015_07_15_1000_BT_31_Night.tif\",\"2015_07_15_1925_BT_31_Day.tif\",\"2015_07_16_0905_BT_31_Night.tif\",\"2015_07_16_1045_BT_31_Night.tif\",\"2015_07_16_1830_BT_31_Day.tif\",\"2015_07_17_0950_BT_31_Night.tif\",\"2015_07_17_1915_BT_31_Day.tif\",\"2015_07_18_1030_BT_31_Night.tif\",\"2015_07_18_1820_BT_31_Day.tif\",\"2015_07_19_0935_BT_31_Night.tif\",\"2015_07_19_1900_BT_31_Day.tif\",\"2015_07_19_1905_BT_31_Day.tif\",\"2015_07_20_1020_BT_31_Night.tif\",\"2015_07_20_1805_BT_31_Day.tif\",\"2015_07_20_1945_BT_31_Day.tif\",\"2015_07_21_0925_BT_31_Night.tif\",\"2015_07_21_1850_BT_31_Day.tif\",\"2015_07_22_1005_BT_31_Night.tif\",\"2015_07_22_1935_BT_31_Day.tif\",\"2015_07_23_0910_BT_31_Night.tif\",\"2015_07_23_1050_BT_31_Night.tif\",\"2015_07_23_1840_BT_31_Day.tif\",\"2015_07_24_0955_BT_31_Night.tif\",\"2015_07_24_1920_BT_31_Day.tif\",\"2015_07_25_1035_BT_31_Night.tif\",\"2015_07_25_1040_BT_31_Night.tif\",\"2015_07_25_1825_BT_31_Day.tif\",\"2015_07_26_0940_BT_31_Night.tif\",\"2015_07_26_0945_BT_31_Night.tif\",\"2015_07_26_1910_BT_31_Day.tif\",\"2015_07_27_1025_BT_31_Night.tif\",\"2015_07_27_1950_BT_31_Day.tif\",\"2015_07_28_0930_BT_31_Night.tif\",\"2015_07_28_1855_BT_31_Day.tif\",\"2015_07_29_1015_BT_31_Night.tif\",\"2015_07_29_1800_BT_31_Day.tif\",\"2015_07_29_1940_BT_31_Day.tif\",\"2015_07_30_0920_BT_31_Night.tif\",\"2015_07_30_1055_BT_31_Night.tif\",\"2015_07_30_1845_BT_31_Day.tif\",\"2015_07_31_1000_BT_31_Night.tif\",\"2015_07_31_1925_BT_31_Day.tif\",\"2023_07_01_1015_BT_31_Night.tif\",\"2023_07_01_1750_BT_31_Day.tif\",\"2023_07_01_1755_BT_31_Day.tif\",\"2023_07_02_0920_BT_31_Night.tif\",\"2023_07_02_1100_BT_31_Night.tif\",\"2023_07_02_1835_BT_31_Day.tif\",\"2023_07_03_1000_BT_31_Night.tif\",\"2023_07_03_1735_BT_31_Day.tif\",\"2023_07_03_1915_BT_31_Day.tif\",\"2023_07_04_1045_BT_31_Night.tif\",\"2023_07_04_1815_BT_31_Day.tif\",\"2023_07_05_0950_BT_31_Night.tif\",\"2023_07_05_1855_BT_31_Day.tif\",\"2023_07_05_1900_BT_31_Day.tif\",\"2023_07_06_1030_BT_31_Night.tif\",\"2023_07_06_1800_BT_31_Day.tif\",\"2023_07_07_0935_BT_31_Night.tif\",\"2023_07_07_1110_BT_31_Night.tif\",\"2023_07_07_1840_BT_31_Day.tif\",\"2023_07_08_1015_BT_31_Night.tif\",\"2023_07_08_1745_BT_31_Day.tif\",\"2023_07_08_1920_BT_31_Day.tif\",\"2023_07_09_0920_BT_31_Night.tif\",\"2023_07_09_1055_BT_31_Night.tif\",\"2023_07_09_1825_BT_31_Day.tif\",\"2023_07_10_1000_BT_31_Night.tif\",\"2023_07_10_1905_BT_31_Day.tif\",\"2023_07_11_1045_BT_31_Night.tif\",\"2023_07_11_1810_BT_31_Day.tif\",\"2023_07_12_0945_BT_31_Night.tif\",\"2023_07_12_1850_BT_31_Day.tif\",\"2023_07_13_1030_BT_31_Night.tif\",\"2023_07_13_1750_BT_31_Day.tif\",\"2023_07_14_0930_BT_31_Night.tif\",\"2023_07_14_0935_BT_31_Night.tif\",\"2023_07_14_1110_BT_31_Night.tif\",\"2023_07_14_1830_BT_31_Day.tif\",\"2023_07_15_1015_BT_31_Night.tif\",\"2023_07_15_1735_BT_31_Day.tif\",\"2023_07_15_1915_BT_31_Day.tif\",\"2023_07_16_1055_BT_31_Night.tif\",\"2023_07_16_1815_BT_31_Day.tif\",\"2023_07_17_1000_BT_31_Night.tif\",\"2023_07_17_1855_BT_31_Day.tif\",\"2023_07_18_1040_BT_31_Night.tif\",\"2023_07_18_1800_BT_31_Day.tif\",\"2023_07_19_0945_BT_31_Night.tif\",\"2023_07_19_1840_BT_31_Day.tif\",\"2023_07_20_1025_BT_31_Night.tif\",\"2023_07_20_1030_BT_31_Night.tif\",\"2023_07_20_1745_BT_31_Day.tif\",\"2023_07_20_1920_BT_31_Day.tif\",\"2023_07_21_0930_BT_31_Night.tif\",\"2023_07_21_1110_BT_31_Night.tif\",\"2023_07_21_1825_BT_31_Day.tif\",\"2023_07_22_1015_BT_31_Night.tif\",\"2023_07_22_1905_BT_31_Day.tif\",\"2023_07_23_1055_BT_31_Night.tif\",\"2023_07_23_1805_BT_31_Day.tif\",\"2023_07_24_1000_BT_31_Night.tif\",\"2023_07_24_1845_BT_31_Day.tif\",\"2023_07_24_1850_BT_31_Day.tif\",\"2023_07_25_1040_BT_31_Night.tif\",\"2023_07_25_1750_BT_31_Day.tif\",\"2023_07_26_0945_BT_31_Night.tif\",\"2023_07_26_1830_BT_31_Day.tif\",\"2023_07_27_1025_BT_31_Night.tif\",\"2023_07_27_1735_BT_31_Day.tif\",\"2023_07_27_1910_BT_31_Day.tif\",\"2023_07_28_0930_BT_31_Night.tif\",\"2023_07_28_1815_BT_31_Day.tif\",\"2023_07_29_1855_BT_31_Day.tif\",\"2023_07_30_1800_BT_31_Day.tif\",\"2023_07_31_1840_BT_31_Day.tif\",\"Central California_2015-07-01_0950_Emis31.tif\",\"Central California_2015-07-01_1915_Emis31.tif\",\"Central California_2015-07-02_1030_Emis31.tif\",\"Central California_2015-07-02_1820_Emis31.tif\",\"Central California_2015-07-03_0935_Emis31.tif\",\"Central California_2015-07-03_1900_Emis31.tif\",\"Central California_2015-07-03_1905_Emis31.tif\",\"Central California_2015-07-04_1020_Emis31.tif\",\"Central California_2015-07-04_1805_Emis31.tif\",\"Central California_2015-07-04_1945_Emis31.tif\",\"Central California_2015-07-05_0925_Emis31.tif\",\"Central California_2015-07-05_1850_Emis31.tif\",\"Central California_2015-07-06_1005_Emis31.tif\",\"Central California_2015-07-06_1010_Emis31.tif\",\"Central California_2015-07-06_1935_Emis31.tif\",\"Central California_2015-07-07_0910_Emis31.tif\",\"Central California_2015-07-07_1050_Emis31.tif\",\"Central California_2015-07-07_1840_Emis31.tif\",\"Central California_2015-07-08_0955_Emis31.tif\",\"Central California_2015-07-08_1920_Emis31.tif\",\"Central California_2015-07-09_1040_Emis31.tif\",\"Central California_2015-07-09_1825_Emis31.tif\",\"Central California_2015-07-10_0945_Emis31.tif\",\"Central California_2015-07-10_1910_Emis31.tif\",\"Central California_2015-07-11_1025_Emis31.tif\",\"Central California_2015-07-11_1815_Emis31.tif\",\"Central California_2015-07-11_1950_Emis31.tif\",\"Central California_2015-07-12_0930_Emis31.tif\",\"Central California_2015-07-12_1855_Emis31.tif\",\"Central California_2015-07-13_1015_Emis31.tif\",\"Central California_2015-07-13_1800_Emis31.tif\",\"Central California_2015-07-13_1940_Emis31.tif\",\"Central California_2015-07-14_0920_Emis31.tif\",\"Central California_2015-07-14_1055_Emis31.tif\",\"Central California_2015-07-14_1845_Emis31.tif\",\"Central California_2015-07-15_1000_Emis31.tif\",\"Central California_2015-07-15_1925_Emis31.tif\",\"Central California_2015-07-16_0905_Emis31.tif\",\"Central California_2015-07-16_1045_Emis31.tif\",\"Central California_2015-07-16_1830_Emis31.tif\",\"Central California_2015-07-17_0950_Emis31.tif\",\"Central California_2015-07-17_1915_Emis31.tif\",\"Central California_2015-07-18_1030_Emis31.tif\",\"Central California_2015-07-18_1820_Emis31.tif\",\"Central California_2015-07-19_0935_Emis31.tif\",\"Central California_2015-07-19_1900_Emis31.tif\",\"Central California_2015-07-19_1905_Emis31.tif\",\"Central California_2015-07-20_1020_Emis31.tif\",\"Central California_2015-07-20_1805_Emis31.tif\",\"Central California_2015-07-20_1945_Emis31.tif\",\"Central California_2015-07-21_0925_Emis31.tif\",\"Central California_2015-07-21_1850_Emis31.tif\",\"Central California_2015-07-22_1005_Emis31.tif\",\"Central California_2015-07-22_1935_Emis31.tif\",\"Central California_2015-07-23_0910_Emis31.tif\",\"Central California_2015-07-23_1050_Emis31.tif\",\"Central California_2015-07-23_1840_Emis31.tif\",\"Central California_2015-07-24_0955_Emis31.tif\",\"Central California_2015-07-24_1920_Emis31.tif\",\"Central California_2015-07-25_1035_Emis31.tif\",\"Central California_2015-07-25_1040_Emis31.tif\",\"Central California_2015-07-25_1825_Emis31.tif\",\"Central California_2015-07-26_0940_Emis31.tif\",\"Central California_2015-07-26_0945_Emis31.tif\",\"Central California_2015-07-26_1910_Emis31.tif\",\"Central California_2015-07-27_1025_Emis31.tif\",\"Central California_2015-07-27_1950_Emis31.tif\",\"Central California_2015-07-28_0930_Emis31.tif\",\"Central California_2015-07-28_1855_Emis31.tif\",\"Central California_2015-07-29_1015_Emis31.tif\",\"Central California_2015-07-29_1800_Emis31.tif\",\"Central California_2015-07-29_1940_Emis31.tif\",\"Central California_2015-07-30_0920_Emis31.tif\",\"Central California_2015-07-30_1055_Emis31.tif\",\"Central California_2015-07-30_1845_Emis31.tif\",\"Central California_2015-07-31_1000_Emis31.tif\",\"Central California_2015-07-31_1925_Emis31.tif\",\"Central-California _2023-07-01_1015_Emis31.tif\",\"Central-California _2023-07-01_1750_Emis31.tif\",\"Central-California _2023-07-01_1755_Emis31.tif\",\"Central-California _2023-07-02_0920_Emis31.tif\",\"Central-California _2023-07-02_1100_Emis31.tif\",\"Central-California _2023-07-02_1835_Emis31.tif\",\"Central-California _2023-07-03_1000_Emis31.tif\",\"Central-California _2023-07-03_1735_Emis31.tif\",\"Central-California _2023-07-03_1915_Emis31.tif\",\"Central-California _2023-07-04_1045_Emis31.tif\",\"Central-California _2023-07-04_1815_Emis31.tif\",\"Central-California _2023-07-05_0950_Emis31.tif\",\"Central-California _2023-07-05_1855_Emis31.tif\",\"Central-California _2023-07-05_1900_Emis31.tif\",\"Central-California _2023-07-06_1030_Emis31.tif\",\"Central-California _2023-07-06_1800_Emis31.tif\",\"Central-California _2023-07-07_0935_Emis31.tif\",\"Central-California _2023-07-07_1110_Emis31.tif\",\"Central-California _2023-07-07_1840_Emis31.tif\",\"Central-California _2023-07-08_1015_Emis31.tif\",\"Central-California _2023-07-08_1745_Emis31.tif\",\"Central-California _2023-07-08_1920_Emis31.tif\",\"Central-California _2023-07-09_0920_Emis31.tif\",\"Central-California _2023-07-09_1055_Emis31.tif\",\"Central-California _2023-07-09_1825_Emis31.tif\",\"Central-California _2023-07-10_1000_Emis31.tif\",\"Central-California _2023-07-10_1905_Emis31.tif\",\"Central-California _2023-07-11_1045_Emis31.tif\",\"Central-California _2023-07-11_1810_Emis31.tif\",\"Central-California _2023-07-12_0945_Emis31.tif\",\"Central-California _2023-07-12_1850_Emis31.tif\",\"Central-California _2023-07-13_1030_Emis31.tif\",\"Central-California _2023-07-13_1750_Emis31.tif\",\"Central-California _2023-07-14_0930_Emis31.tif\",\"Central-California _2023-07-14_0935_Emis31.tif\",\"Central-California _2023-07-14_1110_Emis31.tif\",\"Central-California _2023-07-14_1830_Emis31.tif\",\"Central-California _2023-07-15_1015_Emis31.tif\",\"Central-California _2023-07-15_1735_Emis31.tif\",\"Central-California _2023-07-15_1915_Emis31.tif\",\"Central-California _2023-07-16_1055_Emis31.tif\",\"Central-California _2023-07-16_1815_Emis31.tif\",\"Central-California _2023-07-17_1000_Emis31.tif\",\"Central-California _2023-07-17_1855_Emis31.tif\",\"Central-California _2023-07-18_1040_Emis31.tif\",\"Central-California _2023-07-18_1800_Emis31.tif\",\"Central-California _2023-07-19_0945_Emis31.tif\",\"Central-California _2023-07-19_1840_Emis31.tif\",\"Central-California _2023-07-20_1025_Emis31.tif\",\"Central-California _2023-07-20_1030_Emis31.tif\",\"Central-California _2023-07-20_1745_Emis31.tif\",\"Central-California _2023-07-20_1920_Emis31.tif\",\"Central-California _2023-07-21_0930_Emis31.tif\",\"Central-California _2023-07-21_1110_Emis31.tif\",\"Central-California _2023-07-21_1825_Emis31.tif\",\"Central-California _2023-07-22_1015_Emis31.tif\",\"Central-California _2023-07-22_1905_Emis31.tif\",\"Central-California _2023-07-23_1055_Emis31.tif\",\"Central-California _2023-07-23_1805_Emis31.tif\",\"Central-California _2023-07-24_1000_Emis31.tif\",\"Central-California _2023-07-24_1845_Emis31.tif\",\"Central-California _2023-07-24_1850_Emis31.tif\",\"Central-California _2023-07-25_1040_Emis31.tif\",\"Central-California _2023-07-25_1750_Emis31.tif\",\"Central-California _2023-07-26_0945_Emis31.tif\",\"Central-California _2023-07-26_1830_Emis31.tif\",\"Central-California _2023-07-27_1025_Emis31.tif\",\"Central-California _2023-07-27_1735_Emis31.tif\",\"Central-California _2023-07-27_1910_Emis31.tif\",\"Central-California _2023-07-28_0930_Emis31.tif\",\"Central-California _2023-07-28_1815_Emis31.tif\",\"Central-California _2023-07-29_1855_Emis31.tif\",\"Central-California _2023-07-30_1800_Emis31.tif\",\"Central-California _2023-07-31_1840_Emis31.tif\"]"
+      },
+      {
+        "name": "modis_day_night_lst",
+        "arguments": {
+          "BT_day_path": [
+            "2015_07_01_1915_BT_31_Day.tif",
+            "benchmark/data/question85/2015_07_01_1915_BT_31_Day.tif"
+          ],
+          "BT_night_path": [
+            "2015_07_01_0950_BT_31_Night.tif",
+            "benchmark/data/question85/2015_07_01_0950_BT_31_Night.tif"
+          ],
+          "Emis_day_path": [
+            "Central California_2015-07-01_1915_Emis31.tif",
+            "benchmark/data/question85/Central California_2015-07-01_1915_Emis31.tif"
+          ],
+          "Emis_night_path": [
+            "Central California_2015-07-01_0950_Emis31.tif",
+            "benchmark/data/question85/Central California_2015-07-01_0950_Emis31.tif"
+          ],
+          "output_path": [
+            "2015_07_01_LST.tif",
+            "benchmark/data/question85/2015_07_01_LST.tif"
+          ]
+        },
+        "output": [
+          "Error: ToolException(\"Error calling tool 'modis_day_night_lst': 2015_07_01_1915_BT_31_Day.tif: No such file or directory\")\n Please fix your mistakes.",
+          "Result saved at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/benchmark/data/question85/2015_07_01_LST.tif"
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "86",
+    "tool_calls": []
+  },
+  {
+    "question_index": "87",
+    "tool_calls": []
+  },
+  {
+    "question_index": "88",
+    "tool_calls": []
+  },
+  {
+    "question_index": "89",
+    "tool_calls": []
+  },
+  {
+    "question_index": "90",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question90"
+        },
+        "output": "[\"2022_08_01_0950_BT_31_Night.tif\",\"2022_08_01_1925_BT_31_Day.tif\",\"2022_08_02_1035_BT_31_Night.tif\",\"2022_08_02_1830_BT_31_Day.tif\",\"2022_08_03_0940_BT_31_Night.tif\",\"2022_08_03_1910_BT_31_Day.tif\",\"2022_08_04_1020_BT_31_Night.tif\",\"2022_08_04_1815_BT_31_Day.tif\",\"2022_08_05_0925_BT_31_Night.tif\",\"2022_08_05_1900_BT_31_Day.tif\",\"2022_08_06_1010_BT_31_Night.tif\",\"2022_08_06_1805_BT_31_Day.tif\",\"2022_08_07_0910_BT_31_Night.tif\",\"2022_08_07_0915_BT_31_Night.tif\",\"2022_08_07_1050_BT_31_Night.tif\",\"2022_08_07_1850_BT_31_Day.tif\",\"2022_08_08_0955_BT_31_Night.tif\",\"2022_08_08_1750_BT_31_Day.tif\",\"2022_08_08_1930_BT_31_Day.tif\",\"2022_08_09_1040_BT_31_Night.tif\",\"2022_08_10_0940_BT_31_Night.tif\",\"2022_08_10_0945_BT_31_Night.tif\",\"2022_08_10_1920_BT_31_Day.tif\",\"2022_08_11_1025_BT_31_Night.tif\",\"2022_08_11_1825_BT_31_Day.tif\",\"2022_08_12_0930_BT_31_Night.tif\",\"2022_08_12_1905_BT_31_Day.tif\",\"2022_08_13_1010_BT_31_Night.tif\",\"2022_08_13_1015_BT_31_Night.tif\",\"2022_08_13_1810_BT_31_Day.tif\",\"2022_08_14_0915_BT_31_Night.tif\",\"2022_08_14_1855_BT_31_Day.tif\",\"2022_08_15_1000_BT_31_Night.tif\",\"2022_08_15_1800_BT_31_Day.tif\",\"2022_08_15_1935_BT_31_Day.tif\",\"2022_08_16_1040_BT_31_Night.tif\",\"2022_08_16_1840_BT_31_Day.tif\",\"2022_08_17_0945_BT_31_Night.tif\",\"2022_08_17_1925_BT_31_Day.tif\",\"2022_08_18_1030_BT_31_Night.tif\",\"2022_08_18_1830_BT_31_Day.tif\",\"2022_08_19_0935_BT_31_Night.tif\",\"2022_08_19_1910_BT_31_Day.tif\",\"2022_08_20_1015_BT_31_Night.tif\",\"2022_08_20_1815_BT_31_Day.tif\",\"2022_08_21_0920_BT_31_Night.tif\",\"2022_08_21_1100_BT_31_Night.tif\",\"2022_08_21_1900_BT_31_Day.tif\",\"2022_08_22_1005_BT_31_Night.tif\",\"2022_08_22_1805_BT_31_Day.tif\",\"2022_08_23_1845_BT_31_Day.tif\",\"2022_08_24_0950_BT_31_Night.tif\",\"2022_08_24_1750_BT_31_Day.tif\",\"2022_08_24_1930_BT_31_Day.tif\",\"2022_08_25_1035_BT_31_Night.tif\",\"2022_08_25_1835_BT_31_Day.tif\",\"2022_08_26_0940_BT_31_Night.tif\",\"2022_08_26_1920_BT_31_Day.tif\",\"2022_08_27_1020_BT_31_Night.tif\",\"2022_08_27_1825_BT_31_Day.tif\",\"2022_08_28_0925_BT_31_Night.tif\",\"2022_08_28_1905_BT_31_Day.tif\",\"2022_08_29_1010_BT_31_Night.tif\",\"2022_08_29_1810_BT_31_Day.tif\",\"2022_08_30_0915_BT_31_Night.tif\",\"2022_08_30_1050_BT_31_Night.tif\",\"2022_08_31_0955_BT_31_Night.tif\",\"2022_08_31_1800_BT_31_Day.tif\",\"2022_08_31_1935_BT_31_Day.tif\",\"California_2022-08-01_0950_albedo.tif\",\"California_2022-08-01_1925_albedo.tif\",\"California_2022-08-02_1035_albedo.tif\",\"California_2022-08-02_1830_albedo.tif\",\"California_2022-08-03_0940_albedo.tif\",\"California_2022-08-03_1910_albedo.tif\",\"California_2022-08-04_1020_albedo.tif\",\"California_2022-08-04_1815_albedo.tif\",\"California_2022-08-05_0925_albedo.tif\",\"California_2022-08-05_1900_albedo.tif\",\"California_2022-08-06_1010_albedo.tif\",\"California_2022-08-06_1805_albedo.tif\",\"California_2022-08-07_0910_albedo.tif\",\"California_2022-08-07_0915_albedo.tif\",\"California_2022-08-07_1050_albedo.tif\",\"California_2022-08-07_1850_albedo.tif\",\"California_2022-08-08_0955_albedo.tif\",\"California_2022-08-08_1750_albedo.tif\",\"California_2022-08-08_1930_albedo.tif\",\"California_2022-08-09_1040_albedo.tif\",\"California_2022-08-10_0940_albedo.tif\",\"California_2022-08-10_0945_albedo.tif\",\"California_2022-08-10_1920_albedo.tif\",\"California_2022-08-11_1025_albedo.tif\",\"California_2022-08-11_1825_albedo.tif\",\"California_2022-08-12_0930_albedo.tif\",\"California_2022-08-12_1905_albedo.tif\",\"California_2022-08-13_1010_albedo.tif\",\"California_2022-08-13_1015_albedo.tif\",\"California_2022-08-13_1810_albedo.tif\",\"California_2022-08-14_0915_albedo.tif\",\"California_2022-08-14_1855_albedo.tif\",\"California_2022-08-15_1000_albedo.tif\",\"California_2022-08-15_1800_albedo.tif\",\"California_2022-08-15_1935_albedo.tif\",\"California_2022-08-16_1040_albedo.tif\",\"California_2022-08-16_1840_albedo.tif\",\"California_2022-08-17_0945_albedo.tif\",\"California_2022-08-17_1925_albedo.tif\",\"California_2022-08-18_1030_albedo.tif\",\"California_2022-08-18_1830_albedo.tif\",\"California_2022-08-19_0935_albedo.tif\",\"California_2022-08-19_1910_albedo.tif\",\"California_2022-08-20_1015_albedo.tif\",\"California_2022-08-20_1815_albedo.tif\",\"California_2022-08-21_0920_albedo.tif\",\"California_2022-08-21_1100_albedo.tif\",\"California_2022-08-21_1900_albedo.tif\",\"California_2022-08-22_1005_albedo.tif\",\"California_2022-08-22_1805_albedo.tif\",\"California_2022-08-23_1845_albedo.tif\",\"California_2022-08-24_0950_albedo.tif\",\"California_2022-08-24_1750_albedo.tif\",\"California_2022-08-24_1930_albedo.tif\",\"California_2022-08-25_1035_albedo.tif\",\"California_2022-08-25_1835_albedo.tif\",\"California_2022-08-26_0940_albedo.tif\",\"California_2022-08-26_1920_albedo.tif\",\"California_2022-08-27_1020_albedo.tif\",\"California_2022-08-27_1825_albedo.tif\",\"California_2022-08-28_0925_albedo.tif\",\"California_2022-08-28_1905_albedo.tif\",\"California_2022-08-29_1010_albedo.tif\",\"California_2022-08-29_1810_albedo.tif\",\"California_2022-08-30_0915_albedo.tif\",\"California_2022-08-30_1050_albedo.tif\",\"California_2022-08-31_0955_albedo.tif\",\"California_2022-08-31_1800_albedo.tif\",\"California_2022-08-31_1935_albedo.tif\"]"
+      }
+    ]
+  },
+  {
+    "question_index": "91",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question91"
+        },
+        "output": "[\"Yellow River basin_2023-06-10_LST.tif\",\"Yellow River basin_2023-06-10_NDVI.tif\",\"Yellow River basin_2023-06-26_LST.tif\",\"Yellow River basin_2023-06-26_NDVI.tif\",\"Yellow River basin_2023-08-13_LST.tif\",\"Yellow River basin_2023-08-13_NDVI.tif\",\"Yellow River basin_2023-08-29_LST.tif\",\"Yellow River basin_2023-08-29_NDVI.tif\"]"
+      },
+      {
+        "name": "compute_tvdi",
+        "arguments": {
+          "ndvi_path": [
+            "benchmark/data/question91/Yellow River basin_2023-06-10_NDVI.tif",
+            "benchmark/data/question91/Yellow River basin_2023-08-13_NDVI.tif"
+          ],
+          "lst_path": [
+            "benchmark/data/question91/Yellow River basin_2023-06-10_LST.tif",
+            "benchmark/data/question91/Yellow River basin_2023-08-13_LST.tif"
+          ],
+          "output_path": [
+            "question91/tvdi_june10.tif",
+            "question91/tvdi_august13.tif"
+          ]
+        },
+        "output": [
+          "Result saved at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/question91/tvdi_june10.tif",
+          "Result saved at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/question91/tvdi_august13.tif"
+        ]
+      },
+      {
+        "name": "calculate_threshold_ratio",
+        "arguments": {
+          "image_paths": [
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/question91/tvdi_june10.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/question91/tvdi_june10.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/question91/tvdi_june10.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/question91/tvdi_august13.tif"
+          ],
+          "threshold": [
+            0.7,
+            0.7,
+            0.7,
+            0.7
+          ],
+          "band_index": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "return_type": [
+            "ratio"
+          ]
+        },
+        "output": [
+          "Error: ToolException(\"Error calling tool 'calculate_threshold_ratio': 1 validation error for call[calculate_threshold_ratio]\\nreturn_type\\n  Unexpected keyword argument [type=unexpected_keyword_argument, input_value='ratio', input_type=str]\\n    For further information visit https://errors.pydantic.dev/2.11/v/unexpected_keyword_argument\")\n Please fix your mistakes.",
+          "Error: ToolException(\"Error calling tool 'calculate_threshold_ratio': 1 validation error for call[calculate_threshold_ratio]\\nmode\\n  Unexpected keyword argument [type=unexpected_keyword_argument, input_value='above', input_type=str]\\n    For further information visit https://errors.pydantic.dev/2.11/v/unexpected_keyword_argument\")\n Please fix your mistakes.",
+          "60.05552657476696",
+          "49.55015856073859"
+        ]
+      },
+      {
+        "name": "difference",
+        "input": {
+          "a": 49.55015856073859,
+          "b": 60.05552657476696
+        },
+        "output": "10.50536801402837"
+      }
+    ]
+  },
+  {
+    "question_index": "92",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question92"
+        },
+        "output": "[\"Central Valley_2021-06-10_LST.tif\",\"Central Valley_2021-06-10_NDVI.tif\",\"Central Valley_2021-06-26_LST.tif\",\"Central Valley_2021-06-26_NDVI.tif\",\"Central Valley_2021-07-12_LST.tif\",\"Central Valley_2021-07-12_NDVI.tif\",\"Central Valley_2021-07-28_LST.tif\",\"Central Valley_2021-07-28_NDVI.tif\",\"Central Valley_2021-08-13_LST.tif\",\"Central Valley_2021-08-13_NDVI.tif\",\"Central Valley_2021-08-29_LST.tif\",\"Central Valley_2021-08-29_NDVI.tif\"]"
+      },
+      {
+        "name": "calculate_batch_tif_average",
+        "input": {
+          "file_list": [
+            "Central Valley_2021-06-10_TVDI.tif",
+            "Central Valley_2021-06-26_TVDI.tif",
+            "Central Valley_2021-07-12_TVDI.tif",
+            "Central Valley_2021-07-28_TVDI.tif",
+            "Central Valley_2021-08-13_TVDI.tif",
+            "Central Valley_2021-08-29_TVDI.tif"
+          ],
+          "output_path": "benchmark/data/question92/avg_tvdi.tif"
+        },
+        "output": "Error: calculate_batch_tif_average is not a valid tool, try one of [compute_linear_trend, mann_kendall_test, sens_slope, stl_decompose, detect_change_points, autocorrelation_function, detect_seasonality_acf, getis_ord_gi_star, analyze_hotspot_direction, coefficient_of_variation, skewness, kurtosis, calc_batch_image_mean, calc_batch_image_std, calc_batch_image_median, calc_batch_image_min, calc_batch_image_max, calc_batch_image_skewness, calc_batch_image_kurtosis, calc_batch_image_sum, calc_batch_image_hotspot_percentage, calc_batch_image_hotspot_tif, difference, division, percentage_change, kelvin_to_celsius, celsius_to_kelvin, max_value_and_index, min_value_and_index, count_above_threshold, calculate_bbox_area, ceil_number, count_skeleton_contours, multiply, bboxes2centroids, centroid_distance_extremes, get_list_object_via_indexes, mean, calculate_threshold_ratio, calc_batch_fire_pixels, create_fire_increase_map, identify_fire_prone_areas, get_percentile_value_from_image, image_division_mean, calculate_intersection_percentage, calc_batch_image_mean_mean, calc_batch_image_mean_max, calc_batch_image_mean_max_min, calc_batch_image_mean_threshold, calculate_multi_band_threshold_ratio, count_pixels_satisfying_conditions, count_images_exceeding_threshold_ratio, average_ratio_exceeding_threshold, count_images_exceeding_mean_multiplier, count_spikes_from_values, calculate_band_mean_by_condition, calc_threshold_value_mean, calc_extreme_snow_loss_percentage_from_binary_map, calculate_tif_average, calculate_tif_difference, subtract, calculate_area, grayscale_to_colormap, MSCN, RemoteCLIP, Strip_R_CNN, SM3Det, RemoteSAM, InstructSAM, SAM2, ChangeOS, calculate_batch_ndvi, calculate_batch_ndwi, calculate_batch_ndbi, calculate_batch_evi, calculate_batch_nbr, calculate_batch_fvc, calculate_batch_wri, calculate_batch_ndti, calculate_batch_frp, calculate_batch_ndsi, threshold_segmentation, bbox_expansion, calculate_mean_lst_by_ndvi, calculate_max_lst_by_ndvi, get_filelist, radiometric_correction_sr, apply_cloud_mask, band_ratio, lst_single_channel, lst_multi_channel, split_window, temperature_emissivity_separation, modis_day_night_lst, ttm_lst, compute_tvdi, ATI, dual_polarization_differential, dual_frequency_diff, multi_freq_bt, chang_single_param_inversion, nasa_team_sea_ice_concentration, dual_polarization_ratio, calculate_water_turbidity_ntu]."
+      },
+      {
+        "name": "calculate_tif_average",
+        "arguments": {
+          "file_list": [
+            [
+              "Central Valley_2021-06-10_TVDI.tif",
+              "Central Valley_2021-06-26_TVDI.tif",
+              "Central Valley_2021-07-12_TVDI.tif",
+              "Central Valley_2021-07-28_TVDI.tif",
+              "Central Valley_2021-08-13_TVDI.tif",
+              "Central Valley_2021-08-29_TVDI.tif"
+            ],
+            [
+              "Central Valley_2021-06-10_TVDI.tif",
+              "Central Valley_2021-06-26_TVDI.tif",
+              "Central Valley_2021-07-12_TVDI.tif",
+              "Central Valley_2021-07-28_TVDI.tif",
+              "Central Valley_2021-08-13_TVDI.tif",
+              "Central Valley_2021-08-29_TVDI.tif"
+            ]
+          ],
+          "output_path": [
+            "benchmark/data/question92/avg_tvdi.tif",
+            "benchmark/data/question92/avg_tvdi.tif"
+          ]
+        },
+        "output": [
+          "Error: ToolException(\"Error calling tool 'calculate_tif_average': 'NoneType' object has no attribute 'RasterCount'\")\n Please fix your mistakes.",
+          "Error: ToolException(\"Error calling tool 'calculate_tif_average': 'NoneType' object has no attribute 'RasterCount'\")\n Please fix your mistakes."
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "93",
+    "tool_calls": []
+  },
+  {
+    "question_index": "94",
+    "tool_calls": []
+  },
+  {
+    "question_index": "95",
+    "tool_calls": []
+  },
+  {
+    "question_index": "96",
+    "tool_calls": []
+  },
+  {
+    "question_index": "97",
+    "tool_calls": []
+  },
+  {
+    "question_index": "98",
+    "tool_calls": []
+  },
+  {
+    "question_index": "99",
+    "tool_calls": []
+  },
+  {
+    "question_index": "100",
+    "tool_calls": []
+  },
+  {
+    "question_index": "101",
+    "tool_calls": []
+  },
+  {
+    "question_index": "102",
+    "tool_calls": []
+  },
+  {
+    "question_index": "103",
+    "tool_calls": []
+  },
+  {
+    "question_index": "104",
+    "tool_calls": []
+  },
+  {
+    "question_index": "105",
+    "tool_calls": []
+  },
+  {
+    "question_index": "106",
+    "tool_calls": []
+  },
+  {
+    "question_index": "107",
+    "tool_calls": []
+  },
+  {
+    "question_index": "108",
+    "tool_calls": []
+  },
+  {
+    "question_index": "109",
+    "tool_calls": []
+  },
+  {
+    "question_index": "110",
+    "tool_calls": []
+  },
+  {
+    "question_index": "111",
+    "tool_calls": []
+  },
+  {
+    "question_index": "112",
+    "tool_calls": []
+  },
+  {
+    "question_index": "113",
+    "tool_calls": []
+  },
+  {
+    "question_index": "114",
+    "tool_calls": []
+  },
+  {
+    "question_index": "115",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question115"
+        },
+        "output": "[\"Burns_avg_rad_2017-08-01.tif\",\"Burns_avg_rad_2017-09-01.tif\",\"Juba_avg_rad_2017-08-01.tif\",\"Juba_avg_rad_2017-09-01.tif\"]"
+      },
+      {
+        "name": "calc_batch_image_mean",
+        "arguments": {
+          "file_list": [
+            [
+              "benchmark/data/question115/Burns_avg_rad_2017-08-01.tif",
+              "benchmark/data/question115/Burns_avg_rad_2017-09-01.tif"
+            ],
+            [
+              "benchmark/data/question115/Juba_avg_rad_2017-08-01.tif",
+              "benchmark/data/question115/Juba_avg_rad_2017-09-01.tif"
+            ]
+          ],
+          "uint8": [
+            false,
+            false
+          ]
+        },
+        "output": [
+          "[0.27548184990882874,0.2905765175819397]",
+          "[0.13845115900039673,0.3520009517669678]"
+        ]
+      },
+      {
+        "name": "mean",
+        "arguments": {
+          "x": [
+            [
+              0.27548184990882874,
+              0.2905765175819397
+            ],
+            [
+              0.13845115900039673,
+              0.3520009517669678
+            ]
+          ]
+        },
+        "output": [
+          "0.2830291837453842",
+          "0.24522605538368225"
+        ]
+      },
+      {
+        "name": "difference",
+        "input": {
+          "a": 0.2830291837453842,
+          "b": 0.24522605538368225
+        },
+        "output": "0.037803128361701965"
+      }
+    ]
+  },
+  {
+    "question_index": "116",
+    "tool_calls": []
+  },
+  {
+    "question_index": "117",
+    "tool_calls": []
+  },
+  {
+    "question_index": "118",
+    "tool_calls": []
+  },
+  {
+    "question_index": "119",
+    "tool_calls": []
+  },
+  {
+    "question_index": "120",
+    "tool_calls": []
+  },
+  {
+    "question_index": "121",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "F:/EarthLMM-question-89/data/question121"
+        },
+        "output": "Error: ToolException(\"Error calling tool 'get_filelist': [Errno 2] No such file or directory: 'F:/EarthLMM-question-89/data/question121'\")\n Please fix your mistakes."
+      }
+    ]
+  },
+  {
+    "question_index": "122",
+    "tool_calls": [
+      {
+        "name": "calculate_water_turbidity_ntu",
+        "input": {
+          "input_red_path": "benchmark/data/question122/sur_refl_b01.tif",
+          "output_path": "turbidity_2022.tif"
+        },
+        "output": "Error: ToolException(\"Error calling tool 'calculate_water_turbidity_ntu': benchmark/data/question122/sur_refl_b01.tif: No such file or directory\")\n Please fix your mistakes."
+      },
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question122"
+        },
+        "output": "[\"Taihu Lake-China_sur_refl_b01_2022-01-01.tif\",\"Taihu Lake-China_sur_refl_b01_2022-01-16.tif\",\"Taihu Lake-China_sur_refl_b01_2022-01-31.tif\",\"Taihu Lake-China_sur_refl_b01_2022-02-15.tif\",\"Taihu Lake-China_sur_refl_b01_2022-03-02.tif\",\"Taihu Lake-China_sur_refl_b01_2022-03-17.tif\",\"Taihu Lake-China_sur_refl_b01_2022-04-01.tif\",\"Taihu Lake-China_sur_refl_b01_2022-04-16.tif\",\"Taihu Lake-China_sur_refl_b01_2022-05-01.tif\",\"Taihu Lake-China_sur_refl_b01_2022-05-16.tif\",\"Taihu Lake-China_sur_refl_b01_2022-05-31.tif\",\"Taihu Lake-China_sur_refl_b01_2022-06-15.tif\",\"Taihu Lake-China_sur_refl_b01_2022-06-30.tif\",\"Taihu Lake-China_sur_refl_b01_2022-07-15.tif\",\"Taihu Lake-China_sur_refl_b01_2022-07-30.tif\",\"Taihu Lake-China_sur_refl_b01_2022-08-14.tif\",\"Taihu Lake-China_sur_refl_b01_2022-08-29.tif\",\"Taihu Lake-China_sur_refl_b01_2022-09-13.tif\",\"Taihu Lake-China_sur_refl_b01_2022-09-28.tif\",\"Taihu Lake-China_sur_refl_b01_2022-10-25.tif\",\"Taihu Lake-China_sur_refl_b01_2022-11-09.tif\",\"Taihu Lake-China_sur_refl_b01_2022-11-24.tif\",\"Taihu Lake-China_sur_refl_b01_2022-12-09.tif\",\"Taihu Lake-China_sur_refl_b01_2022-12-24.tif\",\"Taihu Lake-China_sur_refl_b03_2022-01-01.tif\",\"Taihu Lake-China_sur_refl_b03_2022-01-16.tif\",\"Taihu Lake-China_sur_refl_b03_2022-01-31.tif\",\"Taihu Lake-China_sur_refl_b03_2022-02-15.tif\",\"Taihu Lake-China_sur_refl_b03_2022-03-02.tif\",\"Taihu Lake-China_sur_refl_b03_2022-03-17.tif\",\"Taihu Lake-China_sur_refl_b03_2022-04-01.tif\",\"Taihu Lake-China_sur_refl_b03_2022-04-16.tif\",\"Taihu Lake-China_sur_refl_b03_2022-05-01.tif\",\"Taihu Lake-China_sur_refl_b03_2022-05-16.tif\",\"Taihu Lake-China_sur_refl_b03_2022-05-31.tif\",\"Taihu Lake-China_sur_refl_b03_2022-06-15.tif\",\"Taihu Lake-China_sur_refl_b03_2022-06-30.tif\",\"Taihu Lake-China_sur_refl_b03_2022-07-15.tif\",\"Taihu Lake-China_sur_refl_b03_2022-07-30.tif\",\"Taihu Lake-China_sur_refl_b03_2022-08-14.tif\",\"Taihu Lake-China_sur_refl_b03_2022-08-29.tif\",\"Taihu Lake-China_sur_refl_b03_2022-09-13.tif\",\"Taihu Lake-China_sur_refl_b03_2022-09-28.tif\",\"Taihu Lake-China_sur_refl_b03_2022-10-25.tif\",\"Taihu Lake-China_sur_refl_b03_2022-11-09.tif\",\"Taihu Lake-China_sur_refl_b03_2022-11-24.tif\",\"Taihu Lake-China_sur_refl_b03_2022-12-09.tif\",\"Taihu Lake-China_sur_refl_b03_2022-12-24.tif\",\"Taihu Lake-China_sur_refl_b04_2022-01-01.tif\",\"Taihu Lake-China_sur_refl_b04_2022-01-16.tif\",\"Taihu Lake-China_sur_refl_b04_2022-01-31.tif\",\"Taihu Lake-China_sur_refl_b04_2022-02-15.tif\",\"Taihu Lake-China_sur_refl_b04_2022-03-02.tif\",\"Taihu Lake-China_sur_refl_b04_2022-03-17.tif\",\"Taihu Lake-China_sur_refl_b04_2022-04-01.tif\",\"Taihu Lake-China_sur_refl_b04_2022-04-16.tif\",\"Taihu Lake-China_sur_refl_b04_2022-05-01.tif\",\"Taihu Lake-China_sur_refl_b04_2022-05-16.tif\",\"Taihu Lake-China_sur_refl_b04_2022-05-31.tif\",\"Taihu Lake-China_sur_refl_b04_2022-06-15.tif\",\"Taihu Lake-China_sur_refl_b04_2022-06-30.tif\",\"Taihu Lake-China_sur_refl_b04_2022-07-15.tif\",\"Taihu Lake-China_sur_refl_b04_2022-07-30.tif\",\"Taihu Lake-China_sur_refl_b04_2022-08-14.tif\",\"Taihu Lake-China_sur_refl_b04_2022-08-29.tif\",\"Taihu Lake-China_sur_refl_b04_2022-09-13.tif\",\"Taihu Lake-China_sur_refl_b04_2022-09-28.tif\",\"Taihu Lake-China_sur_refl_b04_2022-10-25.tif\",\"Taihu Lake-China_sur_refl_b04_2022-11-09.tif\",\"Taihu Lake-China_sur_refl_b04_2022-11-24.tif\",\"Taihu Lake-China_sur_refl_b04_2022-12-09.tif\",\"Taihu Lake-China_sur_refl_b04_2022-12-24.tif\"]"
+      },
+      {
+        "name": "calculate_water_turbidity_ntu",
+        "input": {
+          "input_red_path": "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-01-01.tif",
+          "output_path": "turbidity_2022_0101.tif"
+        },
+        "output": "Result saved at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/turbidity_2022_0101.tif"
+      },
+      {
+        "name": "calc_batch_image_mean",
+        "input": {
+          "file_list": [
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-01-01.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-01-16.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-01-31.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-02-15.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-03-02.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-03-17.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-04-01.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-04-16.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-05-01.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-05-16.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-05-31.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-06-15.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-06-30.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-07-15.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-07-30.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-08-14.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-08-29.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-09-13.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-09-28.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-10-25.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-11-09.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-11-24.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-12-09.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-12-24.tif"
+          ],
+          "uint8": false
+        },
+        "output": "[8559.444828911957,1663.1041906958862,2024.6270665128798,7573.387927720108,1596.0941945405614,9392.991157247212,3353.748558246828,2046.4563629373317,2435.363321799308,650.39600153787,2029.6520569011918,725.7489427143406,7677.068435217224,2139.949634755863,1008.9996155324875,619.9442522106882,1877.441753171857,8555.35140330642,9825.364475201846,1096.9969242599,2807.498269896194,4019.7527873894655,8812.780469050365,1618.961168781238]"
+      }
+    ]
+  },
+  {
+    "question_index": "123",
+    "tool_calls": []
+  },
+  {
+    "question_index": "124",
+    "tool_calls": []
+  },
+  {
+    "question_index": "125",
+    "tool_calls": []
+  },
+  {
+    "question_index": "126",
+    "tool_calls": []
+  },
+  {
+    "question_index": "127",
+    "tool_calls": []
+  },
+  {
+    "question_index": "128",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question128"
+        },
+        "output": "[\"Congo Basin-Africa_sur_refl_b02_2024-01-01.tif\",\"Congo Basin-Africa_sur_refl_b02_2024-01-09.tif\",\"Congo Basin-Africa_sur_refl_b02_2024-01-17.tif\",\"Congo Basin-Africa_sur_refl_b02_2024-01-25.tif\",\"Congo Basin-Africa_sur_refl_b02_2024-02-02.tif\",\"Congo Basin-Africa_sur_refl_b02_2024-02-10.tif\",\"Congo Basin-Africa_sur_refl_b02_2024-02-18.tif\",\"Congo Basin-Africa_sur_refl_b02_2024-02-26.tif\",\"Congo Basin-Africa_sur_refl_b02_2024-03-05.tif\",\"Congo Basin-Africa_sur_refl_b02_2024-03-13.tif\",\"Congo Basin-Africa_sur_refl_b02_2024-03-21.tif\",\"Congo Basin-Africa_sur_refl_b02_2024-03-29.tif\",\"Congo Basin-Africa_sur_refl_b07_2024-01-01.tif\",\"Congo Basin-Africa_sur_refl_b07_2024-01-09.tif\",\"Congo Basin-Africa_sur_refl_b07_2024-01-17.tif\",\"Congo Basin-Africa_sur_refl_b07_2024-01-25.tif\",\"Congo Basin-Africa_sur_refl_b07_2024-02-02.tif\",\"Congo Basin-Africa_sur_refl_b07_2024-02-10.tif\",\"Congo Basin-Africa_sur_refl_b07_2024-02-18.tif\",\"Congo Basin-Africa_sur_refl_b07_2024-02-26.tif\",\"Congo Basin-Africa_sur_refl_b07_2024-03-05.tif\",\"Congo Basin-Africa_sur_refl_b07_2024-03-13.tif\",\"Congo Basin-Africa_sur_refl_b07_2024-03-21.tif\",\"Congo Basin-Africa_sur_refl_b07_2024-03-29.tif\"]"
+      },
+      {
+        "name": "calculate_batch_nbr",
+        "arguments": {
+          "input_nir_paths": [
+            [
+              "Congo Basin-Africa_sur_refl_b02_2024-01-01.tif",
+              "Congo Basin-Africa_sur_refl_b02_2024-01-09.tif",
+              "Congo Basin-Africa_sur_refl_b02_2024-01-17.tif",
+              "Congo Basin-Africa_sur_refl_b02_2024-01-25.tif",
+              "Congo Basin-Africa_sur_refl_b02_2024-02-02.tif",
+              "Congo Basin-Africa_sur_refl_b02_2024-02-10.tif",
+              "Congo Basin-Africa_sur_refl_b02_2024-02-18.tif",
+              "Congo Basin-Africa_sur_refl_b02_2024-02-26.tif",
+              "Congo Basin-Africa_sur_refl_b02_2024-03-05.tif",
+              "Congo Basin-Africa_sur_refl_b02_2024-03-13.tif",
+              "Congo Basin-Africa_sur_refl_b02_2024-03-21.tif",
+              "Congo Basin-Africa_sur_refl_b02_2024-03-29.tif"
+            ],
+            [
+              "benchmark/data/question128/Congo Basin-Africa_sur_refl_b02_2024-01-01.tif",
+              "benchmark/data/question128/Congo Basin-Africa_sur_refl_b02_2024-01-09.tif",
+              "benchmark/data/question128/Congo Basin-Africa_sur_refl_b02_2024-01-17.tif",
+              "benchmark/data/question128/Congo Basin-Africa_sur_refl_b02_2024-01-25.tif",
+              "benchmark/data/question128/Congo Basin-Africa_sur_refl_b02_2024-02-02.tif",
+              "benchmark/data/question128/Congo Basin-Africa_sur_refl_b02_2024-02-10.tif",
+              "benchmark/data/question128/Congo Basin-Africa_sur_refl_b02_2024-02-18.tif",
+              "benchmark/data/question128/Congo Basin-Africa_sur_refl_b02_2024-02-26.tif",
+              "benchmark/data/question128/Congo Basin-Africa_sur_refl_b02_2024-03-05.tif",
+              "benchmark/data/question128/Congo Basin-Africa_sur_refl_b02_2024-03-13.tif",
+              "benchmark/data/question128/Congo Basin-Africa_sur_refl_b02_2024-03-21.tif",
+              "benchmark/data/question128/Congo Basin-Africa_sur_refl_b02_2024-03-29.tif"
+            ]
+          ],
+          "input_swir_paths": [
+            [
+              "Congo Basin-Africa_sur_refl_b07_2024-01-01.tif",
+              "Congo Basin-Africa_sur_refl_b07_2024-01-09.tif",
+              "Congo Basin-Africa_sur_refl_b07_2024-01-17.tif",
+              "Congo Basin-Africa_sur_refl_b07_2024-01-25.tif",
+              "Congo Basin-Africa_sur_refl_b07_2024-02-02.tif",
+              "Congo Basin-Africa_sur_refl_b07_2024-02-10.tif",
+              "Congo Basin-Africa_sur_refl_b07_2024-02-18.tif",
+              "Congo Basin-Africa_sur_refl_b07_2024-02-26.tif",
+              "Congo Basin-Africa_sur_refl_b07_2024-03-05.tif",
+              "Congo Basin-Africa_sur_refl_b07_2024-03-13.tif",
+              "Congo Basin-Africa_sur_refl_b07_2024-03-21.tif",
+              "Congo Basin-Africa_sur_refl_b07_2024-03-29.tif"
+            ],
+            [
+              "benchmark/data/question128/Congo Basin-Africa_sur_refl_b07_2024-01-01.tif",
+              "benchmark/data/question128/Congo Basin-Africa_sur_refl_b07_2024-01-09.tif",
+              "benchmark/data/question128/Congo Basin-Africa_sur_refl_b07_2024-01-17.tif",
+              "benchmark/data/question128/Congo Basin-Africa_sur_refl_b07_2024-01-25.tif",
+              "benchmark/data/question128/Congo Basin-Africa_sur_refl_b07_2024-02-02.tif",
+              "benchmark/data/question128/Congo Basin-Africa_sur_refl_b07_2024-02-10.tif",
+              "benchmark/data/question128/Congo Basin-Africa_sur_refl_b07_2024-02-18.tif",
+              "benchmark/data/question128/Congo Basin-Africa_sur_refl_b07_2024-02-26.tif",
+              "benchmark/data/question128/Congo Basin-Africa_sur_refl_b07_2024-03-05.tif",
+              "benchmark/data/question128/Congo Basin-Africa_sur_refl_b07_2024-03-13.tif",
+              "benchmark/data/question128/Congo Basin-Africa_sur_refl_b07_2024-03-21.tif",
+              "benchmark/data/question128/Congo Basin-Africa_sur_refl_b07_2024-03-29.tif"
+            ]
+          ],
+          "output_paths": [
+            [
+              "nbr_2024-01-01.tif",
+              "nbr_2024-01-09.tif",
+              "nbr_2024-01-17.tif",
+              "nbr_2024-01-25.tif",
+              "nbr_2024-02-02.tif",
+              "nbr_2024-02-10.tif",
+              "nbr_2024-02-18.tif",
+              "nbr_2024-02-26.tif",
+              "nbr_2024-03-05.tif",
+              "nbr_2024-03-13.tif",
+              "nbr_2024-03-21.tif",
+              "nbr_2024-03-29.tif"
+            ],
+            [
+              "nbr_2024-01-01.tif",
+              "nbr_2024-01-09.tif",
+              "nbr_2024-01-17.tif",
+              "nbr_2024-01-25.tif",
+              "nbr_2024-02-02.tif",
+              "nbr_2024-02-10.tif",
+              "nbr_2024-02-18.tif",
+              "nbr_2024-02-26.tif",
+              "nbr_2024-03-05.tif",
+              "nbr_2024-03-13.tif",
+              "nbr_2024-03-21.tif",
+              "nbr_2024-03-29.tif"
+            ]
+          ]
+        },
+        "output": [
+          "Error: ToolException(\"Error calling tool 'calculate_batch_nbr': Congo Basin-Africa_sur_refl_b02_2024-01-01.tif: No such file or directory\")\n Please fix your mistakes.",
+          "[\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/nbr_2024-01-01.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/nbr_2024-01-09.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/nbr_2024-01-17.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/nbr_2024-01-25.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/nbr_2024-02-02.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/nbr_2024-02-10.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/nbr_2024-02-18.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/nbr_2024-02-26.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/nbr_2024-03-05.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/nbr_2024-03-13.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/nbr_2024-03-21.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/nbr_2024-03-29.tif\"]"
+        ]
+      },
+      {
+        "name": "calc_batch_image_mean_mean",
+        "input": {
+          "file_list": [
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/nbr_2024-01-01.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/nbr_2024-01-09.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/nbr_2024-01-17.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/nbr_2024-01-25.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/nbr_2024-02-02.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/nbr_2024-02-10.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/nbr_2024-02-18.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/nbr_2024-02-26.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/nbr_2024-03-05.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/nbr_2024-03-13.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/nbr_2024-03-21.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/nbr_2024-03-29.tif"
+          ],
+          "uint8": false
+        },
+        "output": "60.6229772468408"
+      }
+    ]
+  },
+  {
+    "question_index": "129",
+    "tool_calls": [
+      {
+        "name": "calculate_batch_ndsi",
+        "arguments": {
+          "green_file_list": [
+            [
+              "benchmark/data/question129/sur_refl_b04.tif"
+            ],
+            [
+              "benchmark/data/question129/sur_refl_b04_1.tif"
+            ]
+          ],
+          "swir_file_list": [
+            [
+              "benchmark/data/question129/sur_refl_b06.tif"
+            ],
+            [
+              "benchmark/data/question129/sur_refl_b06_1.tif"
+            ]
+          ],
+          "output_path_list": [
+            [
+              "question129/ndsi_result.tif"
+            ],
+            [
+              "question129/ndsi_result.tif"
+            ]
+          ]
+        },
+        "output": [
+          "Error: ToolException(\"Error calling tool 'calculate_batch_ndsi': benchmark/data/question129/sur_refl_b04.tif: No such file or directory\")\n Please fix your mistakes.",
+          "Error: ToolException(\"Error calling tool 'calculate_batch_ndsi': benchmark/data/question129/sur_refl_b04_1.tif: No such file or directory\")\n Please fix your mistakes."
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "130",
+    "tool_calls": []
+  },
+  {
+    "question_index": "131",
+    "tool_calls": []
+  },
+  {
+    "question_index": "132",
+    "tool_calls": []
+  },
+  {
+    "question_index": "133",
+    "tool_calls": []
+  },
+  {
+    "question_index": "134",
+    "tool_calls": []
+  },
+  {
+    "question_index": "135",
+    "tool_calls": []
+  },
+  {
+    "question_index": "136",
+    "tool_calls": []
+  },
+  {
+    "question_index": "137",
+    "tool_calls": []
+  },
+  {
+    "question_index": "138",
+    "tool_calls": []
+  },
+  {
+    "question_index": "139",
+    "tool_calls": []
+  },
+  {
+    "question_index": "140",
+    "tool_calls": []
+  },
+  {
+    "question_index": "141",
+    "tool_calls": [
+      {
+        "name": "calculate_batch_ndti",
+        "arguments": {
+          "input_red_paths": [
+            [
+              "benchmark/data/question141/sur_refl_b01_2020.tif",
+              "benchmark/data/question141/sur_refl_b01_2022.tif"
+            ],
+            [
+              "benchmark/data/question141/Dead_Sea/sur_refl_b01_2020.tif",
+              "benchmark/data/question141/Dead_Sea/sur_refl_b01_2022.tif"
+            ],
+            [
+              "benchmark/data/question141/sur_refl_b01_2020.tif",
+              "benchmark/data/question141/sur_refl_b01_2022.tif"
+            ]
+          ],
+          "input_green_paths": [
+            [
+              "benchmark/data/question141/sur_refl_b04_2020.tif",
+              "benchmark/data/question141/sur_refl_b04_2022.tif"
+            ],
+            [
+              "benchmark/data/question141/Dead_Sea/sur_refl_b04_2020.tif",
+              "benchmark/data/question141/Dead_Sea/sur_refl_b04_2022.tif"
+            ],
+            [
+              "benchmark/data/question141/sur_refl_b04_2020.tif",
+              "benchmark/data/question141/sur_refl_b04_2022.tif"
+            ]
+          ],
+          "output_paths": [
+            [
+              "ndti_2020.tif",
+              "ndti_2022.tif"
+            ],
+            [
+              "ndti_2020.tif",
+              "ndti_2022.tif"
+            ],
+            [
+              "ndti_2020.tif",
+              "ndti_2022.tif"
+            ]
+          ]
+        },
+        "output": [
+          "Error: ToolException(\"Error calling tool 'calculate_batch_ndti': benchmark/data/question141/sur_refl_b01_2020.tif: No such file or directory\")\n Please fix your mistakes.",
+          "Error: ToolException(\"Error calling tool 'calculate_batch_ndti': benchmark/data/question141/Dead_Sea/sur_refl_b01_2020.tif: No such file or directory\")\n Please fix your mistakes.",
+          "Error: ToolException(\"Error calling tool 'calculate_batch_ndti': benchmark/data/question141/sur_refl_b01_2020.tif: No such file or directory\")\n Please fix your mistakes."
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "142",
+    "tool_calls": []
+  },
+  {
+    "question_index": "143",
+    "tool_calls": []
+  },
+  {
+    "question_index": "144",
+    "tool_calls": []
+  },
+  {
+    "question_index": "145",
+    "tool_calls": []
+  },
+  {
+    "question_index": "146",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "arguments": {
+          "dir_path": [
+            "benchmark/data/question146/June",
+            "benchmark/data/question146/202406"
+          ]
+        },
+        "output": [
+          "Error: ToolException(\"Error calling tool 'get_filelist': [Errno 2] No such file or directory: 'benchmark/data/question146/June'\")\n Please fix your mistakes.",
+          "Error: ToolException(\"Error calling tool 'get_filelist': [Errno 2] No such file or directory: 'benchmark/data/question146/202406'\")\n Please fix your mistakes."
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "147",
+    "tool_calls": []
+  },
+  {
+    "question_index": "148",
+    "tool_calls": []
+  },
+  {
+    "question_index": "149",
+    "tool_calls": []
+  },
+  {
+    "question_index": "150",
+    "tool_calls": []
+  },
+  {
+    "question_index": "151",
+    "tool_calls": []
+  },
+  {
+    "question_index": "152",
+    "tool_calls": []
+  },
+  {
+    "question_index": "153",
+    "tool_calls": []
+  },
+  {
+    "question_index": "154",
+    "tool_calls": []
+  },
+  {
+    "question_index": "155",
+    "tool_calls": []
+  },
+  {
+    "question_index": "156",
+    "tool_calls": []
+  },
+  {
+    "question_index": "157",
+    "tool_calls": []
+  },
+  {
+    "question_index": "158",
+    "tool_calls": []
+  },
+  {
+    "question_index": "159",
+    "tool_calls": []
+  },
+  {
+    "question_index": "160",
+    "tool_calls": []
+  },
+  {
+    "question_index": "161",
+    "tool_calls": []
+  },
+  {
+    "question_index": "162",
+    "tool_calls": []
+  },
+  {
+    "question_index": "163",
+    "tool_calls": []
+  },
+  {
+    "question_index": "164",
+    "tool_calls": []
+  },
+  {
+    "question_index": "165",
+    "tool_calls": []
+  },
+  {
+    "question_index": "166",
+    "tool_calls": []
+  },
+  {
+    "question_index": "167",
+    "tool_calls": []
+  },
+  {
+    "question_index": "168",
+    "tool_calls": []
+  },
+  {
+    "question_index": "169",
+    "tool_calls": []
+  },
+  {
+    "question_index": "170",
+    "tool_calls": []
+  },
+  {
+    "question_index": "171",
+    "tool_calls": []
+  },
+  {
+    "question_index": "172",
+    "tool_calls": []
+  },
+  {
+    "question_index": "173",
+    "tool_calls": []
+  },
+  {
+    "question_index": "174",
+    "tool_calls": []
+  },
+  {
+    "question_index": "175",
+    "tool_calls": []
+  },
+  {
+    "question_index": "176",
+    "tool_calls": []
+  },
+  {
+    "question_index": "177",
+    "tool_calls": []
+  },
+  {
+    "question_index": "178",
+    "tool_calls": []
+  },
+  {
+    "question_index": "179",
+    "tool_calls": []
+  },
+  {
+    "question_index": "180",
+    "tool_calls": []
+  },
+  {
+    "question_index": "181",
+    "tool_calls": []
+  },
+  {
+    "question_index": "182",
+    "tool_calls": []
+  },
+  {
+    "question_index": "183",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question183"
+        },
+        "output": "[\"Arctic_Ocean_sur_refl_b01_2012-07-01.tif\",\"Arctic_Ocean_sur_refl_b01_2012-07-03.tif\",\"Arctic_Ocean_sur_refl_b01_2012-07-05.tif\",\"Arctic_Ocean_sur_refl_b01_2012-07-07.tif\",\"Arctic_Ocean_sur_refl_b01_2012-07-09.tif\",\"Arctic_Ocean_sur_refl_b01_2012-07-11.tif\",\"Arctic_Ocean_sur_refl_b01_2012-07-13.tif\",\"Arctic_Ocean_sur_refl_b01_2012-07-15.tif\",\"Arctic_Ocean_sur_refl_b01_2012-07-17.tif\",\"Arctic_Ocean_sur_refl_b01_2012-07-19.tif\",\"Arctic_Ocean_sur_refl_b01_2012-07-21.tif\",\"Arctic_Ocean_sur_refl_b01_2012-07-23.tif\",\"Arctic_Ocean_sur_refl_b01_2012-07-25.tif\",\"Arctic_Ocean_sur_refl_b01_2012-07-27.tif\",\"Arctic_Ocean_sur_refl_b01_2012-07-29.tif\",\"Arctic_Ocean_sur_refl_b01_2022-07-01.tif\",\"Arctic_Ocean_sur_refl_b01_2022-07-03.tif\",\"Arctic_Ocean_sur_refl_b01_2022-07-05.tif\",\"Arctic_Ocean_sur_refl_b01_2022-07-07.tif\",\"Arctic_Ocean_sur_refl_b01_2022-07-09.tif\",\"Arctic_Ocean_sur_refl_b01_2022-07-11.tif\",\"Arctic_Ocean_sur_refl_b01_2022-07-13.tif\",\"Arctic_Ocean_sur_refl_b01_2022-07-15.tif\",\"Arctic_Ocean_sur_refl_b01_2022-07-17.tif\",\"Arctic_Ocean_sur_refl_b01_2022-07-19.tif\",\"Arctic_Ocean_sur_refl_b01_2022-07-21.tif\",\"Arctic_Ocean_sur_refl_b01_2022-07-23.tif\",\"Arctic_Ocean_sur_refl_b01_2022-07-25.tif\",\"Arctic_Ocean_sur_refl_b01_2022-07-27.tif\",\"Arctic_Ocean_sur_refl_b01_2022-07-29.tif\",\"Arctic_Ocean_sur_refl_b04_2012-07-01.tif\",\"Arctic_Ocean_sur_refl_b04_2012-07-03.tif\",\"Arctic_Ocean_sur_refl_b04_2012-07-05.tif\",\"Arctic_Ocean_sur_refl_b04_2012-07-07.tif\",\"Arctic_Ocean_sur_refl_b04_2012-07-09.tif\",\"Arctic_Ocean_sur_refl_b04_2012-07-11.tif\",\"Arctic_Ocean_sur_refl_b04_2012-07-13.tif\",\"Arctic_Ocean_sur_refl_b04_2012-07-15.tif\",\"Arctic_Ocean_sur_refl_b04_2012-07-17.tif\",\"Arctic_Ocean_sur_refl_b04_2012-07-19.tif\",\"Arctic_Ocean_sur_refl_b04_2012-07-21.tif\",\"Arctic_Ocean_sur_refl_b04_2012-07-23.tif\",\"Arctic_Ocean_sur_refl_b04_2012-07-25.tif\",\"Arctic_Ocean_sur_refl_b04_2012-07-27.tif\",\"Arctic_Ocean_sur_refl_b04_2012-07-29.tif\",\"Arctic_Ocean_sur_refl_b04_2022-07-01.tif\",\"Arctic_Ocean_sur_refl_b04_2022-07-03.tif\",\"Arctic_Ocean_sur_refl_b04_2022-07-05.tif\",\"Arctic_Ocean_sur_refl_b04_2022-07-07.tif\",\"Arctic_Ocean_sur_refl_b04_2022-07-09.tif\",\"Arctic_Ocean_sur_refl_b04_2022-07-11.tif\",\"Arctic_Ocean_sur_refl_b04_2022-07-13.tif\",\"Arctic_Ocean_sur_refl_b04_2022-07-15.tif\",\"Arctic_Ocean_sur_refl_b04_2022-07-17.tif\",\"Arctic_Ocean_sur_refl_b04_2022-07-19.tif\",\"Arctic_Ocean_sur_refl_b04_2022-07-21.tif\",\"Arctic_Ocean_sur_refl_b04_2022-07-23.tif\",\"Arctic_Ocean_sur_refl_b04_2022-07-25.tif\",\"Arctic_Ocean_sur_refl_b04_2022-07-27.tif\",\"Arctic_Ocean_sur_refl_b04_2022-07-29.tif\"]"
+      },
+      {
+        "name": "calculate_batch_ndti",
+        "input": {
+          "input_red_paths": [
+            "benchmark/data/question183/Arctic_Ocean_sur_refl_b01_2022-07-01.tif",
+            "benchmark/data/question183/Arctic_Ocean_sur_refl_b01_2022-07-03.tif",
+            "benchmark/data/question183/Arctic_Ocean_sur_refl_b01_2022-07-05.tif",
+            "benchmark/data/question183/Arctic_Ocean_sur_refl_b01_2022-07-07.tif",
+            "benchmark/data/question183/Arctic_Ocean_sur_refl_b01_2022-07-09.tif",
+            "benchmark/data/question183/Arctic_Ocean_sur_refl_b01_2022-07-11.tif",
+            "benchmark/data/question183/Arctic_Ocean_sur_refl_b01_2022-07-13.tif",
+            "benchmark/data/question183/Arctic_Ocean_sur_refl_b01_2022-07-15.tif",
+            "benchmark/data/question183/Arctic_Ocean_sur_refl_b01_2022-07-17.tif",
+            "benchmark/data/question183/Arctic_Ocean_sur_refl_b01_2022-07-19.tif",
+            "benchmark/data/question183/Arctic_Ocean_sur_refl_b01_2022-07-21.tif",
+            "benchmark/data/question183/Arctic_Ocean_sur_refl_b01_2022-07-23.tif",
+            "benchmark/data/question183/Arctic_Ocean_sur_refl_b01_2022-07-25.tif",
+            "benchmark/data/question183/Arctic_Ocean_sur_refl_b01_2022-07-27.tif",
+            "benchmark/data/question183/Arctic_Ocean_sur_refl_b01_2022-07-29.tif"
+          ],
+          "input_green_paths": [
+            "benchmark/data/question183/Arctic_Ocean_sur_refl_b04_2022-07-01.tif",
+            "benchmark/data/question183/Arctic_Ocean_sur_refl_b04_2022-07-03.tif",
+            "benchmark/data/question183/Arctic_Ocean_sur_refl_b04_2022-07-05.tif",
+            "benchmark/data/question183/Arctic_Ocean_sur_refl_b04_2022-07-07.tif",
+            "benchmark/data/question183/Arctic_Ocean_sur_refl_b04_2022-07-09.tif",
+            "benchmark/data/question183/Arctic_Ocean_sur_refl_b04_2022-07-11.tif",
+            "benchmark/data/question183/Arctic_Ocean_sur_refl_b04_2022-07-13.tif",
+            "benchmark/data/question183/Arctic_Ocean_sur_refl_b04_2022-07-15.tif",
+            "benchmark/data/question183/Arctic_Ocean_sur_refl_b04_2022-07-17.tif",
+            "benchmark/data/question183/Arctic_Ocean_sur_refl_b04_2022-07-19.tif",
+            "benchmark/data/question183/Arctic_Ocean_sur_refl_b04_2022-07-21.tif",
+            "benchmark/data/question183/Arctic_Ocean_sur_refl_b04_2022-07-23.tif",
+            "benchmark/data/question183/Arctic_Ocean_sur_refl_b04_2022-07-25.tif",
+            "benchmark/data/question183/Arctic_Ocean_sur_refl_b04_2022-07-27.tif",
+            "benchmark/data/question183/Arctic_Ocean_sur_refl_b04_2022-07-29.tif"
+          ],
+          "output_paths": [
+            "ndti_2022-07-01.tif",
+            "ndti_2022-07-03.tif",
+            "ndti_2022-07-05.tif",
+            "ndti_2022-07-07.tif",
+            "ndti_2022-07-09.tif",
+            "ndti_2022-07-11.tif",
+            "ndti_2022-07-13.tif",
+            "ndti_2022-07-15.tif",
+            "ndti_2022-07-17.tif",
+            "ndti_2022-07-19.tif",
+            "ndti_2022-07-21.tif",
+            "ndti_2022-07-23.tif",
+            "ndti_2022-07-25.tif",
+            "ndti_2022-07-27.tif",
+            "ndti_2022-07-29.tif"
+          ]
+        },
+        "output": "[\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndti_2022-07-01.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndti_2022-07-03.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndti_2022-07-05.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndti_2022-07-07.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndti_2022-07-09.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndti_2022-07-11.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndti_2022-07-13.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndti_2022-07-15.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndti_2022-07-17.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndti_2022-07-19.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndti_2022-07-21.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndti_2022-07-23.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndti_2022-07-25.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndti_2022-07-27.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-01_22-59/out/ndti_2022-07-29.tif\"]"
+      }
+    ]
+  },
+  {
+    "question_index": "184",
+    "tool_calls": []
+  },
+  {
+    "question_index": "185",
+    "tool_calls": []
+  },
+  {
+    "question_index": "186",
+    "tool_calls": []
+  },
+  {
+    "question_index": "187",
+    "tool_calls": [
+      {
+        "name": "compute_linear_trend",
+        "input": {
+          "y": "benchmark/data/question187/residential_volume.csv",
+          "x": "benchmark/data/question187/years_1985_2020.csv"
+        },
+        "output": "Error: ToolException(\"Input validation error: 'benchmark/data/question187/residential_volume.csv' is not of type 'array'\")\n Please fix your mistakes."
+      }
+    ]
+  },
+  {
+    "question_index": "188",
+    "tool_calls": []
+  },
+  {
+    "question_index": "189",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question189"
+        },
+        "output": "[\"A.jpg\",\"B.jpg\",\"C.jpg\",\"D.jpg\",\"E.jpg\",\"F.jpg\",\"G.jpg\",\"H.jpg\",\"I.jpg\",\"J.jpg\",\"K.jpg\",\"L.jpg\"]"
+      },
+      {
+        "name": "MSCN",
+        "input": {
+          "input_image_path": "benchmark/data/question189/A.jpg"
+        },
+        "output": "{'predicted_class': 'SparseResidential', 'confidence': 0.7725277543067932, 'top5_predictions': [('SparseResidential', 0.7725277543067932), ('Meadow', 0.01518627256155014), ('Viaduct', 0.010956392623484135), ('Parking', 0.01047519687563181), ('StorageTanks', 0.009892424568533897)]}"
+      }
+    ]
+  },
+  {
+    "question_index": "190",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question190"
+        },
+        "output": "[\"A.jpg\",\"B.jpg\",\"C.jpg\",\"D.jpg\",\"E.jpg\",\"F.jpg\"]"
+      },
+      {
+        "name": "MSCN",
+        "arguments": {
+          "input_image_path": [
+            "benchmark/data/question190/A.jpg",
+            "benchmark/data/question190/B.jpg",
+            "benchmark/data/question190/C.jpg",
+            "benchmark/data/question190/D.jpg"
+          ]
+        },
+        "output": [
+          "{'predicted_class': 'Park', 'confidence': 0.7290698885917664, 'top5_predictions': [('Park', 0.7290698885917664), ('Pond', 0.025260737165808678), ('BaseballField', 0.015320762060582638), ('Meadow', 0.015192613005638123), ('BareLand', 0.013293357565999031)]}",
+          "{'predicted_class': 'Meadow', 'confidence': 0.776190459728241, 'top5_predictions': [('Meadow', 0.776190459728241), ('BareLand', 0.01360396295785904), ('Viaduct', 0.013286152854561806), ('Desert', 0.012945275753736496), ('Farmland', 0.011743386276066303)]}",
+          "{'predicted_class': 'Park', 'confidence': 0.7122185230255127, 'top5_predictions': [('Park', 0.7122185230255127), ('Square', 0.039486419409513474), ('Playground', 0.0232031662017107), ('Meadow', 0.013983840122818947), ('Airport', 0.013902461156249046)]}",
+          "{'predicted_class': 'Park', 'confidence': 0.7954151630401611, 'top5_predictions': [('Park', 0.7954151630401611), ('School', 0.02067052200436592), ('Port', 0.014591868966817856), ('DenseResidential', 0.010871777310967445), ('River', 0.009717939421534538)]}"
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "191",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question191"
+        },
+        "output": "[\"A.jpg\",\"B.jpg\",\"C.jpg\",\"D.jpg\",\"E.jpg\",\"F.jpg\",\"G.jpg\",\"H.jpg\",\"I.jpg\",\"J.jpg\",\"K.jpg\",\"L.jpg\"]"
+      },
+      {
+        "name": "MSCN",
+        "input": {
+          "input_image_path": "benchmark/data/question191/A.jpg"
+        },
+        "output": "{'predicted_class': 'SparseResidential', 'confidence': 0.8119516372680664, 'top5_predictions': [('SparseResidential', 0.8119516372680664), ('StorageTanks', 0.01562942937016487), ('Meadow', 0.013852346688508987), ('Pond', 0.011197652667760849), ('River', 0.010070916265249252)]}"
+      }
+    ]
+  },
+  {
+    "question_index": "192",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question192"
+        },
+        "output": "[\"A.jpg\",\"B.jpg\",\"C.jpg\",\"D.jpg\",\"E.jpg\",\"F.jpg\",\"G.jpg\",\"H.jpg\",\"I.jpg\",\"J.jpg\",\"K.jpg\",\"L.jpg\"]"
+      },
+      {
+        "name": "MSCN",
+        "arguments": {
+          "input_image_path": [
+            "benchmark/data/question192/A.jpg",
+            "benchmark/data/question192/B.jpg"
+          ]
+        },
+        "output": [
+          "{'predicted_class': 'MediumResidential', 'confidence': 0.7792925834655762, 'top5_predictions': [('MediumResidential', 0.7792925834655762), ('Park', 0.017143063247203827), ('Bridge', 0.014778786338865757), ('Parking', 0.0135884340852499), ('Viaduct', 0.013515026308596134)]}",
+          "{'predicted_class': 'Airport', 'confidence': 0.7857256531715393, 'top5_predictions': [('Airport', 0.7857256531715393), ('BareLand', 0.015025862492620945), ('Viaduct', 0.01416028756648302), ('RailwayStation', 0.012184308841824532), ('Beach', 0.0114215649664402)]}"
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "193",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question193"
+        },
+        "output": "[\"A.jpg\",\"B.jpg\",\"C.jpg\",\"D.jpg\",\"E.jpg\",\"F.jpg\",\"G.jpg\",\"H.jpg\",\"I.jpg\",\"J.jpg\",\"K.jpg\",\"L.jpg\"]"
+      },
+      {
+        "name": "MSCN",
+        "input": {
+          "input_image_path": "benchmark/data/question193/A.jpg"
+        },
+        "output": "{'predicted_class': 'Commercial', 'confidence': 0.7225639820098877, 'top5_predictions': [('Commercial', 0.7225639820098877), ('Desert', 0.031055787578225136), ('Viaduct', 0.02769351750612259), ('Airport', 0.0231646541506052), ('BareLand', 0.021630268543958664)]}"
+      }
+    ]
+  },
+  {
+    "question_index": "194",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question194"
+        },
+        "output": "[\"A.jpg\",\"B.jpg\",\"C.jpg\",\"D.jpg\",\"E.jpg\",\"F.jpg\",\"G.jpg\",\"H.jpg\",\"I.jpg\",\"J.jpg\",\"K.jpg\"]"
+      },
+      {
+        "name": "MSCN",
+        "input": {
+          "input_image_path": "benchmark/data/question194/A.jpg"
+        },
+        "output": "{'predicted_class': 'Viaduct', 'confidence': 0.82329922914505, 'top5_predictions': [('Viaduct', 0.82329922914505), ('Meadow', 0.008972464129328728), ('Commercial', 0.00850482378154993), ('Pond', 0.008351253345608711), ('Desert', 0.007711351849138737)]}"
+      }
+    ]
+  },
+  {
+    "question_index": "195",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question195"
+        },
+        "output": "[\"A.jpg\",\"B.jpg\",\"C.jpg\",\"D.jpg\",\"E.jpg\",\"F.jpg\",\"G.jpg\",\"H.jpg\",\"I.jpg\",\"J.jpg\",\"K.jpg\",\"L.jpg\"]"
+      },
+      {
+        "name": "MSCN",
+        "arguments": {
+          "input_image_path": [
+            "benchmark/data/question195/A.jpg",
+            "benchmark/data/question195/B.jpg",
+            "benchmark/data/question195/C.jpg",
+            "benchmark/data/question195/D.jpg"
+          ]
+        },
+        "output": [
+          "{'predicted_class': 'Park', 'confidence': 0.7315757274627686, 'top5_predictions': [('Park', 0.7315757274627686), ('Square', 0.05782701075077057), ('Resort', 0.01918003335595131), ('School', 0.017985114827752113), ('Airport', 0.01736327074468136)]}",
+          "{'predicted_class': 'School', 'confidence': 0.8177392482757568, 'top5_predictions': [('School', 0.8177392482757568), ('Pond', 0.02181885950267315), ('Bridge', 0.01458570547401905), ('BaseballField', 0.012197649106383324), ('Center', 0.008369209244847298)]}",
+          "{'predicted_class': 'Resort', 'confidence': 0.7994400262832642, 'top5_predictions': [('Resort', 0.7994400262832642), ('Pond', 0.018157467246055603), ('Beach', 0.01717141643166542), ('Desert', 0.015170003287494183), ('BareLand', 0.012451311573386192)]}",
+          "{'predicted_class': 'Farmland', 'confidence': 0.7992843985557556, 'top5_predictions': [('Farmland', 0.7992843985557556), ('Pond', 0.021168790757656097), ('BareLand', 0.01664065383374691), ('Park', 0.012888659723103046), ('Beach', 0.010933604091405869)]}"
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "196",
+    "tool_calls": []
+  },
+  {
+    "question_index": "197",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question197"
+        },
+        "output": "[\"A.jpg\",\"B.jpg\",\"C.jpg\",\"D.jpg\",\"E.jpg\",\"F.jpg\",\"G.jpg\",\"H.jpg\",\"I.jpg\",\"J.jpg\",\"K.jpg\",\"L.jpg\"]"
+      },
+      {
+        "name": "MSCN",
+        "input": {
+          "input_image_path": "benchmark/data/question197/A.jpg"
+        },
+        "output": "{'predicted_class': 'School', 'confidence': 0.7903203964233398, 'top5_predictions': [('School', 0.7903203964233398), ('Resort', 0.014577544294297695), ('River', 0.010998588055372238), ('BareLand', 0.010081799700856209), ('Farmland', 0.009885941632091999)]}"
+      }
+    ]
+  },
+  {
+    "question_index": "198",
+    "tool_calls": []
+  },
+  {
+    "question_index": "199",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question199"
+        },
+        "output": "[\"A.jpg\",\"B.jpg\",\"C.jpg\",\"D.jpg\",\"E.jpg\",\"F.jpg\",\"G.jpg\",\"H.jpg\",\"I.jpg\",\"J.jpg\",\"K.jpg\",\"L.jpg\"]"
+      },
+      {
+        "name": "MSCN",
+        "arguments": {
+          "input_image_path": [
+            "benchmark/data/question199/A.jpg",
+            "benchmark/data/question199/B.jpg"
+          ]
+        },
+        "output": [
+          "{'predicted_class': 'Mountain', 'confidence': 0.826341450214386, 'top5_predictions': [('Mountain', 0.826341450214386), ('Meadow', 0.01303942408412695), ('BareLand', 0.009172928519546986), ('Pond', 0.008831565268337727), ('Beach', 0.008572738617658615)]}",
+          "{'predicted_class': 'Desert', 'confidence': 0.7962691783905029, 'top5_predictions': [('Desert', 0.7962691783905029), ('Farmland', 0.012233276851475239), ('Meadow', 0.011350044049322605), ('Pond', 0.010755709372460842), ('BareLand', 0.009186913259327412)]}"
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "200",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question200"
+        },
+        "output": "[\"A.jpg\",\"B.jpg\",\"C.jpg\",\"D.jpg\",\"E.jpg\",\"F.jpg\",\"G.jpg\",\"H.jpg\",\"I.jpg\",\"J.jpg\",\"K.jpg\",\"L.jpg\"]"
+      },
+      {
+        "name": "MSCN",
+        "input": {
+          "input_image_path": "benchmark/data/question200/A.jpg"
+        },
+        "output": "{'predicted_class': 'Port', 'confidence': 0.8120878338813782, 'top5_predictions': [('Port', 0.8120878338813782), ('Pond', 0.033772386610507965), ('Bridge', 0.00962583627551794), ('Playground', 0.009102266281843185), ('BaseballField', 0.007787794340401888)]}"
+      }
+    ]
+  },
+  {
+    "question_index": "201",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question201"
+        },
+        "output": "[\"A.jpg\",\"B.jpg\",\"C.jpg\",\"D.jpg\",\"E.jpg\",\"F.jpg\",\"G.jpg\",\"H.jpg\",\"I.jpg\",\"J.jpg\",\"K.jpg\",\"L.jpg\"]"
+      },
+      {
+        "name": "MSCN",
+        "arguments": {
+          "input_image_path": [
+            "benchmark/data/question201/A.jpg",
+            "benchmark/data/question201/B.jpg",
+            "benchmark/data/question201/C.jpg",
+            "benchmark/data/question201/D.jpg",
+            "benchmark/data/question201/E.jpg"
+          ]
+        },
+        "output": [
+          "{'predicted_class': 'Resort', 'confidence': 0.8021711111068726, 'top5_predictions': [('Resort', 0.8021711111068726), ('Desert', 0.06373175233602524), ('BareLand', 0.02053724229335785), ('Airport', 0.008380277082324028), ('Beach', 0.008375770412385464)]}",
+          "{'predicted_class': 'Commercial', 'confidence': 0.7948707938194275, 'top5_predictions': [('Commercial', 0.7948707938194275), ('Industrial', 0.024436447769403458), ('Desert', 0.015791146084666252), ('BareLand', 0.01208343543112278), ('Beach', 0.010499396361410618)]}",
+          "{'predicted_class': 'Square', 'confidence': 0.7113166451454163, 'top5_predictions': [('Square', 0.7113166451454163), ('School', 0.02200242690742016), ('BareLand', 0.02077450416982174), ('Beach', 0.019672809168696404), ('Pond', 0.017738400027155876)]}",
+          "{'predicted_class': 'School', 'confidence': 0.746046781539917, 'top5_predictions': [('School', 0.746046781539917), ('Beach', 0.043457381427288055), ('Industrial', 0.025570165365934372), ('Port', 0.01614060252904892), ('Resort', 0.01540333591401577)]}",
+          "{'predicted_class': 'Commercial', 'confidence': 0.8087658882141113, 'top5_predictions': [('Commercial', 0.8087658882141113), ('DenseResidential', 0.011350607499480247), ('RailwayStation', 0.009640580043196678), ('BareLand', 0.009510619565844536), ('Desert', 0.008778521791100502)]}"
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "202",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question202"
+        },
+        "output": "[\"A.jpg\",\"B.jpg\",\"C.jpg\",\"D.jpg\",\"E.jpg\",\"F.jpg\",\"G.jpg\",\"H.jpg\",\"I.jpg\",\"J.jpg\",\"K.jpg\"]"
+      },
+      {
+        "name": "MSCN",
+        "input": {
+          "input_image_path": "benchmark/data/question202/A.jpg"
+        },
+        "output": "{'predicted_class': 'SparseResidential', 'confidence': 0.8330124616622925, 'top5_predictions': [('SparseResidential', 0.8330124616622925), ('Square', 0.013078500516712666), ('Farmland', 0.009417260996997356), ('Beach', 0.0081718685105443), ('Pond', 0.008045812137424946)]}"
+      }
+    ]
+  },
+  {
+    "question_index": "203",
+    "tool_calls": []
+  },
+  {
+    "question_index": "204",
+    "tool_calls": []
+  },
+  {
+    "question_index": "205",
+    "tool_calls": []
+  },
+  {
+    "question_index": "206",
+    "tool_calls": [
+      {
+        "name": "SM3Det",
+        "arguments": {
+          "input_image_path": [
+            "benchmark/data/question206/A.jpg",
+            "benchmark/data/question206/A.jpg"
+          ],
+          "text_prompt": [
+            "basketball court",
+            "basketball court"
+          ]
+        },
+        "output": [
+          "Failed to call model",
+          "Failed to call model"
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "207",
+    "tool_calls": []
+  },
+  {
+    "question_index": "208",
+    "tool_calls": []
+  },
+  {
+    "question_index": "209",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question209"
+        },
+        "output": "[\"A.jpg\",\"B.jpg\",\"C.jpg\"]"
+      },
+      {
+        "name": "InstructSAM",
+        "arguments": {
+          "input_image_path": [
+            "benchmark/data/question209/A.jpg",
+            "benchmark/data/question209/B.jpg",
+            "benchmark/data/question209/C.jpg"
+          ],
+          "text_prompt": [
+            "ship",
+            "ship",
+            "ship"
+          ]
+        },
+        "output": [
+          "13",
+          "15",
+          "11"
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "210",
+    "tool_calls": []
+  },
+  {
+    "question_index": "211",
+    "tool_calls": []
+  },
+  {
+    "question_index": "212",
+    "tool_calls": []
+  },
+  {
+    "question_index": "213",
+    "tool_calls": []
+  },
+  {
+    "question_index": "214",
+    "tool_calls": [
+      {
+        "name": "SM3Det",
+        "arguments": {
+          "input_image_path": [
+            "benchmark/data/question214/A.jpg",
+            "benchmark/data/question214/A.jpg"
+          ],
+          "text_prompt": [
+            "tennis court",
+            "tennis court"
+          ]
+        },
+        "output": [
+          "Failed to call model",
+          "Failed to call model"
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "215",
+    "tool_calls": []
+  },
+  {
+    "question_index": "216",
+    "tool_calls": []
+  },
+  {
+    "question_index": "217",
+    "tool_calls": []
+  },
+  {
+    "question_index": "218",
+    "tool_calls": []
+  },
+  {
+    "question_index": "219",
+    "tool_calls": []
+  },
+  {
+    "question_index": "220",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question220"
+        },
+        "output": "[\"t1.png\",\"t2.png\"]"
+      },
+      {
+        "name": "ChangeOS",
+        "input": {
+          "pre_image_path": "benchmark/data/question220/t1.png",
+          "post_image_path": "benchmark/data/question220/t2.png",
+          "output_path": "change_mask.tif"
+        },
+        "output": "Result save at EO_Langchain_P3/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-21_21-55/out/change_mask.tif"
+      },
+      {
+        "name": "calculate_area",
+        "input": {
+          "input_image_path": "EO_Langchain_P3/evaluate_langchain/internvl3.5-241b-a28b_IF_25-09-21_21-55/out/change_mask.tif",
+          "gsd": 1
+        },
+        "output": "15582.0"
+      }
+    ]
+  },
+  {
+    "question_index": "221",
+    "tool_calls": []
+  },
+  {
+    "question_index": "222",
+    "tool_calls": []
+  },
+  {
+    "question_index": "223",
+    "tool_calls": []
+  },
+  {
+    "question_index": "224",
+    "tool_calls": []
+  },
+  {
+    "question_index": "225",
+    "tool_calls": []
+  },
+  {
+    "question_index": "226",
+    "tool_calls": []
+  },
+  {
+    "question_index": "227",
+    "tool_calls": [
+      {
+        "name": "RemoteSAM",
+        "arguments": {
+          "input_image_path": [
+            "benchmark/data/question227/image.tif",
+            "benchmark/data/question227/image.tif"
+          ],
+          "text_prompt": [
+            "roundabout",
+            "the roundabout"
+          ]
+        },
+        "output": [
+          "Failed to call model",
+          "Failed to call model"
+        ]
+      },
+      {
+        "name": "SM3Det",
+        "input": {
+          "input_image_path": "benchmark/data/question227/image.tif",
+          "text_prompt": "roundabout"
+        },
+        "output": "Failed to call model"
+      }
+    ]
+  },
+  {
+    "question_index": "228",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question228"
+        },
+        "output": "[\"332520_3932944_1024_32617_man_made_storage_tank.jpg\"]"
+      },
+      {
+        "name": "SM3Det",
+        "arguments": {
+          "input_image_path": [
+            "benchmark/data/question228/332520_3932944_1024_32617_man_made_storage_tank.jpg",
+            "benchmark/data/question228/332520_3932944_1024_32617_man_made_storage_tank.jpg"
+          ],
+          "text_prompt": [
+            "storage tank",
+            "storage tank"
+          ]
+        },
+        "output": [
+          "Failed to call model",
+          "Failed to call model"
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "229",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question229"
+        },
+        "output": "[\"778028_4444462_2048_32616_leisure_track.jpg\"]"
+      },
+      {
+        "name": "RemoteSAM",
+        "arguments": {
+          "input_image_path": [
+            "benchmark/data/question229/778028_4444462_2048_32616_leisure_track.jpg",
+            "benchmark/data/question229/778028_4444462_2048_32616_leisure_track.jpg"
+          ],
+          "text_prompt": [
+            "the largest ground track field located on the westernmost side",
+            "the largest ground track field on the westernmost side"
+          ]
+        },
+        "output": [
+          "Failed to call model",
+          "Failed to call model"
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "230",
+    "tool_calls": []
+  },
+  {
+    "question_index": "231",
+    "tool_calls": []
+  },
+  {
+    "question_index": "232",
+    "tool_calls": [
+      {
+        "name": "SM3Det",
+        "input": {
+          "input_image_path": "benchmark/data/question232",
+          "text_prompt": "soccer ball field"
+        },
+        "output": "Failed to call model"
+      },
+      {
+        "name": "RemoteSAM",
+        "input": {
+          "input_image_path": "benchmark/data/question232",
+          "text_prompt": "soccer ball field"
+        },
+        "output": "Failed to call model"
+      }
+    ]
+  },
+  {
+    "question_index": "233",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question233"
+        },
+        "output": "[\"P1147.png\"]"
+      },
+      {
+        "name": "SM3Det",
+        "input": {
+          "input_image_path": "benchmark/data/question233/P1147.png",
+          "text_prompt": "plane"
+        },
+        "output": "[[281.1752043242084, 2076.80405394451, 996.1541413789166, 2740.01723511799], [1361.7016451717625, 3048.1300193849056, 1770.6904446719875, 3428.3978126463444], [2375.058179342564, 4013.8437724572937, 2839.067308938686, 4385.992165042706], [2046.4958666876914, 3451.82232637127, 2449.1154614373086, 3811.63665800373], [2783.3757093410827, 4914.311605241193, 3258.9953844089173, 5321.230386946307], [1533.2323050456166, 1516.9702663562068, 1958.9305367512584, 1924.0204563000432], [228.63944680356855, 87.36300595369494, 792.9475282940878, 562.2564398470863], [304.62205304165354, 2994.7165857954838, 763.550920591159, 3391.1974767045162], [1005.8551336460212, 697.6889373443992, 1350.9309991664788, 974.5498321868508], [4023.331251524424, 5263.950244813065, 4388.427537538076, 5612.402294249435]]"
+      },
+      {
+        "name": "bboxes2centroids",
+        "input": {
+          "bboxes": [
+            [
+              281.1752043242084,
+              2076.80405394451,
+              996.1541413789166,
+              2740.01723511799
+            ],
+            [
+              1361.7016451717625,
+              3048.1300193849056,
+              1770.6904446719875,
+              3428.3978126463444
+            ],
+            [
+              2375.058179342564,
+              4013.8437724572937,
+              2839.067308938686,
+              4385.992165042706
+            ],
+            [
+              2046.4958666876914,
+              3451.82232637127,
+              2449.1154614373086,
+              3811.63665800373
+            ],
+            [
+              2783.3757093410827,
+              4914.311605241193,
+              3258.9953844089173,
+              5321.230386946307
+            ],
+            [
+              1533.2323050456166,
+              1516.9702663562068,
+              1958.9305367512584,
+              1924.0204563000432
+            ],
+            [
+              228.63944680356855,
+              87.36300595369494,
+              792.9475282940878,
+              562.2564398470863
+            ],
+            [
+              304.62205304165354,
+              2994.7165857954838,
+              763.550920591159,
+              3391.1974767045162
+            ],
+            [
+              1005.8551336460212,
+              697.6889373443992,
+              1350.9309991664788,
+              974.5498321868508
+            ],
+            [
+              4023.331251524424,
+              5263.950244813065,
+              4388.427537538076,
+              5612.402294249435
+            ]
+          ]
+        },
+        "output": "[[638.6646728515625,2408.41064453125],[1566.196044921875,3238.263916015625],[2607.062744140625,4199.91796875],[2247.8056640625,3631.7294921875],[3021.185546875,5117.77099609375],[1746.0814208984375,1720.495361328125],[510.7934875488281,324.8097229003906],[534.0864868164062,3192.95703125],[1178.39306640625,836.119384765625],[4205.87939453125,5438.17626953125]]"
+      },
+      {
+        "name": "centroid_distance_extremes",
+        "arguments": {
+          "centroids": [
+            [
+              [
+                638.6646728515625,
+                2408.41064453125
+              ],
+              [
+                1566.196044921875,
+                3238.263916015625
+              ],
+              [
+                2607.062744140625,
+                4199.91796875
+              ],
+              [
+                2247.8056640625,
+                3631.7294921875
+              ],
+              [
+                3021.185546875,
+                5117.77099609375
+              ],
+              [
+                1746.0814208984375,
+                1720.495361328125
+              ],
+              [
+                510.7934875488281,
+                324.8097229003906
+              ],
+              [
+                534.0864868164062,
+                3192.95703125
+              ],
+              [
+                1178.39306640625,
+                836.119384765625
+              ],
+              [
+                4205.87939453125,
+                5438.17626953125
+              ]
+            ],
+            [
+              [
+                638.6646728515625,
+                2408.41064453125
+              ],
+              [
+                1566.196044921875,
+                3238.263916015625
+              ],
+              [
+                2607.062744140625,
+                4199.91796875
+              ],
+              [
+                2247.8056640625,
+                3631.7294921875
+              ],
+              [
+                3021.185546875,
+                5117.77099609375
+              ],
+              [
+                1746.0814208984375,
+                1720.495361328125
+              ],
+              [
+                510.7934875488281,
+                324.8097229003906
+              ],
+              [
+                534.0864868164062,
+                3192.95703125
+              ],
+              [
+                1178.39306640625,
+                836.119384765625
+              ],
+              [
+                4205.87939453125,
+                5438.17626953125
+              ]
+            ]
+          ]
+        },
+        "output": [
+          "Error: ToolException(\"Error calling tool 'centroid_distance_extremes': name 'np' is not defined\")\n Please fix your mistakes.",
+          "Error: ToolException(\"Error calling tool 'centroid_distance_extremes': name 'np' is not defined\")\n Please fix your mistakes."
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "234",
+    "tool_calls": [
+      {
+        "name": "Strip_R_CNN",
+        "input": {
+          "input_image_path": "benchmark/data/question234",
+          "text_prompt": "ship"
+        },
+        "output": "Failed to call model"
+      },
+      {
+        "name": "SM3Det",
+        "input": {
+          "input_image_path": "benchmark/data/question234",
+          "text_prompt": "ship"
+        },
+        "output": "Failed to call model"
+      }
+    ]
+  },
+  {
+    "question_index": "235",
+    "tool_calls": []
+  },
+  {
+    "question_index": "236",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question236"
+        },
+        "output": "[\"P1492.png\"]"
+      },
+      {
+        "name": "SM3Det",
+        "input": {
+          "input_image_path": "benchmark/data/question236/P1492.png",
+          "text_prompt": "plane"
+        },
+        "output": "[[542.4612103378632, 243.69258468503642, 856.2730425918243, 464.7275202954323], [992.5337990399998, 2012.3609573366462, 1252.0443259600002, 2246.849980163354], [421.7505612960248, 1760.0538877321846, 663.9119142899127, 1997.9724794553154], [419.9546132148765, 2032.491705048616, 673.687110417936, 2256.217767607634], [962.8087501342129, 263.6454855923522, 1093.688808459537, 344.62923364592905]]"
+      },
+      {
+        "name": "bboxes2centroids",
+        "input": {
+          "bboxes": [
+            [
+              542.4612103378632,
+              243.69258468503642,
+              856.2730425918243,
+              464.7275202954323
+            ],
+            [
+              992.5337990399998,
+              2012.3609573366462,
+              1252.0443259600002,
+              2246.849980163354
+            ],
+            [
+              421.7505612960248,
+              1760.0538877321846,
+              663.9119142899127,
+              1997.9724794553154
+            ],
+            [
+              419.9546132148765,
+              2032.491705048616,
+              673.687110417936,
+              2256.217767607634
+            ],
+            [
+              962.8087501342129,
+              263.6454855923522,
+              1093.688808459537,
+              344.62923364592905
+            ]
+          ]
+        },
+        "output": "[[699.3671264648438,354.2100524902344],[1122.2890625,2129.60546875],[542.8312377929688,1879.01318359375],[546.8208618164062,2144.354736328125],[1028.248779296875,304.1373596191406]]"
+      },
+      {
+        "name": "centroid_distance_extremes",
+        "input": {
+          "centroids": [
+            [
+              699.3671264648438,
+              354.2100524902344
+            ],
+            [
+              1122.2890625,
+              2129.60546875
+            ],
+            [
+              542.8312377929688,
+              1879.01318359375
+            ],
+            [
+              546.8208618164062,
+              2144.354736328125
+            ],
+            [
+              1028.248779296875,
+              304.1373596191406
+            ]
+          ]
+        },
+        "output": "Error: ToolException(\"Error calling tool 'centroid_distance_extremes': name 'np' is not defined\")\n Please fix your mistakes."
+      }
+    ]
+  },
+  {
+    "question_index": "237",
+    "tool_calls": []
+  },
+  {
+    "question_index": "238",
+    "tool_calls": []
+  },
+  {
+    "question_index": "239",
+    "tool_calls": [
+      {
+        "name": "RemoteSAM",
+        "input": {
+          "input_image_path": "benchmark/data/question239",
+          "text_prompt": "soccer ball field"
+        },
+        "output": "Failed to call model"
+      },
+      {
+        "name": "SM3Det",
+        "arguments": {
+          "input_image_path": [
+            "benchmark/data/question239",
+            "benchmark/data/question239"
+          ],
+          "text_prompt": [
+            "soccer ball field",
+            "soccer ball field"
+          ]
+        },
+        "output": [
+          "Failed to call model",
+          "Failed to call model"
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "240",
+    "tool_calls": [
+      {
+        "name": "SM3Det",
+        "arguments": {
+          "input_image_path": [
+            "benchmark/data/question240",
+            "benchmark/data/question240"
+          ],
+          "text_prompt": [
+            "harbor",
+            "harbor"
+          ]
+        },
+        "output": [
+          "Failed to call model",
+          "Failed to call model"
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "241",
+    "tool_calls": [
+      {
+        "name": "SM3Det",
+        "arguments": {
+          "input_image_path": [
+            "benchmark/data/question241",
+            "benchmark/data/question241"
+          ],
+          "text_prompt": [
+            "harbor",
+            "harbor"
+          ]
+        },
+        "output": [
+          "Failed to call model",
+          "Failed to call model"
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "242",
+    "tool_calls": []
+  },
+  {
+    "question_index": "243",
+    "tool_calls": []
+  },
+  {
+    "question_index": "244",
+    "tool_calls": []
+  },
+  {
+    "question_index": "245",
+    "tool_calls": []
+  },
+  {
+    "question_index": "246",
+    "tool_calls": [
+      {
+        "name": "SM3Det",
+        "arguments": {
+          "input_image_path": [
+            "benchmark/data/question246",
+            "benchmark/data/question246"
+          ],
+          "text_prompt": [
+            "storage tank",
+            "storage tank"
+          ]
+        },
+        "output": [
+          "Failed to call model",
+          "Failed to call model"
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "247",
+    "tool_calls": [
+      {
+        "name": "RemoteSAM",
+        "input": {
+          "input_image_path": "benchmark/data/question247",
+          "text_prompt": "the tennis court"
+        },
+        "output": "Failed to call model"
+      },
+      {
+        "name": "SM3Det",
+        "input": {
+          "input_image_path": "benchmark/data/question247",
+          "text_prompt": "tennis court"
+        },
+        "output": "Failed to call model"
+      }
+    ]
+  },
+  {
+    "question_index": "248",
+    "tool_calls": [
+      {
+        "name": "SM3Det",
+        "arguments": {
+          "input_image_path": [
+            "benchmark/data/question248",
+            "benchmark/data/question248"
+          ],
+          "text_prompt": [
+            "tennis court",
+            "tennis court"
+          ]
+        },
+        "output": [
+          "Failed to call model",
+          "Failed to call model"
+        ]
+      }
+    ]
+  }
+]

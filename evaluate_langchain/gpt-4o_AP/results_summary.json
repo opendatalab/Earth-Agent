@@ -1,0 +1,994 @@
+[
+    {
+        "question_id": "1",
+        "answer": "<Answer>No significant trend observed<Answer>"
+    },
+    {
+        "question_id": "2",
+        "answer": "<Answer>B.22.40%<Answer>"
+    },
+    {
+        "question_id": "3",
+        "answer": "<Answer>B.2<Answer>"
+    },
+    {
+        "question_id": "4",
+        "answer": "<Answer>B.22.87%<Answer>"
+    },
+    {
+        "question_id": "5",
+        "answer": "<Answer>The proportion of pixels with TVDI values exceeding 0.7 surpassed 40% occurred 4 times<Answer>"
+    },
+    {
+        "question_id": "6",
+        "answer": "<Answer>D.+1.30 K/year<Answer>"
+    },
+    {
+        "question_id": "7",
+        "answer": "<Answer>A.5 days<Answer>"
+    },
+    {
+        "question_id": "8",
+        "answer": "<Answer>C.53.76%<Answer>"
+    },
+    {
+        "question_id": "9",
+        "answer": "<Answer>Your choice is not listed<Answer>"
+    },
+    {
+        "question_id": "10",
+        "answer": "<Answer>I'm unable to determine the answer due to an error in the tool execution.<Answer>"
+    },
+    {
+        "question_id": "11",
+        "answer": "<Answer>B.27.63%<Answer>"
+    },
+    {
+        "question_id": "12",
+        "answer": "<Answer>C.14 days<Answer>"
+    },
+    {
+        "question_id": "13",
+        "answer": "<Answer>B.+0.38 K/year<Answer>"
+    },
+    {
+        "question_id": "14",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "15",
+        "answer": "Error: Request timed out."
+    },
+    {
+        "question_id": "16",
+        "answer": "<Answer>A.4 days<Answer>"
+    },
+    {
+        "question_id": "17",
+        "answer": "<Answer>A.12.98%<Answer>"
+    },
+    {
+        "question_id": "18",
+        "answer": "<Answer>Decrease of 0.151 g/cm² per year<Answer>"
+    },
+    {
+        "question_id": "19",
+        "answer": "<Answer>D.27.52 g/cm²<Answer>"
+    },
+    {
+        "question_id": "20",
+        "answer": "<Answer>A.3<Answer>"
+    },
+    {
+        "question_id": "21",
+        "answer": "<Answer>A.15.34%<Answer>"
+    },
+    {
+        "question_id": "22",
+        "answer": "<Answer>B.931<Answer>"
+    },
+    {
+        "question_id": "23",
+        "answer": "<Answer>A.7.63%<Answer>"
+    },
+    {
+        "question_id": "24",
+        "answer": "<Answer>C.26.00%<Answer>"
+    },
+    {
+        "question_id": "25",
+        "answer": "<Answer>D.0.0422<Answer>"
+    },
+    {
+        "question_id": "26",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "27",
+        "answer": "<Answer>B.1.04 K<Answer>"
+    },
+    {
+        "question_id": "28",
+        "answer": "<Answer>B.5.24 K<Answer>"
+    },
+    {
+        "question_id": "29",
+        "answer": "<Answer>B.1.00 K<Answer>"
+    },
+    {
+        "question_id": "30",
+        "answer": "<Answer>C.308.25 K<Answer>"
+    },
+    {
+        "question_id": "31",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "32",
+        "answer": "<Answer>A.5 days<Answer>"
+    },
+    {
+        "question_id": "33",
+        "answer": "<Answer>A.21.39%<Answer>"
+    },
+    {
+        "question_id": "34",
+        "answer": "<Answer>2023, 296.93K<Answer>"
+    },
+    {
+        "question_id": "35",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "36",
+        "answer": "<Answer>C.29%<Answer>"
+    },
+    {
+        "question_id": "37",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "38",
+        "answer": "<Answer>D.8.91 K<Answer>"
+    },
+    {
+        "question_id": "39",
+        "answer": "<Answer>C.14 days<Answer>"
+    },
+    {
+        "question_id": "40",
+        "answer": "<Answer>C.No significant change (<1%)<Answer>"
+    },
+    {
+        "question_id": "41",
+        "answer": "<Answer>Decrease by 0.22<Answer>"
+    },
+    {
+        "question_id": "42",
+        "answer": "<Answer>A.10.47%<Answer>"
+    },
+    {
+        "question_id": "43",
+        "answer": "<Answer>B.12 days<Answer>"
+    },
+    {
+        "question_id": "44",
+        "answer": "<Answer>C.August<Answer>"
+    },
+    {
+        "question_id": "45",
+        "answer": "<Answer>A.9.89%<Answer>"
+    },
+    {
+        "question_id": "46",
+        "answer": "<Answer>A.Annual Mean TVDI: 0.7123, Min: 0.0000, Max: 1.0000<Answer>"
+    },
+    {
+        "question_id": "47",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "48",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "49",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "50",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "51",
+        "answer": "<Answer>A.8.65K<Answer>"
+    },
+    {
+        "question_id": "52",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "53",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "54",
+        "answer": "<Answer>B.3 days<Answer>"
+    },
+    {
+        "question_id": "55",
+        "answer": "<Answer>A.2.12 K<Answer>"
+    },
+    {
+        "question_id": "56",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "57",
+        "answer": "<Answer>A.19.82%<Answer>"
+    },
+    {
+        "question_id": "58",
+        "answer": "<Answer>C.12 days<Answer>"
+    },
+    {
+        "question_id": "59",
+        "answer": "<Answer>A.281.72 K<Answer>"
+    },
+    {
+        "question_id": "60",
+        "answer": "<Answer>A.310.12 K<Answer>"
+    },
+    {
+        "question_id": "61",
+        "answer": "<Answer>C.11.3910<Answer>"
+    },
+    {
+        "question_id": "62",
+        "answer": "<Answer>C.41.89%<Answer>"
+    },
+    {
+        "question_id": "63",
+        "answer": "<Answer>C.10.9304<Answer>"
+    },
+    {
+        "question_id": "64",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "65",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "66",
+        "answer": "<Answer>D.41.13%<Answer>"
+    },
+    {
+        "question_id": "67",
+        "answer": "<Answer>B.349.27<Answer>"
+    },
+    {
+        "question_id": "68",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "69",
+        "answer": "<Answer>B.306.65 K<Answer>"
+    },
+    {
+        "question_id": "70",
+        "answer": "<Answer>D.0.774<Answer>"
+    },
+    {
+        "question_id": "71",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "72",
+        "answer": "<Answer>21.69%<Answer>"
+    },
+    {
+        "question_id": "73",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "74",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "75",
+        "answer": "<Answer>C.295.93 K<Answer>"
+    },
+    {
+        "question_id": "76",
+        "answer": "<Answer>A.9.39%<Answer>"
+    },
+    {
+        "question_id": "77",
+        "answer": "<Answer>A.2.77K<Answer>"
+    },
+    {
+        "question_id": "78",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "79",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "80",
+        "answer": "<Answer>C.1.35%<Answer>"
+    },
+    {
+        "question_id": "81",
+        "answer": "<Answer>C.16.01%<Answer>"
+    },
+    {
+        "question_id": "82",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "83",
+        "answer": "<Answer>D.2.53 K<Answer>"
+    },
+    {
+        "question_id": "84",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "85",
+        "answer": "<Answer>Increase of 1.04 K<Answer>"
+    },
+    {
+        "question_id": "86",
+        "answer": "<Answer>A.1.65<Answer>"
+    },
+    {
+        "question_id": "87",
+        "answer": "<Answer>A.1.47<Answer>"
+    },
+    {
+        "question_id": "88",
+        "answer": "<Answer>A.15.87%<Answer>"
+    },
+    {
+        "question_id": "89",
+        "answer": "<Answer>A.1.89<Answer>"
+    },
+    {
+        "question_id": "90",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "91",
+        "answer": "<Answer>A.12.34%<Answer>"
+    },
+    {
+        "question_id": "92",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "93",
+        "answer": "<Answer>D.18.75 K<Answer>"
+    },
+    {
+        "question_id": "94",
+        "answer": "<Answer>C.5.41 K<Answer>"
+    },
+    {
+        "question_id": "95",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "96",
+        "answer": "<Answer>A.0.3227<Answer>"
+    },
+    {
+        "question_id": "97",
+        "answer": "<Answer>A.1.67<Answer>"
+    },
+    {
+        "question_id": "98",
+        "answer": "<Answer>B.0.5165<Answer>"
+    },
+    {
+        "question_id": "99",
+        "answer": "<Answer>A.0.80%<Answer>"
+    },
+    {
+        "question_id": "100",
+        "answer": "<Answer>B.3.25%<Answer>"
+    },
+    {
+        "question_id": "101",
+        "answer": "<Answer>B.2.46 mm<Answer>"
+    },
+    {
+        "question_id": "102",
+        "answer": "<Answer>C.Slope: 0.29, Intercept: 10.80<Answer>"
+    },
+    {
+        "question_id": "103",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "104",
+        "answer": "<Answer>A.1.24<Answer>"
+    },
+    {
+        "question_id": "105",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "106",
+        "answer": "<Answer>A.2.07%<Answer>"
+    },
+    {
+        "question_id": "107",
+        "answer": "<Answer>A.0.028<Answer>"
+    },
+    {
+        "question_id": "108",
+        "answer": "<Answer>A.297.4%<Answer>"
+    },
+    {
+        "question_id": "109",
+        "answer": "<Answer>B.171.4%<Answer>"
+    },
+    {
+        "question_id": "110",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "111",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "112",
+        "answer": "<Answer>B.Slope: 0.12; Intercept: 1.96<Answer>"
+    },
+    {
+        "question_id": "113",
+        "answer": "<Answer>D.-7.01%<Answer>"
+    },
+    {
+        "question_id": "114",
+        "answer": "<Answer>C.5.21<Answer>"
+    },
+    {
+        "question_id": "115",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "116",
+        "answer": "<Answer>C.0.039<Answer>"
+    },
+    {
+        "question_id": "117",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "118",
+        "answer": "<Answer>C.2.87 (Mesokurtic)<Answer>"
+    },
+    {
+        "question_id": "119",
+        "answer": "<Answer>C.1.000 (2022-09-14 to 2022-09-30)<Answer>"
+    },
+    {
+        "question_id": "120",
+        "answer": "<Answer>C.92.27% (2022-08-29)<Answer>"
+    },
+    {
+        "question_id": "121",
+        "answer": "<Answer>C.26.83 °C<Answer>"
+    },
+    {
+        "question_id": "122",
+        "answer": "<Answer>B.Mean: 3838 NTU | Trend: No trend (p=0.98)<Answer>"
+    },
+    {
+        "question_id": "123",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "124",
+        "answer": "<Answer>C.Sep 23-25 (NTU: 6728-7241)<Answer>"
+    },
+    {
+        "question_id": "125",
+        "answer": "<Answer>D.Max water coverage: Aug 4 (45.31%) | Highest NDWI: Aug 4 (-0.08)<Answer>"
+    },
+    {
+        "question_id": "126",
+        "answer": "<Answer>C.Mean NBR: 0.352 | Trend: +0.012 (Slight increase)<Answer>"
+    },
+    {
+        "question_id": "127",
+        "answer": "<Answer>D.NORTH (Hotspot pixels: 135)<Answer>"
+    },
+    {
+        "question_id": "128",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "129",
+        "answer": "<Answer>B.-0.203<Answer>"
+    },
+    {
+        "question_id": "130",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "131",
+        "answer": "<Answer>B.Annual NDSI: 0.266 | Extreme loss: 0.0%<Answer>"
+    },
+    {
+        "question_id": "132",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "133",
+        "answer": "<Answer>D.CV difference: -0.42 | Volatility: Decreased<Answer>"
+    },
+    {
+        "question_id": "134",
+        "answer": "<Answer>A.2007 NDWI: 0.143 | 2008 NDWI: 0.050 | Change: -0.093 | Trend: Decreasing<Answer>"
+    },
+    {
+        "question_id": "135",
+        "answer": "<Answer>A.Slope: 0.0010 | Intercept: 0.750 | Trend: Increasing<Answer>"
+    },
+    {
+        "question_id": "136",
+        "answer": "<Answer>B.Peak loss date: 2009-03-03 | Loss proportion: 34.0%<Answer>"
+    },
+    {
+        "question_id": "137",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "138",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "139",
+        "answer": "<Answer>B.Date: 2024-02-26 | Temperature: -38.24 °C<Answer>"
+    },
+    {
+        "question_id": "140",
+        "answer": "<Answer>B.Warmer: Rome | ΔT: +8.4°C<Answer>"
+    },
+    {
+        "question_id": "141",
+        "answer": "<Answer>Turbidity change: +359,998 | Trend: No trend<Answer>"
+    },
+    {
+        "question_id": "142",
+        "answer": "<Answer>B.Peak pollution date: 2022-09-05 | Max NDTI: 0.312<Answer>"
+    },
+    {
+        "question_id": "143",
+        "answer": "<Answer>C.2020: 97.2% | 2022: 96.8% | Δ: -0.4%<Answer>"
+    },
+    {
+        "question_id": "144",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "145",
+        "answer": "<Answer>A.The daily average rainfall is 6.18 mm, and the rainfall shows a slightly increasing trend.<Answer>"
+    },
+    {
+        "question_id": "146",
+        "answer": "<Answer>A.The average unit area light intensity in June is 0.32, in August is 0.41; June is lower, with a difference of 0.09.<Answer>"
+    },
+    {
+        "question_id": "147",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "148",
+        "answer": "<Answer>E<Answer>"
+    },
+    {
+        "question_id": "149",
+        "answer": "<Answer>D.In 2015, the mean was 37.20 and the hotspot proportion was 0.2116, while in 2020 the mean was 37.23 and the hotspot proportion was 0.2154; the hotspot proportion increased by 0.0039, indicating a slight increase in hotspot proportion.<Answer>"
+    },
+    {
+        "question_id": "150",
+        "answer": "<Answer>B.The date with the greatest percentage increase in vegetation coverage is 2020-08-18, and the value is 417.80%.<Answer>"
+    },
+    {
+        "question_id": "151",
+        "answer": "<Answer>C.The kurtosis of the vegetation coverage data is 3.68, so the distribution is leptokurtic.<Answer>"
+    },
+    {
+        "question_id": "152",
+        "answer": "<Answer>B.The time period with the largest hotspot proportion in the change map is 2021-01-17 to 2021-02-02, with a proportion of 0.817.<Answer>"
+    },
+    {
+        "question_id": "153",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "154",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "155",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "156",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "157",
+        "answer": "Sorry, need more steps to process this request."
+    },
+    {
+        "question_id": "158",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "159",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "160",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "161",
+        "answer": "<Answer>Unable to determine<Answer>"
+    },
+    {
+        "question_id": "162",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "163",
+        "answer": "<Answer>0.408<Answer>"
+    },
+    {
+        "question_id": "164",
+        "answer": "<Answer>A.The annual average NDSI increased from 0.505 in 2020 to 0.528 in 2024, indicating an increase in snow cover by about 4.5%.<Answer>"
+    },
+    {
+        "question_id": "165",
+        "answer": "<Answer>C.The proportion of extreme snow and ice loss regions remained unchanged at 0.0005% from 2020 to 2024, showing stable glacier melt.<Answer>"
+    },
+    {
+        "question_id": "166",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "167",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "168",
+        "answer": "<Answer>A.The CV decreased from 0.1737 (2020) to 0.1623 (2024), meaning snow cover volatility slightly decreased by 0.0114.<Answer>"
+    },
+    {
+        "question_id": "169",
+        "answer": "<Answer>F.The average NDWI remained unchanged (difference < 0.001).<Answer>"
+    },
+    {
+        "question_id": "170",
+        "answer": "<Answer>B.The NDWI showed a decreasing trend, with a linear slope of –0.0027.<Answer>"
+    },
+    {
+        "question_id": "171",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "172",
+        "answer": "<Answer>A.NDWI mean: -0.24, CV: -0.31; highest volatility observed<Answer>"
+    },
+    {
+        "question_id": "173",
+        "answer": "<Answer>-15.955°C<Answer>"
+    },
+    {
+        "question_id": "174",
+        "answer": "<Answer>B.–22.18 °C, showing a typical cold Arctic period<Answer>"
+    },
+    {
+        "question_id": "175",
+        "answer": "<Answer>A–33.10 °C on 2024-01-02<Answer>"
+    },
+    {
+        "question_id": "176",
+        "answer": "<Answer>A.Gazelle was warmer than Reykholt by 7.6 °C.<Answer>"
+    },
+    {
+        "question_id": "177",
+        "answer": "<Answer>E.53.8<Answer>"
+    },
+    {
+        "question_id": "178",
+        "answer": "<Answer>Your choice is B<Answer>"
+    },
+    {
+        "question_id": "179",
+        "answer": "<Answer>C.The kurtosis is 25.03; the most fire-prone day was August 7.<Answer>"
+    },
+    {
+        "question_id": "180",
+        "answer": "<Answer>D.The northwestern region experienced the most significant fire-prone hotspots, covering about 0.01% of Thailand's total area.<Answer>"
+    },
+    {
+        "question_id": "181",
+        "answer": "<Answer>E.The entire country showed no regions with a MaxFRP increase greater than 20 MW.<Answer>"
+    },
+    {
+        "question_id": "182",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "183",
+        "answer": "<Answer>A.2022-07-19, with a maximum NDTI of about -0.035<Answer>"
+    },
+    {
+        "question_id": "184",
+        "answer": "<Answer>B.2012, with a high turbidity area proportion of 98.92%, which is 1.01% higher than 2022<Answer>"
+    },
+    {
+        "question_id": "185",
+        "answer": "<Answer>92.10%<Answer>"
+    },
+    {
+        "question_id": "186",
+        "answer": "<Answer>A.The total change is 10,392.58 and the percentage change is 179.87%<Answer>"
+    },
+    {
+        "question_id": "187",
+        "answer": "<Answer>E.5702.72 units/year, showing a rapid increasing trend<Answer>"
+    },
+    {
+        "question_id": "188",
+        "answer": "<Answer>E.The ratio shows a decreasing trend, with a slope of about -0.0008 per year<Answer>"
+    },
+    {
+        "question_id": "189",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "190",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "191",
+        "answer": "<Answer>D.6<Answer>"
+    },
+    {
+        "question_id": "192",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "193",
+        "answer": "<Answer>B.4<Answer>"
+    },
+    {
+        "question_id": "194",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "195",
+        "answer": "<Answer>C.3<Answer>"
+    },
+    {
+        "question_id": "196",
+        "answer": "<Answer>B.10<Answer>"
+    },
+    {
+        "question_id": "197",
+        "answer": "<Answer>D.4<Answer>"
+    },
+    {
+        "question_id": "198",
+        "answer": "<Answer>D.4<Answer>"
+    },
+    {
+        "question_id": "199",
+        "answer": "<Answer>D.3<Answer>"
+    },
+    {
+        "question_id": "200",
+        "answer": "<Answer>B.8<Answer>"
+    },
+    {
+        "question_id": "201",
+        "answer": "<Answer>C.4<Answer>"
+    },
+    {
+        "question_id": "202",
+        "answer": "<Answer>B.3<Answer>"
+    },
+    {
+        "question_id": "203",
+        "answer": "<Answer>B.4<Answer>"
+    },
+    {
+        "question_id": "204",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "205",
+        "answer": "<Answer>A = B > C<Answer>"
+    },
+    {
+        "question_id": "206",
+        "answer": "<Answer>C > B > A<Answer>"
+    },
+    {
+        "question_id": "207",
+        "answer": "<Answer>C.A = B > C<Answer>"
+    },
+    {
+        "question_id": "208",
+        "answer": "<Answer>C > A > B<Answer>"
+    },
+    {
+        "question_id": "209",
+        "answer": "<Answer>B > A > C<Answer>"
+    },
+    {
+        "question_id": "210",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "211",
+        "answer": "<Answer>D.15<Answer>"
+    },
+    {
+        "question_id": "212",
+        "answer": "<Answer>C.About 3300 m^2<Answer>"
+    },
+    {
+        "question_id": "213",
+        "answer": "<Answer>B.About 1250 m^2<Answer>"
+    },
+    {
+        "question_id": "214",
+        "answer": "<Answer>A > C > B<Answer>"
+    },
+    {
+        "question_id": "215",
+        "answer": "<Answer>B > A > C<Answer>"
+    },
+    {
+        "question_id": "216",
+        "answer": "<Answer>D.About 12000 m^2<Answer>"
+    },
+    {
+        "question_id": "217",
+        "answer": "<Answer>C.About 90000 m^2<Answer>"
+    },
+    {
+        "question_id": "218",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "219",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "220",
+        "answer": "<Answer>D.Greater than 10000 pixels<Answer>"
+    },
+    {
+        "question_id": "221",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "222",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "223",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "224",
+        "answer": "<Answer>A.10 buildings were completely destroyed.<Answer>"
+    },
+    {
+        "question_id": "225",
+        "answer": "<Answer>B.1 building was completely destroyed.<Answer>"
+    },
+    {
+        "question_id": "226",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "227",
+        "answer": "<Answer>A.About (400, 500)<Answer>"
+    },
+    {
+        "question_id": "228",
+        "answer": "<Answer>A.About (570, 240)<Answer>"
+    },
+    {
+        "question_id": "229",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "230",
+        "answer": "<Answer>D.Greater than 30000<Answer>"
+    },
+    {
+        "question_id": "231",
+        "answer": "<Answer>A > C > B<Answer>"
+    },
+    {
+        "question_id": "232",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "233",
+        "answer": "<Answer>B.About 75<Answer>"
+    },
+    {
+        "question_id": "234",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "235",
+        "answer": "Error: <!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n<html><head>\n<meta type=\"copyright\" content=\"Copyright (C) 1996-2021 The Squid Software Foundation and contributors\">\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<title>ERROR: Cache Access Denied</title>\n<style type=\"text/css\"><!-- \n \n\nbody\n:lang(fa) { direction: rtl; font-size: 100%; font-family: Tahoma, Roya, sans-serif; float: right; }\n:lang(he) { direction: rtl; }\n --></style>\n</head><body id=ERR_CACHE_ACCESS_DENIED>\n<div id=\"titles\">\n<h1>ERROR</h1>\n<h2>Cache Access Denied.</h2>\n</div>\n<hr>\n\n<div id=\"content\">\n<p>The following error was encountered while trying to retrieve the URL: <a href=\"http://35.220.164.252:3888/v1/chat/completions\">http://35.220.164.252:3888/v1/chat/completions</a></p>\n\n<blockquote id=\"error\">\n<p><b>Cache Access Denied.</b></p>\n</blockquote>\n\n<p>Sorry, you are not currently allowed to request http://35.220.164.252:3888/v1/chat/completions from this cache until you have authenticated yourself.</p>\n\n<p>Please contact the <a href=\"mailto:webmaster?subject=CacheErrorInfo%20-%20ERR_CACHE_ACCESS_DENIED&amp;body=CacheHost%3A%20cluster-squid-02%0D%0AErrPage%3A%20ERR_CACHE_ACCESS_DENIED%0D%0AErr%3A%20%5Bnone%5D%0D%0ATimeStamp%3A%20Fri,%2012%20Sep%202025%2011%3A20%3A18%20GMT%0D%0A%0D%0AClientIP%3A%2010.140.24.21%0D%0A%0D%0AHTTP%20Request%3A%0D%0APOST%20%2Fv1%2Fchat%2Fcompletions%20HTTP%2F1.1%0AHost%3A%2035.220.164.252%3A3888%0D%0AProxy-Authorization%3A%20Basic%20ZmVuZ3BlaWxpbjp4ZDN1S0VOMU9mU2Z5dFRUR2pJQ1YydkwwRFJOTk96QlZSb1dmdmRueW1kTXJ2SXY4cVJKVGhpR1JPTXU%3D%0D%0AAccept-Encoding%3A%20gzip,%20deflate,%20zstd%0D%0AConnection%3A%20keep-alive%0D%0AAccept%3A%20application%2Fjson%0D%0AContent-Type%3A%20application%2Fjson%0D%0AUser-Agent%3A%20AsyncOpenAI%2FPython%201.99.9%0D%0AX-Stainless-Lang%3A%20python%0D%0AX-Stainless-Package-Version%3A%201.99.9%0D%0AX-Stainless-OS%3A%20Linux%0D%0AX-Stainless-Arch%3A%20x64%0D%0AX-Stainless-Runtime%3A%20CPython%0D%0AX-Stainless-Runtime-Version%3A%203.11.9%0D%0AAuthorization%3A%20Bearer%20sk-8FIn7RFwfERr8JpsApsVxuxAX5ubqJ9rW2fa8yvgPmrgrPWT%0D%0AX-Stainless-Async%3A%20async%3Aasyncio%0D%0AX-Stainless-Raw-Response%3A%20true%0D%0Ax-stainless-retry-count%3A%200%0D%0Ax-stainless-read-timeout%3A%20120.0%0D%0AContent-Length%3A%2096016%0D%0A%0D%0A%0D%0A\">cache administrator</a> if you have difficulties authenticating yourself.</p>\n\n<br>\n</div>\n\n<hr> \n<div id=\"footer\">\n<p>Generated Fri, 12 Sep 2025 11:20:18 GMT by cluster-squid-02 (squid)</p>\n<!-- ERR_CACHE_ACCESS_DENIED -->\n</div>\n</body></html>"
+    },
+    {
+        "question_id": "236",
+        "answer": "Error: <!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n<html><head>\n<meta type=\"copyright\" content=\"Copyright (C) 1996-2021 The Squid Software Foundation and contributors\">\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<title>ERROR: Cache Access Denied</title>\n<style type=\"text/css\"><!-- \n \n\nbody\n:lang(fa) { direction: rtl; font-size: 100%; font-family: Tahoma, Roya, sans-serif; float: right; }\n:lang(he) { direction: rtl; }\n --></style>\n</head><body id=ERR_CACHE_ACCESS_DENIED>\n<div id=\"titles\">\n<h1>ERROR</h1>\n<h2>Cache Access Denied.</h2>\n</div>\n<hr>\n\n<div id=\"content\">\n<p>The following error was encountered while trying to retrieve the URL: <a href=\"http://35.220.164.252:3888/v1/chat/completions\">http://35.220.164.252:3888/v1/chat/completions</a></p>\n\n<blockquote id=\"error\">\n<p><b>Cache Access Denied.</b></p>\n</blockquote>\n\n<p>Sorry, you are not currently allowed to request http://35.220.164.252:3888/v1/chat/completions from this cache until you have authenticated yourself.</p>\n\n<p>Please contact the <a href=\"mailto:webmaster?subject=CacheErrorInfo%20-%20ERR_CACHE_ACCESS_DENIED&amp;body=CacheHost%3A%20cluster-squid-02%0D%0AErrPage%3A%20ERR_CACHE_ACCESS_DENIED%0D%0AErr%3A%20%5Bnone%5D%0D%0ATimeStamp%3A%20Fri,%2012%20Sep%202025%2011%3A22%3A18%20GMT%0D%0A%0D%0AClientIP%3A%2010.140.24.21%0D%0A%0D%0AHTTP%20Request%3A%0D%0APOST%20%2Fv1%2Fchat%2Fcompletions%20HTTP%2F1.1%0AHost%3A%2035.220.164.252%3A3888%0D%0AProxy-Authorization%3A%20Basic%20ZmVuZ3BlaWxpbjp4ZDN1S0VOMU9mU2Z5dFRUR2pJQ1YydkwwRFJOTk96QlZSb1dmdmRueW1kTXJ2SXY4cVJKVGhpR1JPTXU%3D%0D%0AAccept-Encoding%3A%20gzip,%20deflate,%20zstd%0D%0AConnection%3A%20keep-alive%0D%0AAccept%3A%20application%2Fjson%0D%0AContent-Type%3A%20application%2Fjson%0D%0AUser-Agent%3A%20AsyncOpenAI%2FPython%201.99.9%0D%0AX-Stainless-Lang%3A%20python%0D%0AX-Stainless-Package-Version%3A%201.99.9%0D%0AX-Stainless-OS%3A%20Linux%0D%0AX-Stainless-Arch%3A%20x64%0D%0AX-Stainless-Runtime%3A%20CPython%0D%0AX-Stainless-Runtime-Version%3A%203.11.9%0D%0AAuthorization%3A%20Bearer%20sk-8FIn7RFwfERr8JpsApsVxuxAX5ubqJ9rW2fa8yvgPmrgrPWT%0D%0AX-Stainless-Async%3A%20async%3Aasyncio%0D%0AX-Stainless-Raw-Response%3A%20true%0D%0Ax-stainless-retry-count%3A%201%0D%0Ax-stainless-read-timeout%3A%20120.0%0D%0AContent-Length%3A%2094701%0D%0A%0D%0A%0D%0A\">cache administrator</a> if you have difficulties authenticating yourself.</p>\n\n<br>\n</div>\n\n<hr> \n<div id=\"footer\">\n<p>Generated Fri, 12 Sep 2025 11:22:18 GMT by cluster-squid-02 (squid)</p>\n<!-- ERR_CACHE_ACCESS_DENIED -->\n</div>\n</body></html>"
+    },
+    {
+        "question_id": "237",
+        "answer": "Error: <!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n<html><head>\n<meta type=\"copyright\" content=\"Copyright (C) 1996-2021 The Squid Software Foundation and contributors\">\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<title>ERROR: Cache Access Denied</title>\n<style type=\"text/css\"><!-- \n \n\nbody\n:lang(fa) { direction: rtl; font-size: 100%; font-family: Tahoma, Roya, sans-serif; float: right; }\n:lang(he) { direction: rtl; }\n --></style>\n</head><body id=ERR_CACHE_ACCESS_DENIED>\n<div id=\"titles\">\n<h1>ERROR</h1>\n<h2>Cache Access Denied.</h2>\n</div>\n<hr>\n\n<div id=\"content\">\n<p>The following error was encountered while trying to retrieve the URL: <a href=\"http://35.220.164.252:3888/v1/chat/completions\">http://35.220.164.252:3888/v1/chat/completions</a></p>\n\n<blockquote id=\"error\">\n<p><b>Cache Access Denied.</b></p>\n</blockquote>\n\n<p>Sorry, you are not currently allowed to request http://35.220.164.252:3888/v1/chat/completions from this cache until you have authenticated yourself.</p>\n\n<p>Please contact the <a href=\"mailto:webmaster?subject=CacheErrorInfo%20-%20ERR_CACHE_ACCESS_DENIED&amp;body=CacheHost%3A%20cluster-squid-02%0D%0AErrPage%3A%20ERR_CACHE_ACCESS_DENIED%0D%0AErr%3A%20%5Bnone%5D%0D%0ATimeStamp%3A%20Fri,%2012%20Sep%202025%2011%3A24%3A18%20GMT%0D%0A%0D%0AClientIP%3A%2010.140.24.21%0D%0A%0D%0AHTTP%20Request%3A%0D%0APOST%20%2Fv1%2Fchat%2Fcompletions%20HTTP%2F1.1%0AHost%3A%2035.220.164.252%3A3888%0D%0AProxy-Authorization%3A%20Basic%20ZmVuZ3BlaWxpbjp4ZDN1S0VOMU9mU2Z5dFRUR2pJQ1YydkwwRFJOTk96QlZSb1dmdmRueW1kTXJ2SXY4cVJKVGhpR1JPTXU%3D%0D%0AAccept-Encoding%3A%20gzip,%20deflate,%20zstd%0D%0AConnection%3A%20keep-alive%0D%0AAccept%3A%20application%2Fjson%0D%0AContent-Type%3A%20application%2Fjson%0D%0AUser-Agent%3A%20AsyncOpenAI%2FPython%201.99.9%0D%0AX-Stainless-Lang%3A%20python%0D%0AX-Stainless-Package-Version%3A%201.99.9%0D%0AX-Stainless-OS%3A%20Linux%0D%0AX-Stainless-Arch%3A%20x64%0D%0AX-Stainless-Runtime%3A%20CPython%0D%0AX-Stainless-Runtime-Version%3A%203.11.9%0D%0AAuthorization%3A%20Bearer%20sk-8FIn7RFwfERr8JpsApsVxuxAX5ubqJ9rW2fa8yvgPmrgrPWT%0D%0AX-Stainless-Async%3A%20async%3Aasyncio%0D%0AX-Stainless-Raw-Response%3A%20true%0D%0Ax-stainless-retry-count%3A%201%0D%0Ax-stainless-read-timeout%3A%20120.0%0D%0AContent-Length%3A%2094657%0D%0A%0D%0A%0D%0A\">cache administrator</a> if you have difficulties authenticating yourself.</p>\n\n<br>\n</div>\n\n<hr> \n<div id=\"footer\">\n<p>Generated Fri, 12 Sep 2025 11:24:18 GMT by cluster-squid-02 (squid)</p>\n<!-- ERR_CACHE_ACCESS_DENIED -->\n</div>\n</body></html>"
+    },
+    {
+        "question_id": "238",
+        "answer": "Error: <!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n<html><head>\n<meta type=\"copyright\" content=\"Copyright (C) 1996-2021 The Squid Software Foundation and contributors\">\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<title>ERROR: Cache Access Denied</title>\n<style type=\"text/css\"><!-- \n \n\nbody\n:lang(fa) { direction: rtl; font-size: 100%; font-family: Tahoma, Roya, sans-serif; float: right; }\n:lang(he) { direction: rtl; }\n --></style>\n</head><body id=ERR_CACHE_ACCESS_DENIED>\n<div id=\"titles\">\n<h1>ERROR</h1>\n<h2>Cache Access Denied.</h2>\n</div>\n<hr>\n\n<div id=\"content\">\n<p>The following error was encountered while trying to retrieve the URL: <a href=\"http://35.220.164.252:3888/v1/chat/completions\">http://35.220.164.252:3888/v1/chat/completions</a></p>\n\n<blockquote id=\"error\">\n<p><b>Cache Access Denied.</b></p>\n</blockquote>\n\n<p>Sorry, you are not currently allowed to request http://35.220.164.252:3888/v1/chat/completions from this cache until you have authenticated yourself.</p>\n\n<p>Please contact the <a href=\"mailto:webmaster?subject=CacheErrorInfo%20-%20ERR_CACHE_ACCESS_DENIED&amp;body=CacheHost%3A%20cluster-squid-02%0D%0AErrPage%3A%20ERR_CACHE_ACCESS_DENIED%0D%0AErr%3A%20%5Bnone%5D%0D%0ATimeStamp%3A%20Fri,%2012%20Sep%202025%2011%3A26%3A18%20GMT%0D%0A%0D%0AClientIP%3A%2010.140.24.21%0D%0A%0D%0AHTTP%20Request%3A%0D%0APOST%20%2Fv1%2Fchat%2Fcompletions%20HTTP%2F1.1%0AHost%3A%2035.220.164.252%3A3888%0D%0AProxy-Authorization%3A%20Basic%20ZmVuZ3BlaWxpbjp4ZDN1S0VOMU9mU2Z5dFRUR2pJQ1YydkwwRFJOTk96QlZSb1dmdmRueW1kTXJ2SXY4cVJKVGhpR1JPTXU%3D%0D%0AAccept-Encoding%3A%20gzip,%20deflate,%20zstd%0D%0AConnection%3A%20keep-alive%0D%0AAccept%3A%20application%2Fjson%0D%0AContent-Type%3A%20application%2Fjson%0D%0AUser-Agent%3A%20AsyncOpenAI%2FPython%201.99.9%0D%0AX-Stainless-Lang%3A%20python%0D%0AX-Stainless-Package-Version%3A%201.99.9%0D%0AX-Stainless-OS%3A%20Linux%0D%0AX-Stainless-Arch%3A%20x64%0D%0AX-Stainless-Runtime%3A%20CPython%0D%0AX-Stainless-Runtime-Version%3A%203.11.9%0D%0AAuthorization%3A%20Bearer%20sk-8FIn7RFwfERr8JpsApsVxuxAX5ubqJ9rW2fa8yvgPmrgrPWT%0D%0AX-Stainless-Async%3A%20async%3Aasyncio%0D%0AX-Stainless-Raw-Response%3A%20true%0D%0Ax-stainless-retry-count%3A%201%0D%0Ax-stainless-read-timeout%3A%20120.0%0D%0AContent-Length%3A%2094807%0D%0A%0D%0A%0D%0A\">cache administrator</a> if you have difficulties authenticating yourself.</p>\n\n<br>\n</div>\n\n<hr> \n<div id=\"footer\">\n<p>Generated Fri, 12 Sep 2025 11:26:18 GMT by cluster-squid-02 (squid)</p>\n<!-- ERR_CACHE_ACCESS_DENIED -->\n</div>\n</body></html>"
+    },
+    {
+        "question_id": "239",
+        "answer": "Error: <!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n<html><head>\n<meta type=\"copyright\" content=\"Copyright (C) 1996-2021 The Squid Software Foundation and contributors\">\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<title>ERROR: Cache Access Denied</title>\n<style type=\"text/css\"><!-- \n \n\nbody\n:lang(fa) { direction: rtl; font-size: 100%; font-family: Tahoma, Roya, sans-serif; float: right; }\n:lang(he) { direction: rtl; }\n --></style>\n</head><body id=ERR_CACHE_ACCESS_DENIED>\n<div id=\"titles\">\n<h1>ERROR</h1>\n<h2>Cache Access Denied.</h2>\n</div>\n<hr>\n\n<div id=\"content\">\n<p>The following error was encountered while trying to retrieve the URL: <a href=\"http://35.220.164.252:3888/v1/chat/completions\">http://35.220.164.252:3888/v1/chat/completions</a></p>\n\n<blockquote id=\"error\">\n<p><b>Cache Access Denied.</b></p>\n</blockquote>\n\n<p>Sorry, you are not currently allowed to request http://35.220.164.252:3888/v1/chat/completions from this cache until you have authenticated yourself.</p>\n\n<p>Please contact the <a href=\"mailto:webmaster?subject=CacheErrorInfo%20-%20ERR_CACHE_ACCESS_DENIED&amp;body=CacheHost%3A%20cluster-squid-02%0D%0AErrPage%3A%20ERR_CACHE_ACCESS_DENIED%0D%0AErr%3A%20%5Bnone%5D%0D%0ATimeStamp%3A%20Fri,%2012%20Sep%202025%2011%3A28%3A18%20GMT%0D%0A%0D%0AClientIP%3A%2010.140.24.21%0D%0A%0D%0AHTTP%20Request%3A%0D%0APOST%20%2Fv1%2Fchat%2Fcompletions%20HTTP%2F1.1%0AHost%3A%2035.220.164.252%3A3888%0D%0AProxy-Authorization%3A%20Basic%20ZmVuZ3BlaWxpbjp4ZDN1S0VOMU9mU2Z5dFRUR2pJQ1YydkwwRFJOTk96QlZSb1dmdmRueW1kTXJ2SXY4cVJKVGhpR1JPTXU%3D%0D%0AAccept-Encoding%3A%20gzip,%20deflate,%20zstd%0D%0AConnection%3A%20keep-alive%0D%0AAccept%3A%20application%2Fjson%0D%0AContent-Type%3A%20application%2Fjson%0D%0AUser-Agent%3A%20AsyncOpenAI%2FPython%201.99.9%0D%0AX-Stainless-Lang%3A%20python%0D%0AX-Stainless-Package-Version%3A%201.99.9%0D%0AX-Stainless-OS%3A%20Linux%0D%0AX-Stainless-Arch%3A%20x64%0D%0AX-Stainless-Runtime%3A%20CPython%0D%0AX-Stainless-Runtime-Version%3A%203.11.9%0D%0AAuthorization%3A%20Bearer%20sk-8FIn7RFwfERr8JpsApsVxuxAX5ubqJ9rW2fa8yvgPmrgrPWT%0D%0AX-Stainless-Async%3A%20async%3Aasyncio%0D%0AX-Stainless-Raw-Response%3A%20true%0D%0Ax-stainless-retry-count%3A%201%0D%0Ax-stainless-read-timeout%3A%20120.0%0D%0AContent-Length%3A%2094674%0D%0A%0D%0A%0D%0A\">cache administrator</a> if you have difficulties authenticating yourself.</p>\n\n<br>\n</div>\n\n<hr> \n<div id=\"footer\">\n<p>Generated Fri, 12 Sep 2025 11:28:18 GMT by cluster-squid-02 (squid)</p>\n<!-- ERR_CACHE_ACCESS_DENIED -->\n</div>\n</body></html>"
+    },
+    {
+        "question_id": "240",
+        "answer": "Error: <!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n<html><head>\n<meta type=\"copyright\" content=\"Copyright (C) 1996-2021 The Squid Software Foundation and contributors\">\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<title>ERROR: Cache Access Denied</title>\n<style type=\"text/css\"><!-- \n \n\nbody\n:lang(fa) { direction: rtl; font-size: 100%; font-family: Tahoma, Roya, sans-serif; float: right; }\n:lang(he) { direction: rtl; }\n --></style>\n</head><body id=ERR_CACHE_ACCESS_DENIED>\n<div id=\"titles\">\n<h1>ERROR</h1>\n<h2>Cache Access Denied.</h2>\n</div>\n<hr>\n\n<div id=\"content\">\n<p>The following error was encountered while trying to retrieve the URL: <a href=\"http://35.220.164.252:3888/v1/chat/completions\">http://35.220.164.252:3888/v1/chat/completions</a></p>\n\n<blockquote id=\"error\">\n<p><b>Cache Access Denied.</b></p>\n</blockquote>\n\n<p>Sorry, you are not currently allowed to request http://35.220.164.252:3888/v1/chat/completions from this cache until you have authenticated yourself.</p>\n\n<p>Please contact the <a href=\"mailto:webmaster?subject=CacheErrorInfo%20-%20ERR_CACHE_ACCESS_DENIED&amp;body=CacheHost%3A%20cluster-squid-02%0D%0AErrPage%3A%20ERR_CACHE_ACCESS_DENIED%0D%0AErr%3A%20%5Bnone%5D%0D%0ATimeStamp%3A%20Fri,%2012%20Sep%202025%2011%3A30%3A18%20GMT%0D%0A%0D%0AClientIP%3A%2010.140.24.21%0D%0A%0D%0AHTTP%20Request%3A%0D%0APOST%20%2Fv1%2Fchat%2Fcompletions%20HTTP%2F1.1%0AHost%3A%2035.220.164.252%3A3888%0D%0AProxy-Authorization%3A%20Basic%20ZmVuZ3BlaWxpbjp4ZDN1S0VOMU9mU2Z5dFRUR2pJQ1YydkwwRFJOTk96QlZSb1dmdmRueW1kTXJ2SXY4cVJKVGhpR1JPTXU%3D%0D%0AAccept-Encoding%3A%20gzip,%20deflate,%20zstd%0D%0AConnection%3A%20keep-alive%0D%0AAccept%3A%20application%2Fjson%0D%0AContent-Type%3A%20application%2Fjson%0D%0AUser-Agent%3A%20AsyncOpenAI%2FPython%201.99.9%0D%0AX-Stainless-Lang%3A%20python%0D%0AX-Stainless-Package-Version%3A%201.99.9%0D%0AX-Stainless-OS%3A%20Linux%0D%0AX-Stainless-Arch%3A%20x64%0D%0AX-Stainless-Runtime%3A%20CPython%0D%0AX-Stainless-Runtime-Version%3A%203.11.9%0D%0AAuthorization%3A%20Bearer%20sk-8FIn7RFwfERr8JpsApsVxuxAX5ubqJ9rW2fa8yvgPmrgrPWT%0D%0AX-Stainless-Async%3A%20async%3Aasyncio%0D%0AX-Stainless-Raw-Response%3A%20true%0D%0Ax-stainless-retry-count%3A%201%0D%0Ax-stainless-read-timeout%3A%20120.0%0D%0AContent-Length%3A%2094780%0D%0A%0D%0A%0D%0A\">cache administrator</a> if you have difficulties authenticating yourself.</p>\n\n<br>\n</div>\n\n<hr> \n<div id=\"footer\">\n<p>Generated Fri, 12 Sep 2025 11:30:18 GMT by cluster-squid-02 (squid)</p>\n<!-- ERR_CACHE_ACCESS_DENIED -->\n</div>\n</body></html>"
+    },
+    {
+        "question_id": "241",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "242",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "243",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "244",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "245",
+        "answer": "<Answer>B.About 150<Answer>"
+    },
+    {
+        "question_id": "246",
+        "answer": "<Answer>A.About (100, 1000)<Answer>"
+    },
+    {
+        "question_id": "247",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "248",
+        "answer": "<Answer>D.There isn't tennis court in the provided image.<Answer>"
+    }
+]

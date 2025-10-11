@@ -1,0 +1,58 @@
+{
+    "mcpServers": {
+        "Analysis": {
+            "command": "python",
+            "args": [
+                "tools/Analysis.py",
+                "--temp_dir",
+                "tmp/tmp/out"
+            ]
+        },
+        "Index": {
+            "command": "python",
+            "args": [
+                "tools/Index.py",
+                "--temp_dir",
+                "tmp/tmp/out"
+            ]
+        },
+        "Inversion": {
+            "command": "python",
+            "args": [
+                "tools/Inversion.py",
+                "--temp_dir",
+                "tmp/tmp/out"
+            ]
+        },
+        "Perception": {
+            "command": "python",
+            "args": [
+                "tools/Perception.py",
+                "--temp_dir",
+                "tmp/tmp/out"
+            ]
+        },
+        "Statistics": {
+            "command": "python",
+            "args": [
+                "tools/Statistics.py",
+                "--temp_dir",
+                "tmp/tmp/out"
+            ]
+        }
+    },
+    "models": [
+        {
+            "config_name": "qwen3-max-preview",
+            "model_type": "openai_chat",
+            "model_name": "qwen3-max-preview",
+            "api_key": "",
+            "client_args": {
+                "base_url": ""
+            },
+            "generate_args": {
+                "enable_thinking": false
+            }
+        }
+    ]
+}

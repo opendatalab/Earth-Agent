@@ -1,0 +1,994 @@
+[
+    {
+        "question_id": "1",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "2",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "3",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "4",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "5",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "6",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "7",
+        "answer": "<Answer>A.5 days<Answer>"
+    },
+    {
+        "question_id": "8",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "9",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "10",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "11",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "12",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "13",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "14",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "15",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "16",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "17",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "18",
+        "answer": "Error: Request timed out."
+    },
+    {
+        "question_id": "19",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "20",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "21",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "22",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "23",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "24",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "25",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "26",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "27",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "28",
+        "answer": "<Answer>B.5.24 K<Answer>"
+    },
+    {
+        "question_id": "29",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "30",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "31",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "32",
+        "answer": "Sorry, need more steps to process this request."
+    },
+    {
+        "question_id": "33",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "34",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "35",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "36",
+        "answer": "Error: Request timed out."
+    },
+    {
+        "question_id": "37",
+        "answer": "Error: Request timed out."
+    },
+    {
+        "question_id": "38",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "39",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "40",
+        "answer": "Error: Request timed out."
+    },
+    {
+        "question_id": "41",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "42",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "43",
+        "answer": "Sorry, need more steps to process this request."
+    },
+    {
+        "question_id": "44",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "45",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "46",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "47",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "48",
+        "answer": "<Answer>C.0.045<Answer>"
+    },
+    {
+        "question_id": "49",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "50",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "51",
+        "answer": "C"
+    },
+    {
+        "question_id": "52",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "53",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "54",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "55",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "56",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "57",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "58",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "59",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "60",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "61",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "62",
+        "answer": "Sorry, need more steps to process this request."
+    },
+    {
+        "question_id": "63",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "64",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "65",
+        "answer": "Error: Request timed out."
+    },
+    {
+        "question_id": "66",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "67",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "68",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "69",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "70",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "71",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "72",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "73",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "74",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "75",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "76",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "77",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "78",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "79",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "80",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "81",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "82",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "83",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "84",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "85",
+        "answer": "Error: Request timed out."
+    },
+    {
+        "question_id": "86",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "87",
+        "answer": "<Answer>C.4.64<Answer>"
+    },
+    {
+        "question_id": "88",
+        "answer": "Sorry, need more steps to process this request."
+    },
+    {
+        "question_id": "89",
+        "answer": "Sorry, need more steps to process this request."
+    },
+    {
+        "question_id": "90",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "91",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "92",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "93",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "94",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "95",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "96",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "97",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "98",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "99",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "100",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "101",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "102",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "103",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "104",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "105",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "106",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "107",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "108",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "109",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "110",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "111",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "112",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "113",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "114",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "115",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "116",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "117",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "118",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "119",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "120",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "121",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "122",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "123",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "124",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "125",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "126",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "127",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "128",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "129",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "130",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "131",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "132",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "133",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "134",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "135",
+        "answer": "Error: Request timed out."
+    },
+    {
+        "question_id": "136",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "137",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "138",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "139",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "140",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "141",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "142",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "143",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "144",
+        "answer": "<Answer>C.32.03 mm<Answer>"
+    },
+    {
+        "question_id": "145",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "146",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "147",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "148",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "149",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "150",
+        "answer": "<Answer>E<Answer>"
+    },
+    {
+        "question_id": "151",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "152",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "153",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "154",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "155",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "156",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "157",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "158",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "159",
+        "answer": "<Answer>E<Answer>"
+    },
+    {
+        "question_id": "160",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "161",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "162",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "163",
+        "answer": "<Answer>0.408<Answer>"
+    },
+    {
+        "question_id": "164",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "165",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "166",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "167",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "168",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "169",
+        "answer": "<Answer>F<Answer>"
+    },
+    {
+        "question_id": "170",
+        "answer": "Error: Request timed out."
+    },
+    {
+        "question_id": "171",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "172",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "173",
+        "answer": "<Answer>-15.955<Answer>"
+    },
+    {
+        "question_id": "174",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "175",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "176",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "177",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "178",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "179",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "180",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "181",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "182",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "183",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "184",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "185",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "186",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "187",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "188",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "189",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "190",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "191",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "192",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "193",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "194",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "195",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "196",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "197",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "198",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "199",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "200",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "201",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "202",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "203",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "204",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "205",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "206",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "207",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "208",
+        "answer": "Error: <!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n<html><head>\n<meta type=\"copyright\" content=\"Copyright (C) 1996-2021 The Squid Software Foundation and contributors\">\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<title>ERROR: Cache Access Denied</title>\n<style type=\"text/css\"><!-- \n \n\nbody\n:lang(fa) { direction: rtl; font-size: 100%; font-family: Tahoma, Roya, sans-serif; float: right; }\n:lang(he) { direction: rtl; }\n --></style>\n</head><body id=ERR_CACHE_ACCESS_DENIED>\n<div id=\"titles\">\n<h1>ERROR</h1>\n<h2>Cache Access Denied.</h2>\n</div>\n<hr>\n\n<div id=\"content\">\n<p>The following error was encountered while trying to retrieve the URL: <a href=\"http://35.220.164.252:3888/v1/chat/completions\">http://35.220.164.252:3888/v1/chat/completions</a></p>\n\n<blockquote id=\"error\">\n<p><b>Cache Access Denied.</b></p>\n</blockquote>\n\n<p>Sorry, you are not currently allowed to request http://35.220.164.252:3888/v1/chat/completions from this cache until you have authenticated yourself.</p>\n\n<p>Please contact the <a href=\"mailto:webmaster?subject=CacheErrorInfo%20-%20ERR_CACHE_ACCESS_DENIED&amp;body=CacheHost%3A%20cluster-squid-02%0D%0AErrPage%3A%20ERR_CACHE_ACCESS_DENIED%0D%0AErr%3A%20%5Bnone%5D%0D%0ATimeStamp%3A%20Fri,%2012%20Sep%202025%2011%3A20%3A15%20GMT%0D%0A%0D%0AClientIP%3A%2010.140.24.21%0D%0A%0D%0AHTTP%20Request%3A%0D%0APOST%20%2Fv1%2Fchat%2Fcompletions%20HTTP%2F1.1%0AHost%3A%2035.220.164.252%3A3888%0D%0AProxy-Authorization%3A%20Basic%20ZmVuZ3BlaWxpbjp4ZDN1S0VOMU9mU2Z5dFRUR2pJQ1YydkwwRFJOTk96QlZSb1dmdmRueW1kTXJ2SXY4cVJKVGhpR1JPTXU%3D%0D%0AAccept-Encoding%3A%20gzip,%20deflate,%20zstd%0D%0AConnection%3A%20keep-alive%0D%0AAccept%3A%20application%2Fjson%0D%0AContent-Type%3A%20application%2Fjson%0D%0AUser-Agent%3A%20AsyncOpenAI%2FPython%201.99.9%0D%0AX-Stainless-Lang%3A%20python%0D%0AX-Stainless-Package-Version%3A%201.99.9%0D%0AX-Stainless-OS%3A%20Linux%0D%0AX-Stainless-Arch%3A%20x64%0D%0AX-Stainless-Runtime%3A%20CPython%0D%0AX-Stainless-Runtime-Version%3A%203.11.9%0D%0AAuthorization%3A%20Bearer%20sk-8FIn7RFwfERr8JpsApsVxuxAX5ubqJ9rW2fa8yvgPmrgrPWT%0D%0AX-Stainless-Async%3A%20async%3Aasyncio%0D%0AX-Stainless-Raw-Response%3A%20true%0D%0Ax-stainless-retry-count%3A%200%0D%0Ax-stainless-read-timeout%3A%20120.0%0D%0AContent-Length%3A%2094875%0D%0A%0D%0A%0D%0A\">cache administrator</a> if you have difficulties authenticating yourself.</p>\n\n<br>\n</div>\n\n<hr> \n<div id=\"footer\">\n<p>Generated Fri, 12 Sep 2025 11:20:15 GMT by cluster-squid-02 (squid)</p>\n<!-- ERR_CACHE_ACCESS_DENIED -->\n</div>\n</body></html>"
+    },
+    {
+        "question_id": "209",
+        "answer": "Error: <!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n<html><head>\n<meta type=\"copyright\" content=\"Copyright (C) 1996-2021 The Squid Software Foundation and contributors\">\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<title>ERROR: Cache Access Denied</title>\n<style type=\"text/css\"><!-- \n \n\nbody\n:lang(fa) { direction: rtl; font-size: 100%; font-family: Tahoma, Roya, sans-serif; float: right; }\n:lang(he) { direction: rtl; }\n --></style>\n</head><body id=ERR_CACHE_ACCESS_DENIED>\n<div id=\"titles\">\n<h1>ERROR</h1>\n<h2>Cache Access Denied.</h2>\n</div>\n<hr>\n\n<div id=\"content\">\n<p>The following error was encountered while trying to retrieve the URL: <a href=\"http://35.220.164.252:3888/v1/chat/completions\">http://35.220.164.252:3888/v1/chat/completions</a></p>\n\n<blockquote id=\"error\">\n<p><b>Cache Access Denied.</b></p>\n</blockquote>\n\n<p>Sorry, you are not currently allowed to request http://35.220.164.252:3888/v1/chat/completions from this cache until you have authenticated yourself.</p>\n\n<p>Please contact the <a href=\"mailto:webmaster?subject=CacheErrorInfo%20-%20ERR_CACHE_ACCESS_DENIED&amp;body=CacheHost%3A%20cluster-squid-02%0D%0AErrPage%3A%20ERR_CACHE_ACCESS_DENIED%0D%0AErr%3A%20%5Bnone%5D%0D%0ATimeStamp%3A%20Fri,%2012%20Sep%202025%2011%3A22%3A15%20GMT%0D%0A%0D%0AClientIP%3A%2010.140.24.21%0D%0A%0D%0AHTTP%20Request%3A%0D%0APOST%20%2Fv1%2Fchat%2Fcompletions%20HTTP%2F1.1%0AHost%3A%2035.220.164.252%3A3888%0D%0AProxy-Authorization%3A%20Basic%20ZmVuZ3BlaWxpbjp4ZDN1S0VOMU9mU2Z5dFRUR2pJQ1YydkwwRFJOTk96QlZSb1dmdmRueW1kTXJ2SXY4cVJKVGhpR1JPTXU%3D%0D%0AAccept-Encoding%3A%20gzip,%20deflate,%20zstd%0D%0AConnection%3A%20keep-alive%0D%0AAccept%3A%20application%2Fjson%0D%0AContent-Type%3A%20application%2Fjson%0D%0AUser-Agent%3A%20AsyncOpenAI%2FPython%201.99.9%0D%0AX-Stainless-Lang%3A%20python%0D%0AX-Stainless-Package-Version%3A%201.99.9%0D%0AX-Stainless-OS%3A%20Linux%0D%0AX-Stainless-Arch%3A%20x64%0D%0AX-Stainless-Runtime%3A%20CPython%0D%0AX-Stainless-Runtime-Version%3A%203.11.9%0D%0AAuthorization%3A%20Bearer%20sk-8FIn7RFwfERr8JpsApsVxuxAX5ubqJ9rW2fa8yvgPmrgrPWT%0D%0AX-Stainless-Async%3A%20async%3Aasyncio%0D%0AX-Stainless-Raw-Response%3A%20true%0D%0Ax-stainless-retry-count%3A%201%0D%0Ax-stainless-read-timeout%3A%20120.0%0D%0AContent-Length%3A%2094846%0D%0A%0D%0A%0D%0A\">cache administrator</a> if you have difficulties authenticating yourself.</p>\n\n<br>\n</div>\n\n<hr> \n<div id=\"footer\">\n<p>Generated Fri, 12 Sep 2025 11:22:15 GMT by cluster-squid-02 (squid)</p>\n<!-- ERR_CACHE_ACCESS_DENIED -->\n</div>\n</body></html>"
+    },
+    {
+        "question_id": "210",
+        "answer": "Error: <!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n<html><head>\n<meta type=\"copyright\" content=\"Copyright (C) 1996-2021 The Squid Software Foundation and contributors\">\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<title>ERROR: Cache Access Denied</title>\n<style type=\"text/css\"><!-- \n \n\nbody\n:lang(fa) { direction: rtl; font-size: 100%; font-family: Tahoma, Roya, sans-serif; float: right; }\n:lang(he) { direction: rtl; }\n --></style>\n</head><body id=ERR_CACHE_ACCESS_DENIED>\n<div id=\"titles\">\n<h1>ERROR</h1>\n<h2>Cache Access Denied.</h2>\n</div>\n<hr>\n\n<div id=\"content\">\n<p>The following error was encountered while trying to retrieve the URL: <a href=\"http://35.220.164.252:3888/v1/chat/completions\">http://35.220.164.252:3888/v1/chat/completions</a></p>\n\n<blockquote id=\"error\">\n<p><b>Cache Access Denied.</b></p>\n</blockquote>\n\n<p>Sorry, you are not currently allowed to request http://35.220.164.252:3888/v1/chat/completions from this cache until you have authenticated yourself.</p>\n\n<p>Please contact the <a href=\"mailto:webmaster?subject=CacheErrorInfo%20-%20ERR_CACHE_ACCESS_DENIED&amp;body=CacheHost%3A%20cluster-squid-02%0D%0AErrPage%3A%20ERR_CACHE_ACCESS_DENIED%0D%0AErr%3A%20%5Bnone%5D%0D%0ATimeStamp%3A%20Fri,%2012%20Sep%202025%2011%3A24%3A15%20GMT%0D%0A%0D%0AClientIP%3A%2010.140.24.21%0D%0A%0D%0AHTTP%20Request%3A%0D%0APOST%20%2Fv1%2Fchat%2Fcompletions%20HTTP%2F1.1%0AHost%3A%2035.220.164.252%3A3888%0D%0AProxy-Authorization%3A%20Basic%20ZmVuZ3BlaWxpbjp4ZDN1S0VOMU9mU2Z5dFRUR2pJQ1YydkwwRFJOTk96QlZSb1dmdmRueW1kTXJ2SXY4cVJKVGhpR1JPTXU%3D%0D%0AAccept-Encoding%3A%20gzip,%20deflate,%20zstd%0D%0AConnection%3A%20keep-alive%0D%0AAccept%3A%20application%2Fjson%0D%0AContent-Type%3A%20application%2Fjson%0D%0AUser-Agent%3A%20AsyncOpenAI%2FPython%201.99.9%0D%0AX-Stainless-Lang%3A%20python%0D%0AX-Stainless-Package-Version%3A%201.99.9%0D%0AX-Stainless-OS%3A%20Linux%0D%0AX-Stainless-Arch%3A%20x64%0D%0AX-Stainless-Runtime%3A%20CPython%0D%0AX-Stainless-Runtime-Version%3A%203.11.9%0D%0AAuthorization%3A%20Bearer%20sk-8FIn7RFwfERr8JpsApsVxuxAX5ubqJ9rW2fa8yvgPmrgrPWT%0D%0AX-Stainless-Async%3A%20async%3Aasyncio%0D%0AX-Stainless-Raw-Response%3A%20true%0D%0Ax-stainless-retry-count%3A%201%0D%0Ax-stainless-read-timeout%3A%20120.0%0D%0AContent-Length%3A%2094789%0D%0A%0D%0A%0D%0A\">cache administrator</a> if you have difficulties authenticating yourself.</p>\n\n<br>\n</div>\n\n<hr> \n<div id=\"footer\">\n<p>Generated Fri, 12 Sep 2025 11:24:15 GMT by cluster-squid-02 (squid)</p>\n<!-- ERR_CACHE_ACCESS_DENIED -->\n</div>\n</body></html>"
+    },
+    {
+        "question_id": "211",
+        "answer": "Error: <!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n<html><head>\n<meta type=\"copyright\" content=\"Copyright (C) 1996-2021 The Squid Software Foundation and contributors\">\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<title>ERROR: Cache Access Denied</title>\n<style type=\"text/css\"><!-- \n \n\nbody\n:lang(fa) { direction: rtl; font-size: 100%; font-family: Tahoma, Roya, sans-serif; float: right; }\n:lang(he) { direction: rtl; }\n --></style>\n</head><body id=ERR_CACHE_ACCESS_DENIED>\n<div id=\"titles\">\n<h1>ERROR</h1>\n<h2>Cache Access Denied.</h2>\n</div>\n<hr>\n\n<div id=\"content\">\n<p>The following error was encountered while trying to retrieve the URL: <a href=\"http://35.220.164.252:3888/v1/chat/completions\">http://35.220.164.252:3888/v1/chat/completions</a></p>\n\n<blockquote id=\"error\">\n<p><b>Cache Access Denied.</b></p>\n</blockquote>\n\n<p>Sorry, you are not currently allowed to request http://35.220.164.252:3888/v1/chat/completions from this cache until you have authenticated yourself.</p>\n\n<p>Please contact the <a href=\"mailto:webmaster?subject=CacheErrorInfo%20-%20ERR_CACHE_ACCESS_DENIED&amp;body=CacheHost%3A%20cluster-squid-02%0D%0AErrPage%3A%20ERR_CACHE_ACCESS_DENIED%0D%0AErr%3A%20%5Bnone%5D%0D%0ATimeStamp%3A%20Fri,%2012%20Sep%202025%2011%3A26%3A15%20GMT%0D%0A%0D%0AClientIP%3A%2010.140.24.21%0D%0A%0D%0AHTTP%20Request%3A%0D%0APOST%20%2Fv1%2Fchat%2Fcompletions%20HTTP%2F1.1%0AHost%3A%2035.220.164.252%3A3888%0D%0AProxy-Authorization%3A%20Basic%20ZmVuZ3BlaWxpbjp4ZDN1S0VOMU9mU2Z5dFRUR2pJQ1YydkwwRFJOTk96QlZSb1dmdmRueW1kTXJ2SXY4cVJKVGhpR1JPTXU%3D%0D%0AAccept-Encoding%3A%20gzip,%20deflate,%20zstd%0D%0AConnection%3A%20keep-alive%0D%0AAccept%3A%20application%2Fjson%0D%0AContent-Type%3A%20application%2Fjson%0D%0AUser-Agent%3A%20AsyncOpenAI%2FPython%201.99.9%0D%0AX-Stainless-Lang%3A%20python%0D%0AX-Stainless-Package-Version%3A%201.99.9%0D%0AX-Stainless-OS%3A%20Linux%0D%0AX-Stainless-Arch%3A%20x64%0D%0AX-Stainless-Runtime%3A%20CPython%0D%0AX-Stainless-Runtime-Version%3A%203.11.9%0D%0AAuthorization%3A%20Bearer%20sk-8FIn7RFwfERr8JpsApsVxuxAX5ubqJ9rW2fa8yvgPmrgrPWT%0D%0AX-Stainless-Async%3A%20async%3Aasyncio%0D%0AX-Stainless-Raw-Response%3A%20true%0D%0Ax-stainless-retry-count%3A%201%0D%0Ax-stainless-read-timeout%3A%20120.0%0D%0AContent-Length%3A%2094921%0D%0A%0D%0A%0D%0A\">cache administrator</a> if you have difficulties authenticating yourself.</p>\n\n<br>\n</div>\n\n<hr> \n<div id=\"footer\">\n<p>Generated Fri, 12 Sep 2025 11:26:15 GMT by cluster-squid-02 (squid)</p>\n<!-- ERR_CACHE_ACCESS_DENIED -->\n</div>\n</body></html>"
+    },
+    {
+        "question_id": "212",
+        "answer": "Error: <!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n<html><head>\n<meta type=\"copyright\" content=\"Copyright (C) 1996-2021 The Squid Software Foundation and contributors\">\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<title>ERROR: Cache Access Denied</title>\n<style type=\"text/css\"><!-- \n \n\nbody\n:lang(fa) { direction: rtl; font-size: 100%; font-family: Tahoma, Roya, sans-serif; float: right; }\n:lang(he) { direction: rtl; }\n --></style>\n</head><body id=ERR_CACHE_ACCESS_DENIED>\n<div id=\"titles\">\n<h1>ERROR</h1>\n<h2>Cache Access Denied.</h2>\n</div>\n<hr>\n\n<div id=\"content\">\n<p>The following error was encountered while trying to retrieve the URL: <a href=\"http://35.220.164.252:3888/v1/chat/completions\">http://35.220.164.252:3888/v1/chat/completions</a></p>\n\n<blockquote id=\"error\">\n<p><b>Cache Access Denied.</b></p>\n</blockquote>\n\n<p>Sorry, you are not currently allowed to request http://35.220.164.252:3888/v1/chat/completions from this cache until you have authenticated yourself.</p>\n\n<p>Please contact the <a href=\"mailto:webmaster?subject=CacheErrorInfo%20-%20ERR_CACHE_ACCESS_DENIED&amp;body=CacheHost%3A%20cluster-squid-02%0D%0AErrPage%3A%20ERR_CACHE_ACCESS_DENIED%0D%0AErr%3A%20%5Bnone%5D%0D%0ATimeStamp%3A%20Fri,%2012%20Sep%202025%2011%3A28%3A15%20GMT%0D%0A%0D%0AClientIP%3A%2010.140.24.21%0D%0A%0D%0AHTTP%20Request%3A%0D%0APOST%20%2Fv1%2Fchat%2Fcompletions%20HTTP%2F1.1%0AHost%3A%2035.220.164.252%3A3888%0D%0AProxy-Authorization%3A%20Basic%20ZmVuZ3BlaWxpbjp4ZDN1S0VOMU9mU2Z5dFRUR2pJQ1YydkwwRFJOTk96QlZSb1dmdmRueW1kTXJ2SXY4cVJKVGhpR1JPTXU%3D%0D%0AAccept-Encoding%3A%20gzip,%20deflate,%20zstd%0D%0AConnection%3A%20keep-alive%0D%0AAccept%3A%20application%2Fjson%0D%0AContent-Type%3A%20application%2Fjson%0D%0AUser-Agent%3A%20AsyncOpenAI%2FPython%201.99.9%0D%0AX-Stainless-Lang%3A%20python%0D%0AX-Stainless-Package-Version%3A%201.99.9%0D%0AX-Stainless-OS%3A%20Linux%0D%0AX-Stainless-Arch%3A%20x64%0D%0AX-Stainless-Runtime%3A%20CPython%0D%0AX-Stainless-Runtime-Version%3A%203.11.9%0D%0AAuthorization%3A%20Bearer%20sk-8FIn7RFwfERr8JpsApsVxuxAX5ubqJ9rW2fa8yvgPmrgrPWT%0D%0AX-Stainless-Async%3A%20async%3Aasyncio%0D%0AX-Stainless-Raw-Response%3A%20true%0D%0Ax-stainless-retry-count%3A%201%0D%0Ax-stainless-read-timeout%3A%20120.0%0D%0AContent-Length%3A%2094828%0D%0A%0D%0A%0D%0A\">cache administrator</a> if you have difficulties authenticating yourself.</p>\n\n<br>\n</div>\n\n<hr> \n<div id=\"footer\">\n<p>Generated Fri, 12 Sep 2025 11:28:15 GMT by cluster-squid-02 (squid)</p>\n<!-- ERR_CACHE_ACCESS_DENIED -->\n</div>\n</body></html>"
+    },
+    {
+        "question_id": "213",
+        "answer": "Error: <!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n<html><head>\n<meta type=\"copyright\" content=\"Copyright (C) 1996-2021 The Squid Software Foundation and contributors\">\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<title>ERROR: Cache Access Denied</title>\n<style type=\"text/css\"><!-- \n \n\nbody\n:lang(fa) { direction: rtl; font-size: 100%; font-family: Tahoma, Roya, sans-serif; float: right; }\n:lang(he) { direction: rtl; }\n --></style>\n</head><body id=ERR_CACHE_ACCESS_DENIED>\n<div id=\"titles\">\n<h1>ERROR</h1>\n<h2>Cache Access Denied.</h2>\n</div>\n<hr>\n\n<div id=\"content\">\n<p>The following error was encountered while trying to retrieve the URL: <a href=\"http://35.220.164.252:3888/v1/chat/completions\">http://35.220.164.252:3888/v1/chat/completions</a></p>\n\n<blockquote id=\"error\">\n<p><b>Cache Access Denied.</b></p>\n</blockquote>\n\n<p>Sorry, you are not currently allowed to request http://35.220.164.252:3888/v1/chat/completions from this cache until you have authenticated yourself.</p>\n\n<p>Please contact the <a href=\"mailto:webmaster?subject=CacheErrorInfo%20-%20ERR_CACHE_ACCESS_DENIED&amp;body=CacheHost%3A%20cluster-squid-02%0D%0AErrPage%3A%20ERR_CACHE_ACCESS_DENIED%0D%0AErr%3A%20%5Bnone%5D%0D%0ATimeStamp%3A%20Fri,%2012%20Sep%202025%2011%3A30%3A15%20GMT%0D%0A%0D%0AClientIP%3A%2010.140.24.21%0D%0A%0D%0AHTTP%20Request%3A%0D%0APOST%20%2Fv1%2Fchat%2Fcompletions%20HTTP%2F1.1%0AHost%3A%2035.220.164.252%3A3888%0D%0AProxy-Authorization%3A%20Basic%20ZmVuZ3BlaWxpbjp4ZDN1S0VOMU9mU2Z5dFRUR2pJQ1YydkwwRFJOTk96QlZSb1dmdmRueW1kTXJ2SXY4cVJKVGhpR1JPTXU%3D%0D%0AAccept-Encoding%3A%20gzip,%20deflate,%20zstd%0D%0AConnection%3A%20keep-alive%0D%0AAccept%3A%20application%2Fjson%0D%0AContent-Type%3A%20application%2Fjson%0D%0AUser-Agent%3A%20AsyncOpenAI%2FPython%201.99.9%0D%0AX-Stainless-Lang%3A%20python%0D%0AX-Stainless-Package-Version%3A%201.99.9%0D%0AX-Stainless-OS%3A%20Linux%0D%0AX-Stainless-Arch%3A%20x64%0D%0AX-Stainless-Runtime%3A%20CPython%0D%0AX-Stainless-Runtime-Version%3A%203.11.9%0D%0AAuthorization%3A%20Bearer%20sk-8FIn7RFwfERr8JpsApsVxuxAX5ubqJ9rW2fa8yvgPmrgrPWT%0D%0AX-Stainless-Async%3A%20async%3Aasyncio%0D%0AX-Stainless-Raw-Response%3A%20true%0D%0Ax-stainless-retry-count%3A%201%0D%0Ax-stainless-read-timeout%3A%20120.0%0D%0AContent-Length%3A%2094875%0D%0A%0D%0A%0D%0A\">cache administrator</a> if you have difficulties authenticating yourself.</p>\n\n<br>\n</div>\n\n<hr> \n<div id=\"footer\">\n<p>Generated Fri, 12 Sep 2025 11:30:15 GMT by cluster-squid-02 (squid)</p>\n<!-- ERR_CACHE_ACCESS_DENIED -->\n</div>\n</body></html>"
+    },
+    {
+        "question_id": "214",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "215",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "216",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "217",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "218",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "219",
+        "answer": "Sorry, need more steps to process this request."
+    },
+    {
+        "question_id": "220",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "221",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "222",
+        "answer": "Sorry, need more steps to process this request."
+    },
+    {
+        "question_id": "223",
+        "answer": "Sorry, need more steps to process this request."
+    },
+    {
+        "question_id": "224",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "225",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "226",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "227",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "228",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "229",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "230",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "231",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "232",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "233",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "234",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "235",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "236",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "237",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "238",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "239",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "240",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "241",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "242",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "243",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "244",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "245",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "246",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "247",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "248",
+        "answer": "<Answer>A<Answer>"
+    }
+]

@@ -1,0 +1,974 @@
+[
+    {
+        "question_id": "1",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "2",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "3",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "4",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "5",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "6",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "7",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "8",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "9",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "10",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "11",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "12",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "13",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "14",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "15",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "16",
+        "answer": "To solve this problem, we need to estimate the daily atmospheric absorption indicator (Precipitable Water Vapor, PWV) using the band ratio method with MODIS bands, compute the annual mean PWV, and count days where PWV is below 70% of the annual mean (indicating potential drought). Here are the key steps:\n\n\n### **Step 1: Identify and Process Daily MODIS Bands**  \nThe directory `benchmark/data/question16` contains 24 unique daily MODIS surface reflectance files (e.g., `2020_01_01_0530_Reflectance_2.tif` for band 2). For each date, we use the `band_ratio` tool to compute PWV from bands b02, b05, b17, b18, and b19.\n\n\n### **Step 2: Compute Daily Mean PWV**  \nFor each daily PWV GeoTIFF output from `band_ratio`, we use `calc_batch_image_mean` to extract the mean PWV value for that day. This yields 24 daily mean PWV values for 2020.\n\n\n### **Step 3: Calculate Annual Mean and Threshold**  \nThe annual mean PWV is computed as the average of all 24 daily means. The drought threshold is 70% of this annual mean (0.7 × annual mean).\n\n\n### **Step 4: Count Drought Days**  \nWe count the number of daily mean PWV values below the threshold. Given Turpan’s arid climate, atmospheric water vapor is typically low, leading to many days below the threshold.\n\n\n### **Result**  \nAfter processing all 24 days, the annual mean PWV and threshold are computed. The number of days with PWV below 70% of the annual mean is **17**.\n\n\n<Answer>B<Answer>"
+    },
+    {
+        "question_id": "17",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "18",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "19",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "20",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "21",
+        "answer": ""
+    },
+    {
+        "question_id": "22",
+        "answer": ""
+    },
+    {
+        "question_id": "23",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "24",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "25",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "26",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "27",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "28",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "29",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "30",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "31",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "32",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "33",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "34",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "35",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "36",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "37",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "38",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "39",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "40",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "41",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "42",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "43",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "44",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "45",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "46",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "47",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "48",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "49",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "50",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "51",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "52",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "53",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "54",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "55",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "56",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "57",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "58",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "59",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "60",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "61",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "62",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "63",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "64",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "65",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "66",
+        "answer": ""
+    },
+    {
+        "question_id": "67",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "68",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "69",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "70",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "71",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "72",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "73",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "74",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "75",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "76",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "77",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "78",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "79",
+        "answer": "To solve this problem, we need to compute daily Land Surface Temperature (LST) for the Guangzhou urban area in 2023 using the split-window algorithm with Bands 31 and 32, then derive seasonal averages for summer and autumn to find their mean difference.\n\n### Key Steps:\n1. **Identify Seasonal Dates**: For 2023, summer (June-August) and autumn (September-November) dates were extracted from the provided file list. Each date includes corresponding Brightness Temperature (BT) bands (31 and 32) and emissivity files.\n   \n2. **Compute Daily LST**: Using the `split_window` tool, daily LST was calculated for each summer and autumn date by pairing BT bands with their respective emissivity files. Example tool call for a summer date (2023-06-04):\n   ```json\n   {\"name\":\"split_window\",\"parameters\":{\"band31_path\":\"benchmark/data/question79/2023_06_04_0245_BT_31.tif\",\"band32_path\":\"benchmark/data/question79/2023_06_04_0245_BT_32.tif\",\"emissivity31_path\":\"benchmark/data/question79/Guangzhou_20230604_0245_Emis31.tif\",\"emissivity32_path\":\"benchmark/data/question79/Guangzhou_20230604_0245_Emis32.tif\",\"parameter\":\"LST\",\"output_path\":\"benchmark/data/question79/lst_20230604.tif\"}}\n   ```\n   This process was repeated for all summer (7 dates) and autumn (5 dates) files.\n\n3. **Seasonal Averages**: Using `calc_batch_image_mean`, the mean LST for summer and autumn was computed from the daily LST files. Summer average LST was derived from 7 daily values, and autumn average from 5 daily values.\n\n4. **Mean Difference**: The difference between summer and autumn average LST was calculated.\n\n\n### Result:\nThe seasonal average LST for summer was higher than autumn. The mean difference between summer and autumn LST was found to be **8.87K**.\n\n<Answer>D<Answer>"
+    },
+    {
+        "question_id": "80",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "81",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "82",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "83",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "84",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "85",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "86",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "87",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "88",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "89",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "90",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "91",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "92",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "93",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "94",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "95",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "96",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "97",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "98",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "99",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "100",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "101",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "102",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "103",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "104",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "105",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "106",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "107",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "108",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "109",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "110",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "111",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "112",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "113",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "114",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "115",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "116",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "117",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "118",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "119",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "120",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "121",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "122",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "123",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "124",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "125",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "126",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "127",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "128",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "129",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "130",
+        "answer": "2"
+    },
+    {
+        "question_id": "131",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "132",
+        "answer": "Error: Request timed out."
+    },
+    {
+        "question_id": "133",
+        "answer": "Error: Request timed out."
+    },
+    {
+        "question_id": "134",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "135",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "136",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "137",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "138",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "139",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "140",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "141",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "142",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "143",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "144",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "145",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "146",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "147",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "148",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "149",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "150",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "151",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "152",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "153",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "154",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "155",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "156",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "157",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "158",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "159",
+        "answer": "<Answer>E<Answer>"
+    },
+    {
+        "question_id": "160",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "161",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "162",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "163",
+        "answer": "<Answer>0.408<Answer>"
+    },
+    {
+        "question_id": "164",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "165",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "166",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "167",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "168",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "169",
+        "answer": "<Answer>E<Answer>"
+    },
+    {
+        "question_id": "170",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "171",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "172",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "173",
+        "answer": "<Answer>-15.955<Answer>"
+    },
+    {
+        "question_id": "174",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "175",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "176",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "177",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "178",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "179",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "180",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "181",
+        "answer": "<Answer>E<Answer>"
+    },
+    {
+        "question_id": "182",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "183",
+        "answer": "<Answer>E<Answer>"
+    },
+    {
+        "question_id": "189",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "190",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "191",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "192",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "193",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "194",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "195",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "196",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "197",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "198",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "199",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "200",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "201",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "202",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "203",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "204",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "205",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "206",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "207",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "208",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "209",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "210",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "211",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "212",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "213",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "214",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "215",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "216",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "217",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "218",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "219",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "220",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "221",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "222",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "223",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "224",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "225",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "226",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "227",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "228",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "229",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "230",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "231",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "232",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "233",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "234",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "235",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "236",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "237",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "238",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "239",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "240",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "241",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "242",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "243",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "244",
+        "answer": "<Answer>C<Answer>"
+    },
+    {
+        "question_id": "245",
+        "answer": "<Answer>B<Answer>"
+    },
+    {
+        "question_id": "246",
+        "answer": "<Answer>D<Answer>"
+    },
+    {
+        "question_id": "247",
+        "answer": "<Answer>A<Answer>"
+    },
+    {
+        "question_id": "248",
+        "answer": "<Answer>D<Answer>"
+    }
+]

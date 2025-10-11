@@ -1,0 +1,2813 @@
+[
+  {
+    "question_index": "1",
+    "tool_calls": []
+  },
+  {
+    "question_index": "2",
+    "tool_calls": []
+  },
+  {
+    "question_index": "3",
+    "tool_calls": []
+  },
+  {
+    "question_index": "4",
+    "tool_calls": []
+  },
+  {
+    "question_index": "5",
+    "tool_calls": []
+  },
+  {
+    "question_index": "6",
+    "tool_calls": []
+  },
+  {
+    "question_index": "7",
+    "tool_calls": []
+  },
+  {
+    "question_index": "8",
+    "tool_calls": []
+  },
+  {
+    "question_index": "9",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question9"
+        },
+        "output": "[\"Chicago_2021-01-06_BT10.tif\",\"Chicago_2021-01-06_b4.tif\",\"Chicago_2021-01-06_b5.tif\",\"Chicago_2021-01-13_BT10.tif\",\"Chicago_2021-01-13_b4.tif\",\"Chicago_2021-01-13_b5.tif\",\"Chicago_2021-01-22_BT10.tif\",\"Chicago_2021-01-22_b4.tif\",\"Chicago_2021-01-22_b5.tif\",\"Chicago_2021-01-29_BT10.tif\",\"Chicago_2021-01-29_b4.tif\",\"Chicago_2021-01-29_b5.tif\",\"Chicago_2021-02-07_BT10.tif\",\"Chicago_2021-02-07_b4.tif\",\"Chicago_2021-02-07_b5.tif\",\"Chicago_2021-02-14_BT10.tif\",\"Chicago_2021-02-14_b4.tif\",\"Chicago_2021-02-14_b5.tif\",\"Chicago_2021-02-23_BT10.tif\",\"Chicago_2021-02-23_b4.tif\",\"Chicago_2021-02-23_b5.tif\",\"Chicago_2021-03-02_BT10.tif\",\"Chicago_2021-03-02_b4.tif\",\"Chicago_2021-03-02_b5.tif\",\"Chicago_2021-03-11_BT10.tif\",\"Chicago_2021-03-11_b4.tif\",\"Chicago_2021-03-11_b5.tif\",\"Chicago_2021-03-18_BT10.tif\",\"Chicago_2021-03-18_b4.tif\",\"Chicago_2021-03-18_b5.tif\",\"Chicago_2021-03-27_BT10.tif\",\"Chicago_2021-03-27_b4.tif\",\"Chicago_2021-03-27_b5.tif\",\"Chicago_2021-04-03_BT10.tif\",\"Chicago_2021-04-03_BT10.tif.enp\",\"Chicago_2021-04-03_b4.tif\",\"Chicago_2021-04-03_b5.tif\",\"Chicago_2021-04-12_BT10.tif\",\"Chicago_2021-04-12_b4.tif\",\"Chicago_2021-04-12_b5.tif\",\"Chicago_2021-05-05_BT10.tif\",\"Chicago_2021-05-05_b4.tif\",\"Chicago_2021-05-05_b5.tif\",\"Chicago_2021-05-14_BT10.tif\",\"Chicago_2021-05-14_b4.tif\",\"Chicago_2021-05-14_b5.tif\",\"Chicago_2021-05-21_BT10.tif\",\"Chicago_2021-05-21_b4.tif\",\"Chicago_2021-05-21_b5.tif\",\"Chicago_2021-05-30_BT10.tif\",\"Chicago_2021-05-30_b4.tif\",\"Chicago_2021-05-30_b5.tif\",\"Chicago_2021-06-06_BT10.tif\",\"Chicago_2021-06-06_b4.tif\",\"Chicago_2021-06-06_b5.tif\",\"Chicago_2021-06-15_BT10.tif\",\"Chicago_2021-06-15_b4.tif\",\"Chicago_2021-06-15_b5.tif\",\"Chicago_2021-06-22_BT10.tif\",\"Chicago_2021-06-22_b4.tif\",\"Chicago_2021-06-22_b5.tif\",\"Chicago_2021-07-01_BT10.tif\",\"Chicago_2021-07-01_b4.tif\",\"Chicago_2021-07-01_b5.tif\",\"Chicago_2021-07-17_BT10.tif\",\"Chicago_2021-07-17_b4.tif\",\"Chicago_2021-07-17_b5.tif\",\"Chicago_2021-07-24_BT10.tif\",\"Chicago_2021-07-24_b4.tif\",\"Chicago_2021-07-24_b5.tif\",\"Chicago_2021-08-02_BT10.tif\",\"Chicago_2021-08-02_b4.tif\",\"Chicago_2021-08-02_b5.tif\",\"Chicago_2021-08-09_BT10.tif\",\"Chicago_2021-08-09_b4.tif\",\"Chicago_2021-08-09_b5.tif\",\"Chicago_2021-08-18_BT10.tif\",\"Chicago_2021-08-18_b4.tif\",\"Chicago_2021-08-18_b5.tif\",\"Chicago_2021-08-25_BT10.tif\",\"Chicago_2021-08-25_b4.tif\",\"Chicago_2021-08-25_b5.tif\",\"Chicago_2021-09-03_BT10.tif\",\"Chicago_2021-09-03_b4.tif\",\"Chicago_2021-09-03_b5.tif\",\"Chicago_2021-09-10_BT10.tif\",\"Chicago_2021-09-10_b4.tif\",\"Chicago_2021-09-10_b5.tif\",\"Chicago_2021-09-19_BT10.tif\",\"Chicago_2021-09-19_b4.tif\",\"Chicago_2021-09-19_b5.tif\",\"Chicago_2021-09-26_BT10.tif\",\"Chicago_2021-09-26_b4.tif\",\"Chicago_2021-09-26_b5.tif\",\"Chicago_2021-10-12_BT10.tif\",\"Chicago_2021-10-12_b4.tif\",\"Chicago_2021-10-12_b5.tif\",\"Chicago_2021-11-06_BT10.tif\",\"Chicago_2021-11-06_b4.tif\",\"Chicago_2021-11-06_b5.tif\",\"Chicago_2021-11-22_BT10.tif\",\"Chicago_2021-11-22_b4.tif\",\"Chicago_2021-11-22_b5.tif\",\"Chicago_2021-12-08_BT10.tif\",\"Chicago_2021-12-08_b4.tif\",\"Chicago_2021-12-08_b5.tif\"]"
+      },
+      {
+        "name": "count_images_exceeding_threshold_ratio",
+        "input": {
+          "image_paths": [
+            "benchmark/data/question9/Chicago_2021-01-06_BT10.tif",
+            "benchmark/data/question9/Chicago_2021-01-13_BT10.tif",
+            "benchmark/data/question9/Chicago_2021-01-22_BT10.tif",
+            "benchmark/data/question9/Chicago_2021-01-29_BT10.tif",
+            "benchmark/data/question9/Chicago_2021-02-07_BT10.tif",
+            "benchmark/data/question9/Chicago_2021-02-14_BT10.tif",
+            "benchmark/data/question9/Chicago_2021-02-23_BT10.tif",
+            "benchmark/data/question9/Chicago_2021-03-02_BT10.tif",
+            "benchmark/data/question9/Chicago_2021-03-11_BT10.tif",
+            "benchmark/data/question9/Chicago_2021-03-18_BT10.tif",
+            "benchmark/data/question9/Chicago_2021-03-27_BT10.tif",
+            "benchmark/data/question9/Chicago_2021-04-03_BT10.tif",
+            "benchmark/data/question9/Chicago_2021-04-12_BT10.tif",
+            "benchmark/data/question9/Chicago_2021-05-05_BT10.tif",
+            "benchmark/data/question9/Chicago_2021-05-14_BT10.tif",
+            "benchmark/data/question9/Chicago_2021-05-21_BT10.tif",
+            "benchmark/data/question9/Chicago_2021-05-30_BT10.tif",
+            "benchmark/data/question9/Chicago_2021-06-06_BT10.tif",
+            "benchmark/data/question9/Chicago_2021-06-15_BT10.tif",
+            "benchmark/data/question9/Chicago_2021-06-22_BT10.tif",
+            "benchmark/data/question9/Chicago_2021-07-01_BT10.tif",
+            "benchmark/data/question9/Chicago_2021-07-17_BT10.tif",
+            "benchmark/data/question9/Chicago_2021-07-24_BT10.tif",
+            "benchmark/data/question9/Chicago_2021-08-02_BT10.tif",
+            "benchmark/data/question9/Chicago_2021-08-09_BT10.tif",
+            "benchmark/data/question9/Chicago_2021-08-18_BT10.tif",
+            "benchmark/data/question9/Chicago_2021-08-25_BT10.tif",
+            "benchmark/data/question9/Chicago_2021-09-03_BT10.tif",
+            "benchmark/data/question9/Chicago_2021-09-10_BT10.tif",
+            "benchmark/data/question9/Chicago_2021-09-19_BT10.tif",
+            "benchmark/data/question9/Chicago_2021-09-26_BT10.tif",
+            "benchmark/data/question9/Chicago_2021-10-12_BT10.tif",
+            "benchmark/data/question9/Chicago_2021-11-06_BT10.tif",
+            "benchmark/data/question9/Chicago_2021-11-22_BT10.tif",
+            "benchmark/data/question9/Chicago_2021-12-08_BT10.tif"
+          ],
+          "value_threshold": 300,
+          "ratio_threshold": 25,
+          "mode": "above",
+          "verbose": false
+        },
+        "output": "4"
+      }
+    ]
+  },
+  {
+    "question_index": "10",
+    "tool_calls": []
+  },
+  {
+    "question_index": "11",
+    "tool_calls": [
+      {
+        "name": "lst_multi_channel",
+        "input": {
+          "band31_path": "benchmark/data/question11/band31.tif",
+          "band32_path": "benchmark/data/question11/band32.tif",
+          "output_path": "temp/lst_result.tif"
+        },
+        "output": "Error: ToolException(\"Error calling tool 'lst_multi_channel': benchmark/data/question11/band31.tif: No such file or directory\")\n Please fix your mistakes."
+      },
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question11"
+        },
+        "output": "[\"2022_08_10_0110_BT_31.tif\",\"2022_08_10_0110_BT_32.tif\"]"
+      },
+      {
+        "name": "lst_multi_channel",
+        "input": {
+          "band31_path": "benchmark/data/question11/2022_08_10_0110_BT_31.tif",
+          "band32_path": "benchmark/data/question11/2022_08_10_0110_BT_32.tif",
+          "output_path": "temp/lst_result.tif"
+        },
+        "output": "Result saved at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/temp/lst_result.tif"
+      },
+      {
+        "name": "calculate_threshold_ratio",
+        "input": {
+          "image_paths": "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/temp/lst_result.tif",
+          "threshold": 310,
+          "band_index": 0
+        },
+        "output": "49.73684210526316"
+      }
+    ]
+  },
+  {
+    "question_index": "12",
+    "tool_calls": []
+  },
+  {
+    "question_index": "13",
+    "tool_calls": []
+  },
+  {
+    "question_index": "14",
+    "tool_calls": []
+  },
+  {
+    "question_index": "15",
+    "tool_calls": []
+  },
+  {
+    "question_index": "16",
+    "tool_calls": []
+  },
+  {
+    "question_index": "17",
+    "tool_calls": []
+  },
+  {
+    "question_index": "18",
+    "tool_calls": []
+  },
+  {
+    "question_index": "19",
+    "tool_calls": []
+  },
+  {
+    "question_index": "20",
+    "tool_calls": []
+  },
+  {
+    "question_index": "21",
+    "tool_calls": []
+  },
+  {
+    "question_index": "22",
+    "tool_calls": []
+  },
+  {
+    "question_index": "23",
+    "tool_calls": []
+  },
+  {
+    "question_index": "24",
+    "tool_calls": []
+  },
+  {
+    "question_index": "25",
+    "tool_calls": []
+  },
+  {
+    "question_index": "26",
+    "tool_calls": [
+      {
+        "name": "ttm_lst",
+        "input": {
+          "tir_band_paths": [
+            "benchmark/data/question26/band10.tif",
+            "benchmark/data/question26/band11.tif",
+            "benchmark/data/question26/band12.tif"
+          ],
+          "output_path": "ttm_lst_result.tif"
+        },
+        "output": "Error: ToolException(\"Error calling tool 'ttm_lst': benchmark/data/question26/band10.tif: No such file or directory\")\n Please fix your mistakes."
+      },
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question26"
+        },
+        "output": "[\"2022_12_23_BT_10.tif\",\"2022_12_23_BT_11.tif\",\"2022_12_23_BT_12.tif\",\"2022_12_23_BT_13.tif\",\"2022_12_23_BT_14.tif\"]"
+      },
+      {
+        "name": "ttm_lst",
+        "input": {
+          "tir_band_paths": [
+            "benchmark/data/question26/2022_12_23_BT_10.tif",
+            "benchmark/data/question26/2022_12_23_BT_11.tif",
+            "benchmark/data/question26/2022_12_23_BT_12.tif"
+          ],
+          "output_path": "ttm_lst_result.tif"
+        },
+        "output": "Result saved at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ttm_lst_result.tif"
+      },
+      {
+        "name": "calculate_threshold_ratio",
+        "input": {
+          "image_paths": "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ttm_lst_result.tif",
+          "threshold": 278
+        },
+        "output": "24.32440243341047"
+      }
+    ]
+  },
+  {
+    "question_index": "27",
+    "tool_calls": []
+  },
+  {
+    "question_index": "28",
+    "tool_calls": [
+      {
+        "name": "ttm_lst",
+        "arguments": {
+          "tir_band_paths": [
+            [
+              "benchmark/data/question28/aster_band10.tif",
+              "benchmark/data/question28/aster_band11.tif",
+              "benchmark/data/question28/aster_band12.tif"
+            ],
+            [
+              "benchmark/data/question28/aster_10.tif",
+              "benchmark/data/question28/aster_11.tif",
+              "benchmark/data/question28/aster_12.tif"
+            ]
+          ],
+          "output_path": [
+            "question28/ttm_lst.tif",
+            "question28/ttm_lst.tif"
+          ],
+          "wavelengths": [
+            [
+              8.3,
+              8.65,
+              9.1
+            ],
+            [
+              8.3,
+              8.65,
+              9.1
+            ]
+          ]
+        },
+        "output": [
+          "Error: ToolException(\"Error calling tool 'ttm_lst': benchmark/data/question28/aster_band10.tif: No such file or directory\")\n Please fix your mistakes.",
+          "Error: ToolException(\"Error calling tool 'ttm_lst': benchmark/data/question28/aster_10.tif: No such file or directory\")\n Please fix your mistakes."
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "29",
+    "tool_calls": []
+  },
+  {
+    "question_index": "30",
+    "tool_calls": []
+  },
+  {
+    "question_index": "31",
+    "tool_calls": []
+  },
+  {
+    "question_index": "32",
+    "tool_calls": []
+  },
+  {
+    "question_index": "33",
+    "tool_calls": []
+  },
+  {
+    "question_index": "34",
+    "tool_calls": []
+  },
+  {
+    "question_index": "35",
+    "tool_calls": []
+  },
+  {
+    "question_index": "36",
+    "tool_calls": []
+  },
+  {
+    "question_index": "37",
+    "tool_calls": []
+  },
+  {
+    "question_index": "38",
+    "tool_calls": [
+      {
+        "name": "split_window",
+        "arguments": {
+          "band31_path": [
+            "benchmark/data/question38/2020_band31.tif",
+            "benchmark/data/question38/2020/band31.tif"
+          ],
+          "band32_path": [
+            "benchmark/data/question38/2020_band32.tif",
+            "benchmark/data/question38/2020/band32.tif"
+          ],
+          "emissivity31_path": [
+            "benchmark/data/question38/2020_emissivity31.tif",
+            "benchmark/data/question38/2020/emissivity31.tif"
+          ],
+          "emissivity32_path": [
+            "benchmark/data/question38/2020_emissivity32.tif",
+            "benchmark/data/question38/2020/emissivity32.tif"
+          ],
+          "parameter": [
+            "LST",
+            "LST"
+          ],
+          "output_path": [
+            "question38/lst_2020.tif",
+            "question38/lst_2020.tif"
+          ]
+        },
+        "output": [
+          "Error: ToolException(\"Error calling tool 'split_window': benchmark/data/question38/2020_band31.tif: No such file or directory\")\n Please fix your mistakes.",
+          "Error: ToolException(\"Error calling tool 'split_window': benchmark/data/question38/2020/band31.tif: No such file or directory\")\n Please fix your mistakes."
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "39",
+    "tool_calls": []
+  },
+  {
+    "question_index": "40",
+    "tool_calls": []
+  },
+  {
+    "question_index": "41",
+    "tool_calls": []
+  },
+  {
+    "question_index": "42",
+    "tool_calls": []
+  },
+  {
+    "question_index": "43",
+    "tool_calls": []
+  },
+  {
+    "question_index": "44",
+    "tool_calls": []
+  },
+  {
+    "question_index": "45",
+    "tool_calls": [
+      {
+        "name": "ATI",
+        "arguments": {
+          "day_temp_path": [
+            "benchmark/data/question45/day_temp.tif",
+            "benchmark/data/question45/daytime_temp.tif"
+          ],
+          "night_temp_path": [
+            "benchmark/data/question45/night_temp.tif",
+            "benchmark/data/question45/nighttime_temp.tif"
+          ],
+          "albedo_path": [
+            "benchmark/data/question45/albedo.tif",
+            "benchmark/data/question45/albedo.tif"
+          ],
+          "output_path": [
+            "result_ati.tif",
+            "result_ati.tif"
+          ]
+        },
+        "output": [
+          "Error: ToolException(\"Error calling tool 'ATI': benchmark/data/question45/day_temp.tif: No such file or directory\")\n Please fix your mistakes.",
+          "Error: ToolException(\"Error calling tool 'ATI': benchmark/data/question45/daytime_temp.tif: No such file or directory\")\n Please fix your mistakes."
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "46",
+    "tool_calls": []
+  },
+  {
+    "question_index": "47",
+    "tool_calls": []
+  },
+  {
+    "question_index": "48",
+    "tool_calls": []
+  },
+  {
+    "question_index": "49",
+    "tool_calls": []
+  },
+  {
+    "question_index": "50",
+    "tool_calls": []
+  },
+  {
+    "question_index": "51",
+    "tool_calls": []
+  },
+  {
+    "question_index": "52",
+    "tool_calls": []
+  },
+  {
+    "question_index": "53",
+    "tool_calls": [
+      {
+        "name": "lst_single_channel",
+        "input": {
+          "bt_path": "benchmark/data/question53/LC08_L1TP_070077_20210811_B10.tif",
+          "red_path": "benchmark/data/question53/LC08_L1TP_070077_20210811_B4.tif",
+          "nir_path": "benchmark/data/question53/LC08_L1TP_070077_20210811_B5.tif",
+          "output_path": "question53/lst_result.tif"
+        },
+        "output": "Error: ToolException(\"Error calling tool 'lst_single_channel': benchmark/data/question53/LC08_L1TP_070077_20210811_B10.tif: No such file or directory\")\n Please fix your mistakes."
+      },
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question53/"
+        },
+        "output": "[\"Okavango Delta_2021-08-11_BT10.tif\",\"Okavango Delta_2021-08-11_b4.tif\",\"Okavango Delta_2021-08-11_b5.tif\"]"
+      },
+      {
+        "name": "lst_single_channel",
+        "input": {
+          "bt_path": "benchmark/data/question53/Okavango Delta_2021-08-11_BT10.tif",
+          "red_path": "benchmark/data/question53/Okavango Delta_2021-08-11_b4.tif",
+          "nir_path": "benchmark/data/question53/Okavango Delta_2021-08-11_b5.tif",
+          "output_path": "question53/lst_result.tif"
+        },
+        "output": "Result saved at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/question53/lst_result.tif"
+      },
+      {
+        "name": "calculate_threshold_ratio",
+        "arguments": {
+          "image_paths": [
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/question53/lst_result.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/question53/lst_result.tif"
+          ],
+          "threshold": [
+            305,
+            305
+          ],
+          "band_index": [
+            0,
+            0
+          ],
+          "uint8": [
+            false
+          ]
+        },
+        "output": [
+          "Error: ToolException(\"Error calling tool 'calculate_threshold_ratio': 1 validation error for call[calculate_threshold_ratio]\\nuint8\\n  Unexpected keyword argument [type=unexpected_keyword_argument, input_value=False, input_type=bool]\\n    For further information visit https://errors.pydantic.dev/2.11/v/unexpected_keyword_argument\")\n Please fix your mistakes.",
+          "6.337726735886568"
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "54",
+    "tool_calls": []
+  },
+  {
+    "question_index": "55",
+    "tool_calls": []
+  },
+  {
+    "question_index": "56",
+    "tool_calls": []
+  },
+  {
+    "question_index": "57",
+    "tool_calls": []
+  },
+  {
+    "question_index": "58",
+    "tool_calls": []
+  },
+  {
+    "question_index": "59",
+    "tool_calls": []
+  },
+  {
+    "question_index": "60",
+    "tool_calls": []
+  },
+  {
+    "question_index": "61",
+    "tool_calls": []
+  },
+  {
+    "question_index": "62",
+    "tool_calls": [
+      {
+        "name": "band_ratio",
+        "input": {
+          "sur_refl_b02_path": "benchmark/data/question62/sur_refl_b02.tif",
+          "sur_refl_b05_path": "benchmark/data/question62/sur_refl_b05.tif",
+          "sur_refl_b17_path": "benchmark/data/question62/sur_refl_b17.tif",
+          "sur_refl_b18_path": "benchmark/data/question62/sur_refl_b18.tif",
+          "sur_refl_b19_path": "benchmark/data/question62/sur_refl_b19.tif",
+          "output_path": "pwv_result.tif"
+        },
+        "output": "Error: ToolException(\"Error calling tool 'band_ratio': benchmark/data/question62/sur_refl_b02.tif: No such file or directory\")\n Please fix your mistakes."
+      },
+      {
+        "name": "calculate_threshold_ratio",
+        "input": {
+          "image_paths": "pwv_result.tif",
+          "threshold": 0.85,
+          "band_index": 0,
+          "return_type": "ratio",
+          "uint8": false
+        },
+        "output": "Error: ToolException(\"Error calling tool 'calculate_threshold_ratio': 2 validation errors for call[calculate_threshold_ratio]\\nreturn_type\\n  Unexpected keyword argument [type=unexpected_keyword_argument, input_value='ratio', input_type=str]\\n    For further information visit https://errors.pydantic.dev/2.11/v/unexpected_keyword_argument\\nuint8\\n  Unexpected keyword argument [type=unexpected_keyword_argument, input_value=False, input_type=bool]\\n    For further information visit https://errors.pydantic.dev/2.11/v/unexpected_keyword_argument\")\n Please fix your mistakes."
+      }
+    ]
+  },
+  {
+    "question_index": "63",
+    "tool_calls": []
+  },
+  {
+    "question_index": "64",
+    "tool_calls": []
+  },
+  {
+    "question_index": "65",
+    "tool_calls": []
+  },
+  {
+    "question_index": "66",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/supported_data/question66"
+        },
+        "output": "[\"answer_66.py\",\"lst_tes_result.tif\"]"
+      },
+      {
+        "name": "calculate_multi_band_threshold_ratio",
+        "input": {
+          "image_path": "benchmark/supported_data/question66/lst_tes_result.tif",
+          "band_conditions": [
+            [
+              0,
+              300,
+              "above"
+            ],
+            [
+              1,
+              0.96,
+              "below"
+            ]
+          ]
+        },
+        "output": "41.13315833506345"
+      }
+    ]
+  },
+  {
+    "question_index": "67",
+    "tool_calls": []
+  },
+  {
+    "question_index": "68",
+    "tool_calls": [
+      {
+        "name": "temperature_emissivity_separation",
+        "arguments": {
+          "tir_band_paths": [
+            [
+              "benchmark/data/question68/aster_b10.tif",
+              "benchmark/data/question68/aster_b11.tif",
+              "benchmark/data/question68/aster_b12.tif",
+              "benchmark/data/question68/aster_b13.tif",
+              "benchmark/data/question68/aster_b14.tif"
+            ],
+            [
+              "benchmark/data/question68/aster_b10.tif",
+              "benchmark/data/question68/aster_b11.tif",
+              "benchmark/data/question68/aster_b12.tif",
+              "benchmark/data/question68/aster_b14.tif"
+            ],
+            [
+              "benchmark/data/question68/aster_b10.tif",
+              "benchmark/data/question68/aster_b11.tif",
+              "benchmark/data/question68/aster_b14.tif"
+            ]
+          ],
+          "representative_band_index": [
+            3,
+            2,
+            2
+          ],
+          "output_path": [
+            "question68/tes_output.tif",
+            "question68/tes_output.tif",
+            "question68/tes_output.tif"
+          ]
+        },
+        "output": [
+          "Error: ToolException(\"Error calling tool 'temperature_emissivity_separation': benchmark/data/question68/aster_b13.tif: No such file or directory\")\n Please fix your mistakes.",
+          "Error: ToolException(\"Error calling tool 'temperature_emissivity_separation': benchmark/data/question68/aster_b12.tif: No such file or directory\")\n Please fix your mistakes.",
+          "Error: ToolException(\"Error calling tool 'temperature_emissivity_separation': benchmark/data/question68/aster_b14.tif: No such file or directory\")\n Please fix your mistakes."
+        ]
+      },
+      {
+        "name": "calculate_threshold_ratio",
+        "input": {
+          "image_path": "question68/tes_output.tif",
+          "threshold": 0.07,
+          "band_index": 2
+        },
+        "output": "Error: ToolException(\"Input validation error: 'image_paths' is a required property\")\n Please fix your mistakes."
+      }
+    ]
+  },
+  {
+    "question_index": "69",
+    "tool_calls": []
+  },
+  {
+    "question_index": "70",
+    "tool_calls": [
+      {
+        "name": "compute_tvdi",
+        "arguments": {
+          "ndvi_path": [
+            "benchmark/data/question70/ndvi.tif",
+            "benchmark/data/question70/ndvi_202202.tif"
+          ],
+          "lst_path": [
+            "benchmark/data/question70/lst.tif",
+            "benchmark/data/question70/lst_202202.tif"
+          ],
+          "output_path": [
+            "question70/tvdi_result.tif",
+            "question70/tvdi_result.tif"
+          ]
+        },
+        "output": [
+          "Error: ToolException(\"Error calling tool 'compute_tvdi': benchmark/data/question70/ndvi.tif: No such file or directory\")\n Please fix your mistakes.",
+          "Error: ToolException(\"Error calling tool 'compute_tvdi': benchmark/data/question70/ndvi_202202.tif: No such file or directory\")\n Please fix your mistakes."
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "71",
+    "tool_calls": []
+  },
+  {
+    "question_index": "72",
+    "tool_calls": []
+  },
+  {
+    "question_index": "73",
+    "tool_calls": []
+  },
+  {
+    "question_index": "74",
+    "tool_calls": []
+  },
+  {
+    "question_index": "75",
+    "tool_calls": []
+  },
+  {
+    "question_index": "76",
+    "tool_calls": []
+  },
+  {
+    "question_index": "77",
+    "tool_calls": []
+  },
+  {
+    "question_index": "78",
+    "tool_calls": [
+      {
+        "name": "split_window",
+        "arguments": {
+          "band31_path": [
+            "benchmark/data/question78/band31.tif",
+            "benchmark/data/question78/thermal_band31_20210805.tif"
+          ],
+          "band32_path": [
+            "benchmark/data/question78/band32.tif",
+            "benchmark/data/question78/thermal_band32_20210805.tif"
+          ],
+          "emissivity31_path": [
+            "benchmark/data/question78/emissivity31.tif",
+            "benchmark/data/question78/emissivity31.tif"
+          ],
+          "emissivity32_path": [
+            "benchmark/data/question78/emissivity32.tif",
+            "benchmark/data/question78/emissivity32.tif"
+          ],
+          "parameter": [
+            "LST",
+            "LST"
+          ],
+          "output_path": [
+            "question78/lst.tif",
+            "question78/lst.tif"
+          ]
+        },
+        "output": [
+          "Error: ToolException(\"Error calling tool 'split_window': benchmark/data/question78/band31.tif: No such file or directory\")\n Please fix your mistakes.",
+          "Error: ToolException(\"Error calling tool 'split_window': benchmark/data/question78/thermal_band31_20210805.tif: No such file or directory\")\n Please fix your mistakes."
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "79",
+    "tool_calls": []
+  },
+  {
+    "question_index": "80",
+    "tool_calls": [
+      {
+        "name": "split_window",
+        "arguments": {
+          "band31_path": [
+            "benchmark/data/question80/band31.tif",
+            "benchmark/data/question80/band31.tif"
+          ],
+          "band32_path": [
+            "benchmark/data/question80/band32.tif",
+            "benchmark/data/question80/band32.tif"
+          ],
+          "emissivity31_path": [
+            "benchmark/data/question80/emissivity31.tif",
+            "benchmark/data/question80/emissivity31.tif"
+          ],
+          "emissivity32_path": [
+            "benchmark/data/question80/emissivity32.tif",
+            "benchmark/data/question80/emissivity32.tif"
+          ],
+          "parameter": [
+            "LST",
+            "LST"
+          ],
+          "output_path": [
+            "question80/lst_result.tif",
+            "question80/lst_result.tif"
+          ]
+        },
+        "output": [
+          "Error: ToolException(\"Error calling tool 'split_window': benchmark/data/question80/band31.tif: No such file or directory\")\n Please fix your mistakes.",
+          "Error: ToolException(\"Error calling tool 'split_window': benchmark/data/question80/band31.tif: No such file or directory\")\n Please fix your mistakes."
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "81",
+    "tool_calls": []
+  },
+  {
+    "question_index": "82",
+    "tool_calls": []
+  },
+  {
+    "question_index": "83",
+    "tool_calls": []
+  },
+  {
+    "question_index": "84",
+    "tool_calls": []
+  },
+  {
+    "question_index": "85",
+    "tool_calls": [
+      {
+        "name": "modis_day_night_lst",
+        "arguments": {
+          "BT_day_path": [
+            "benchmark/data/question85/2015_BT_Day.tif",
+            "benchmark/data/question85/2015/LST_Day_1km.tif"
+          ],
+          "BT_night_path": [
+            "benchmark/data/question85/2015_BT_Night.tif",
+            "benchmark/data/question85/2015/LST_Night_1km.tif"
+          ],
+          "Emis_day_path": [
+            "benchmark/data/question85/2015_Emis_31.tif",
+            "benchmark/data/question85/2015/Emis_31.tif"
+          ],
+          "Emis_night_path": [
+            "benchmark/data/question85/2015_Emis_32.tif",
+            "benchmark/data/question85/2015/Emis_32.tif"
+          ],
+          "output_path": [
+            "2015_lst.tif",
+            "2015_lst.tif"
+          ]
+        },
+        "output": [
+          "Error: ToolException(\"Error calling tool 'modis_day_night_lst': benchmark/data/question85/2015_BT_Day.tif: No such file or directory\")\n Please fix your mistakes.",
+          "Error: ToolException(\"Error calling tool 'modis_day_night_lst': benchmark/data/question85/2015/LST_Day_1km.tif: No such file or directory\")\n Please fix your mistakes."
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "86",
+    "tool_calls": []
+  },
+  {
+    "question_index": "87",
+    "tool_calls": []
+  },
+  {
+    "question_index": "88",
+    "tool_calls": []
+  },
+  {
+    "question_index": "89",
+    "tool_calls": []
+  },
+  {
+    "question_index": "90",
+    "tool_calls": []
+  },
+  {
+    "question_index": "91",
+    "tool_calls": []
+  },
+  {
+    "question_index": "92",
+    "tool_calls": []
+  },
+  {
+    "question_index": "93",
+    "tool_calls": []
+  },
+  {
+    "question_index": "94",
+    "tool_calls": [
+      {
+        "name": "lst_single_channel",
+        "arguments": {
+          "bt_path": [
+            "benchmark/data/question94/2018_bt.tif",
+            "benchmark/data/question94/2018_B10.tif"
+          ],
+          "red_path": [
+            "benchmark/data/question94/2018_red.tif",
+            "benchmark/data/question94/2018_red.tif"
+          ],
+          "nir_path": [
+            "benchmark/data/question94/2018_nir.tif",
+            "benchmark/data/question94/2018_nir.tif"
+          ],
+          "output_path": [
+            "question94/lst_2018.tif",
+            "question94/lst_2018.tif"
+          ]
+        },
+        "output": [
+          "Error: ToolException(\"Error calling tool 'lst_single_channel': benchmark/data/question94/2018_bt.tif: No such file or directory\")\n Please fix your mistakes.",
+          "Error: ToolException(\"Error calling tool 'lst_single_channel': benchmark/data/question94/2018_B10.tif: No such file or directory\")\n Please fix your mistakes."
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "95",
+    "tool_calls": []
+  },
+  {
+    "question_index": "96",
+    "tool_calls": []
+  },
+  {
+    "question_index": "97",
+    "tool_calls": []
+  },
+  {
+    "question_index": "98",
+    "tool_calls": []
+  },
+  {
+    "question_index": "99",
+    "tool_calls": []
+  },
+  {
+    "question_index": "100",
+    "tool_calls": []
+  },
+  {
+    "question_index": "101",
+    "tool_calls": []
+  },
+  {
+    "question_index": "102",
+    "tool_calls": []
+  },
+  {
+    "question_index": "103",
+    "tool_calls": []
+  },
+  {
+    "question_index": "104",
+    "tool_calls": []
+  },
+  {
+    "question_index": "105",
+    "tool_calls": []
+  },
+  {
+    "question_index": "106",
+    "tool_calls": []
+  },
+  {
+    "question_index": "107",
+    "tool_calls": []
+  },
+  {
+    "question_index": "108",
+    "tool_calls": []
+  },
+  {
+    "question_index": "109",
+    "tool_calls": []
+  },
+  {
+    "question_index": "110",
+    "tool_calls": []
+  },
+  {
+    "question_index": "111",
+    "tool_calls": []
+  },
+  {
+    "question_index": "112",
+    "tool_calls": []
+  },
+  {
+    "question_index": "113",
+    "tool_calls": []
+  },
+  {
+    "question_index": "114",
+    "tool_calls": []
+  },
+  {
+    "question_index": "115",
+    "tool_calls": []
+  },
+  {
+    "question_index": "116",
+    "tool_calls": []
+  },
+  {
+    "question_index": "117",
+    "tool_calls": []
+  },
+  {
+    "question_index": "118",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question118"
+        },
+        "output": "[\"Sahara Desert- Algeria_NDVI_2022-03-06.tif\",\"Sahara Desert- Algeria_NDVI_2022-03-22.tif\",\"Sahara Desert- Algeria_NDVI_2022-04-07.tif\",\"Sahara Desert- Algeria_NDVI_2022-04-23.tif\",\"Sahara Desert- Algeria_NDVI_2022-05-09.tif\",\"Sahara Desert- Algeria_NDVI_2022-05-25.tif\",\"Sahara Desert- Algeria_NDVI_2022-06-10.tif\",\"Sahara Desert- Algeria_NDVI_2022-06-26.tif\",\"Sahara Desert- Algeria_NDVI_2022-07-12.tif\",\"Sahara Desert- Algeria_NDVI_2022-07-28.tif\",\"Sahara Desert- Algeria_NDVI_2022-08-13.tif\",\"Sahara Desert- Algeria_NDVI_2022-08-29.tif\",\"Sahara Desert- Algeria_sur_refl_b01_2022-03-06.tif\",\"Sahara Desert- Algeria_sur_refl_b01_2022-03-22.tif\",\"Sahara Desert- Algeria_sur_refl_b01_2022-04-07.tif\",\"Sahara Desert- Algeria_sur_refl_b01_2022-04-23.tif\",\"Sahara Desert- Algeria_sur_refl_b01_2022-05-09.tif\",\"Sahara Desert- Algeria_sur_refl_b01_2022-05-25.tif\",\"Sahara Desert- Algeria_sur_refl_b01_2022-06-10.tif\",\"Sahara Desert- Algeria_sur_refl_b01_2022-06-26.tif\",\"Sahara Desert- Algeria_sur_refl_b01_2022-07-12.tif\",\"Sahara Desert- Algeria_sur_refl_b01_2022-07-28.tif\",\"Sahara Desert- Algeria_sur_refl_b01_2022-08-13.tif\",\"Sahara Desert- Algeria_sur_refl_b01_2022-08-29.tif\",\"Sahara Desert- Algeria_sur_refl_b03_2022-03-06.tif\",\"Sahara Desert- Algeria_sur_refl_b03_2022-03-22.tif\",\"Sahara Desert- Algeria_sur_refl_b03_2022-04-07.tif\",\"Sahara Desert- Algeria_sur_refl_b03_2022-04-23.tif\",\"Sahara Desert- Algeria_sur_refl_b03_2022-05-09.tif\",\"Sahara Desert- Algeria_sur_refl_b03_2022-05-25.tif\",\"Sahara Desert- Algeria_sur_refl_b03_2022-06-10.tif\",\"Sahara Desert- Algeria_sur_refl_b03_2022-06-26.tif\",\"Sahara Desert- Algeria_sur_refl_b03_2022-07-12.tif\",\"Sahara Desert- Algeria_sur_refl_b03_2022-07-28.tif\",\"Sahara Desert- Algeria_sur_refl_b03_2022-08-13.tif\",\"Sahara Desert- Algeria_sur_refl_b03_2022-08-29.tif\",\"Sahara Desert- Algeria_sur_refl_b04_2022-03-06.tif\",\"Sahara Desert- Algeria_sur_refl_b04_2022-03-22.tif\",\"Sahara Desert- Algeria_sur_refl_b04_2022-04-07.tif\",\"Sahara Desert- Algeria_sur_refl_b04_2022-04-23.tif\",\"Sahara Desert- Algeria_sur_refl_b04_2022-05-09.tif\",\"Sahara Desert- Algeria_sur_refl_b04_2022-05-25.tif\",\"Sahara Desert- Algeria_sur_refl_b04_2022-06-10.tif\",\"Sahara Desert- Algeria_sur_refl_b04_2022-06-26.tif\",\"Sahara Desert- Algeria_sur_refl_b04_2022-07-12.tif\",\"Sahara Desert- Algeria_sur_refl_b04_2022-07-28.tif\",\"Sahara Desert- Algeria_sur_refl_b04_2022-08-13.tif\",\"Sahara Desert- Algeria_sur_refl_b04_2022-08-29.tif\"]"
+      },
+      {
+        "name": "calc_batch_image_kurtosis",
+        "input": {
+          "file_list": [
+            "benchmark/data/question118/Sahara Desert- Algeria_NDVI_2022-03-06.tif",
+            "benchmark/data/question118/Sahara Desert- Algeria_NDVI_2022-03-22.tif",
+            "benchmark/data/question118/Sahara Desert- Algeria_NDVI_2022-04-07.tif",
+            "benchmark/data/question118/Sahara Desert- Algeria_NDVI_2022-04-23.tif",
+            "benchmark/data/question118/Sahara Desert- Algeria_NDVI_2022-05-09.tif",
+            "benchmark/data/question118/Sahara Desert- Algeria_NDVI_2022-05-25.tif",
+            "benchmark/data/question118/Sahara Desert- Algeria_NDVI_2022-06-10.tif",
+            "benchmark/data/question118/Sahara Desert- Algeria_NDVI_2022-06-26.tif",
+            "benchmark/data/question118/Sahara Desert- Algeria_NDVI_2022-07-12.tif",
+            "benchmark/data/question118/Sahara Desert- Algeria_NDVI_2022-07-28.tif",
+            "benchmark/data/question118/Sahara Desert- Algeria_NDVI_2022-08-13.tif",
+            "benchmark/data/question118/Sahara Desert- Algeria_NDVI_2022-08-29.tif"
+          ],
+          "uint8": false
+        },
+        "output": "[11.216437677222089,11.633804380634533,12.356570376556304,10.78008243548578,8.154972288639412,13.299318913510907,11.824536513989347,12.633278758770546,9.853206668277837,14.355906125000143,19.89327436540534,23.31018180539483]"
+      }
+    ]
+  },
+  {
+    "question_index": "119",
+    "tool_calls": []
+  },
+  {
+    "question_index": "120",
+    "tool_calls": []
+  },
+  {
+    "question_index": "121",
+    "tool_calls": []
+  },
+  {
+    "question_index": "122",
+    "tool_calls": [
+      {
+        "name": "calculate_water_turbidity_ntu",
+        "input": {
+          "input_red_path": "benchmark/data/question122/sur_refl_b01.tif",
+          "output_path": "question122/turbidity_2022.tif",
+          "method": "linear",
+          "a": 1.0,
+          "b": 0.0,
+          "n": 1.0
+        },
+        "output": "Error: ToolException(\"Error calling tool 'calculate_water_turbidity_ntu': benchmark/data/question122/sur_refl_b01.tif: No such file or directory\")\n Please fix your mistakes."
+      },
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question122"
+        },
+        "output": "[\"Taihu Lake-China_sur_refl_b01_2022-01-01.tif\",\"Taihu Lake-China_sur_refl_b01_2022-01-16.tif\",\"Taihu Lake-China_sur_refl_b01_2022-01-31.tif\",\"Taihu Lake-China_sur_refl_b01_2022-02-15.tif\",\"Taihu Lake-China_sur_refl_b01_2022-03-02.tif\",\"Taihu Lake-China_sur_refl_b01_2022-03-17.tif\",\"Taihu Lake-China_sur_refl_b01_2022-04-01.tif\",\"Taihu Lake-China_sur_refl_b01_2022-04-16.tif\",\"Taihu Lake-China_sur_refl_b01_2022-05-01.tif\",\"Taihu Lake-China_sur_refl_b01_2022-05-16.tif\",\"Taihu Lake-China_sur_refl_b01_2022-05-31.tif\",\"Taihu Lake-China_sur_refl_b01_2022-06-15.tif\",\"Taihu Lake-China_sur_refl_b01_2022-06-30.tif\",\"Taihu Lake-China_sur_refl_b01_2022-07-15.tif\",\"Taihu Lake-China_sur_refl_b01_2022-07-30.tif\",\"Taihu Lake-China_sur_refl_b01_2022-08-14.tif\",\"Taihu Lake-China_sur_refl_b01_2022-08-29.tif\",\"Taihu Lake-China_sur_refl_b01_2022-09-13.tif\",\"Taihu Lake-China_sur_refl_b01_2022-09-28.tif\",\"Taihu Lake-China_sur_refl_b01_2022-10-25.tif\",\"Taihu Lake-China_sur_refl_b01_2022-11-09.tif\",\"Taihu Lake-China_sur_refl_b01_2022-11-24.tif\",\"Taihu Lake-China_sur_refl_b01_2022-12-09.tif\",\"Taihu Lake-China_sur_refl_b01_2022-12-24.tif\",\"Taihu Lake-China_sur_refl_b03_2022-01-01.tif\",\"Taihu Lake-China_sur_refl_b03_2022-01-16.tif\",\"Taihu Lake-China_sur_refl_b03_2022-01-31.tif\",\"Taihu Lake-China_sur_refl_b03_2022-02-15.tif\",\"Taihu Lake-China_sur_refl_b03_2022-03-02.tif\",\"Taihu Lake-China_sur_refl_b03_2022-03-17.tif\",\"Taihu Lake-China_sur_refl_b03_2022-04-01.tif\",\"Taihu Lake-China_sur_refl_b03_2022-04-16.tif\",\"Taihu Lake-China_sur_refl_b03_2022-05-01.tif\",\"Taihu Lake-China_sur_refl_b03_2022-05-16.tif\",\"Taihu Lake-China_sur_refl_b03_2022-05-31.tif\",\"Taihu Lake-China_sur_refl_b03_2022-06-15.tif\",\"Taihu Lake-China_sur_refl_b03_2022-06-30.tif\",\"Taihu Lake-China_sur_refl_b03_2022-07-15.tif\",\"Taihu Lake-China_sur_refl_b03_2022-07-30.tif\",\"Taihu Lake-China_sur_refl_b03_2022-08-14.tif\",\"Taihu Lake-China_sur_refl_b03_2022-08-29.tif\",\"Taihu Lake-China_sur_refl_b03_2022-09-13.tif\",\"Taihu Lake-China_sur_refl_b03_2022-09-28.tif\",\"Taihu Lake-China_sur_refl_b03_2022-10-25.tif\",\"Taihu Lake-China_sur_refl_b03_2022-11-09.tif\",\"Taihu Lake-China_sur_refl_b03_2022-11-24.tif\",\"Taihu Lake-China_sur_refl_b03_2022-12-09.tif\",\"Taihu Lake-China_sur_refl_b03_2022-12-24.tif\",\"Taihu Lake-China_sur_refl_b04_2022-01-01.tif\",\"Taihu Lake-China_sur_refl_b04_2022-01-16.tif\",\"Taihu Lake-China_sur_refl_b04_2022-01-31.tif\",\"Taihu Lake-China_sur_refl_b04_2022-02-15.tif\",\"Taihu Lake-China_sur_refl_b04_2022-03-02.tif\",\"Taihu Lake-China_sur_refl_b04_2022-03-17.tif\",\"Taihu Lake-China_sur_refl_b04_2022-04-01.tif\",\"Taihu Lake-China_sur_refl_b04_2022-04-16.tif\",\"Taihu Lake-China_sur_refl_b04_2022-05-01.tif\",\"Taihu Lake-China_sur_refl_b04_2022-05-16.tif\",\"Taihu Lake-China_sur_refl_b04_2022-05-31.tif\",\"Taihu Lake-China_sur_refl_b04_2022-06-15.tif\",\"Taihu Lake-China_sur_refl_b04_2022-06-30.tif\",\"Taihu Lake-China_sur_refl_b04_2022-07-15.tif\",\"Taihu Lake-China_sur_refl_b04_2022-07-30.tif\",\"Taihu Lake-China_sur_refl_b04_2022-08-14.tif\",\"Taihu Lake-China_sur_refl_b04_2022-08-29.tif\",\"Taihu Lake-China_sur_refl_b04_2022-09-13.tif\",\"Taihu Lake-China_sur_refl_b04_2022-09-28.tif\",\"Taihu Lake-China_sur_refl_b04_2022-10-25.tif\",\"Taihu Lake-China_sur_refl_b04_2022-11-09.tif\",\"Taihu Lake-China_sur_refl_b04_2022-11-24.tif\",\"Taihu Lake-China_sur_refl_b04_2022-12-09.tif\",\"Taihu Lake-China_sur_refl_b04_2022-12-24.tif\"]"
+      },
+      {
+        "name": "calc_batch_image_mean",
+        "input": {
+          "file_list": [
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-01-01.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-01-16.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-01-31.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-02-15.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-03-02.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-03-17.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-04-01.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-04-16.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-05-01.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-05-16.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-05-31.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-06-15.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-06-30.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-07-15.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-07-30.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-08-14.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-08-29.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-09-13.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-09-28.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-10-25.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-11-09.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-11-24.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-12-09.tif",
+            "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-12-24.tif"
+          ],
+          "uint8": false
+        },
+        "output": "[8559.444828911957,1663.1041906958862,2024.6270665128798,7573.387927720108,1596.0941945405614,9392.991157247212,3353.748558246828,2046.4563629373317,2435.363321799308,650.39600153787,2029.6520569011918,725.7489427143406,7677.068435217224,2139.949634755863,1008.9996155324875,619.9442522106882,1877.441753171857,8555.35140330642,9825.364475201846,1096.9969242599,2807.498269896194,4019.7527873894655,8812.780469050365,1618.961168781238]"
+      },
+      {
+        "name": "mann_kendall_test",
+        "input": {
+          "x": [
+            8559.444828911957,
+            1663.1041906958862,
+            2024.6270665128798,
+            7573.387927720108,
+            1596.0941945405614,
+            9392.991157247212,
+            3353.748558246828,
+            2046.4563629373317,
+            2435.363321799308,
+            650.39600153787,
+            2029.6520569011918,
+            725.7489427143406,
+            7677.068435217224,
+            2139.949634755863,
+            1008.9996155324875,
+            619.9442522106882,
+            1877.441753171857,
+            8555.35140330642,
+            9825.364475201846,
+            1096.9969242599,
+            2807.498269896194,
+            4019.7527873894655,
+            8812.780469050365,
+            1618.961168781238
+          ]
+        },
+        "output": "[\"no trend\",0.9802109790485438,0.024804403006957923,0.007246376811594203]"
+      }
+    ]
+  },
+  {
+    "question_index": "123",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question123"
+        },
+        "output": "[\"Lake Baikal_sur_refl_b01_2022-07-01.tif\",\"Lake Baikal_sur_refl_b01_2022-07-02.tif\",\"Lake Baikal_sur_refl_b01_2022-07-03.tif\",\"Lake Baikal_sur_refl_b01_2022-07-04.tif\",\"Lake Baikal_sur_refl_b01_2022-07-05.tif\",\"Lake Baikal_sur_refl_b01_2022-07-06.tif\",\"Lake Baikal_sur_refl_b01_2022-07-07.tif\",\"Lake Baikal_sur_refl_b01_2022-07-08.tif\",\"Lake Baikal_sur_refl_b01_2022-07-09.tif\",\"Lake Baikal_sur_refl_b01_2022-07-10.tif\",\"Lake Baikal_sur_refl_b01_2022-07-11.tif\",\"Lake Baikal_sur_refl_b01_2022-07-12.tif\",\"Lake Baikal_sur_refl_b01_2022-07-13.tif\",\"Lake Baikal_sur_refl_b01_2022-07-14.tif\",\"Lake Baikal_sur_refl_b01_2022-07-15.tif\",\"Lake Baikal_sur_refl_b01_2022-07-16.tif\",\"Lake Baikal_sur_refl_b01_2022-07-17.tif\",\"Lake Baikal_sur_refl_b01_2022-07-18.tif\",\"Lake Baikal_sur_refl_b01_2022-07-19.tif\",\"Lake Baikal_sur_refl_b01_2022-07-20.tif\",\"Lake Baikal_sur_refl_b01_2022-07-21.tif\",\"Lake Baikal_sur_refl_b01_2022-07-22.tif\",\"Lake Baikal_sur_refl_b01_2022-07-23.tif\",\"Lake Baikal_sur_refl_b01_2022-07-24.tif\",\"Lake Baikal_sur_refl_b01_2022-07-25.tif\",\"Lake Baikal_sur_refl_b01_2022-07-26.tif\",\"Lake Baikal_sur_refl_b01_2022-07-27.tif\",\"Lake Baikal_sur_refl_b01_2022-07-28.tif\",\"Lake Baikal_sur_refl_b01_2022-07-29.tif\",\"Lake Baikal_sur_refl_b01_2022-07-30.tif\",\"Lake Baikal_sur_refl_b03_2022-07-01.tif\",\"Lake Baikal_sur_refl_b03_2022-07-02.tif\",\"Lake Baikal_sur_refl_b03_2022-07-03.tif\",\"Lake Baikal_sur_refl_b03_2022-07-04.tif\",\"Lake Baikal_sur_refl_b03_2022-07-05.tif\",\"Lake Baikal_sur_refl_b03_2022-07-06.tif\",\"Lake Baikal_sur_refl_b03_2022-07-07.tif\",\"Lake Baikal_sur_refl_b03_2022-07-08.tif\",\"Lake Baikal_sur_refl_b03_2022-07-09.tif\",\"Lake Baikal_sur_refl_b03_2022-07-10.tif\",\"Lake Baikal_sur_refl_b03_2022-07-11.tif\",\"Lake Baikal_sur_refl_b03_2022-07-12.tif\",\"Lake Baikal_sur_refl_b03_2022-07-13.tif\",\"Lake Baikal_sur_refl_b03_2022-07-14.tif\",\"Lake Baikal_sur_refl_b03_2022-07-15.tif\",\"Lake Baikal_sur_refl_b03_2022-07-16.tif\",\"Lake Baikal_sur_refl_b03_2022-07-17.tif\",\"Lake Baikal_sur_refl_b03_2022-07-18.tif\",\"Lake Baikal_sur_refl_b03_2022-07-19.tif\",\"Lake Baikal_sur_refl_b03_2022-07-20.tif\",\"Lake Baikal_sur_refl_b03_2022-07-21.tif\",\"Lake Baikal_sur_refl_b03_2022-07-22.tif\",\"Lake Baikal_sur_refl_b03_2022-07-23.tif\",\"Lake Baikal_sur_refl_b03_2022-07-24.tif\",\"Lake Baikal_sur_refl_b03_2022-07-25.tif\",\"Lake Baikal_sur_refl_b03_2022-07-26.tif\",\"Lake Baikal_sur_refl_b03_2022-07-27.tif\",\"Lake Baikal_sur_refl_b03_2022-07-28.tif\",\"Lake Baikal_sur_refl_b03_2022-07-29.tif\",\"Lake Baikal_sur_refl_b03_2022-07-30.tif\",\"Lake Baikal_sur_refl_b04_2022-07-01.tif\",\"Lake Baikal_sur_refl_b04_2022-07-02.tif\",\"Lake Baikal_sur_refl_b04_2022-07-03.tif\",\"Lake Baikal_sur_refl_b04_2022-07-04.tif\",\"Lake Baikal_sur_refl_b04_2022-07-05.tif\",\"Lake Baikal_sur_refl_b04_2022-07-06.tif\",\"Lake Baikal_sur_refl_b04_2022-07-07.tif\",\"Lake Baikal_sur_refl_b04_2022-07-08.tif\",\"Lake Baikal_sur_refl_b04_2022-07-09.tif\",\"Lake Baikal_sur_refl_b04_2022-07-10.tif\",\"Lake Baikal_sur_refl_b04_2022-07-11.tif\",\"Lake Baikal_sur_refl_b04_2022-07-12.tif\",\"Lake Baikal_sur_refl_b04_2022-07-13.tif\",\"Lake Baikal_sur_refl_b04_2022-07-14.tif\",\"Lake Baikal_sur_refl_b04_2022-07-15.tif\",\"Lake Baikal_sur_refl_b04_2022-07-16.tif\",\"Lake Baikal_sur_refl_b04_2022-07-17.tif\",\"Lake Baikal_sur_refl_b04_2022-07-18.tif\",\"Lake Baikal_sur_refl_b04_2022-07-19.tif\",\"Lake Baikal_sur_refl_b04_2022-07-20.tif\",\"Lake Baikal_sur_refl_b04_2022-07-21.tif\",\"Lake Baikal_sur_refl_b04_2022-07-22.tif\",\"Lake Baikal_sur_refl_b04_2022-07-23.tif\",\"Lake Baikal_sur_refl_b04_2022-07-24.tif\",\"Lake Baikal_sur_refl_b04_2022-07-25.tif\",\"Lake Baikal_sur_refl_b04_2022-07-26.tif\",\"Lake Baikal_sur_refl_b04_2022-07-27.tif\",\"Lake Baikal_sur_refl_b04_2022-07-28.tif\",\"Lake Baikal_sur_refl_b04_2022-07-29.tif\",\"Lake Baikal_sur_refl_b04_2022-07-30.tif\"]"
+      }
+    ]
+  },
+  {
+    "question_index": "124",
+    "tool_calls": []
+  },
+  {
+    "question_index": "125",
+    "tool_calls": []
+  },
+  {
+    "question_index": "126",
+    "tool_calls": []
+  },
+  {
+    "question_index": "127",
+    "tool_calls": []
+  },
+  {
+    "question_index": "128",
+    "tool_calls": [
+      {
+        "name": "calculate_batch_nbr",
+        "input": {
+          "input_nir_paths": [
+            "benchmark/data/question128/nir1.tif",
+            "benchmark/data/question128/nir2.tif",
+            "benchmark/data/question128/nir3.tif"
+          ],
+          "input_swir_paths": [
+            "benchmark/data/question128/swir1.tif",
+            "benchmark/data/question128/swir2.tif",
+            "benchmark/data/question128/swir3.tif"
+          ],
+          "output_paths": [
+            "nbr1.tif",
+            "nbr2.tif",
+            "nbr3.tif"
+          ]
+        },
+        "output": "Error: ToolException(\"Error calling tool 'calculate_batch_nbr': benchmark/data/question128/nir1.tif: No such file or directory\")\n Please fix your mistakes."
+      },
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question128"
+        },
+        "output": "[\"Congo Basin-Africa_sur_refl_b02_2024-01-01.tif\",\"Congo Basin-Africa_sur_refl_b02_2024-01-09.tif\",\"Congo Basin-Africa_sur_refl_b02_2024-01-17.tif\",\"Congo Basin-Africa_sur_refl_b02_2024-01-25.tif\",\"Congo Basin-Africa_sur_refl_b02_2024-02-02.tif\",\"Congo Basin-Africa_sur_refl_b02_2024-02-10.tif\",\"Congo Basin-Africa_sur_refl_b02_2024-02-18.tif\",\"Congo Basin-Africa_sur_refl_b02_2024-02-26.tif\",\"Congo Basin-Africa_sur_refl_b02_2024-03-05.tif\",\"Congo Basin-Africa_sur_refl_b02_2024-03-13.tif\",\"Congo Basin-Africa_sur_refl_b02_2024-03-21.tif\",\"Congo Basin-Africa_sur_refl_b02_2024-03-29.tif\",\"Congo Basin-Africa_sur_refl_b07_2024-01-01.tif\",\"Congo Basin-Africa_sur_refl_b07_2024-01-09.tif\",\"Congo Basin-Africa_sur_refl_b07_2024-01-17.tif\",\"Congo Basin-Africa_sur_refl_b07_2024-01-25.tif\",\"Congo Basin-Africa_sur_refl_b07_2024-02-02.tif\",\"Congo Basin-Africa_sur_refl_b07_2024-02-10.tif\",\"Congo Basin-Africa_sur_refl_b07_2024-02-18.tif\",\"Congo Basin-Africa_sur_refl_b07_2024-02-26.tif\",\"Congo Basin-Africa_sur_refl_b07_2024-03-05.tif\",\"Congo Basin-Africa_sur_refl_b07_2024-03-13.tif\",\"Congo Basin-Africa_sur_refl_b07_2024-03-21.tif\",\"Congo Basin-Africa_sur_refl_b07_2024-03-29.tif\"]"
+      },
+      {
+        "name": "calculate_batch_nbr",
+        "input": {
+          "input_nir_paths": [
+            "benchmark/data/question128/Congo Basin-Africa_sur_refl_b02_2024-01-01.tif",
+            "benchmark/data/question128/Congo Basin-Africa_sur_refl_b02_2024-01-09.tif",
+            "benchmark/data/question128/Congo Basin-Africa_sur_refl_b02_2024-01-17.tif",
+            "benchmark/data/question128/Congo Basin-Africa_sur_refl_b02_2024-01-25.tif",
+            "benchmark/data/question128/Congo Basin-Africa_sur_refl_b02_2024-02-02.tif",
+            "benchmark/data/question128/Congo Basin-Africa_sur_refl_b02_2024-02-10.tif",
+            "benchmark/data/question128/Congo Basin-Africa_sur_refl_b02_2024-02-18.tif",
+            "benchmark/data/question128/Congo Basin-Africa_sur_refl_b02_2024-02-26.tif",
+            "benchmark/data/question128/Congo Basin-Africa_sur_refl_b02_2024-03-05.tif",
+            "benchmark/data/question128/Congo Basin-Africa_sur_refl_b02_2024-03-13.tif",
+            "benchmark/data/question128/Congo Basin-Africa_sur_refl_b02_2024-03-21.tif",
+            "benchmark/data/question128/Congo Basin-Africa_sur_refl_b02_2024-03-29.tif"
+          ],
+          "input_swir_paths": [
+            "benchmark/data/question128/Congo Basin-Africa_sur_refl_b07_2024-01-01.tif",
+            "benchmark/data/question128/Congo Basin-Africa_sur_refl_b07_2024-01-09.tif",
+            "benchmark/data/question128/Congo Basin-Africa_sur_refl_b07_2024-01-17.tif",
+            "benchmark/data/question128/Congo Basin-Africa_sur_refl_b07_2024-01-25.tif",
+            "benchmark/data/question128/Congo Basin-Africa_sur_refl_b07_2024-02-02.tif",
+            "benchmark/data/question128/Congo Basin-Africa_sur_refl_b07_2024-02-10.tif",
+            "benchmark/data/question128/Congo Basin-Africa_sur_refl_b07_2024-02-18.tif",
+            "benchmark/data/question128/Congo Basin-Africa_sur_refl_b07_2024-02-26.tif",
+            "benchmark/data/question128/Congo Basin-Africa_sur_refl_b07_2024-03-05.tif",
+            "benchmark/data/question128/Congo Basin-Africa_sur_refl_b07_2024-03-13.tif",
+            "benchmark/data/question128/Congo Basin-Africa_sur_refl_b07_2024-03-21.tif",
+            "benchmark/data/question128/Congo Basin-Africa_sur_refl_b07_2024-03-29.tif"
+          ],
+          "output_paths": [
+            "nbr1.tif",
+            "nbr2.tif",
+            "nbr3.tif",
+            "nbr4.tif",
+            "nbr5.tif",
+            "nbr6.tif",
+            "nbr7.tif",
+            "nbr8.tif",
+            "nbr9.tif",
+            "nbr10.tif",
+            "nbr11.tif",
+            "nbr12.tif"
+          ]
+        },
+        "output": "[\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/nbr1.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/nbr2.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/nbr3.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/nbr4.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/nbr5.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/nbr6.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/nbr7.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/nbr8.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/nbr9.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/nbr10.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/nbr11.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/nbr12.tif\"]"
+      },
+      {
+        "name": "calc_batch_image_mean",
+        "input": {
+          "file_list": [
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/nbr1.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/nbr2.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/nbr3.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/nbr4.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/nbr5.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/nbr6.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/nbr7.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/nbr8.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/nbr9.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/nbr10.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/nbr11.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/nbr12.tif"
+          ]
+        },
+        "output": "[0.18570250272750854,0.1892978847026825,0.1594163030385971,0.14849936962127686,0.1771252602338791,0.14930592477321625,0.14408369362354279,0.13239893317222595,0.16422933340072632,725.8812866210938,0.14438113570213318,0.0]"
+      }
+    ]
+  },
+  {
+    "question_index": "129",
+    "tool_calls": []
+  },
+  {
+    "question_index": "130",
+    "tool_calls": []
+  },
+  {
+    "question_index": "131",
+    "tool_calls": []
+  },
+  {
+    "question_index": "132",
+    "tool_calls": []
+  },
+  {
+    "question_index": "133",
+    "tool_calls": []
+  },
+  {
+    "question_index": "134",
+    "tool_calls": []
+  },
+  {
+    "question_index": "135",
+    "tool_calls": []
+  },
+  {
+    "question_index": "136",
+    "tool_calls": []
+  },
+  {
+    "question_index": "137",
+    "tool_calls": []
+  },
+  {
+    "question_index": "138",
+    "tool_calls": []
+  },
+  {
+    "question_index": "139",
+    "tool_calls": []
+  },
+  {
+    "question_index": "140",
+    "tool_calls": []
+  },
+  {
+    "question_index": "141",
+    "tool_calls": [
+      {
+        "name": "calculate_batch_ndti",
+        "arguments": {
+          "input_red_paths": [
+            [
+              "benchmark/data/question141/red_2020.tif",
+              "benchmark/data/question141/red_2022.tif"
+            ],
+            [
+              "benchmark/data/question141/2020/red.tif",
+              "benchmark/data/question141/2022/red.tif"
+            ]
+          ],
+          "input_green_paths": [
+            [
+              "benchmark/data/question141/green_2020.tif",
+              "benchmark/data/question141/green_2022.tif"
+            ],
+            [
+              "benchmark/data/question141/2020/green.tif",
+              "benchmark/data/question141/2022/green.tif"
+            ]
+          ],
+          "output_paths": [
+            [
+              "ndti_2020.tif",
+              "ndti_2022.tif"
+            ],
+            [
+              "ndti_2020.tif",
+              "ndti_2022.tif"
+            ]
+          ]
+        },
+        "output": [
+          "Error: ToolException(\"Error calling tool 'calculate_batch_ndti': benchmark/data/question141/red_2020.tif: No such file or directory\")\n Please fix your mistakes.",
+          "Error: ToolException(\"Error calling tool 'calculate_batch_ndti': benchmark/data/question141/2020/red.tif: No such file or directory\")\n Please fix your mistakes."
+        ]
+      },
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question141"
+        },
+        "output": "[\"Dead Sea_sur_refl_b01_2020-08-01.tif\",\"Dead Sea_sur_refl_b01_2020-08-02.tif\",\"Dead Sea_sur_refl_b01_2020-08-03.tif\",\"Dead Sea_sur_refl_b01_2020-08-04.tif\",\"Dead Sea_sur_refl_b01_2020-08-05.tif\",\"Dead Sea_sur_refl_b01_2020-08-06.tif\",\"Dead Sea_sur_refl_b01_2020-08-07.tif\",\"Dead Sea_sur_refl_b01_2020-08-08.tif\",\"Dead Sea_sur_refl_b01_2020-08-09.tif\",\"Dead Sea_sur_refl_b01_2020-08-10.tif\",\"Dead Sea_sur_refl_b01_2020-08-11.tif\",\"Dead Sea_sur_refl_b01_2020-08-12.tif\",\"Dead Sea_sur_refl_b01_2020-08-13.tif\",\"Dead Sea_sur_refl_b01_2020-08-14.tif\",\"Dead Sea_sur_refl_b01_2020-08-15.tif\",\"Dead Sea_sur_refl_b01_2020-08-16.tif\",\"Dead Sea_sur_refl_b01_2020-08-17.tif\",\"Dead Sea_sur_refl_b01_2020-08-18.tif\",\"Dead Sea_sur_refl_b01_2020-08-19.tif\",\"Dead Sea_sur_refl_b01_2020-08-20.tif\",\"Dead Sea_sur_refl_b01_2020-08-21.tif\",\"Dead Sea_sur_refl_b01_2020-08-22.tif\",\"Dead Sea_sur_refl_b01_2020-08-23.tif\",\"Dead Sea_sur_refl_b01_2020-08-24.tif\",\"Dead Sea_sur_refl_b01_2020-08-25.tif\",\"Dead Sea_sur_refl_b01_2020-08-26.tif\",\"Dead Sea_sur_refl_b01_2020-08-27.tif\",\"Dead Sea_sur_refl_b01_2020-08-28.tif\",\"Dead Sea_sur_refl_b01_2020-08-29.tif\",\"Dead Sea_sur_refl_b01_2020-08-30.tif\",\"Dead Sea_sur_refl_b01_2022-08-01.tif\",\"Dead Sea_sur_refl_b01_2022-08-02.tif\",\"Dead Sea_sur_refl_b01_2022-08-03.tif\",\"Dead Sea_sur_refl_b01_2022-08-04.tif\",\"Dead Sea_sur_refl_b01_2022-08-05.tif\",\"Dead Sea_sur_refl_b01_2022-08-06.tif\",\"Dead Sea_sur_refl_b01_2022-08-07.tif\",\"Dead Sea_sur_refl_b01_2022-08-08.tif\",\"Dead Sea_sur_refl_b01_2022-08-09.tif\",\"Dead Sea_sur_refl_b01_2022-08-10.tif\",\"Dead Sea_sur_refl_b01_2022-08-11.tif\",\"Dead Sea_sur_refl_b01_2022-08-12.tif\",\"Dead Sea_sur_refl_b01_2022-08-13.tif\",\"Dead Sea_sur_refl_b01_2022-08-14.tif\",\"Dead Sea_sur_refl_b01_2022-08-15.tif\",\"Dead Sea_sur_refl_b01_2022-08-16.tif\",\"Dead Sea_sur_refl_b01_2022-08-17.tif\",\"Dead Sea_sur_refl_b01_2022-08-18.tif\",\"Dead Sea_sur_refl_b01_2022-08-19.tif\",\"Dead Sea_sur_refl_b01_2022-08-20.tif\",\"Dead Sea_sur_refl_b01_2022-08-21.tif\",\"Dead Sea_sur_refl_b01_2022-08-22.tif\",\"Dead Sea_sur_refl_b01_2022-08-23.tif\",\"Dead Sea_sur_refl_b01_2022-08-24.tif\",\"Dead Sea_sur_refl_b01_2022-08-25.tif\",\"Dead Sea_sur_refl_b01_2022-08-26.tif\",\"Dead Sea_sur_refl_b01_2022-08-27.tif\",\"Dead Sea_sur_refl_b01_2022-08-28.tif\",\"Dead Sea_sur_refl_b01_2022-08-29.tif\",\"Dead Sea_sur_refl_b01_2022-08-30.tif\",\"Dead Sea_sur_refl_b04_2020-08-01.tif\",\"Dead Sea_sur_refl_b04_2020-08-02.tif\",\"Dead Sea_sur_refl_b04_2020-08-03.tif\",\"Dead Sea_sur_refl_b04_2020-08-04.tif\",\"Dead Sea_sur_refl_b04_2020-08-05.tif\",\"Dead Sea_sur_refl_b04_2020-08-06.tif\",\"Dead Sea_sur_refl_b04_2020-08-07.tif\",\"Dead Sea_sur_refl_b04_2020-08-08.tif\",\"Dead Sea_sur_refl_b04_2020-08-09.tif\",\"Dead Sea_sur_refl_b04_2020-08-10.tif\",\"Dead Sea_sur_refl_b04_2020-08-11.tif\",\"Dead Sea_sur_refl_b04_2020-08-12.tif\",\"Dead Sea_sur_refl_b04_2020-08-13.tif\",\"Dead Sea_sur_refl_b04_2020-08-14.tif\",\"Dead Sea_sur_refl_b04_2020-08-15.tif\",\"Dead Sea_sur_refl_b04_2020-08-16.tif\",\"Dead Sea_sur_refl_b04_2020-08-17.tif\",\"Dead Sea_sur_refl_b04_2020-08-18.tif\",\"Dead Sea_sur_refl_b04_2020-08-19.tif\",\"Dead Sea_sur_refl_b04_2020-08-20.tif\",\"Dead Sea_sur_refl_b04_2020-08-21.tif\",\"Dead Sea_sur_refl_b04_2020-08-22.tif\",\"Dead Sea_sur_refl_b04_2020-08-23.tif\",\"Dead Sea_sur_refl_b04_2020-08-24.tif\",\"Dead Sea_sur_refl_b04_2020-08-25.tif\",\"Dead Sea_sur_refl_b04_2020-08-26.tif\",\"Dead Sea_sur_refl_b04_2020-08-27.tif\",\"Dead Sea_sur_refl_b04_2020-08-28.tif\",\"Dead Sea_sur_refl_b04_2020-08-29.tif\",\"Dead Sea_sur_refl_b04_2020-08-30.tif\",\"Dead Sea_sur_refl_b04_2022-08-01.tif\",\"Dead Sea_sur_refl_b04_2022-08-02.tif\",\"Dead Sea_sur_refl_b04_2022-08-03.tif\",\"Dead Sea_sur_refl_b04_2022-08-04.tif\",\"Dead Sea_sur_refl_b04_2022-08-05.tif\",\"Dead Sea_sur_refl_b04_2022-08-06.tif\",\"Dead Sea_sur_refl_b04_2022-08-07.tif\",\"Dead Sea_sur_refl_b04_2022-08-08.tif\",\"Dead Sea_sur_refl_b04_2022-08-09.tif\",\"Dead Sea_sur_refl_b04_2022-08-10.tif\",\"Dead Sea_sur_refl_b04_2022-08-11.tif\",\"Dead Sea_sur_refl_b04_2022-08-12.tif\",\"Dead Sea_sur_refl_b04_2022-08-13.tif\",\"Dead Sea_sur_refl_b04_2022-08-14.tif\",\"Dead Sea_sur_refl_b04_2022-08-15.tif\",\"Dead Sea_sur_refl_b04_2022-08-16.tif\",\"Dead Sea_sur_refl_b04_2022-08-17.tif\",\"Dead Sea_sur_refl_b04_2022-08-18.tif\",\"Dead Sea_sur_refl_b04_2022-08-19.tif\",\"Dead Sea_sur_refl_b04_2022-08-20.tif\",\"Dead Sea_sur_refl_b04_2022-08-21.tif\",\"Dead Sea_sur_refl_b04_2022-08-22.tif\",\"Dead Sea_sur_refl_b04_2022-08-23.tif\",\"Dead Sea_sur_refl_b04_2022-08-24.tif\",\"Dead Sea_sur_refl_b04_2022-08-25.tif\",\"Dead Sea_sur_refl_b04_2022-08-26.tif\",\"Dead Sea_sur_refl_b04_2022-08-27.tif\",\"Dead Sea_sur_refl_b04_2022-08-28.tif\",\"Dead Sea_sur_refl_b04_2022-08-29.tif\",\"Dead Sea_sur_refl_b04_2022-08-30.tif\"]"
+      }
+    ]
+  },
+  {
+    "question_index": "142",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question142"
+        },
+        "output": "[\"Mediterranean Sea_sur_refl_b01_2022-09-01.tif\",\"Mediterranean Sea_sur_refl_b01_2022-09-02.tif\",\"Mediterranean Sea_sur_refl_b01_2022-09-03.tif\",\"Mediterranean Sea_sur_refl_b01_2022-09-04.tif\",\"Mediterranean Sea_sur_refl_b01_2022-09-05.tif\",\"Mediterranean Sea_sur_refl_b01_2022-09-06.tif\",\"Mediterranean Sea_sur_refl_b01_2022-09-07.tif\",\"Mediterranean Sea_sur_refl_b01_2022-09-08.tif\",\"Mediterranean Sea_sur_refl_b01_2022-09-09.tif\",\"Mediterranean Sea_sur_refl_b01_2022-09-10.tif\",\"Mediterranean Sea_sur_refl_b01_2022-09-11.tif\",\"Mediterranean Sea_sur_refl_b01_2022-09-12.tif\",\"Mediterranean Sea_sur_refl_b01_2022-09-13.tif\",\"Mediterranean Sea_sur_refl_b01_2022-09-14.tif\",\"Mediterranean Sea_sur_refl_b01_2022-09-15.tif\",\"Mediterranean Sea_sur_refl_b01_2022-09-16.tif\",\"Mediterranean Sea_sur_refl_b01_2022-09-17.tif\",\"Mediterranean Sea_sur_refl_b01_2022-09-18.tif\",\"Mediterranean Sea_sur_refl_b01_2022-09-19.tif\",\"Mediterranean Sea_sur_refl_b01_2022-09-20.tif\",\"Mediterranean Sea_sur_refl_b01_2022-09-21.tif\",\"Mediterranean Sea_sur_refl_b01_2022-09-22.tif\",\"Mediterranean Sea_sur_refl_b01_2022-09-23.tif\",\"Mediterranean Sea_sur_refl_b01_2022-09-24.tif\",\"Mediterranean Sea_sur_refl_b01_2022-09-25.tif\",\"Mediterranean Sea_sur_refl_b01_2022-09-26.tif\",\"Mediterranean Sea_sur_refl_b01_2022-09-27.tif\",\"Mediterranean Sea_sur_refl_b01_2022-09-28.tif\",\"Mediterranean Sea_sur_refl_b01_2022-09-29.tif\",\"Mediterranean Sea_sur_refl_b04_2022-09-01.tif\",\"Mediterranean Sea_sur_refl_b04_2022-09-02.tif\",\"Mediterranean Sea_sur_refl_b04_2022-09-03.tif\",\"Mediterranean Sea_sur_refl_b04_2022-09-04.tif\",\"Mediterranean Sea_sur_refl_b04_2022-09-05.tif\",\"Mediterranean Sea_sur_refl_b04_2022-09-06.tif\",\"Mediterranean Sea_sur_refl_b04_2022-09-07.tif\",\"Mediterranean Sea_sur_refl_b04_2022-09-08.tif\",\"Mediterranean Sea_sur_refl_b04_2022-09-09.tif\",\"Mediterranean Sea_sur_refl_b04_2022-09-10.tif\",\"Mediterranean Sea_sur_refl_b04_2022-09-11.tif\",\"Mediterranean Sea_sur_refl_b04_2022-09-12.tif\",\"Mediterranean Sea_sur_refl_b04_2022-09-13.tif\",\"Mediterranean Sea_sur_refl_b04_2022-09-14.tif\",\"Mediterranean Sea_sur_refl_b04_2022-09-15.tif\",\"Mediterranean Sea_sur_refl_b04_2022-09-16.tif\",\"Mediterranean Sea_sur_refl_b04_2022-09-17.tif\",\"Mediterranean Sea_sur_refl_b04_2022-09-18.tif\",\"Mediterranean Sea_sur_refl_b04_2022-09-19.tif\",\"Mediterranean Sea_sur_refl_b04_2022-09-20.tif\",\"Mediterranean Sea_sur_refl_b04_2022-09-21.tif\",\"Mediterranean Sea_sur_refl_b04_2022-09-22.tif\",\"Mediterranean Sea_sur_refl_b04_2022-09-23.tif\",\"Mediterranean Sea_sur_refl_b04_2022-09-24.tif\",\"Mediterranean Sea_sur_refl_b04_2022-09-25.tif\",\"Mediterranean Sea_sur_refl_b04_2022-09-26.tif\",\"Mediterranean Sea_sur_refl_b04_2022-09-27.tif\",\"Mediterranean Sea_sur_refl_b04_2022-09-28.tif\",\"Mediterranean Sea_sur_refl_b04_2022-09-29.tif\"]"
+      },
+      {
+        "name": "calculate_batch_ndti",
+        "input": {
+          "input_red_paths": [
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b01_2022-09-01.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b01_2022-09-02.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b01_2022-09-03.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b01_2022-09-04.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b01_2022-09-05.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b01_2022-09-06.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b01_2022-09-07.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b01_2022-09-08.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b01_2022-09-09.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b01_2022-09-10.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b01_2022-09-11.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b01_2022-09-12.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b01_2022-09-13.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b01_2022-09-14.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b01_2022-09-15.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b01_2022-09-16.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b01_2022-09-17.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b01_2022-09-18.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b01_2022-09-19.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b01_2022-09-20.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b01_2022-09-21.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b01_2022-09-22.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b01_2022-09-23.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b01_2022-09-24.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b01_2022-09-25.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b01_2022-09-26.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b01_2022-09-27.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b01_2022-09-28.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b01_2022-09-29.tif"
+          ],
+          "input_green_paths": [
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b04_2022-09-01.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b04_2022-09-02.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b04_2022-09-03.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b04_2022-09-04.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b04_2022-09-05.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b04_2022-09-06.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b04_2022-09-07.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b04_2022-09-08.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b04_2022-09-09.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b04_2022-09-10.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b04_2022-09-11.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b04_2022-09-12.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b04_2022-09-13.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b04_2022-09-14.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b04_2022-09-15.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b04_2022-09-16.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b04_2022-09-17.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b04_2022-09-18.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b04_2022-09-19.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b04_2022-09-20.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b04_2022-09-21.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b04_2022-09-22.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b04_2022-09-23.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b04_2022-09-24.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b04_2022-09-25.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b04_2022-09-26.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b04_2022-09-27.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b04_2022-09-28.tif",
+            "benchmark/data/question142/Mediterranean Sea_sur_refl_b04_2022-09-29.tif"
+          ],
+          "output_paths": [
+            "ndti_2022-09-01.tif",
+            "ndti_2022-09-02.tif",
+            "ndti_2022-09-03.tif",
+            "ndti_2022-09-04.tif",
+            "ndti_2022-09-05.tif",
+            "ndti_2022-09-06.tif",
+            "ndti_2022-09-07.tif",
+            "ndti_2022-09-08.tif",
+            "ndti_2022-09-09.tif",
+            "ndti_2022-09-10.tif",
+            "ndti_2022-09-11.tif",
+            "ndti_2022-09-12.tif",
+            "ndti_2022-09-13.tif",
+            "ndti_2022-09-14.tif",
+            "ndti_2022-09-15.tif",
+            "ndti_2022-09-16.tif",
+            "ndti_2022-09-17.tif",
+            "ndti_2022-09-18.tif",
+            "ndti_2022-09-19.tif",
+            "ndti_2022-09-20.tif",
+            "ndti_2022-09-21.tif",
+            "ndti_2022-09-22.tif",
+            "ndti_2022-09-23.tif",
+            "ndti_2022-09-24.tif",
+            "ndti_2022-09-25.tif",
+            "ndti_2022-09-26.tif",
+            "ndti_2022-09-27.tif",
+            "ndti_2022-09-28.tif",
+            "ndti_2022-09-29.tif"
+          ]
+        },
+        "output": "[\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-01.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-02.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-03.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-04.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-05.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-06.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-07.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-08.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-09.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-10.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-11.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-12.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-13.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-14.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-15.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-16.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-17.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-18.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-19.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-20.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-21.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-22.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-23.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-24.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-25.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-26.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-27.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-28.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-29.tif\"]"
+      },
+      {
+        "name": "calc_batch_image_max",
+        "input": {
+          "file_list": [
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-01.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-02.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-03.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-04.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-05.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-06.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-07.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-08.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-09.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-10.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-11.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-12.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-13.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-14.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-15.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-16.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-17.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-18.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-19.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-20.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-21.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-22.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-23.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-24.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-25.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-26.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-27.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-28.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/ndti_2022-09-29.tif"
+          ]
+        },
+        "output": "[44.000022888183594,17.0000057220459,81.00008392333984,55.000057220458984,67.00006866455078,47.00004577636719,49.00004959106445,29.000028610229492,73.00007629394531,-0.0,49.00004959106445,9.500000953674316,35.00003433227539,16.000003814697266,33.00001525878906,39.000038146972656,25.000011444091797,41.00004196166992,58.00002670288086,16.00000762939453,55.000057220458984,32.333343505859375,0.0025403201580047607,103.00010681152344,41.00004196166992,29.000028610229492,45.00004577636719,0.7857142686843872,-0.06329113990068436]"
+      }
+    ]
+  },
+  {
+    "question_index": "143",
+    "tool_calls": []
+  },
+  {
+    "question_index": "144",
+    "tool_calls": []
+  },
+  {
+    "question_index": "145",
+    "tool_calls": []
+  },
+  {
+    "question_index": "146",
+    "tool_calls": []
+  },
+  {
+    "question_index": "147",
+    "tool_calls": []
+  },
+  {
+    "question_index": "148",
+    "tool_calls": []
+  },
+  {
+    "question_index": "149",
+    "tool_calls": []
+  },
+  {
+    "question_index": "150",
+    "tool_calls": []
+  },
+  {
+    "question_index": "151",
+    "tool_calls": [
+      {
+        "name": "kurtosis",
+        "input": {
+          "x": "benchmark/data/question151",
+          "fisher": false
+        },
+        "output": "Error: ToolException(\"Input validation error: 'benchmark/data/question151' is not of type 'array'\")\n Please fix your mistakes."
+      },
+      {
+        "name": "calc_batch_image_kurtosis",
+        "input": {
+          "file_list": [
+            "benchmark/data/question151"
+          ]
+        },
+        "output": "Error: ToolException(\"Error calling tool 'calc_batch_image_kurtosis': Failed to open benchmark/data/question151\")\n Please fix your mistakes."
+      }
+    ]
+  },
+  {
+    "question_index": "152",
+    "tool_calls": []
+  },
+  {
+    "question_index": "153",
+    "tool_calls": []
+  },
+  {
+    "question_index": "154",
+    "tool_calls": []
+  },
+  {
+    "question_index": "155",
+    "tool_calls": []
+  },
+  {
+    "question_index": "156",
+    "tool_calls": [
+      {
+        "name": "calculate_water_turbidity_ntu",
+        "arguments": {
+          "input_red_path": [
+            "bbenchmark/data/question156/sur_refl_b01.tif",
+            "benchmark/data/question156/sur_refl_b01.tif"
+          ],
+          "output_path": [
+            "turbidity_result.tif",
+            "turbidity_result.tif"
+          ]
+        },
+        "output": [
+          "Error: ToolException(\"Error calling tool 'calculate_water_turbidity_ntu': bbenchmark/data/question156/sur_refl_b01.tif: No such file or directory\")\n Please fix your mistakes.",
+          "Error: ToolException(\"Error calling tool 'calculate_water_turbidity_ntu': benchmark/data/question156/sur_refl_b01.tif: No such file or directory\")\n Please fix your mistakes."
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "157",
+    "tool_calls": []
+  },
+  {
+    "question_index": "158",
+    "tool_calls": []
+  },
+  {
+    "question_index": "159",
+    "tool_calls": []
+  },
+  {
+    "question_index": "160",
+    "tool_calls": []
+  },
+  {
+    "question_index": "161",
+    "tool_calls": []
+  },
+  {
+    "question_index": "162",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question162"
+        },
+        "output": "[\"California_sur_refl_b02.tif_2025-01-01.tif\",\"California_sur_refl_b02.tif_2025-01-09.tif\",\"California_sur_refl_b02.tif_2025-01-17.tif\",\"California_sur_refl_b02.tif_2025-01-25.tif\",\"California_sur_refl_b02.tif_2025-02-02.tif\",\"California_sur_refl_b02.tif_2025-02-10.tif\",\"California_sur_refl_b02.tif_2025-02-18.tif\",\"California_sur_refl_b02.tif_2025-02-26.tif\",\"California_sur_refl_b02.tif_2025-03-06.tif\",\"California_sur_refl_b02.tif_2025-03-14.tif\",\"California_sur_refl_b02.tif_2025-03-22.tif\",\"California_sur_refl_b07.tif_2025-01-01.tif\",\"California_sur_refl_b07.tif_2025-01-09.tif\",\"California_sur_refl_b07.tif_2025-01-17.tif\",\"California_sur_refl_b07.tif_2025-01-25.tif\",\"California_sur_refl_b07.tif_2025-02-02.tif\",\"California_sur_refl_b07.tif_2025-02-10.tif\",\"California_sur_refl_b07.tif_2025-02-18.tif\",\"California_sur_refl_b07.tif_2025-02-26.tif\",\"California_sur_refl_b07.tif_2025-03-06.tif\",\"California_sur_refl_b07.tif_2025-03-14.tif\",\"California_sur_refl_b07.tif_2025-03-22.tif\"]"
+      },
+      {
+        "name": "calculate_batch_nbr",
+        "input": {
+          "input_nir_paths": [
+            "benchmark/data/question162/California_sur_refl_b02.tif_2025-01-01.tif",
+            "benchmark/data/question162/California_sur_refl_b02.tif_2025-01-09.tif",
+            "benchmark/data/question162/California_sur_refl_b02.tif_2025-01-17.tif",
+            "benchmark/data/question162/California_sur_refl_b02.tif_2025-01-25.tif",
+            "benchmark/data/question162/California_sur_refl_b02.tif_2025-02-02.tif",
+            "benchmark/data/question162/California_sur_refl_b02.tif_2025-02-10.tif",
+            "benchmark/data/question162/California_sur_refl_b02.tif_2025-02-18.tif",
+            "benchmark/data/question162/California_sur_refl_b02.tif_2025-02-26.tif",
+            "benchmark/data/question162/California_sur_refl_b02.tif_2025-03-06.tif",
+            "benchmark/data/question162/California_sur_refl_b02.tif_2025-03-14.tif",
+            "benchmark/data/question162/California_sur_refl_b02.tif_2025-03-22.tif"
+          ],
+          "input_swir_paths": [
+            "benchmark/data/question162/California_sur_refl_b07.tif_2025-01-01.tif",
+            "benchmark/data/question162/California_sur_refl_b07.tif_2025-01-09.tif",
+            "benchmark/data/question162/California_sur_refl_b07.tif_2025-01-17.tif",
+            "benchmark/data/question162/California_sur_refl_b07.tif_2025-01-25.tif",
+            "benchmark/data/question162/California_sur_refl_b07.tif_2025-02-02.tif",
+            "benchmark/data/question162/California_sur_refl_b07.tif_2025-02-10.tif",
+            "benchmark/data/question162/California_sur_refl_b07.tif_2025-02-18.tif",
+            "benchmark/data/question162/California_sur_refl_b07.tif_2025-02-26.tif",
+            "benchmark/data/question162/California_sur_refl_b07.tif_2025-03-06.tif",
+            "benchmark/data/question162/California_sur_refl_b07.tif_2025-03-14.tif",
+            "benchmark/data/question162/California_sur_refl_b07.tif_2025-03-22.tif"
+          ],
+          "output_paths": [
+            "question162/nbr_2025-01-01.tif",
+            "question162/nbr_2025-01-09.tif",
+            "question162/nbr_2025-01-17.tif",
+            "question162/nbr_2025-01-25.tif",
+            "question162/nbr_2025-02-02.tif",
+            "question162/nbr_2025-02-10.tif",
+            "question162/nbr_2025-02-18.tif",
+            "question162/nbr_2025-02-26.tif",
+            "question162/nbr_2025-03-06.tif",
+            "question162/nbr_2025-03-14.tif",
+            "question162/nbr_2025-03-22.tif"
+          ]
+        },
+        "output": "[\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/question162/nbr_2025-01-01.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/question162/nbr_2025-01-09.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/question162/nbr_2025-01-17.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/question162/nbr_2025-01-25.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/question162/nbr_2025-02-02.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/question162/nbr_2025-02-10.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/question162/nbr_2025-02-18.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/question162/nbr_2025-02-26.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/question162/nbr_2025-03-06.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/question162/nbr_2025-03-14.tif\",\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/question162/nbr_2025-03-22.tif\"]"
+      },
+      {
+        "name": "calc_batch_image_mean",
+        "input": {
+          "file_list": [
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/question162/nbr_2025-01-01.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/question162/nbr_2025-01-09.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/question162/nbr_2025-01-17.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/question162/nbr_2025-01-25.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/question162/nbr_2025-02-02.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/question162/nbr_2025-02-10.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/question162/nbr_2025-02-18.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/question162/nbr_2025-02-26.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/question162/nbr_2025-03-06.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/question162/nbr_2025-03-14.tif",
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/question162/nbr_2025-03-22.tif"
+          ]
+        },
+        "output": "[-29800.1875,-5674.3603515625,-37169.0625,-25747.2734375,-9152.1611328125,-25850.421875,-58023.19140625,-28680.04296875,-19911.033203125,-3434.096923828125,-15076.787109375]"
+      },
+      {
+        "name": "mann_kendall_test",
+        "input": {
+          "x": [
+            -29800.1875,
+            -5674.3603515625,
+            -37169.0625,
+            -25747.2734375,
+            -9152.1611328125,
+            -25850.421875,
+            -58023.19140625,
+            -28680.04296875,
+            -19911.033203125,
+            -3434.096923828125,
+            -15076.787109375
+          ]
+        },
+        "output": "[\"no trend\",0.4362749288405292,0.778498944161523,0.2]"
+      }
+    ]
+  },
+  {
+    "question_index": "163",
+    "tool_calls": [
+      {
+        "name": "calculate_batch_ndsi",
+        "input": {
+          "green_file_list": [
+            "benchmark/data/question163/sur_refl_b04.tif"
+          ],
+          "swir_file_list": [
+            "benchmark/data/question163/sur_refl_b06.tif"
+          ],
+          "output_path_list": [
+            "question163/ndsi_result.tif"
+          ]
+        },
+        "output": "Error: ToolException(\"Error calling tool 'calculate_batch_ndsi': benchmark/data/question163/sur_refl_b04.tif: No such file or directory\")\n Please fix your mistakes."
+      },
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question163"
+        },
+        "output": "[\"Greenland_sur_refl_b04.tif_2020-09-12.tif\",\"Greenland_sur_refl_b06.tif_2020-09-12.tif\"]"
+      },
+      {
+        "name": "calculate_batch_ndsi",
+        "input": {
+          "green_file_list": [
+            "benchmark/data/question163/Greenland_sur_refl_b04.tif_2020-09-12.tif"
+          ],
+          "swir_file_list": [
+            "benchmark/data/question163/Greenland_sur_refl_b06.tif_2020-09-12.tif"
+          ],
+          "output_path_list": [
+            "question163/ndsi_result.tif"
+          ]
+        },
+        "output": "[\"Result save at EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/question163/ndsi_result.tif\"]"
+      },
+      {
+        "name": "calc_batch_image_mean",
+        "input": {
+          "file_list": [
+            "EO_Langchain/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-02_21-32/out/question163/ndsi_result.tif"
+          ],
+          "uint8": false
+        },
+        "output": "[0.4078550934791565]"
+      }
+    ]
+  },
+  {
+    "question_index": "164",
+    "tool_calls": []
+  },
+  {
+    "question_index": "165",
+    "tool_calls": []
+  },
+  {
+    "question_index": "166",
+    "tool_calls": []
+  },
+  {
+    "question_index": "167",
+    "tool_calls": []
+  },
+  {
+    "question_index": "168",
+    "tool_calls": []
+  },
+  {
+    "question_index": "169",
+    "tool_calls": []
+  },
+  {
+    "question_index": "170",
+    "tool_calls": []
+  },
+  {
+    "question_index": "171",
+    "tool_calls": []
+  },
+  {
+    "question_index": "172",
+    "tool_calls": []
+  },
+  {
+    "question_index": "173",
+    "tool_calls": []
+  },
+  {
+    "question_index": "174",
+    "tool_calls": []
+  },
+  {
+    "question_index": "175",
+    "tool_calls": []
+  },
+  {
+    "question_index": "176",
+    "tool_calls": []
+  },
+  {
+    "question_index": "177",
+    "tool_calls": []
+  },
+  {
+    "question_index": "178",
+    "tool_calls": []
+  },
+  {
+    "question_index": "179",
+    "tool_calls": []
+  },
+  {
+    "question_index": "180",
+    "tool_calls": []
+  },
+  {
+    "question_index": "181",
+    "tool_calls": []
+  },
+  {
+    "question_index": "182",
+    "tool_calls": []
+  },
+  {
+    "question_index": "183",
+    "tool_calls": []
+  },
+  {
+    "question_index": "184",
+    "tool_calls": []
+  },
+  {
+    "question_index": "185",
+    "tool_calls": []
+  },
+  {
+    "question_index": "186",
+    "tool_calls": []
+  },
+  {
+    "question_index": "187",
+    "tool_calls": [
+      {
+        "name": "compute_linear_trend",
+        "input": {
+          "y": [
+            1985,
+            1986,
+            1987,
+            1988,
+            1989,
+            1990,
+            1991,
+            1992,
+            1993,
+            1994,
+            1995,
+            1996,
+            1997,
+            1998,
+            1999,
+            2000,
+            2001,
+            2002,
+            2003,
+            2004,
+            2005,
+            2006,
+            2007,
+            2008,
+            2009,
+            2010,
+            2011,
+            2012,
+            2013,
+            2014,
+            2015,
+            2016,
+            2017,
+            2018,
+            2019,
+            2020
+          ],
+          "x": [
+            1985,
+            1986,
+            1987,
+            1988,
+            1989,
+            1990,
+            1991,
+            1992,
+            1993,
+            1994,
+            1995,
+            1996,
+            1997,
+            1998,
+            1999,
+            2000,
+            2001,
+            2002,
+            2003,
+            2004,
+            2005,
+            2006,
+            2007,
+            2008,
+            2009,
+            2010,
+            2011,
+            2012,
+            2013,
+            2014,
+            2015,
+            2016,
+            2017,
+            2018,
+            2019,
+            2020
+          ]
+        },
+        "output": "[1.0000000000000075,-1.5703561492524852e-11]"
+      }
+    ]
+  },
+  {
+    "question_index": "188",
+    "tool_calls": []
+  },
+  {
+    "question_index": "189",
+    "tool_calls": []
+  },
+  {
+    "question_index": "190",
+    "tool_calls": []
+  },
+  {
+    "question_index": "191",
+    "tool_calls": []
+  },
+  {
+    "question_index": "192",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question192"
+        },
+        "output": "[\"A.jpg\",\"B.jpg\",\"C.jpg\",\"D.jpg\",\"E.jpg\",\"F.jpg\",\"G.jpg\",\"H.jpg\",\"I.jpg\",\"J.jpg\",\"K.jpg\",\"L.jpg\"]"
+      }
+    ]
+  },
+  {
+    "question_index": "193",
+    "tool_calls": []
+  },
+  {
+    "question_index": "194",
+    "tool_calls": []
+  },
+  {
+    "question_index": "195",
+    "tool_calls": []
+  },
+  {
+    "question_index": "196",
+    "tool_calls": []
+  },
+  {
+    "question_index": "197",
+    "tool_calls": []
+  },
+  {
+    "question_index": "198",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question198"
+        },
+        "output": "[\"A.jpg\",\"B.jpg\",\"C.jpg\",\"D.jpg\",\"E.jpg\",\"F.jpg\",\"G.jpg\",\"H.jpg\",\"I.jpg\",\"J.jpg\",\"K.jpg\",\"L.jpg\"]"
+      },
+      {
+        "name": "MSCN",
+        "arguments": {
+          "input_image_path": [
+            "benchmark/data/question198/A.jpg",
+            "benchmark/data/question198/B.jpg"
+          ]
+        },
+        "output": [
+          "{'predicted_class': 'Stadium', 'confidence': 0.781446635723114, 'top5_predictions': [('Stadium', 0.781446635723114), ('Farmland', 0.012077275663614273), ('Industrial', 0.011235920712351799), ('BareLand', 0.011039801873266697), ('Bridge', 0.010850590653717518)]}",
+          "{'predicted_class': 'Beach', 'confidence': 0.786211371421814, 'top5_predictions': [('Beach', 0.786211371421814), ('Desert', 0.021964700892567635), ('BareLand', 0.015205773524940014), ('Industrial', 0.009209184907376766), ('Forest', 0.008470187894999981)]}"
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "199",
+    "tool_calls": []
+  },
+  {
+    "question_index": "200",
+    "tool_calls": []
+  },
+  {
+    "question_index": "201",
+    "tool_calls": []
+  },
+  {
+    "question_index": "202",
+    "tool_calls": []
+  },
+  {
+    "question_index": "203",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question203"
+        },
+        "output": "[\"A.jpg\",\"B.jpg\",\"C.jpg\",\"D.jpg\",\"E.jpg\",\"F.jpg\",\"G.jpg\",\"H.jpg\",\"I.jpg\",\"J.jpg\",\"K.jpg\",\"L.jpg\"]"
+      }
+    ]
+  },
+  {
+    "question_index": "204",
+    "tool_calls": [
+      {
+        "name": "SM3Det",
+        "input": {
+          "input_image_path": "benchmark/data/question204/region_A.tif",
+          "text_prompt": "baseball diamond"
+        },
+        "output": "Failed to call model"
+      }
+    ]
+  },
+  {
+    "question_index": "205",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question205"
+        },
+        "output": "[\"A.jpg\",\"B.jpg\",\"C.jpg\"]"
+      },
+      {
+        "name": "InstructSAM",
+        "arguments": {
+          "input_image_path": [
+            "benchmark/data/question205/A.jpg",
+            "benchmark/data/question205/B.jpg",
+            "benchmark/data/question205/C.jpg"
+          ],
+          "text_prompt": [
+            "storage tank",
+            "storage tank",
+            "storage tank"
+          ]
+        },
+        "output": [
+          "28",
+          "28",
+          "32"
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "206",
+    "tool_calls": []
+  },
+  {
+    "question_index": "207",
+    "tool_calls": []
+  },
+  {
+    "question_index": "208",
+    "tool_calls": [
+      {
+        "name": "SM3Det",
+        "arguments": {
+          "input_image_path": [
+            "benchmark/data/question208/A.jpg",
+            "benchmark/data/question208/A.jpg"
+          ],
+          "text_prompt": [
+            "plane",
+            "plane"
+          ]
+        },
+        "output": [
+          "Failed to call model",
+          "Failed to call model"
+        ]
+      },
+      {
+        "name": "InstructSAM",
+        "input": {
+          "input_image_path": "benchmark/data/question208/A.jpg",
+          "text_prompt": "plane"
+        },
+        "output": "Failed to call model"
+      }
+    ]
+  },
+  {
+    "question_index": "209",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question209"
+        },
+        "output": "[\"A.jpg\",\"B.jpg\",\"C.jpg\"]"
+      },
+      {
+        "name": "SM3Det",
+        "arguments": {
+          "input_image_path": [
+            "benchmark/data/question209/A.jpg",
+            "benchmark/data/question209/A.jpg",
+            "benchmark/data/question209/B.jpg"
+          ],
+          "text_prompt": [
+            "ship",
+            "ship",
+            "ship"
+          ]
+        },
+        "output": [
+          "Failed to call model",
+          "Failed to call model",
+          "Failed to call model"
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "210",
+    "tool_calls": []
+  },
+  {
+    "question_index": "211",
+    "tool_calls": []
+  },
+  {
+    "question_index": "212",
+    "tool_calls": []
+  },
+  {
+    "question_index": "213",
+    "tool_calls": []
+  },
+  {
+    "question_index": "214",
+    "tool_calls": []
+  },
+  {
+    "question_index": "215",
+    "tool_calls": []
+  },
+  {
+    "question_index": "216",
+    "tool_calls": []
+  },
+  {
+    "question_index": "217",
+    "tool_calls": [
+      {
+        "name": "ChangeOS",
+        "input": {
+          "pre_image_path": "benchmark/data/question217",
+          "post_image_path": "benchmark/data/question217",
+          "output_path": "question217/building_mask.tif"
+        },
+        "output": "Failed to call model"
+      },
+      {
+        "name": "calculate_area",
+        "input": {
+          "input_image_path": "benchmark/data/question217",
+          "gsd": 1
+        },
+        "output": "Error: ToolException(\"Error calling tool 'calculate_area': Failed to open benchmark/data/question217\")\n Please fix your mistakes."
+      }
+    ]
+  },
+  {
+    "question_index": "218",
+    "tool_calls": []
+  },
+  {
+    "question_index": "219",
+    "tool_calls": []
+  },
+  {
+    "question_index": "220",
+    "tool_calls": []
+  },
+  {
+    "question_index": "221",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question221"
+        },
+        "output": "[\"area_A_time_post.png\",\"area_A_time_pre.png\",\"area_B_time_post.png\",\"area_B_time_pre.png\"]"
+      },
+      {
+        "name": "ChangeOS",
+        "arguments": {
+          "pre_image_path": [
+            "benchmark/data/question221/area_A_time_pre.png",
+            "benchmark/data/question221/area_B_time_pre.png"
+          ],
+          "post_image_path": [
+            "benchmark/data/question221/area_A_time_post.png",
+            "benchmark/data/question221/area_B_time_post.png"
+          ],
+          "output_path": [
+            "change_A.tif",
+            "change_B.tif"
+          ]
+        },
+        "output": [
+          "Result save at EO_Langchain_P3/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-21_21-53/out/change_A.tif",
+          "Result save at EO_Langchain_P3/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-21_21-53/out/change_B.tif"
+        ]
+      },
+      {
+        "name": "count_above_threshold",
+        "arguments": {
+          "file_path": [
+            "EO_Langchain_P3/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-21_21-53/out/change_A.tif",
+            "EO_Langchain_P3/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-21_21-53/out/change_B.tif"
+          ],
+          "threshold": [
+            0,
+            0
+          ]
+        },
+        "output": [
+          "2833",
+          "470"
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "222",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question222"
+        },
+        "output": "[\"area_A_time_post.png\",\"area_A_time_pre.png\",\"area_B_time_post.png\",\"area_B_time_pre.png\"]"
+      },
+      {
+        "name": "ChangeOS",
+        "arguments": {
+          "pre_image_path": [
+            "benchmark/data/question222/area_A_time_pre.png",
+            "benchmark/data/question222/area_B_time_pre.png"
+          ],
+          "post_image_path": [
+            "benchmark/data/question222/area_A_time_post.png",
+            "benchmark/data/question222/area_B_time_post.png"
+          ],
+          "output_path": [
+            "change_A.tif",
+            "change_B.tif"
+          ]
+        },
+        "output": [
+          "Result save at EO_Langchain_P3/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-21_21-53/out/change_A.tif",
+          "Result save at EO_Langchain_P3/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-21_21-53/out/change_B.tif"
+        ]
+      },
+      {
+        "name": "count_above_threshold",
+        "arguments": {
+          "file_path": [
+            "EO_Langchain_P3/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-21_21-53/out/change_A.tif",
+            "EO_Langchain_P3/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-21_21-53/out/change_B.tif"
+          ],
+          "threshold": [
+            0,
+            0
+          ]
+        },
+        "output": [
+          "6256",
+          "559"
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "223",
+    "tool_calls": []
+  },
+  {
+    "question_index": "224",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question224"
+        },
+        "output": "[\"time_post.png\",\"time_pre.png\"]"
+      },
+      {
+        "name": "ChangeOS",
+        "input": {
+          "pre_image_path": "benchmark/data/question224/time_pre.png",
+          "post_image_path": "benchmark/data/question224/time_post.png",
+          "output_path": "change_mask.tif"
+        },
+        "output": "Result save at EO_Langchain_P3/evaluate_langchain/internvl3.5-241b-a28b_AP_25-09-21_21-53/out/change_mask.tif"
+      },
+      {
+        "name": "InstructSAM",
+        "input": {
+          "input_image_path": "benchmark/data/question224/time_post.png",
+          "text_prompt": "destroyed building"
+        },
+        "output": "Failed to call model"
+      },
+      {
+        "name": "count_skeleton_contours",
+        "input": {
+          "image_path": "change_mask.tif"
+        },
+        "output": "Error: ToolException(\"Error calling tool 'count_skeleton_contours': Failed to read image: change_mask.tif\")\n Please fix your mistakes."
+      }
+    ]
+  },
+  {
+    "question_index": "225",
+    "tool_calls": []
+  },
+  {
+    "question_index": "226",
+    "tool_calls": [
+      {
+        "name": "RemoteSAM",
+        "input": {
+          "input_image_path": "benchmark/data/question226/478549_4934011_2048_32610_sport_soccer.jpg",
+          "text_prompt": "the football field located on the westernmost side"
+        },
+        "output": "[0, 264, 127, 342]"
+      }
+    ]
+  },
+  {
+    "question_index": "227",
+    "tool_calls": []
+  },
+  {
+    "question_index": "228",
+    "tool_calls": [
+      {
+        "name": "SM3Det",
+        "arguments": {
+          "input_image_path": [
+            "benchmark/data/question228",
+            "benchmark/data/question228"
+          ],
+          "text_prompt": [
+            "storage tank",
+            "storage tank"
+          ]
+        },
+        "output": [
+          "Failed to call model",
+          "Failed to call model"
+        ]
+      },
+      {
+        "name": "RemoteSAM",
+        "input": {
+          "input_image_path": "benchmark/data/question228",
+          "text_prompt": "the largest white-colored storage tank located on the northernmost side"
+        },
+        "output": "Failed to call model"
+      }
+    ]
+  },
+  {
+    "question_index": "229",
+    "tool_calls": []
+  },
+  {
+    "question_index": "230",
+    "tool_calls": []
+  },
+  {
+    "question_index": "231",
+    "tool_calls": []
+  },
+  {
+    "question_index": "232",
+    "tool_calls": []
+  },
+  {
+    "question_index": "233",
+    "tool_calls": [
+      {
+        "name": "SM3Det",
+        "input": {
+          "input_image_path": "benchmark/data/question233",
+          "text_prompt": "plane"
+        },
+        "output": "Failed to call model"
+      }
+    ]
+  },
+  {
+    "question_index": "234",
+    "tool_calls": []
+  },
+  {
+    "question_index": "235",
+    "tool_calls": [
+      {
+        "name": "SM3Det",
+        "input": {
+          "input_image_path": "benchmark/data/question235/P0173.png",
+          "text_prompt": "plane"
+        },
+        "output": "[[491.0790173199024, 532.4672113721562, 562.0259631488476, 598.4655278856563], [548.8890091794906, 563.0357985333173, 636.5373824220719, 643.8464036151202], [57.80447557024877, 335.5737795902144, 191.6531355137356, 446.2885861324419], [401.37008574135325, 474.0626367286795, 509.87466523520925, 573.0938574119455], [344.68536128896415, 146.72417592770273, 464.1361108790046, 249.53275156253164], [736.0987847534097, 503.04083510957025, 809.2765814575278, 568.1303074685547], [680.844715515679, 448.88796412922295, 760.034923156196, 512.0025388004645], [588.7239929596311, 312.1080869733864, 666.2259582122439, 378.0191713273949], [537.4924642348188, 258.3778122955483, 610.3360269761187, 313.6958571380454]]"
+      },
+      {
+        "name": "bboxes2centroids",
+        "input": {
+          "bboxes": [
+            [
+              491.0790173199024,
+              532.4672113721562,
+              562.0259631488476,
+              598.4655278856563
+            ],
+            [
+              548.8890091794906,
+              563.0357985333173,
+              636.5373824220719,
+              643.8464036151202
+            ],
+            [
+              57.80447557024877,
+              335.5737795902144,
+              191.6531355137356,
+              446.2885861324419
+            ],
+            [
+              401.37008574135325,
+              474.0626367286795,
+              509.87466523520925,
+              573.0938574119455
+            ],
+            [
+              344.68536128896415,
+              146.72417592770273,
+              464.1361108790046,
+              249.53275156253164
+            ],
+            [
+              736.0987847534097,
+              503.04083510957025,
+              809.2765814575278,
+              568.1303074685547
+            ],
+            [
+              680.844715515679,
+              448.88796412922295,
+              760.034923156196,
+              512.0025388004645
+            ],
+            [
+              588.7239929596311,
+              312.1080869733864,
+              666.2259582122439,
+              378.0191713273949
+            ],
+            [
+              537.4924642348188,
+              258.3778122955483,
+              610.3360269761187,
+              313.6958571380454
+            ]
+          ]
+        },
+        "output": "[[526.552490234375,565.4663696289062],[592.7131958007812,603.4411010742188],[124.72880554199219,390.9311828613281],[455.62237548828125,523.5782470703125],[404.4107360839844,198.1284637451172],[772.6876831054688,535.5855712890625],[720.4398193359375,480.44525146484375],[627.4749755859375,345.0636291503906],[573.9142456054688,286.0368347167969]]"
+      },
+      {
+        "name": "centroid_distance_extremes",
+        "arguments": {
+          "centroids": [
+            [
+              [
+                526.552490234375,
+                565.4663696289062
+              ],
+              [
+                592.7131958007812,
+                603.4411010742188
+              ],
+              [
+                124.72880554199219,
+                390.9311828613281
+              ],
+              [
+                455.62237548828125,
+                523.5782470703125
+              ],
+              [
+                404.4107360839844,
+                198.1284637451172
+              ],
+              [
+                772.6876831054688,
+                535.5855712890625
+              ],
+              [
+                720.4398193359375,
+                480.44525146484375
+              ],
+              [
+                627.4749755859375,
+                345.0636291503906
+              ],
+              [
+                573.9142456054688,
+                286.0368347167969
+              ]
+            ],
+            [
+              [
+                526.552490234375,
+                565.4663696289062
+              ],
+              [
+                592.7131958007812,
+                603.4411010742188
+              ],
+              [
+                124.72880554199219,
+                390.9311828613281
+              ],
+              [
+                455.62237548828125,
+                523.5782470703125
+              ],
+              [
+                404.4107360839844,
+                198.1284637451172
+              ],
+              [
+                772.6876831054688,
+                535.5855712890625
+              ],
+              [
+                720.4398193359375,
+                480.44525146484375
+              ],
+              [
+                627.4749755859375,
+                345.0636291503906
+              ],
+              [
+                573.9142456054688,
+                286.0368347167969
+              ]
+            ]
+          ]
+        },
+        "output": [
+          "Error: ToolException(\"Error calling tool 'centroid_distance_extremes': name 'np' is not defined\")\n Please fix your mistakes.",
+          "Error: ToolException(\"Error calling tool 'centroid_distance_extremes': name 'np' is not defined\")\n Please fix your mistakes."
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "236",
+    "tool_calls": [
+      {
+        "name": "SM3Det",
+        "arguments": {
+          "input_image_path": [
+            "benchmark/data/question236",
+            "benchmark/data/question236.png"
+          ],
+          "text_prompt": [
+            "plane",
+            "plane"
+          ]
+        },
+        "output": [
+          "Failed to call model",
+          "Failed to call model"
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "237",
+    "tool_calls": [
+      {
+        "name": "SM3Det",
+        "arguments": {
+          "input_image_path": [
+            "benchmark/data/question237",
+            "benchmark/data/question237"
+          ],
+          "text_prompt": [
+            "harbor",
+            "harbor"
+          ]
+        },
+        "output": [
+          "Failed to call model",
+          "Failed to call model"
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "238",
+    "tool_calls": [
+      {
+        "name": "SM3Det",
+        "input": {
+          "input_image_path": "benchmark/data/question238",
+          "text_prompt": "harbor"
+        },
+        "output": "Failed to call model"
+      }
+    ]
+  },
+  {
+    "question_index": "239",
+    "tool_calls": [
+      {
+        "name": "SM3Det",
+        "arguments": {
+          "input_image_path": [
+            "benchmark/data/question239",
+            "benchmark/data/question239"
+          ],
+          "text_prompt": [
+            "soccer ball field",
+            "soccer ball field"
+          ]
+        },
+        "output": [
+          "Failed to call model",
+          "Failed to call model"
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "240",
+    "tool_calls": [
+      {
+        "name": "SM3Det",
+        "arguments": {
+          "input_image_path": [
+            "benchmark/data/question240",
+            "benchmark/data/question240"
+          ],
+          "text_prompt": [
+            "harbor",
+            "harbor"
+          ]
+        },
+        "output": [
+          "Failed to call model",
+          "Failed to call model"
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "241",
+    "tool_calls": [
+      {
+        "name": "SM3Det",
+        "input": {
+          "input_image_path": "benchmark/data/question241",
+          "text_prompt": "harbor"
+        },
+        "output": "Failed to call model"
+      }
+    ]
+  },
+  {
+    "question_index": "242",
+    "tool_calls": [
+      {
+        "name": "InstructSAM",
+        "arguments": {
+          "input_image_path": [
+            "benchmark/data/question242",
+            "benchmark/data/question242"
+          ],
+          "text_prompt": [
+            "ruined building",
+            "ruined building"
+          ]
+        },
+        "output": [
+          "Failed to call model",
+          "Failed to call model"
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "243",
+    "tool_calls": [
+      {
+        "name": "get_filelist",
+        "input": {
+          "dir_path": "benchmark/data/question243"
+        },
+        "output": "[\"t1.png\",\"t2.png\"]"
+      }
+    ]
+  },
+  {
+    "question_index": "244",
+    "tool_calls": []
+  },
+  {
+    "question_index": "245",
+    "tool_calls": []
+  },
+  {
+    "question_index": "246",
+    "tool_calls": []
+  },
+  {
+    "question_index": "247",
+    "tool_calls": [
+      {
+        "name": "SM3Det",
+        "arguments": {
+          "input_image_path": [
+            "benchmark/data/question247",
+            "benchmark/data/question247"
+          ],
+          "text_prompt": [
+            "tennis court",
+            "tennis court"
+          ]
+        },
+        "output": [
+          "Failed to call model",
+          "Failed to call model"
+        ]
+      }
+    ]
+  },
+  {
+    "question_index": "248",
+    "tool_calls": [
+      {
+        "name": "SM3Det",
+        "arguments": {
+          "input_image_path": [
+            "benchmark/data/question248",
+            "benchmark/data/question248"
+          ],
+          "text_prompt": [
+            "tennis court",
+            "tennis court"
+          ]
+        },
+        "output": [
+          "Failed to call model",
+          "Failed to call model"
+        ]
+      }
+    ]
+  }
+]

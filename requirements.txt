@@ -1,0 +1,67 @@
+# Earth Agent Evaluation Framework Requirements
+# Based on agentlego conda environment
+
+# Core packages
+addict==2.4.0
+affine==2.4.0
+agentscope==0.1.6
+aiofiles==24.1.0
+aiohappyeyeballs==2.6.1
+aiohttp==3.12.15
+aiosignal==1.4.0
+annotated-types==0.7.0
+anyio==4.10.0
+attrs==25.3.0
+
+# Geospatial libraries
+GDAL
+rasterio==1.4.3
+pyproj==3.7.2
+
+# LangChain and MCP
+fastmcp==2.11.3
+langchain==0.3.27
+langchain-core==0.3.75
+langchain-mcp-adapters==0.1.9
+langchain-openai==0.3.32
+langchain-text-splitters==0.3.10
+langgraph==0.6.6
+langgraph-checkpoint==2.1.1
+langgraph-prebuilt==0.6.4
+langgraph-sdk==0.2.4
+langsmith==0.4.21
+mcp==1.12.4
+
+# Scientific computing
+numpy
+scipy==1.16.1
+pandas==2.3.1
+scikit-learn==1.7.1
+scikit-image==0.25.2
+statsmodels==0.14.5
+
+# Visualization
+matplotlib==3.10.5
+
+# Image processing
+opencv-python==4.12.0.88
+pillow==11.3.0
+imageio==2.37.0
+
+# API and HTTP
+requests==2.32.4
+urllib3==1.26.20
+openai==1.99.9
+huggingface-hub==0.34.4
+
+# Utilities
+tqdm==4.65.2
+python-dotenv==1.1.1
+json5==0.12.0
+jsonschema==4.25.0
+PyYAML==6.0.2
+pathlib==1.0.1
+
+# Development tools
+black==25.1.0
+flake8==7.3.0
