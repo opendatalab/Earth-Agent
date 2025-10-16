@@ -28,6 +28,26 @@ snapshot_download(
 )
 ``` -->
 
+```bash
+# Install huggingface-hub if not already installed
+pip install huggingface-hub
+
+# Download the dataset
+huggingface-cli download Sssunset/Earth-Bench --local-dir ./benchmark/data --repo-type dataset
+``` -->
+
+<!-- Alternatively, you can download manually:
+
+```python
+from huggingface_hub import snapshot_download
+
+snapshot_download(
+    repo_id="Sssunset/Earth-Bench",
+    repo_type="dataset",
+    local_dir="./benchmark/data"
+)
+```
+
 ### 2. Dataset Structure
 
 After downloading, your data directory should have the following structure:
