@@ -8,13 +8,13 @@ This repository contains the evaluation framework for Earth Agent: Unlocking the
 
 Download the benchmark dataset from Hugging Face:
 
-```bash
+<!-- ```bash
 # Install huggingface-hub if not already installed
 pip install huggingface-hub
 
 # Download the dataset
 huggingface-cli download wqjklej/safkhj --local-dir ./benchmark/data --repo-type dataset
-```
+``` -->
 
 Alternatively, you can download manually:
 
