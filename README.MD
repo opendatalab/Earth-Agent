@@ -16,7 +16,7 @@ pip install huggingface-hub
 huggingface-cli download wqjklej/safkhj --local-dir ./benchmark/data --repo-type dataset
 ``` -->
 
-Alternatively, you can download manually:
+<!-- Alternatively, you can download manually:
 
 ```python
 from huggingface_hub import snapshot_download
@@ -26,7 +26,7 @@ snapshot_download(
     repo_type="dataset",
     local_dir="./benchmark/data"
 )
-```
+``` -->
 
 ### 2. Dataset Structure
 
