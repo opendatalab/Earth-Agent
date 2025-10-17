@@ -240,3 +240,16 @@ The ground truth file `extracted_tool_calls_GT.json` contains reference tool usa
 - `agent/` - Model configuration files
 - `benchmark/` - Benchmark dataset and questions
 - `tools/` - Tool implementations for the agent system
+
+## 📚 Citation
+```bibtex
+@misc{wang2024benchcoeframeworkcollaborationexperts,
+      title={Bench-CoE: a Framework for Collaboration of Experts from Benchmark}, 
+      author={Yuanshuai Wang and Xingjian Zhang and Jinkun Zhao and Siwei Wen and Peilin Feng and Shuhao Liao and Lei Huang and Wenjun Wu},
+      year={2024},
+      eprint={2412.04167},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2412.04167}, 
+}
+```
