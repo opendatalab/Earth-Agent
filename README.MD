@@ -38,7 +38,9 @@ This repository contains the evaluation framework for Earth Agent: Unlocking the
 - **[2025.9.27]**: 🔥 We have released **Earth-Agent: Unlocking the Full Landscape of Earth Observation with Agents**. Check out the [paper](https://arxiv.org/pdf/2509.23141). We present Earth-Agent and Earth-Bench.
 
 
-## <img id="painting_icon" width="5%" src="https://cdn-icons-png.flaticon.com/256/599/599205.png"> Earth-Agent Overview
+<!-- ## <img id="painting_icon" width="5%" src="https://cdn-icons-png.flaticon.com/256/599/599205.png"> Earth-Agent Overview -->
+
+## [<img src="images/earthagent.png" alt="Project" style="width:25px; height:auto;">] Earth-Agent Overview
 
 <div align="center">
 <img src="imgs/Overview.png" alt="framework" width="95%" height="auto">
