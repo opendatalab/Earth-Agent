@@ -40,7 +40,7 @@ This repository contains the evaluation framework for Earth Agent: Unlocking the
 
 <!-- ## <img id="painting_icon" width="5%" src="https://cdn-icons-png.flaticon.com/256/599/599205.png"> Earth-Agent Overview -->
 
-## <img src="imgs/earthagent.png" alt="Project" style="width:25px; height:auto;"> Earth-Agent Overview
+## <img src="imgs/earthagent.png" alt="Project" style="width:30px; height:auto;"> Earth-Agent Overview
 
 <div align="center">
 <img src="imgs/Overview.png" alt="framework" width="95%" height="auto">
