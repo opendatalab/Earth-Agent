@@ -1,6 +1,41 @@
 # Earth Agent Evaluation Framework
 
+<div align="center">
+<h2> <img src="./imgs/logo.png" alt="Image Alt Text" width="50" height="50" align="absmiddle"> Earth-Agent: Unlocking the Full Landscape of Earth Observation with Agents
+</h2> 
+</div>
+<div align="center">
+
+[Peilin Feng](https://peilin-ff.github.io/)<sup>1*</sup>, 
+[Zhutao Lv](https://scholar.google.com/citations?user=aGJ7T4YAAAAJ&hl=zh-CN&oi=ao)<sup>1,2*</sup>,
+[Junyan Ye](https://yejy53.github.io/)<sup>1,2</sup>, 
+[Xiaolei Wang](https://scholar.google.com/citations?user=8wbcPvcAAAAJ&hl=zh-CN&oi=sra)<sup>2</sup>, <br>
+[Xinjie Huo](https://scholar.google.com/citations?user=0osg1poAAAAJ&hl=zh-CN&oi=ao)<sup>2</sup>, 
+[Jinhua Yu](https://scholar.google.com/citations?user=radsfXwAAAAJ&hl=zh-CN&oi=ao)<sup>2</sup>, 
+[Wanghan Xu](https://scholar.google.com/citations?user=lmCL5xQAAAAJ&hl=zh-CN&oi=ao)<sup>1</sup>, 
+[Wenlong Zhang](https://wenlongzhang0517.github.io/)<sup>1</sup>, 
+[Lei Bai](http://leibai.site/)<sup>1</sup>, 
+[Conghui He](https://conghui.github.io/)<sup>1</sup>, 
+[Weijia Li](https://liweijia.github.io/)<sup>1,2†</sup>
+
+<sup>1</sup>Shanghai Artificial Intelligence Laboratory, <sup>2</sup>Sun Yat-sen University<br>
+
+<div align="center">
+<!-- [![GitHub issues](https://img.shields.io/github/issues/opendatalab/FakeVLM?color=critical&label=Issues)](https://github.com/opendatalab/FakeVLM/issues)
+[![GitHub Stars](https://img.shields.io/github/stars/opendatalab/FakeVLM?style=social)](https://github.com/opendatalab/FakeVLM/stargazers) -->
+
+[![arXiv](https://img.shields.io/badge/Arxiv-2503.14905-AD1C18.svg?logo=arXiv)](https://arxiv.org/pdf/2509.23141) 
+[![](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fopendatalab%2FFakeVLM&count_bg=%23C25AE6&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Visitor&edge_flat=false)](https://hits.seeyoufarm.com)
+[![Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-yellow)](https://huggingface.co/datasets/Sssunset/Earth-Bench)
+</div>
+
+</div>
 This repository contains the evaluation framework for Earth Agent: Unlocking the Full Landscape of Earth Observation with Agents
+
+
+## 📰 News 
+- **[2025.10.17]**: 🤗 We are excited to release the Earth-Bench dataset. Check out [on huggingface](https://huggingface.co/datasets/Sssunset/Earth-Bench).
+- **[2025.9.27]**: 🔥 We have released **Earth-Agent: Unlocking the Full Landscape of Earth Observation with Agents**. Check out the [paper](https://arxiv.org/pdf/2509.23141). We present Earth-Agent and Earth-Bench.
 
 ## 📦 Data Preparation
 
