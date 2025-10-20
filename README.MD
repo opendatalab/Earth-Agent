@@ -46,7 +46,7 @@ This repository contains the evaluation framework for Earth Agent: Unlocking the
 
 We introduce Earth-Agent, an EO agent framework cast as a **ReAct-style** Partially Observable Markov Decision Process (POMDP). The LLM serves as the policy, iterating a loop of tool calling, memory update, deliberation, and action to solve tasks conditioned on goal and interaction history. Besides, Earth-Agent integrates **104** specialized tools across five functional kits, i.e. *Index*, *Inversion*, *Perception*, *Analysis*, and *Statistics*, spanning perceptual and spectral analysis. To evaluate both outcomes and reasoning, we adopt a **dual-level protocol**: *end-to-end* assessment of final Accuracy and trajectory Efficiency, and *step-by-step* checks of Tool-Any-Order, Tool-In-Order, Tool-Exact-Match, and Parameter Accuracy to characterize the completeness and fidelity of reasoning trajectories.
 
-## <img id="painting_icon" width="5%" src="https://cdn-icons-png.flaticon.com/256/2435/2435606.png"> Contributions
+## <img id="painting_icon" width="3%" src="https://cdn-icons-png.flaticon.com/256/2435/2435606.png"> Contributions
 
 - We propose Earth-Agent, a revolutionary paradigm shift from traditional MLLMs to agentic EO analysis, unifying RGB and spectral EO data within an MCP-based tool ecosystem
 - In order to comprehensivly evaluate Earth-Agent, we propose Earth-Bench, which covers *Spectrum*, *Products* and *RGB* modality for scientific workflows requring tool interaction,
