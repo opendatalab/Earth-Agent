@@ -1,4 +1,3 @@
-# Earth Agent Evaluation Framework
 
 <div align="center">
 <h2> <img src="./imgs/earthagent.png" alt="Image Alt Text" width="50" height="50" align="absmiddle"> Earth-Agent: Unlocking the Full Landscape of Earth Observation with Agents
