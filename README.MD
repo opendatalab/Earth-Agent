@@ -23,7 +23,7 @@
 <!-- [![GitHub issues](https://img.shields.io/github/issues/opendatalab/FakeVLM?color=critical&label=Issues)](https://github.com/opendatalab/FakeVLM/issues)
 [![GitHub Stars](https://img.shields.io/github/stars/opendatalab/FakeVLM?style=social)](https://github.com/opendatalab/FakeVLM/stargazers) -->
 
-[![arXiv](https://img.shields.io/badge/Arxiv-2503.14905-AD1C18.svg?logo=arXiv)](https://arxiv.org/pdf/2509.23141) 
+[![arXiv](https://img.shields.io/badge/Arxiv-2509.23141-AD1C18.svg?logo=arXiv)](https://arxiv.org/pdf/2509.23141) 
 [![](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fopendatalab%2FFakeVLM&count_bg=%23C25AE6&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Visitor&edge_flat=false)](https://hits.seeyoufarm.com)
 [![Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-yellow)](https://huggingface.co/datasets/Sssunset/Earth-Bench)
 </div>
@@ -33,6 +33,7 @@ This repository contains the evaluation framework for Earth Agent: Unlocking the
 
 
 ## 📰 News 
+- **[2025.10.27]**: 🎉 We are excited to announce that Synced Review has reported on our article. You can find more details [here](https://www.jiqizhixin.com/articles/2025-10-27-7).
 - **[2025.10.17]**: 🤗 We are excited to release the Earth-Bench dataset. Check out [on huggingface](https://huggingface.co/datasets/Sssunset/Earth-Bench).
 - **[2025.9.27]**: 🔥 We have released **Earth-Agent: Unlocking the Full Landscape of Earth Observation with Agents**. Check out the [paper](https://arxiv.org/pdf/2509.23141). We present Earth-Agent and Earth-Bench.
 
