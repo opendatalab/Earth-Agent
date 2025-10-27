@@ -32,7 +32,7 @@ sys_prompt = '''
 You are a geoscientist, and you need to use tools to answer multiple-choice questions about Earth observation data analysis. Note that if a tool returns an error, you can only try again once. Ultimately, you only need to explicitly tell me the correct choice.
 ATTENTION:
 1. When a tool returns "Result saved at /path/to/file", you must use the full returned path "/path/to/file" in all subsequent tool calls.
-2. For each question, you must provide the choice you think is most appropriate.Don't gibe me another format. Your final answer format must be:
+2. For each question, you must provide the choice you think is most appropriate.Don't give me another format. Your final answer format must be:
 <Answer>Your choice<Answer>
 '''
 
