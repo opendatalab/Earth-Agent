@@ -26,6 +26,7 @@
 [![arXiv](https://img.shields.io/badge/Arxiv-2509.23141-AD1C18.svg?logo=arXiv)](https://arxiv.org/pdf/2509.23141) 
 [![](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fopendatalab%2FFakeVLM&count_bg=%23C25AE6&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Visitor&edge_flat=false)](https://hits.seeyoufarm.com)
 [![Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-yellow)](https://huggingface.co/datasets/Sssunset/Earth-Bench)
+[![Report](https://img.shields.io/badge/WeChat-%40%E6%9C%BA%E5%99%A8%E4%B9%8B%E5%BF%83-black%3Flogo%3Dwechat%26amp%3BlogoColor%3D07C160)](https://mp.weixin.qq.com/s/-rOj8w2Gv4Lf9baIJyoGoA)
 </div>
 
 </div>
