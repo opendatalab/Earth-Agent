@@ -156,6 +156,7 @@ async def create_langchain_agent(llm, mcp_servers):
     try:
         # Get tools from all MCP servers
         tools = await client.get_tools()
+        # import pdb; pdb.set_trace()
         print(f"Successfully loaded {len(tools)} tools from MCP servers")
         
         # Create ReAct agent
