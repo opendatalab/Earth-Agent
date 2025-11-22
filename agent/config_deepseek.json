@@ -46,11 +46,13 @@
             "config_name": "deepseek-chat",
             "model_type": "openai_chat",
             "model_name": "deepseek-chat",
-            "api_key": "",
+            "api_key": "sk-f454fec6d4784ce2b353944b1cefbdc4",
             "client_args": {
-                "base_url": ""
+                "base_url": "https://api.deepseek.com"
             },
-            "generate_args": {"enable_thinking": false}
+            "generate_args": {
+                "enable_thinking": false
+            }
         }
     ]
 }

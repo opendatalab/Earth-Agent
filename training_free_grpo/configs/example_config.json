@@ -1,0 +1,60 @@
+{
+    "exp_id": "earth_agent_practice_gpt5",
+
+    "practice": {
+        "epochs": 1,
+        "batch_size": 10,
+        "grpo_n": 3,
+        "rollout_concurrency": 8,
+        "rollout_temperature": 1.0,
+        "task_timeout": 600,
+        "num_experiences_per_query": 1,
+        "given_ground_truth": true,
+        "do_eval": false,
+        "eval_strategy": "epoch",
+        "shuffle_data": true,
+        "rollout_data_truncate": 60,
+        "restart_step": null,
+        "agent_objective": "Input: An Earth observation question with satellite/remote sensing data.\nOutput: A reasoned answer using appropriate geoscience tools for data analysis.",
+        "learning_objective": "Extract generalizable strategies for Earth observation analysis: which tools to use in which order, how to interpret geospatial results, and how to combine multiple data sources."
+    },
+
+    "model": {
+        "model_name": "gpt-5",
+        "api_key": "",
+        "base_url": "",
+        "temperature": 1.0,
+        "max_tokens": 8192,
+        "timeout": 120
+    },
+
+    "judge_model": {
+        "model_name": "gpt-5",
+        "api_key": "",
+        "base_url": "",
+        "temperature": 0.3,
+        "max_tokens": 4096,
+        "timeout": 120
+    },
+
+    "practice_dataset_path": "../benchmark/question.json",
+    "eval_dataset_path": null,
+
+    "question_ids": [
+        "10", "114", "137", "176", "2", "215", "23", "3", "53", "102",
+        "116", "138", "186", "202", "218", "231", "30", "55", "107", "119",
+        "149", "187", "203", "223", "233", "33", "8", "109", "12", "155",
+        "19", "208", "224", "236", "4", "80", "11", "121", "161", "190",
+        "209", "225", "242", "40", "110", "125", "17", "191", "21", "228",
+        "244", "43", "112", "136", "173", "195", "210", "229", "28", "45"
+    ],
+
+
+    "output_dir": "./training_free_results",
+    "log_dir": "./training_free_logs",
+
+    "verify_module": "earth_science",
+
+    "langchain_config_path": "../agent/config_gpt5.json",
+    "use_autoplanning": true
+}

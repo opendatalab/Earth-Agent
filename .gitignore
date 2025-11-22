@@ -1,5 +1,6 @@
 # Dataset folder
 benchmark/data/
+agent/
 
 # Python
 __pycache__/

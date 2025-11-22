@@ -43,12 +43,12 @@
     },
     "models": [
         {
-            "config_name": "Pro/moonshotai/Kimi-K2-Instruct",
+            "config_name": "kimi-k2-0905-preview",
             "model_type": "openai_chat",
-            "model_name": "Pro/moonshotai/Kimi-K2-Instruct",
-            "api_key": "",
+            "model_name": "kimi-k2-0905-preview",
+            "api_key": "sk-sAOaIuaTbzermaJnJJAZzNnLdqQ38zxC2cYawqEQZ7zfTBE5",
             "client_args": {
-                "base_url": ""
+                "base_url": "http://35.220.164.252:3888/v1/"
             },
             "generate_args": {}
         }
