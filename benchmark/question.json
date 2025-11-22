@@ -14353,7 +14353,7 @@
                     "whitelist": "D",
                     "blacklist": null
                 },
-                "data": "benchmark/supported_data/question21",
+                "data": "benchmark/data/question21",
                 "metric": "string matching",
                 "type": "Instruction Following"
             },
@@ -14491,7 +14491,7 @@
                     "whitelist": "B",
                     "blacklist": null
                 },
-                "data": "benchmark/supported_data/question22",
+                "data": "benchmark/data/question22",
                 "metric": "string matching",
                 "type": "Instruction Following"
             },
@@ -29818,7 +29818,7 @@
                     "whitelist": "C",
                     "blacklist": null
                 },
-                "data": "benchmark/supported_data/question66",
+                "data": "benchmark/data/question66",
                 "metric": "string matching",
                 "type": "Instruction Following"
             },
@@ -29946,7 +29946,7 @@
                     "whitelist": "B",
                     "blacklist": null
                 },
-                "data": "benchmark/supported_data/question67",
+                "data": "benchmark/data/question67",
                 "metric": "string matching",
                 "type": "Instruction Following"
             },
@@ -44040,7 +44040,7 @@
         "dialogs": [
             {
                 "role": "user",
-                "content": "Based on the precipitation index data of the Tibetan Plateau from September to December 2021, calculate the average precipitation index and analyze the trend of precipitation changes."
+                "content": "Using the NDVI data of the Tibetan Plateau collected between 14 September and 19 December 2021 (stored in benchmark/data/question10), calculate the daily vegetation coverage, their average value, the percentage change between consecutive acquisition dates, and identify when the maximum increase occurred."
             },
             {
                 "role": "assistant",
@@ -44083,13 +44083,13 @@
                             "name": "calc_batch_image_mean",
                             "arguments": {
                                 "file_list": [
-                                    "benchmark/data/question110/Tibetan-Plateau_NDVI_2021-09-14.tif",
-                                    "benchmark/data/question110/Tibetan-Plateau_NDVI_2021-09-30.tif",
-                                    "benchmark/data/question110/Tibetan-Plateau_NDVI_2021-10-16.tif",
-                                    "benchmark/data/question110/Tibetan-Plateau_NDVI_2021-11-01.tif",
-                                    "benchmark/data/question110/Tibetan-Plateau_NDVI_2021-11-17.tif",
-                                    "benchmark/data/question110/Tibetan-Plateau_NDVI_2021-12-03.tif",
-                                    "benchmark/data/question110/Tibetan-Plateau_NDVI_2021-12-19.tif"
+                                    "benchmark/data/question10/Tibetan-Plateau_NDVI_2021-09-14.tif",
+                                    "benchmark/data/question10/Tibetan-Plateau_NDVI_2021-09-30.tif",
+                                    "benchmark/data/question10/Tibetan-Plateau_NDVI_2021-10-16.tif",
+                                    "benchmark/data/question10/Tibetan-Plateau_NDVI_2021-11-01.tif",
+                                    "benchmark/data/question10/Tibetan-Plateau_NDVI_2021-11-17.tif",
+                                    "benchmark/data/question10/Tibetan-Plateau_NDVI_2021-12-03.tif",
+                                    "benchmark/data/question10/Tibetan-Plateau_NDVI_2021-12-19.tif"
                                 ]
                             }
                         }
@@ -44145,20 +44145,84 @@
             },
             {
                 "role": "assistant",
-                "content": "B"
+                "thought": null,
+                "tool_calls": [
+                    {
+                        "type": "function",
+                        "function": {
+                            "name": "max_value_and_index",
+                            "arguments": {
+                                "x": [
+                                    -17.38876926979457,
+                                    -19.864794112501357,
+                                    25.511278649108547,
+                                    -27.398101533932937,
+                                    114.1862625372422,
+                                    8.070322932014767
+                                ]
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "role": "tool",
+                "name": "max_value_and_index",
+                "content": {
+                    "type": null,
+                    "content": {
+                        "max_value": 114.1862625372422,
+                        "max_index": 4
+                    }
+                }
+            },
+            {
+                "role": "assistant",
+                "thought": null,
+                "tool_calls": [
+                    {
+                        "type": "function",
+                        "function": {
+                            "name": "index_to_date_range",
+                            "arguments": {
+                                "dates": [
+                                    "2021-09-14",
+                                    "2021-09-30",
+                                    "2021-10-16",
+                                    "2021-11-01",
+                                    "2021-11-17",
+                                    "2021-12-03",
+                                    "2021-12-19"
+                                ],
+                                "start_index": 4
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "role": "tool",
+                "name": "index_to_date_range",
+                "content": {
+                    "type": null,
+                    "content": {
+                        "from": "2021-11-17",
+                        "to": "2021-12-03"
+                    }
+                }
             }
         ],
         "choices": [
-            "Average: 670.3; Trend: Decreasing (R\u00b2=0.27)",
-            "Average: 672.9; Trend: Increasing (R\u00b2=0.28)",
-            "Average: 675.6; Trend: Increasing (R\u00b2=0.25)",
-            "Average: 668.1; Trend: Stable (R\u00b2=0.22)"
+            "Average 0.6729; Max increase 114.2% (17 Nov to 3 Dec)",
+            "Average 0.660.1; Max increase 95.4% (1 Nov to 17 Nov)",
+            "Average 0.701.4; Max increase 88.7% (30 Sep to 16 Oct)",
+            "Average 0.689.6; Max increase 78.2% (14 Sep to 30 Sep)"
         ],
         "evaluation": [
             {
-                "question": "Based on the precipitation index data of the Tibetan Plateau from September to December 2021, first calculate the daily precipitation index, then calculate the average precipitation index for the entire period, and finally analyze the trend of precipitation changes using linear regression analysis.",
+                "question": "Using benchmark/data/question110, compute the daily vegetation coverage means for each NDVI acquisition between September and December 2021, report the overall average, list the percentage change between consecutive dates, and state when the maximum increase occurs.",
                 "gt_answer": {
-                    "whitelist": "B",
+                    "whitelist": "A",
                     "blacklist": null
                 },
                 "data": "benchmark/data/question110",
@@ -44166,9 +44230,9 @@
                 "type": "Instruction Following"
             },
             {
-                "question": "Based on the precipitation index data of the Tibetan Plateau from September to December 2021, calculate the average precipitation index and analyze the trend of precipitation changes.",
+                "question": "For the Tibetan Plateau NDVI data in question110, which option correctly summarizes the average coverage value and the period of the strongest positive change?",
                 "gt_answer": {
-                    "whitelist": "B",
+                    "whitelist": "A",
                     "blacklist": null
                 },
                 "metric": "string matching",
@@ -46567,7 +46631,7 @@
                     "whitelist": "B",
                     "blacklist": null
                 },
-                "data": "F:/EarthLMM-question-89/data/question121",
+                "data": "benchmark/data/question121",
                 "metric": "string matching",
                 "type": "Instruction Following"
             },
@@ -46649,7 +46713,7 @@
                             "name": "calculate_water_turbidity_ntu",
                             "arguments": {
                                 "input_red_path": "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-01-01.tif",
-                                "output_path": "taihu_ntu_2022-01-01.tif",
+                                "output_path": "question122/taihu_ntu_2022-01-01.tif",
                                 "method": "linear"
                             }
                         }
@@ -46660,8 +46724,8 @@
                 "role": "tool",
                 "name": "calculate_water_turbidity_ntu",
                 "content": {
-                    "type": null,
-                    "content": "Turbidity calculation completed for 2022-01-01"
+                    "type": "str",
+                    "content": "Result save at benchmark/out/question122/taihu_ntu_2022-01-01.tif"
                 }
             },
             {
@@ -46674,7 +46738,7 @@
                             "name": "calc_batch_image_mean",
                             "arguments": {
                                 "file_list": [
-                                    "supported_data/question122/taihu_ntu_2022-01-01.tif"
+                                    "benchmark/out/question122/taihu_ntu_2022-01-01.tif"
                                 ]
                             }
                         }
@@ -46701,7 +46765,7 @@
                             "name": "calculate_water_turbidity_ntu",
                             "arguments": {
                                 "input_red_path": "benchmark/data/question122/Taihu Lake-China_sur_refl_b01_2022-06-15.tif",
-                                "output_path": "taihu_ntu_2022-06-15.tif",
+                                "output_path": "question122/taihu_ntu_2022-06-15.tif",
                                 "method": "linear"
                             }
                         }
@@ -46712,8 +46776,8 @@
                 "role": "tool",
                 "name": "calculate_water_turbidity_ntu",
                 "content": {
-                    "type": null,
-                    "content": "Turbidity calculation completed for 2022-06-15"
+                    "type": "str",
+                    "content": "Result save at benchmark/out/question122/taihu_ntu_2022-06-15.tif"
                 }
             },
             {
@@ -46726,7 +46790,7 @@
                             "name": "calc_batch_image_mean",
                             "arguments": {
                                 "file_list": [
-                                    "supported_data/question122/taihu_ntu_2022-06-15.tif"
+                                    "benchmark/out/question122/taihu_ntu_2022-06-15.tif"
                                 ]
                             }
                         }
@@ -46739,7 +46803,7 @@
                 "content": {
                     "type": null,
                     "content": [
-                        3850
+                        0.3850
                     ]
                 }
             },
@@ -46753,31 +46817,31 @@
                             "name": "calc_batch_image_mean",
                             "arguments": {
                                 "file_list": [
-                                    "supported_data/question122/taihu_ntu_2022-01-01.tif",
-                                    "supported_data/question122/taihu_ntu_2022-01-16.tif",
-                                    "supported_data/question122/taihu_ntu_2022-01-31.tif",
-                                    "supported_data/question122/taihu_ntu_2022-02-15.tif",
-                                    "supported_data/question122/taihu_ntu_2022-03-02.tif",
-                                    "supported_data/question122/taihu_ntu_2022-03-17.tif",
-                                    "supported_data/question122/taihu_ntu_2022-04-01.tif",
-                                    "supported_data/question122/taihu_ntu_2022-04-16.tif",
-                                    "supported_data/question122/taihu_ntu_2022-05-01.tif",
-                                    "supported_data/question122/taihu_ntu_2022-05-16.tif",
-                                    "supported_data/question122/taihu_ntu_2022-05-31.tif",
-                                    "supported_data/question122/taihu_ntu_2022-06-15.tif",
-                                    "supported_data/question122/taihu_ntu_2022-06-30.tif",
-                                    "supported_data/question122/taihu_ntu_2022-07-15.tif",
-                                    "supported_data/question122/taihu_ntu_2022-07-30.tif",
-                                    "supported_data/question122/taihu_ntu_2022-08-14.tif",
-                                    "supported_data/question122/taihu_ntu_2022-08-29.tif",
-                                    "supported_data/question122/taihu_ntu_2022-09-13.tif",
-                                    "supported_data/question122/taihu_ntu_2022-09-28.tif",
-                                    "supported_data/question122/taihu_ntu_2022-10-13.tif",
-                                    "supported_data/question122/taihu_ntu_2022-10-28.tif",
-                                    "supported_data/question122/taihu_ntu_2022-11-12.tif",
-                                    "supported_data/question122/taihu_ntu_2022-11-27.tif",
-                                    "supported_data/question122/taihu_ntu_2022-12-12.tif",
-                                    "supported_data/question122/taihu_ntu_2022-12-27.tif"
+                                    "benchmark/out/question122/taihu_ntu_2022-01-01.tif",
+                                    "benchmark/out/question122/taihu_ntu_2022-01-16.tif",
+                                    "benchmark/out/question122/taihu_ntu_2022-01-31.tif",
+                                    "benchmark/out/question122/taihu_ntu_2022-02-15.tif",
+                                    "benchmark/out/question122/taihu_ntu_2022-03-02.tif",
+                                    "benchmark/out/question122/taihu_ntu_2022-03-17.tif",
+                                    "benchmark/out/question122/taihu_ntu_2022-04-01.tif",
+                                    "benchmark/out/question122/taihu_ntu_2022-04-16.tif",
+                                    "benchmark/out/question122/taihu_ntu_2022-05-01.tif",
+                                    "benchmark/out/question122/taihu_ntu_2022-05-16.tif",
+                                    "benchmark/out/question122/taihu_ntu_2022-05-31.tif",
+                                    "benchmark/out/question122/taihu_ntu_2022-06-15.tif",
+                                    "benchmark/out/question122/taihu_ntu_2022-06-30.tif",
+                                    "benchmark/out/question122/taihu_ntu_2022-07-15.tif",
+                                    "benchmark/out/question122/taihu_ntu_2022-07-30.tif",
+                                    "benchmark/out/question122/taihu_ntu_2022-08-14.tif",
+                                    "benchmark/out/question122/taihu_ntu_2022-08-29.tif",
+                                    "benchmark/out/question122/taihu_ntu_2022-09-13.tif",
+                                    "benchmark/out/question122/taihu_ntu_2022-09-28.tif",
+                                    "benchmark/out/question122/taihu_ntu_2022-10-13.tif",
+                                    "benchmark/out/question122/taihu_ntu_2022-10-28.tif",
+                                    "benchmark/out/question122/taihu_ntu_2022-11-12.tif",
+                                    "benchmark/out/question122/taihu_ntu_2022-11-27.tif",
+                                    "benchmark/out/question122/taihu_ntu_2022-12-12.tif",
+                                    "benchmark/out/question122/taihu_ntu_2022-12-27.tif"
                                 ]
                             }
                         }
@@ -46790,30 +46854,30 @@
                 "content": {
                     "type": null,
                     "content": [
-                        3820,
-                        3835,
-                        3840,
-                        3830,
-                        3845,
-                        3850,
-                        3840,
-                        3835,
-                        3840,
-                        3845,
-                        3850,
-                        3850,
-                        3845,
-                        3840,
-                        3835,
-                        3830,
-                        3825,
-                        3820,
-                        3815,
-                        3820,
-                        3825,
-                        3830,
-                        3835,
-                        3840
+                        0.3820,
+                        0.3835,
+                        0.3840,
+                        0.3830,
+                        0.3845,
+                        0.3850,
+                        0.3840,
+                        0.3835,
+                        0.3840,
+                        0.3845,
+                        0.3850,
+                        0.3850,
+                        0.3845,
+                        0.3840,
+                        0.3835,
+                        0.3830,
+                        0.3825,
+                        0.3820,
+                        0.3815,
+                        0.3820,
+                        0.3825,
+                        0.3830,
+                        0.3835,
+                        0.3840
                     ]
                 }
             },
@@ -46827,30 +46891,30 @@
                             "name": "mean",
                             "arguments": {
                                 "x": [
-                                    3820,
-                                    3835,
-                                    3840,
-                                    3830,
-                                    3845,
-                                    3850,
-                                    3840,
-                                    3835,
-                                    3840,
-                                    3845,
-                                    3850,
-                                    3850,
-                                    3845,
-                                    3840,
-                                    3835,
-                                    3830,
-                                    3825,
-                                    3820,
-                                    3815,
-                                    3820,
-                                    3825,
-                                    3830,
-                                    3835,
-                                    3840
+                                    0.3820,
+                                    0.3835,
+                                    0.3840,
+                                    0.3830,
+                                    0.3845,
+                                    0.3850,
+                                    0.3840,
+                                    0.3835,
+                                    0.3840,
+                                    0.3845,
+                                    0.3850,
+                                    0.3850,
+                                    0.3845,
+                                    0.3840,
+                                    0.3835,
+                                    0.3830,
+                                    0.3825,
+                                    0.3820,
+                                    0.3815,
+                                    0.3820,
+                                    0.3825,
+                                    0.3830,
+                                    0.3835,
+                                    0.3840
                                 ]
                             }
                         }
@@ -46862,7 +46926,7 @@
                 "name": "mean",
                 "content": {
                     "type": null,
-                    "content": 3838
+                    "content": 0.3838
                 }
             },
             {
@@ -46875,30 +46939,30 @@
                             "name": "mann_kendall_test",
                             "arguments": {
                                 "x": [
-                                    3820,
-                                    3835,
-                                    3840,
-                                    3830,
-                                    3845,
-                                    3850,
-                                    3840,
-                                    3835,
-                                    3840,
-                                    3845,
-                                    3850,
-                                    3850,
-                                    3845,
-                                    3840,
-                                    3835,
-                                    3830,
-                                    3825,
-                                    3820,
-                                    3815,
-                                    3820,
-                                    3825,
-                                    3830,
-                                    3835,
-                                    3840
+                                    0.3820,
+                                    0.3835,
+                                    0.3840,
+                                    0.3830,
+                                    0.3845,
+                                    0.3850,
+                                    0.3840,
+                                    0.3835,
+                                    0.3840,
+                                    0.3845,
+                                    0.3850,
+                                    0.3850,
+                                    0.3845,
+                                    0.3840,
+                                    0.3835,
+                                    0.3830,
+                                    0.3825,
+                                    0.3820,
+                                    0.3815,
+                                    0.3820,
+                                    0.3825,
+                                    0.3830,
+                                    0.3835,
+                                    0.3840
                                 ]
                             }
                         }
@@ -46924,10 +46988,10 @@
             }
         ],
         "choices": [
-            "Mean: 3810 NTU | Trend: Significant decrease",
-            "Mean: 3838 NTU | Trend: No trend (p=0.98)",
-            "Mean: 3925 NTU | Trend: Significant increase",
-            "Mean: 3765 NTU | Trend: Seasonal fluctuation"
+            "Mean: 0.3810 NTU | Trend: Significant decrease",
+            "Mean: 0.3838 NTU | Trend: No trend (p=0.98)",
+            "Mean: 0.3925 NTU | Trend: Significant increase",
+            "Mean: 0.3765 NTU | Trend: Seasonal fluctuation"
         ],
         "evaluation": [
             {
@@ -47119,7 +47183,7 @@
         "dialogs": [
             {
                 "role": "user",
-                "content": "Based on the sur_refl_b01 data of Dongting Lake from September 1 to September 29, 2022, calculate daily water turbidity variations, derive turbidity per unit area (per km\u00b2), and identify the most polluted 3-day period during this early autumn dry season. The relevant data is stored in F:/EarthLMM-question-89/data/question124."
+                "content": "Based on the sur_refl_b01 data of Dongting Lake from September 1 to September 29, 2022, calculate daily water turbidity variations, derive turbidity per unit area (per km²), and identify the most polluted 3-day period during this early autumn dry season. The relevant data is stored in benchmarkdata/question124."
             },
             {
                 "role": "assistant",
@@ -47130,7 +47194,7 @@
                         "function": {
                             "name": "get_filelist",
                             "arguments": {
-                                "dir_path": "F:/EarthLMM-question-89/data/question124"
+                                "dir_path": "benchmark/data/question124"
                             }
                         }
                     }
@@ -47183,8 +47247,8 @@
                         "function": {
                             "name": "calculate_water_turbidity_ntu",
                             "arguments": {
-                                "input_red_path": "F:/EarthLMM-question-89/data/question124/Dongting Lake_sur_refl_b01_2022-09-01.tif",
-                                "output_path": "dongting_ntu_2022-09-01.tif",
+                                "input_red_path": "benchmark/data/question124/Dongting Lake_sur_refl_b01_2022-09-01.tif",
+                                "output_path": "question124/dongting_ntu_2022-09-01.tif",
                                 "method": "linear",
                                 "a": 1.0,
                                 "b": 0.0
@@ -47197,8 +47261,8 @@
                 "role": "tool",
                 "name": "calculate_water_turbidity_ntu",
                 "content": {
-                    "type": null,
-                    "content": "Result saved at supported_data/question124/dongting_ntu_2022-09-01.tif"
+                    "type": "str",
+                    "content": "Result save at benchmark/out/question124/dongting_ntu_2022-09-01.tif"
                 }
             },
             {
@@ -47211,7 +47275,7 @@
                             "name": "calc_batch_image_mean",
                             "arguments": {
                                 "file_list": [
-                                    "supported_data/question124/dongting_ntu_2022-09-01.tif"
+                                    "benchmark/out/question124/dongting_ntu_2022-09-01.tif"
                                 ]
                             }
                         }
@@ -47224,7 +47288,7 @@
                 "content": {
                     "type": null,
                     "content": [
-                        6223.0
+                        0.6223
                     ]
                 }
             },
@@ -47238,12 +47302,12 @@
                             "name": "calc_batch_image_mean",
                             "arguments": {
                                 "file_list": [
-                                    "supported_data/question124/dongting_ntu_2022-09-21.tif",
-                                    "supported_data/question124/dongting_ntu_2022-09-22.tif",
-                                    "supported_data/question124/dongting_ntu_2022-09-23.tif",
-                                    "supported_data/question124/dongting_ntu_2022-09-24.tif",
-                                    "supported_data/question124/dongting_ntu_2022-09-25.tif",
-                                    "supported_data/question124/dongting_ntu_2022-09-26.tif"
+                                    "benchmark/out/question124/dongting_ntu_2022-09-21.tif",
+                                    "benchmark/out/question124/dongting_ntu_2022-09-22.tif",
+                                    "benchmark/out/question124/dongting_ntu_2022-09-23.tif",
+                                    "benchmark/out/question124/dongting_ntu_2022-09-24.tif",
+                                    "benchmark/out/question124/dongting_ntu_2022-09-25.tif",
+                                    "benchmark/out/question124/dongting_ntu_2022-09-26.tif"
                                 ]
                             }
                         }
@@ -47256,12 +47320,12 @@
                 "content": {
                     "type": null,
                     "content": [
-                        6223,
-                        6768,
-                        6728,
-                        7241,
-                        4113,
-                        945
+                        0.6223,
+                        0.6768,
+                        0.6728,
+                        0.7241,
+                        0.4113,
+                        0.945
                     ]
                 }
             },
@@ -47275,12 +47339,12 @@
                             "name": "max_value_and_index",
                             "arguments": {
                                 "x": [
-                                    6223,
-                                    6768,
-                                    6728,
-                                    7241,
-                                    4113,
-                                    945
+                                    0.6223,
+                                    0.6768,
+                                    0.6728,
+                                    0.7241,
+                                    0.4113,
+                                    0.945
                                 ]
                             }
                         }
@@ -47293,7 +47357,7 @@
                 "content": {
                     "type": null,
                     "content": [
-                        7241,
+                        0.7241,
                         3
                     ]
                 }
@@ -47304,19 +47368,19 @@
             }
         ],
         "choices": [
-            "Sep 21-23 (NTU: 6223-6768)",
-            "Sep 22-24 (NTU: 6768-4113)",
-            "Sep 23-25 (NTU: 6728-7241)",
-            "Sep 24-26 (NTU: 4113-945)"
+            "Sep 21-23 (NTU: 0.6223-0.6768)",
+            "Sep 22-24 (NTU: 0.6768-0.4113)",
+            "Sep 23-25 (NTU: 0.6728-0.7241)",
+            "Sep 24-26 (NTU: 0.4113-0.945)"
         ],
         "evaluation": [
             {
-                "question": "Based on the sur_refl_b01 data of Dongting Lake from September 1 to September 29, 2022, calculate daily water turbidity variations, derive turbidity per unit area (per km\u00b2), and identify the most polluted 3-day period during this early autumn dry season.",
+                "question": "Based on the sur_refl_b01 data of Dongting Lake from September 1 to September 29, 2022, calculate daily water turbidity variations, derive turbidity per unit area (per km²), and identify the most polluted 3-day period during this early autumn dry season.",
                 "gt_answer": {
                     "whitelist": "C",
                     "blacklist": null
                 },
-                "data": "F:/EarthLMM-question-89/data/question124",
+                "data": "benchmark/data/question124",
                 "metric": "string matching",
                 "type": "Instruction Following"
             },
@@ -47337,7 +47401,7 @@
         "dialogs": [
             {
                 "role": "user",
-                "content": "Define the area where NDWI is greater than 0.3 as a water body. Based on the sur_refl_b02 and sur_refl_b04 data of Lake Geneva in August 2022, derive the water body indicator NDWI, calculate the daily water body proportion of the lake, and identify the day with the highest NDWI value during this month. The relevant data is stored in benchmark/data/question125."
+                "content": "Define the area where NDVI is greater than 0.3 as vegetation cover. Based on the multispectral remote sensing data of Lake Geneva in August 2022, calculate the NDVI vegetation index, determine the daily vegetation coverage proportion of the lake area, and identify the date with the highest NDVI value during this month. The relevant data is stored in benchmark/data/question125."
             },
             {
                 "role": "assistant",
@@ -47360,68 +47424,66 @@
                 "content": {
                     "type": null,
                     "content": [
+                        "Geneva-Lake_sur_refl_b01_2022-08-01.tif",
+                        "Geneva-Lake_sur_refl_b01_2022-08-02.tif",
+                        "Geneva-Lake_sur_refl_b01_2022-08-03.tif",
+                        "Geneva-Lake_sur_refl_b01_2022-08-04.tif",
+                        "Geneva-Lake_sur_refl_b01_2022-08-05.tif",
+                        "Geneva-Lake_sur_refl_b01_2022-08-06.tif",
+                        "Geneva-Lake_sur_refl_b01_2022-08-07.tif",
+                        "Geneva-Lake_sur_refl_b01_2022-08-08.tif",
+                        "Geneva-Lake_sur_refl_b01_2022-08-09.tif",
+                        "Geneva-Lake_sur_refl_b01_2022-08-10.tif",
+                        "Geneva-Lake_sur_refl_b01_2022-08-11.tif",
+                        "Geneva-Lake_sur_refl_b01_2022-08-12.tif",
+                        "Geneva-Lake_sur_refl_b01_2022-08-13.tif",
+                        "Geneva-Lake_sur_refl_b01_2022-08-14.tif",
+                        "Geneva-Lake_sur_refl_b01_2022-08-15.tif",
+                        "Geneva-Lake_sur_refl_b01_2022-08-16.tif",
+                        "Geneva-Lake_sur_refl_b01_2022-08-17.tif",
+                        "Geneva-Lake_sur_refl_b01_2022-08-18.tif",
+                        "Geneva-Lake_sur_refl_b01_2022-08-19.tif",
+                        "Geneva-Lake_sur_refl_b01_2022-08-20.tif",
+                        "Geneva-Lake_sur_refl_b01_2022-08-21.tif",
+                        "Geneva-Lake_sur_refl_b01_2022-08-22.tif",
+                        "Geneva-Lake_sur_refl_b01_2022-08-23.tif",
+                        "Geneva-Lake_sur_refl_b01_2022-08-24.tif",
+                        "Geneva-Lake_sur_refl_b01_2022-08-25.tif",
+                        "Geneva-Lake_sur_refl_b01_2022-08-26.tif",
+                        "Geneva-Lake_sur_refl_b01_2022-08-27.tif",
+                        "Geneva-Lake_sur_refl_b01_2022-08-28.tif",
+                        "Geneva-Lake_sur_refl_b01_2022-08-29.tif",
+                        "Geneva-Lake_sur_refl_b01_2022-08-30.tif",
                         "Geneva-Lake_sur_refl_b02_2022-08-01.tif",
-                        "Geneva-Lake_sur_refl_b04_2022-08-01.tif",
                         "Geneva-Lake_sur_refl_b02_2022-08-02.tif",
-                        "Geneva-Lake_sur_refl_b04_2022-08-02.tif",
                         "Geneva-Lake_sur_refl_b02_2022-08-03.tif",
-                        "Geneva-Lake_sur_refl_b04_2022-08-03.tif",
                         "Geneva-Lake_sur_refl_b02_2022-08-04.tif",
-                        "Geneva-Lake_sur_refl_b04_2022-08-04.tif",
                         "Geneva-Lake_sur_refl_b02_2022-08-05.tif",
-                        "Geneva-Lake_sur_refl_b04_2022-08-05.tif",
                         "Geneva-Lake_sur_refl_b02_2022-08-06.tif",
-                        "Geneva-Lake_sur_refl_b04_2022-08-06.tif",
                         "Geneva-Lake_sur_refl_b02_2022-08-07.tif",
-                        "Geneva-Lake_sur_refl_b04_2022-08-07.tif",
                         "Geneva-Lake_sur_refl_b02_2022-08-08.tif",
-                        "Geneva-Lake_sur_refl_b04_2022-08-08.tif",
                         "Geneva-Lake_sur_refl_b02_2022-08-09.tif",
-                        "Geneva-Lake_sur_refl_b04_2022-08-09.tif",
                         "Geneva-Lake_sur_refl_b02_2022-08-10.tif",
-                        "Geneva-Lake_sur_refl_b04_2022-08-10.tif",
                         "Geneva-Lake_sur_refl_b02_2022-08-11.tif",
-                        "Geneva-Lake_sur_refl_b04_2022-08-11.tif",
                         "Geneva-Lake_sur_refl_b02_2022-08-12.tif",
-                        "Geneva-Lake_sur_refl_b04_2022-08-12.tif",
                         "Geneva-Lake_sur_refl_b02_2022-08-13.tif",
-                        "Geneva-Lake_sur_refl_b04_2022-08-13.tif",
                         "Geneva-Lake_sur_refl_b02_2022-08-14.tif",
-                        "Geneva-Lake_sur_refl_b04_2022-08-14.tif",
                         "Geneva-Lake_sur_refl_b02_2022-08-15.tif",
-                        "Geneva-Lake_sur_refl_b04_2022-08-15.tif",
                         "Geneva-Lake_sur_refl_b02_2022-08-16.tif",
-                        "Geneva-Lake_sur_refl_b04_2022-08-16.tif",
                         "Geneva-Lake_sur_refl_b02_2022-08-17.tif",
-                        "Geneva-Lake_sur_refl_b04_2022-08-17.tif",
                         "Geneva-Lake_sur_refl_b02_2022-08-18.tif",
-                        "Geneva-Lake_sur_refl_b04_2022-08-18.tif",
                         "Geneva-Lake_sur_refl_b02_2022-08-19.tif",
-                        "Geneva-Lake_sur_refl_b04_2022-08-19.tif",
                         "Geneva-Lake_sur_refl_b02_2022-08-20.tif",
-                        "Geneva-Lake_sur_refl_b04_2022-08-20.tif",
                         "Geneva-Lake_sur_refl_b02_2022-08-21.tif",
-                        "Geneva-Lake_sur_refl_b04_2022-08-21.tif",
                         "Geneva-Lake_sur_refl_b02_2022-08-22.tif",
-                        "Geneva-Lake_sur_refl_b04_2022-08-22.tif",
                         "Geneva-Lake_sur_refl_b02_2022-08-23.tif",
-                        "Geneva-Lake_sur_refl_b04_2022-08-23.tif",
                         "Geneva-Lake_sur_refl_b02_2022-08-24.tif",
-                        "Geneva-Lake_sur_refl_b04_2022-08-24.tif",
                         "Geneva-Lake_sur_refl_b02_2022-08-25.tif",
-                        "Geneva-Lake_sur_refl_b04_2022-08-25.tif",
                         "Geneva-Lake_sur_refl_b02_2022-08-26.tif",
-                        "Geneva-Lake_sur_refl_b04_2022-08-26.tif",
                         "Geneva-Lake_sur_refl_b02_2022-08-27.tif",
-                        "Geneva-Lake_sur_refl_b04_2022-08-27.tif",
                         "Geneva-Lake_sur_refl_b02_2022-08-28.tif",
-                        "Geneva-Lake_sur_refl_b04_2022-08-28.tif",
                         "Geneva-Lake_sur_refl_b02_2022-08-29.tif",
-                        "Geneva-Lake_sur_refl_b04_2022-08-29.tif",
-                        "Geneva-Lake_sur_refl_b02_2022-08-30.tif",
-                        "Geneva-Lake_sur_refl_b04_2022-08-30.tif",
-                        "Geneva-Lake_sur_refl_b02_2022-08-31.tif",
-                        "Geneva-Lake_sur_refl_b04_2022-08-31.tif"
+                        "Geneva-Lake_sur_refl_b02_2022-08-30.tif"
                     ]
                 }
             },
@@ -47432,11 +47494,11 @@
                     {
                         "type": "function",
                         "function": {
-                            "name": "calculate_ndwi",
+                            "name": "calculate_ndvi",
                             "arguments": {
-                                "input_nir_path": "benchmark/data/question125/Geneva-Lake_sur_refl_b04_2022-08-01.tif",
-                                "input_swir_path": "benchmark/data/question125/Geneva-Lake_sur_refl_b02_2022-08-01.tif",
-                                "output_path": "ndwi_2022-08-01.tif"
+                                "red_band_file": "benchmark/data/question125/Geneva-Lake_sur_refl_b01_2022-08-01.tif",
+                                "nir_band_file": "benchmark/data/question125/Geneva-Lake_sur_refl_b02_2022-08-01.tif",
+                                "output_file": "geneva_ndvi_2022-08-01.tif"
                             }
                         }
                     }
@@ -47444,10 +47506,10 @@
             },
             {
                 "role": "tool",
-                "name": "calculate_ndwi",
+                "name": "calculate_ndvi",
                 "content": {
                     "type": null,
-                    "content": "supported_data/question125/ndwi_2022-08-01.tif"
+                    "content": "geneva_ndvi_2022-08-01.tif"
                 }
             },
             {
@@ -47457,11 +47519,9 @@
                     {
                         "type": "function",
                         "function": {
-                            "name": "calculate_ndwi",
+                            "name": "calc_batch_image_mean",
                             "arguments": {
-                                "input_nir_path": "benchmark/data/question125/Geneva-Lake_sur_refl_b04_2022-08-02.tif",
-                                "input_swir_path": "benchmark/data/question125/Geneva-Lake_sur_refl_b02_2022-08-02.tif",
-                                "output_path": "ndwi_2022-08-02.tif"
+                                "file_path": "geneva_ndvi_2022-08-01.tif"
                             }
                         }
                     }
@@ -47469,10 +47529,10 @@
             },
             {
                 "role": "tool",
-                "name": "calculate_ndwi",
+                "name": "calc_batch_image_mean",
                 "content": {
                     "type": null,
-                    "content": "supported_data/question125/ndwi_2022-08-02.tif"
+                    "content": 0.5636
                 }
             },
             {
@@ -47482,12 +47542,11 @@
                     {
                         "type": "function",
                         "function": {
-                            "name": "calc_batch_image_hotspot_percentage",
+                            "name": "calculate_ndvi",
                             "arguments": {
-                                "file_list": [
-                                    "supported_data/question125/ndwi_2022-08-01.tif"
-                                ],
-                                "threshold": 0.3
+                                "red_band_file": "benchmark/data/question125/Geneva-Lake_sur_refl_b01_2022-08-02.tif",
+                                "nir_band_file": "benchmark/data/question125/Geneva-Lake_sur_refl_b02_2022-08-02.tif",
+                                "output_file": "geneva_ndvi_2022-08-02.tif"
                             }
                         }
                     }
@@ -47495,12 +47554,10 @@
             },
             {
                 "role": "tool",
-                "name": "calc_batch_image_hotspot_percentage",
+                "name": "calculate_ndvi",
                 "content": {
                     "type": null,
-                    "content": [
-                        0.5013
-                    ]
+                    "content": "geneva_ndvi_2022-08-02.tif"
                 }
             },
             {
@@ -47510,12 +47567,9 @@
                     {
                         "type": "function",
                         "function": {
-                            "name": "calc_batch_image_hotspot_percentage",
+                            "name": "calc_batch_image_mean",
                             "arguments": {
-                                "file_list": [
-                                    "supported_data/question125/ndwi_2022-08-02.tif"
-                                ],
-                                "threshold": 0.3
+                                "file_path": "geneva_ndvi_2022-08-02.tif"
                             }
                         }
                     }
@@ -47523,12 +47577,58 @@
             },
             {
                 "role": "tool",
-                "name": "calc_batch_image_hotspot_percentage",
+                "name": "calc_batch_image_mean",
                 "content": {
                     "type": null,
-                    "content": [
-                        0.4805
-                    ]
+                    "content": 0.4441
+                }
+            },
+            {
+                "role": "assistant",
+                "thought": null,
+                "tool_calls": [
+                    {
+                        "type": "function",
+                        "function": {
+                            "name": "calculate_ndvi",
+                            "arguments": {
+                                "red_band_file": "benchmark/data/question125/Geneva-Lake_sur_refl_b01_2022-08-03.tif",
+                                "nir_band_file": "benchmark/data/question125/Geneva-Lake_sur_refl_b02_2022-08-03.tif",
+                                "output_file": "geneva_ndvi_2022-08-03.tif"
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "role": "tool",
+                "name": "calculate_ndvi",
+                "content": {
+                    "type": null,
+                    "content": "geneva_ndvi_2022-08-03.tif"
+                }
+            },
+            {
+                "role": "assistant",
+                "thought": null,
+                "tool_calls": [
+                    {
+                        "type": "function",
+                        "function": {
+                            "name": "calc_batch_image_mean",
+                            "arguments": {
+                                "file_path": "geneva_ndvi_2022-08-03.tif"
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "role": "tool",
+                "name": "calc_batch_image_mean",
+                "content": {
+                    "type": null,
+                    "content": 0.5443
                 }
             },
             {
@@ -47541,7 +47641,36 @@
                             "name": "calc_batch_image_mean",
                             "arguments": {
                                 "file_list": [
-                                    "supported_data/question125/ndwi_2022-08-01.tif"
+                                    "geneva_ndvi_2022-08-01.tif",
+                                    "geneva_ndvi_2022-08-02.tif",
+                                    "geneva_ndvi_2022-08-03.tif",
+                                    "geneva_ndvi_2022-08-04.tif",
+                                    "geneva_ndvi_2022-08-05.tif",
+                                    "geneva_ndvi_2022-08-06.tif",
+                                    "geneva_ndvi_2022-08-07.tif",
+                                    "geneva_ndvi_2022-08-08.tif",
+                                    "geneva_ndvi_2022-08-09.tif",
+                                    "geneva_ndvi_2022-08-10.tif",
+                                    "geneva_ndvi_2022-08-11.tif",
+                                    "geneva_ndvi_2022-08-12.tif",
+                                    "geneva_ndvi_2022-08-13.tif",
+                                    "geneva_ndvi_2022-08-14.tif",
+                                    "geneva_ndvi_2022-08-15.tif",
+                                    "geneva_ndvi_2022-08-16.tif",
+                                    "geneva_ndvi_2022-08-17.tif",
+                                    "geneva_ndvi_2022-08-18.tif",
+                                    "geneva_ndvi_2022-08-19.tif",
+                                    "geneva_ndvi_2022-08-20.tif",
+                                    "geneva_ndvi_2022-08-21.tif",
+                                    "geneva_ndvi_2022-08-22.tif",
+                                    "geneva_ndvi_2022-08-23.tif",
+                                    "geneva_ndvi_2022-08-24.tif",
+                                    "geneva_ndvi_2022-08-25.tif",
+                                    "geneva_ndvi_2022-08-26.tif",
+                                    "geneva_ndvi_2022-08-27.tif",
+                                    "geneva_ndvi_2022-08-28.tif",
+                                    "geneva_ndvi_2022-08-29.tif",
+                                    "geneva_ndvi_2022-08-30.tif"
                                 ]
                             }
                         }
@@ -47554,34 +47683,36 @@
                 "content": {
                     "type": null,
                     "content": [
-                        86545.91
-                    ]
-                }
-            },
-            {
-                "role": "assistant",
-                "thought": null,
-                "tool_calls": [
-                    {
-                        "type": "function",
-                        "function": {
-                            "name": "calc_batch_image_mean",
-                            "arguments": {
-                                "file_list": [
-                                    "supported_data/question125/ndwi_2022-08-02.tif"
-                                ]
-                            }
-                        }
-                    }
-                ]
-            },
-            {
-                "role": "tool",
-                "name": "calc_batch_image_mean",
-                "content": {
-                    "type": null,
-                    "content": [
-                        60720.7
+                        0.5636,
+                        0.4441,
+                        0.5443,
+                        0.5097,
+                        0.2542,
+                        0.1676,
+                        0.0805,
+                        0.5082,
+                        0.1766,
+                        0.4068,
+                        0.4367,
+                        0.4755,
+                        0.3697,
+                        -0.0026,
+                        0.0676,
+                        0.3447,
+                        0.1060,
+                        0.0385,
+                        0.0099,
+                        0.0747,
+                        0.3752,
+                        0.4213,
+                        0.5016,
+                        0.1763,
+                        0.4291,
+                        0.0249,
+                        0.4821,
+                        0.1186,
+                        0.4958,
+                        0.0733
                     ]
                 }
             },
@@ -47595,37 +47726,36 @@
                             "name": "max_value_and_index",
                             "arguments": {
                                 "x": [
-                                    0.5013,
-                                    0.4805,
-                                    0.4721,
-                                    0.4531,
-                                    0.4456,
-                                    0.4321,
-                                    0.4234,
-                                    0.4156,
-                                    0.4089,
-                                    0.4012,
-                                    0.3945,
-                                    0.3878,
-                                    0.3812,
-                                    0.3745,
-                                    0.3678,
-                                    0.3612,
-                                    0.3545,
-                                    0.3478,
-                                    0.3412,
-                                    0.3345,
-                                    0.3278,
-                                    0.3212,
-                                    0.3145,
-                                    0.3078,
-                                    0.3012,
-                                    0.2945,
-                                    0.2878,
-                                    0.2812,
-                                    0.2745,
-                                    0.2678,
-                                    0.2612
+                                    0.5636,
+                                    0.4441,
+                                    0.5443,
+                                    0.5097,
+                                    0.2542,
+                                    0.1676,
+                                    0.0805,
+                                    0.5082,
+                                    0.1766,
+                                    0.4068,
+                                    0.4367,
+                                    0.4755,
+                                    0.3697,
+                                    -0.0026,
+                                    0.0676,
+                                    0.3447,
+                                    0.1060,
+                                    0.0385,
+                                    0.0099,
+                                    0.0747,
+                                    0.3752,
+                                    0.4213,
+                                    0.5016,
+                                    0.1763,
+                                    0.4291,
+                                    0.0249,
+                                    0.4821,
+                                    0.1186,
+                                    0.4958,
+                                    0.0733
                                 ]
                             }
                         }
@@ -47638,84 +47768,21 @@
                 "content": {
                     "type": null,
                     "content": [
-                        0.5013,
+                        0.5636,
                         0
                     ]
                 }
-            },
-            {
-                "role": "assistant",
-                "thought": null,
-                "tool_calls": [
-                    {
-                        "type": "function",
-                        "function": {
-                            "name": "max_value_and_index",
-                            "arguments": {
-                                "x": [
-                                    86545.91,
-                                    60720.7,
-                                    10330.19,
-                                    -0.08,
-                                    23456.78,
-                                    12345.67,
-                                    9876.54,
-                                    8765.43,
-                                    7654.32,
-                                    6543.21,
-                                    5432.1,
-                                    4321.09,
-                                    3210.98,
-                                    2109.87,
-                                    1098.76,
-                                    987.65,
-                                    876.54,
-                                    765.43,
-                                    654.32,
-                                    543.21,
-                                    432.1,
-                                    321.09,
-                                    210.98,
-                                    109.87,
-                                    98.76,
-                                    87.65,
-                                    76.54,
-                                    65.43,
-                                    54.32,
-                                    43.21,
-                                    32.1,
-                                    21.09
-                                ]
-                            }
-                        }
-                    }
-                ]
-            },
-            {
-                "role": "tool",
-                "name": "max_value_and_index",
-                "content": {
-                    "type": null,
-                    "content": [
-                        86545.91,
-                        0
-                    ]
-                }
-            },
-            {
-                "role": "assistant",
-                "content": "A"
             }
         ],
         "choices": [
-            "Max water coverage: Aug 1 (50.13%) | Highest NDWI: Aug 1 (86545.91)",
-            "Max water coverage: Aug 2 (48.05%) | Highest NDWI: Aug 2 (60720.70)",
-            "Max water coverage: Aug 3 (47.21%) | Highest NDWI: Aug 3 (10330.19)",
-            "Max water coverage: Aug 4 (45.31%) | Highest NDWI: Aug 4 (-0.08)"
+            "A. 2022-08-01 (NDVI: 0.5636)",
+            "B. 2022-08-03 (NDVI: 0.5443)",
+            "C. 2022-08-12 (NDVI: 0.4755)",
+            "D. 2022-08-29 (NDVI: 0.4958)"
         ],
         "evaluation": [
             {
-                "question": "Define the area where NDWI is greater than 0.3 as a water body. Based on the sur_refl_b02 and sur_refl_b04 data of Lake Geneva in August 2022, derive the water body indicator NDWI, calculate the daily water body proportion of the lake, and identify the day with the highest NDWI value during this month.",
+                "question": "Define the area where NDVI is greater than 0.3 as vegetation cover. Based on the multispectral remote sensing data of Lake Geneva in August 2022, calculate the NDVI vegetation index, determine the daily vegetation coverage proportion of the lake area, and identify the date with the highest NDVI value during this month.",
                 "gt_answer": {
                     "whitelist": "A",
                     "blacklist": null
@@ -47725,7 +47792,7 @@
                 "type": "Instruction Following"
             },
             {
-                "question": "Process Lake Geneva's NDWI data (August 2022) to determine peak water coverage and NDWI extremes.",
+                "question": "Process Lake Geneva's NDVI data (August 2022) to determine peak vegetation coverage and NDVI extremes.",
                 "gt_answer": {
                     "whitelist": "A",
                     "blacklist": null
@@ -52938,7 +53005,7 @@
                             "arguments": {
                                 "input_red_path": "benchmark/data/question141/Dead Sea_sur_refl_b01_2020-08-01.tif",
                                 "input_green_path": "benchmark/data/question141/Dead Sea_sur_refl_b04_2020-08-01.tif",
-                                "output_path": "ndti_2020_august_01.tif"
+                                "output_path": "question141/ndti_2020_august_01.tif"
                             }
                         }
                     }
@@ -52948,8 +53015,8 @@
                 "role": "tool",
                 "name": "calculate_ndti",
                 "content": {
-                    "type": null,
-                    "content": "NDTI calculation completed for 2020-08-01"
+                    "type": "str",
+                    "content": "Result save at benchmark/out/question141/ndti_2020_august_01.tif"
                 }
             },
             {
@@ -52990,7 +53057,7 @@
                             "arguments": {
                                 "input_red_path": "benchmark/data/question141/Dead Sea_sur_refl_b01_2020-08-02.tif",
                                 "input_green_path": "benchmark/data/question141/Dead Sea_sur_refl_b04_2020-08-02.tif",
-                                "output_path": "ndti_2020_august_02.tif"
+                                "output_path": "question141/ndti_2020_august_02.tif"
                             }
                         }
                     }
@@ -53000,8 +53067,8 @@
                 "role": "tool",
                 "name": "calculate_ndti",
                 "content": {
-                    "type": null,
-                    "content": "NDTI calculation completed for 2020-08-02"
+                    "type": "str",
+                    "content": "Result save at benchmark/out/question141/ndti_2020_august_02.tif"
                 }
             },
             {
@@ -53186,7 +53253,7 @@
                             "arguments": {
                                 "input_red_path": "benchmark/data/question141/Dead Sea_sur_refl_b01_2022-08-01.tif",
                                 "input_green_path": "benchmark/data/question141/Dead Sea_sur_refl_b04_2022-08-01.tif",
-                                "output_path": "ndti_2022_august_01.tif"
+                                "output_path": "question141/ndti_2022_august_01.tif"
                             }
                         }
                     }
@@ -53196,8 +53263,8 @@
                 "role": "tool",
                 "name": "calculate_ndti",
                 "content": {
-                    "type": null,
-                    "content": "NDTI calculation completed for 2022-08-01"
+                    "type": "str",
+                    "content": "Result save at benchmark/out/question141/ndti_2022_august_01.tif"
                 }
             },
             {
@@ -53405,7 +53472,7 @@
                             "name": "multiply",
                             "arguments": {
                                 "a": 0.316,
-                                "b": 100000
+                                "b": 1
                             }
                         }
                     }
@@ -53416,7 +53483,7 @@
                 "name": "multiply",
                 "content": {
                     "type": null,
-                    "content": 31600
+                    "content": 0.31600
                 }
             },
             {
@@ -53425,10 +53492,10 @@
             }
         ],
         "choices": [
-            "urbidity change: +42,150 | Trend: Increasing",
-            "Turbidity change: +66,063 | Trend: Increasing",
-            "Turbidity change: -18,725 | Trend: Decreasing",
-            "Turbidity change: +55,890 | Trend: Increasing"
+            "urbidity change: +0.42150 | Trend: Increasing",
+            "Turbidity change: +0.66063 | Trend: Increasing",
+            "Turbidity change: -0.18725 | Trend: Decreasing",
+            "Turbidity change: +0.55890 | Trend: Increasing"
         ],
         "evaluation": [
             {
@@ -57202,45 +57269,20 @@
                 }
             },
             {
-                "role": "assistant",
-                "thought": null,
-                "tool_calls": [
-                    {
-                        "type": "function",
-                        "function": {
-                            "name": "calc_batch_image_mean",
-                            "arguments": {
-                                "file_list": [
-                                    "benchmark/data/question155/sur_refl_b01_2022-05-01.tif",
-                                    "benchmark/data/question155/sur_refl_b01_2022-08-14.tif",
-                                    "benchmark/data/question155/sur_refl_b01_2022-07-30.tif",
-                                    "benchmark/data/question155/sur_refl_b01_2022-06-30.tif",
-                                    "benchmark/data/question155/sur_refl_b01_2022-05-31.tif",
-                                    "benchmark/data/question155/sur_refl_b01_2022-08-29.tif",
-                                    "benchmark/data/question155/sur_refl_b01_2022-07-15.tif",
-                                    "benchmark/data/question155/sur_refl_b01_2022-06-15.tif",
-                                    "benchmark/data/question155/sur_refl_b01_2022-05-16.tif"
-                                ]
-                            }
-                        }
-                    }
-                ]
-            },
-            {
                 "role": "tool",
                 "name": "calc_batch_image_mean",
                 "content": {
                     "type": null,
                     "content": [
-                        5782.89,
-                        3293.33,
+                        0.578289,
+                        0.329333,
                         0.0,
-                        2440.05,
-                        2215.08,
-                        3070.96,
-                        3030.38,
+                        0.244005,
+                        0.221508,
+                        0.307096,
+                        0.303038,
                         0.0001,
-                        2932.41
+                        0.293241
                     ]
                 }
             },
@@ -57330,11 +57372,11 @@
             }
         ],
         "choices": [
-            "The average turbidity on May 1, 2022 is 5782.89, and on August 14, 2022 is 3293.33; the highest proportion of severely polluted areas occurs on May 1, 2022, at 0.149.",
-            "The average turbidity on May 31, 2022 is 2215.08, and on August 29, 2022 is 3070.96; the highest proportion of severely polluted areas occurs on August 29, 2022, at 0.0009.",
-            "The average turbidity on May 1, 2022 is 5782.89, and on August 14, 2022 is 3293.33; the highest proportion of severely polluted areas occurs on July 30, 2022, at 0.0000.",
-            "The average turbidity on June 30, 2022 is 2440.05, and on July 30, 2022 is 2896.13; the highest proportion of severely polluted areas occurs on May 1, 2022, at 0.149.",
-            "The average turbidity on May 16, 2022 is 2932.41, and on July 15, 2022 is 3030.38; the highest proportion of severely polluted areas occurs on June 15, 2022, at 0.0001."
+            "The average turbidity on May 1, 2022 is 0.578289, and on August 14, 2022 is 0.329333; the highest proportion of severely polluted areas occurs on May 1, 2022, at 0.149.",
+            "The average turbidity on May 31, 2022 is 0.221508, and on August 29, 2022 is 0.307096; the highest proportion of severely polluted areas occurs on August 29, 2022, at 0.0009.",
+            "The average turbidity on May 1, 2022 is 0.578289, and on August 14, 2022 is 0.329333; the highest proportion of severely polluted areas occurs on July 30, 2022, at 0.0000.",
+            "The average turbidity on June 30, 2022 is 0.244005, and on July 30, 2022 is 0.289613; the highest proportion of severely polluted areas occurs on May 1, 2022, at 0.149.",
+            "The average turbidity on May 16, 2022 is 0.293241, and on July 15, 2022 is 0.303038; the highest proportion of severely polluted areas occurs on June 15, 2022, at 0.0001."
         ],
         "evaluation": [
             {
@@ -57424,7 +57466,7 @@
                             "name": "calculate_water_turbidity_ntu",
                             "arguments": {
                                 "input_red_path": "bbenchmark/data/question156/lakeUrmia_sur_refl_b01.tif_2022-01-01.tif",
-                                "output_path": "ntu_turbidity_001.tif",
+                                "output_path": "question156/ntu_turbidity_001.tif",
                                 "method": "linear",
                                 "a": 1.0,
                                 "b": 0.0
@@ -57437,8 +57479,8 @@
                 "role": "tool",
                 "name": "calculate_water_turbidity_ntu",
                 "content": {
-                    "type": null,
-                    "content": "Result saved at supported_data/question156/ntu_turbidity_001.tif"
+                    "type": "str",
+                    "content": "Result save at benchmark/out/question156/ntu_turbidity_001.tif"
                 }
             },
             {
@@ -57451,7 +57493,7 @@
                             "name": "calc_batch_image_mean",
                             "arguments": {
                                 "file_list": [
-                                    "supported_data/question156/ntu_turbidity_001.tif"
+                                    "benchmark/out/question156/ntu_turbidity_001.tif"
                                 ]
                             }
                         }
@@ -57464,7 +57506,7 @@
                 "content": {
                     "type": null,
                     "content": [
-                        3245.67
+                        0.324567
                     ]
                 }
             },
@@ -57478,7 +57520,7 @@
                             "name": "calc_batch_image_skewness",
                             "arguments": {
                                 "file_list": [
-                                    "supported_data/question156/ntu_turbidity_001.tif"
+                                    "benchmark/out/question156/ntu_turbidity_001.tif"
                                 ]
                             }
                         }
@@ -57505,30 +57547,30 @@
                             "name": "mean",
                             "arguments": {
                                 "x": [
-                                    3245.67,
-                                    2987.34,
-                                    4567.89,
-                                    3456.78,
-                                    5678.9,
-                                    4321.56,
-                                    3890.12,
-                                    4123.45,
-                                    6789.01,
-                                    5432.1,
-                                    4567.89,
-                                    3987.65,
-                                    4123.45,
-                                    4567.89,
-                                    5432.1,
-                                    6789.01,
-                                    4567.89,
-                                    3987.65,
-                                    4123.45,
-                                    4567.89,
-                                    5432.1,
-                                    6789.01,
-                                    4567.89,
-                                    3987.65
+                                    0.324567,
+                                    0.298734,
+                                    0.456789,
+                                    0.345678,
+                                    0.56789,
+                                    0.432156,
+                                    0.389012,
+                                    0.412345,
+                                    0.678901,
+                                    0.54321,
+                                    0.456789,
+                                    0.398765,
+                                    0.412345,
+                                    0.456789,
+                                    0.54321,
+                                    0.678901,
+                                    0.456789,
+                                    0.398765,
+                                    0.412345,
+                                    0.456789,
+                                    0.54321,
+                                    0.678901,
+                                    0.456789,
+                                    0.398765
                                 ]
                             }
                         }
@@ -57540,7 +57582,7 @@
                 "name": "mean",
                 "content": {
                     "type": null,
-                    "content": 4567.89
+                    "content": 0.456789
                 }
             },
             {
@@ -57609,7 +57651,7 @@
                     "whitelist": "A",
                     "blacklist": null
                 },
-                "data": "bbenchmark/data/question156",
+                "data": "benchmark/data/question156",
                 "metric": "string matching",
                 "type": "Instruction Following"
             },
@@ -57690,7 +57732,7 @@
                             "name": "calculate_water_turbidity_ntu",
                             "arguments": {
                                 "input_red_path": "benchmark/data/question157/lakeUrmia_sur_refl_b01.tif_2022-01-01.tif",
-                                "output_path": "ntu_pollution_001.tif",
+                                "output_path": "question157/ntu_pollution_001.tif",
                                 "method": "linear",
                                 "a": 1.0,
                                 "b": 0.0
@@ -57703,8 +57745,8 @@
                 "role": "tool",
                 "name": "calculate_water_turbidity_ntu",
                 "content": {
-                    "type": null,
-                    "content": "Result saved at supported_data/question157/ntu_pollution_001.tif"
+                    "type": "str",
+                    "content": "Result save at benchmark/out/question157/ntu_pollution_001.tif"
                 }
             },
             {
@@ -57717,7 +57759,7 @@
                             "name": "calc_batch_image_mean",
                             "arguments": {
                                 "file_list": [
-                                    "supported_data/question157/ntu_pollution_001.tif"
+                                    "benchmark/out/question157/ntu_pollution_001.tif"
                                 ]
                             }
                         }
@@ -57730,7 +57772,7 @@
                 "content": {
                     "type": null,
                     "content": [
-                        3245.67
+                        0.324567
                     ]
                 }
             },
@@ -57744,7 +57786,7 @@
                             "name": "calculate_water_turbidity_ntu",
                             "arguments": {
                                 "input_red_path": "benchmark/data/question157/lakeUrmia_sur_refl_b01.tif_2022-01-16.tif",
-                                "output_path": "ntu_pollution_002.tif",
+                                "output_path": "question157/ntu_pollution_002.tif",
                                 "method": "linear",
                                 "a": 1.0,
                                 "b": 0.0
@@ -57757,8 +57799,8 @@
                 "role": "tool",
                 "name": "calculate_water_turbidity_ntu",
                 "content": {
-                    "type": null,
-                    "content": "Result saved at supported_data/question157/ntu_pollution_002.tif"
+                    "type": "str",
+                    "content": "Result save at benchmark/out/question157/ntu_pollution_002.tif"
                 }
             },
             {
@@ -57771,7 +57813,7 @@
                             "name": "calc_batch_image_mean",
                             "arguments": {
                                 "file_list": [
-                                    "supported_data/question157/ntu_pollution_002.tif"
+                                    "benchmark/out/question157/ntu_pollution_002.tif"
                                 ]
                             }
                         }
@@ -57784,7 +57826,7 @@
                 "content": {
                     "type": null,
                     "content": [
-                        8233.77
+                        0.823377
                     ]
                 }
             },
@@ -57798,7 +57840,7 @@
                             "name": "calculate_water_turbidity_ntu",
                             "arguments": {
                                 "input_red_path": "benchmark/data/question157/lakeUrmia_sur_refl_b01.tif_2022-05-01.tif",
-                                "output_path": "ntu_pollution_009.tif",
+                                "output_path": "question157/ntu_pollution_009.tif",
                                 "method": "linear",
                                 "a": 1.0,
                                 "b": 0.0
@@ -57811,8 +57853,8 @@
                 "role": "tool",
                 "name": "calculate_water_turbidity_ntu",
                 "content": {
-                    "type": null,
-                    "content": "Result saved at supported_data/question157/ntu_pollution_009.tif"
+                    "type": "str",
+                    "content": "Result save at benchmark/out/question157/ntu_pollution_009.tif"
                 }
             },
             {
@@ -57825,7 +57867,7 @@
                             "name": "calc_batch_image_mean",
                             "arguments": {
                                 "file_list": [
-                                    "supported_data/question157/ntu_pollution_009.tif"
+                                    "benchmark/out/question157/ntu_pollution_009.tif"
                                 ]
                             }
                         }
@@ -57838,7 +57880,7 @@
                 "content": {
                     "type": null,
                     "content": [
-                        7753.23
+                        0.775323
                     ]
                 }
             },
@@ -57852,7 +57894,7 @@
                             "name": "calculate_water_turbidity_ntu",
                             "arguments": {
                                 "input_red_path": "benchmark/data/question157/lakeUrmia_sur_refl_b01.tif_2022-12-24.tif",
-                                "output_path": "ntu_pollution_024.tif",
+                                "output_path": "question157/ntu_pollution_024.tif",
                                 "method": "linear",
                                 "a": 1.0,
                                 "b": 0.0
@@ -57865,8 +57907,8 @@
                 "role": "tool",
                 "name": "calculate_water_turbidity_ntu",
                 "content": {
-                    "type": null,
-                    "content": "Result saved at supported_data/question157/ntu_pollution_024.tif"
+                    "type": "str",
+                    "content": "Result save at benchmark/out/question157/ntu_pollution_024.tif"
                 }
             },
             {
@@ -57879,7 +57921,7 @@
                             "name": "calc_batch_image_mean",
                             "arguments": {
                                 "file_list": [
-                                    "supported_data/question157/ntu_pollution_024.tif"
+                                    "benchmark/out/question157/ntu_pollution_024.tif"
                                 ]
                             }
                         }
@@ -57892,7 +57934,7 @@
                 "content": {
                     "type": null,
                     "content": [
-                        8497.79
+                        0.849779
                     ]
                 }
             },
@@ -57906,30 +57948,30 @@
                             "name": "max_value_and_index",
                             "arguments": {
                                 "x": [
-                                    3245.67,
-                                    8233.77,
-                                    4567.89,
-                                    3456.78,
-                                    5678.9,
-                                    4321.56,
-                                    3890.12,
-                                    4123.45,
-                                    7753.23,
-                                    5432.1,
-                                    4567.89,
-                                    3987.65,
-                                    4123.45,
-                                    4567.89,
-                                    5432.1,
-                                    6789.01,
-                                    4567.89,
-                                    3987.65,
-                                    4123.45,
-                                    4567.89,
-                                    5432.1,
-                                    6789.01,
-                                    4567.89,
-                                    8497.79
+                                    0.324567,
+                                    0.823377,
+                                    0.456789,
+                                    0.345678,
+                                    0.56789,
+                                    0.432156,
+                                    0.389012,
+                                    0.412345,
+                                    0.775323,
+                                    0.54321,
+                                    0.456789,
+                                    0.398765,
+                                    0.412345,
+                                    0.456789,
+                                    0.54321,
+                                    0.678901,
+                                    0.456789,
+                                    0.398765,
+                                    0.412345,
+                                    0.456789,
+                                    0.54321,
+                                    0.678901,
+                                    0.456789,
+                                    0.849779
                                 ]
                             }
                         }
@@ -57942,7 +57984,7 @@
                 "content": {
                     "type": null,
                     "content": [
-                        8497.79,
+                        0.849779,
                         23
                     ]
                 }
@@ -57953,11 +57995,11 @@
             }
         ],
         "choices": [
-            "The highest unit-area turbidity occurred on December 24, 2022, with a value of 8497.79.",
-            "The highest unit-area turbidity occurred on January 16, 2022, with a value of 8233.77.",
-            "The highest unit-area turbidity occurred on May 1, 2022, with a value of 7753.23.",
-            "The highest unit-area turbidity occurred on March 2, 2022, with a value of 5961.99.",
-            "The highest unit-area turbidity occurred on July 15, 2022, with a value of 3030.38."
+            "The highest unit-area turbidity occurred on December 24, 2022, with a value of 0.849779.",
+            "The highest unit-area turbidity occurred on January 16, 2022, with a value of 0.823377.",
+            "The highest unit-area turbidity occurred on May 1, 2022, with a value of 0.775323.",
+            "The highest unit-area turbidity occurred on March 2, 2022, with a value of 0.596199.",
+            "The highest unit-area turbidity occurred on July 15, 2022, with a value of 0.303038."
         ],
         "evaluation": [
             {
@@ -63900,10 +63942,66 @@
                 "content": {
                     "type": null,
                     "content": [
-                        "Arctic_sur_refl_b01_2012-07-01.tif",
-                        "Arctic_sur_refl_b04_2012-07-01.tif",
-                        "Arctic_sur_refl_b01_2022-07-01.tif",
-                        "Arctic_sur_refl_b04_2022-07-01.tif"
+                        "Arctic_Ocean_sur_refl_b01_2012-07-01.tif",
+                        "Arctic_Ocean_sur_refl_b01_2012-07-03.tif",
+                        "Arctic_Ocean_sur_refl_b01_2012-07-05.tif",
+                        "Arctic_Ocean_sur_refl_b01_2012-07-07.tif",
+                        "Arctic_Ocean_sur_refl_b01_2012-07-09.tif",
+                        "Arctic_Ocean_sur_refl_b01_2012-07-11.tif",
+                        "Arctic_Ocean_sur_refl_b01_2012-07-13.tif",
+                        "Arctic_Ocean_sur_refl_b01_2012-07-15.tif",
+                        "Arctic_Ocean_sur_refl_b01_2012-07-17.tif",
+                        "Arctic_Ocean_sur_refl_b01_2012-07-19.tif",
+                        "Arctic_Ocean_sur_refl_b01_2012-07-21.tif",
+                        "Arctic_Ocean_sur_refl_b01_2012-07-23.tif",
+                        "Arctic_Ocean_sur_refl_b01_2012-07-25.tif",
+                        "Arctic_Ocean_sur_refl_b01_2012-07-27.tif",
+                        "Arctic_Ocean_sur_refl_b01_2012-07-29.tif",
+                        "Arctic_Ocean_sur_refl_b04_2012-07-01.tif",
+                        "Arctic_Ocean_sur_refl_b04_2012-07-03.tif",
+                        "Arctic_Ocean_sur_refl_b04_2012-07-05.tif",
+                        "Arctic_Ocean_sur_refl_b04_2012-07-07.tif",
+                        "Arctic_Ocean_sur_refl_b04_2012-07-09.tif",
+                        "Arctic_Ocean_sur_refl_b04_2012-07-11.tif",
+                        "Arctic_Ocean_sur_refl_b04_2012-07-13.tif",
+                        "Arctic_Ocean_sur_refl_b04_2012-07-15.tif",
+                        "Arctic_Ocean_sur_refl_b04_2012-07-17.tif",
+                        "Arctic_Ocean_sur_refl_b04_2012-07-19.tif",
+                        "Arctic_Ocean_sur_refl_b04_2012-07-21.tif",
+                        "Arctic_Ocean_sur_refl_b04_2012-07-23.tif",
+                        "Arctic_Ocean_sur_refl_b04_2012-07-25.tif",
+                        "Arctic_Ocean_sur_refl_b04_2012-07-27.tif",
+                        "Arctic_Ocean_sur_refl_b04_2012-07-29.tif",
+                        "Arctic_Ocean_sur_refl_b01_2022-07-01.tif",
+                        "Arctic_Ocean_sur_refl_b01_2022-07-03.tif",
+                        "Arctic_Ocean_sur_refl_b01_2022-07-05.tif",
+                        "Arctic_Ocean_sur_refl_b01_2022-07-07.tif",
+                        "Arctic_Ocean_sur_refl_b01_2022-07-09.tif",
+                        "Arctic_Ocean_sur_refl_b01_2022-07-11.tif",
+                        "Arctic_Ocean_sur_refl_b01_2022-07-13.tif",
+                        "Arctic_Ocean_sur_refl_b01_2022-07-15.tif",
+                        "Arctic_Ocean_sur_refl_b01_2022-07-17.tif",
+                        "Arctic_Ocean_sur_refl_b01_2022-07-19.tif",
+                        "Arctic_Ocean_sur_refl_b01_2022-07-21.tif",
+                        "Arctic_Ocean_sur_refl_b01_2022-07-23.tif",
+                        "Arctic_Ocean_sur_refl_b01_2022-07-25.tif",
+                        "Arctic_Ocean_sur_refl_b01_2022-07-27.tif",
+                        "Arctic_Ocean_sur_refl_b01_2022-07-29.tif",
+                        "Arctic_Ocean_sur_refl_b04_2022-07-01.tif",
+                        "Arctic_Ocean_sur_refl_b04_2022-07-03.tif",
+                        "Arctic_Ocean_sur_refl_b04_2022-07-05.tif",
+                        "Arctic_Ocean_sur_refl_b04_2022-07-07.tif",
+                        "Arctic_Ocean_sur_refl_b04_2022-07-09.tif",
+                        "Arctic_Ocean_sur_refl_b04_2022-07-11.tif",
+                        "Arctic_Ocean_sur_refl_b04_2022-07-13.tif",
+                        "Arctic_Ocean_sur_refl_b04_2022-07-15.tif",
+                        "Arctic_Ocean_sur_refl_b04_2022-07-17.tif",
+                        "Arctic_Ocean_sur_refl_b04_2022-07-19.tif",
+                        "Arctic_Ocean_sur_refl_b04_2022-07-21.tif",
+                        "Arctic_Ocean_sur_refl_b04_2022-07-23.tif",
+                        "Arctic_Ocean_sur_refl_b04_2022-07-25.tif",
+                        "Arctic_Ocean_sur_refl_b04_2022-07-27.tif",
+                        "Arctic_Ocean_sur_refl_b04_2022-07-29.tif"
                     ]
                 }
             },
@@ -63916,58 +64014,82 @@
                         "function": {
                             "name": "calculate_ndti",
                             "arguments": {
-                                "input_red_path": "benchmark/data/question182/Arctic_sur_refl_b01_2012-07-01.tif",
-                                "input_green_path": "benchmark/data/question182/Arctic_sur_refl_b04_2012-07-01.tif",
-                                "output_path": "ndti_2012_july_01.tif"
-                            }
-                        }
-                    }
-                ]
-            },
-            {
-                "role": "tool",
-                "name": "calculate_ndti",
-                "content": {
-                    "type": null,
-                    "content": "ndti_2012_july_01.tif"
-                }
-            },
-            {
-                "role": "assistant",
-                "thought": null,
-                "tool_calls": [
-                    {
-                        "type": "function",
-                        "function": {
-                            "name": "calculate_ndti",
-                            "arguments": {
-                                "input_red_path": "benchmark/data/question182/Arctic_sur_refl_b01_2022-07-01.tif",
-                                "input_green_path": "benchmark/data/question182/Arctic_sur_refl_b04_2022-07-01.tif",
-                                "output_path": "ndti_2022_july_01.tif"
-                            }
-                        }
-                    }
-                ]
-            },
-            {
-                "role": "tool",
-                "name": "calculate_ndti",
-                "content": {
-                    "type": null,
-                    "content": "ndti_2022_july_01.tif"
-                }
-            },
-            {
-                "role": "assistant",
-                "thought": null,
-                "tool_calls": [
-                    {
-                        "type": "function",
-                        "function": {
-                            "name": "calc_batch_image_mean",
-                            "arguments": {
-                                "file_list": [
-                                    "ndti_2012_july_01.tif"
+                                "input_pairs": [
+                                    {
+                                        "input_red_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b01_2012-07-01.tif",
+                                        "input_green_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b04_2012-07-01.tif",
+                                        "output_filename": "ndti_2012_july_01.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b01_2012-07-03.tif",
+                                        "input_green_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b04_2012-07-03.tif",
+                                        "output_filename": "ndti_2012_july_02.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b01_2012-07-05.tif",
+                                        "input_green_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b04_2012-07-05.tif",
+                                        "output_filename": "ndti_2012_july_03.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b01_2012-07-07.tif",
+                                        "input_green_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b04_2012-07-07.tif",
+                                        "output_filename": "ndti_2012_july_04.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b01_2012-07-09.tif",
+                                        "input_green_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b04_2012-07-09.tif",
+                                        "output_filename": "ndti_2012_july_05.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b01_2012-07-11.tif",
+                                        "input_green_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b04_2012-07-11.tif",
+                                        "output_filename": "ndti_2012_july_06.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b01_2012-07-13.tif",
+                                        "input_green_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b04_2012-07-13.tif",
+                                        "output_filename": "ndti_2012_july_07.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b01_2012-07-15.tif",
+                                        "input_green_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b04_2012-07-15.tif",
+                                        "output_filename": "ndti_2012_july_08.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b01_2012-07-17.tif",
+                                        "input_green_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b04_2012-07-17.tif",
+                                        "output_filename": "ndti_2012_july_09.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b01_2012-07-19.tif",
+                                        "input_green_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b04_2012-07-19.tif",
+                                        "output_filename": "ndti_2012_july_10.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b01_2012-07-21.tif",
+                                        "input_green_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b04_2012-07-21.tif",
+                                        "output_filename": "ndti_2012_july_11.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b01_2012-07-23.tif",
+                                        "input_green_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b04_2012-07-23.tif",
+                                        "output_filename": "ndti_2012_july_12.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b01_2012-07-25.tif",
+                                        "input_green_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b04_2012-07-25.tif",
+                                        "output_filename": "ndti_2012_july_13.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b01_2012-07-27.tif",
+                                        "input_green_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b04_2012-07-27.tif",
+                                        "output_filename": "ndti_2012_july_14.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b01_2012-07-29.tif",
+                                        "input_green_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b04_2012-07-29.tif",
+                                        "output_filename": "ndti_2012_july_15.tif"
+                                    }
                                 ]
                             }
                         }
@@ -63976,11 +64098,25 @@
             },
             {
                 "role": "tool",
-                "name": "calc_batch_image_mean",
+                "name": "calculate_ndti",
                 "content": {
                     "type": null,
                     "content": [
-                        -666.47
+                        "ndti_2012_july_01.tif",
+                        "ndti_2012_july_02.tif",
+                        "ndti_2012_july_03.tif",
+                        "ndti_2012_july_04.tif",
+                        "ndti_2012_july_05.tif",
+                        "ndti_2012_july_06.tif",
+                        "ndti_2012_july_07.tif",
+                        "ndti_2012_july_08.tif",
+                        "ndti_2012_july_09.tif",
+                        "ndti_2012_july_10.tif",
+                        "ndti_2012_july_11.tif",
+                        "ndti_2012_july_12.tif",
+                        "ndti_2012_july_13.tif",
+                        "ndti_2012_july_14.tif",
+                        "ndti_2012_july_15.tif"
                     ]
                 }
             },
@@ -63994,7 +64130,21 @@
                             "name": "calc_batch_image_mean",
                             "arguments": {
                                 "file_list": [
-                                    "ndti_2022_july_01.tif"
+                                    "ndti_2012_july_01.tif",
+                                    "ndti_2012_july_02.tif",
+                                    "ndti_2012_july_03.tif",
+                                    "ndti_2012_july_04.tif",
+                                    "ndti_2012_july_05.tif",
+                                    "ndti_2012_july_06.tif",
+                                    "ndti_2012_july_07.tif",
+                                    "ndti_2012_july_08.tif",
+                                    "ndti_2012_july_09.tif",
+                                    "ndti_2012_july_10.tif",
+                                    "ndti_2012_july_11.tif",
+                                    "ndti_2012_july_12.tif",
+                                    "ndti_2012_july_13.tif",
+                                    "ndti_2012_july_14.tif",
+                                    "ndti_2012_july_15.tif"
                                 ]
                             }
                         }
@@ -64007,7 +64157,191 @@
                 "content": {
                     "type": null,
                     "content": [
-                        -61.17
+                        -0.06641,
+                        -0.066252,
+                        -0.058266,
+                        -0.056729,
+                        -0.05297,
+                        -0.05068,
+                        -0.049999,
+                        -0.053002,
+                        -0.046312,
+                        -0.037716,
+                        -0.04209,
+                        -0.046783,
+                        -0.037334,
+                        -0.040143,
+                        -0.047744
+                    ]
+                }
+            },
+            {
+                "role": "assistant",
+                "thought": null,
+                "tool_calls": [
+                    {
+                        "type": "function",
+                        "function": {
+                            "name": "calculate_ndti",
+                            "arguments": {
+                                "input_pairs": [
+                                    {
+                                        "input_red_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b01_2022-07-01.tif",
+                                        "input_green_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b04_2022-07-01.tif",
+                                        "output_filename": "ndti_2022_july_01.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b01_2022-07-03.tif",
+                                        "input_green_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b04_2022-07-03.tif",
+                                        "output_filename": "ndti_2022_july_02.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b01_2022-07-05.tif",
+                                        "input_green_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b04_2022-07-05.tif",
+                                        "output_filename": "ndti_2022_july_03.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b01_2022-07-07.tif",
+                                        "input_green_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b04_2022-07-07.tif",
+                                        "output_filename": "ndti_2022_july_04.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b01_2022-07-09.tif",
+                                        "input_green_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b04_2022-07-09.tif",
+                                        "output_filename": "ndti_2022_july_05.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b01_2022-07-11.tif",
+                                        "input_green_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b04_2022-07-11.tif",
+                                        "output_filename": "ndti_2022_july_06.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b01_2022-07-13.tif",
+                                        "input_green_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b04_2022-07-13.tif",
+                                        "output_filename": "ndti_2022_july_07.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b01_2022-07-15.tif",
+                                        "input_green_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b04_2022-07-15.tif",
+                                        "output_filename": "ndti_2022_july_08.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b01_2022-07-17.tif",
+                                        "input_green_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b04_2022-07-17.tif",
+                                        "output_filename": "ndti_2022_july_09.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b01_2022-07-19.tif",
+                                        "input_green_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b04_2022-07-19.tif",
+                                        "output_filename": "ndti_2022_july_10.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b01_2022-07-21.tif",
+                                        "input_green_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b04_2022-07-21.tif",
+                                        "output_filename": "ndti_2022_july_11.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b01_2022-07-23.tif",
+                                        "input_green_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b04_2022-07-23.tif",
+                                        "output_filename": "ndti_2022_july_12.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b01_2022-07-25.tif",
+                                        "input_green_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b04_2022-07-25.tif",
+                                        "output_filename": "ndti_2022_july_13.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b01_2022-07-27.tif",
+                                        "input_green_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b04_2022-07-27.tif",
+                                        "output_filename": "ndti_2022_july_14.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b01_2022-07-29.tif",
+                                        "input_green_path": "benchmark/data/question182/Arctic_Ocean_sur_refl_b04_2022-07-29.tif",
+                                        "output_filename": "ndti_2022_july_15.tif"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "role": "tool",
+                "name": "calculate_ndti",
+                "content": {
+                    "type": null,
+                    "content": [
+                        "ndti_2022_july_01.tif",
+                        "ndti_2022_july_02.tif",
+                        "ndti_2022_july_03.tif",
+                        "ndti_2022_july_04.tif",
+                        "ndti_2022_july_05.tif",
+                        "ndti_2022_july_06.tif",
+                        "ndti_2022_july_07.tif",
+                        "ndti_2022_july_08.tif",
+                        "ndti_2022_july_09.tif",
+                        "ndti_2022_july_10.tif",
+                        "ndti_2022_july_11.tif",
+                        "ndti_2022_july_12.tif",
+                        "ndti_2022_july_13.tif",
+                        "ndti_2022_july_14.tif",
+                        "ndti_2022_july_15.tif"
+                    ]
+                }
+            },
+            {
+                "role": "assistant",
+                "thought": null,
+                "tool_calls": [
+                    {
+                        "type": "function",
+                        "function": {
+                            "name": "calc_batch_image_mean",
+                            "arguments": {
+                                "file_list": [
+                                    "ndti_2022_july_01.tif",
+                                    "ndti_2022_july_02.tif",
+                                    "ndti_2022_july_03.tif",
+                                    "ndti_2022_july_04.tif",
+                                    "ndti_2022_july_05.tif",
+                                    "ndti_2022_july_06.tif",
+                                    "ndti_2022_july_07.tif",
+                                    "ndti_2022_july_08.tif",
+                                    "ndti_2022_july_09.tif",
+                                    "ndti_2022_july_10.tif",
+                                    "ndti_2022_july_11.tif",
+                                    "ndti_2022_july_12.tif",
+                                    "ndti_2022_july_13.tif",
+                                    "ndti_2022_july_14.tif",
+                                    "ndti_2022_july_15.tif"
+                                ]
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "role": "tool",
+                "name": "calc_batch_image_mean",
+                "content": {
+                    "type": null,
+                    "content": [
+                        -0.069272,
+                        -0.057762,
+                        -0.053583,
+                        -0.048742,
+                        -0.053095,
+                        -0.045134,
+                        -0.049498,
+                        -0.040266,
+                        -0.037868,
+                        -0.035175,
+                        -0.044699,
+                        -0.041704,
+                        -0.046307,
+                        -0.039898,
+                        -0.044336
                     ]
                 }
             },
@@ -64020,8 +64354,10 @@
                         "function": {
                             "name": "difference",
                             "arguments": {
-                                "a": -61.17,
-                                "b": -666.47
+                                "x": [
+                                    -0.047156,
+                                    -0.050162
+                                ]
                             }
                         }
                     }
@@ -64032,20 +64368,16 @@
                 "name": "difference",
                 "content": {
                     "type": null,
-                    "content": 605.3
+                    "content": 0.003006
                 }
-            },
-            {
-                "role": "assistant",
-                "content": "B"
             }
         ],
         "choices": [
-            "The average NDTI increased from about -666.47 in July 2012 to about -61.17 in July 2022, indicating a significant decrease in ocean turbidity, with a magnitude change of about 605.30.",
-            "The average NDTI increased from about -666.47 to about -61.17, indicating a significant increase in ocean turbidity, with a magnitude change of about 605.30.",
-            "The average NDTI changed from about -666.47 to about -580.00, indicating a minor decrease in ocean turbidity, with a magnitude change of about 86.47.",
-            "The average NDTI changed from about -61.17 to about -666.47, indicating a significant decrease in ocean turbidity, with a magnitude change of about 605.30.",
-            "The average NDTI changed from about -200.00 to about -100.00, showing a minor increase in ocean turbidity, with a magnitude change of about 100.00."
+            "The average NDTI decreased slightly from about -0.0472 in July 2012 to about -0.0502 in July 2022, meaning turbidity weakened and the magnitude of change was roughly 0.0030.",
+            "The average NDTI rose from about -0.050162 in July 2012 to about -0.047156 in July 2022, so ocean turbidity increased (less negative NDTI) with a magnitude of about 0.003006.",
+            "The average NDTI rose from about -0.0472 to -0.0502, indicating much clearer water, with a magnitude near 0.0030.",
+            "Average NDTI values of roughly -0.0502 and -0.0472 show no detectable change in turbidity between 2012 and 2022.",
+            "Average NDTI stayed at about -0.05 for both years, so there was virtually zero change."
         ],
         "evaluation": [
             {
@@ -64098,18 +64430,36 @@
                 "content": {
                     "type": null,
                     "content": [
-                        "Arctic_sur_refl_b01_2022-07-01.tif",
-                        "Arctic_sur_refl_b04_2022-07-01.tif",
-                        "Arctic_sur_refl_b01_2022-07-05.tif",
-                        "Arctic_sur_refl_b04_2022-07-05.tif",
-                        "Arctic_sur_refl_b01_2022-07-11.tif",
-                        "Arctic_sur_refl_b04_2022-07-11.tif",
-                        "Arctic_sur_refl_b01_2022-07-17.tif",
-                        "Arctic_sur_refl_b04_2022-07-17.tif",
-                        "Arctic_sur_refl_b01_2022-07-19.tif",
-                        "Arctic_sur_refl_b04_2022-07-19.tif",
-                        "Arctic_sur_refl_b01_2022-07-25.tif",
-                        "Arctic_sur_refl_b04_2022-07-25.tif"
+                        "Arctic_Ocean_sur_refl_b01_2022-07-01.tif",
+                        "Arctic_Ocean_sur_refl_b01_2022-07-03.tif",
+                        "Arctic_Ocean_sur_refl_b01_2022-07-05.tif",
+                        "Arctic_Ocean_sur_refl_b01_2022-07-07.tif",
+                        "Arctic_Ocean_sur_refl_b01_2022-07-09.tif",
+                        "Arctic_Ocean_sur_refl_b01_2022-07-11.tif",
+                        "Arctic_Ocean_sur_refl_b01_2022-07-13.tif",
+                        "Arctic_Ocean_sur_refl_b01_2022-07-15.tif",
+                        "Arctic_Ocean_sur_refl_b01_2022-07-17.tif",
+                        "Arctic_Ocean_sur_refl_b01_2022-07-19.tif",
+                        "Arctic_Ocean_sur_refl_b01_2022-07-21.tif",
+                        "Arctic_Ocean_sur_refl_b01_2022-07-23.tif",
+                        "Arctic_Ocean_sur_refl_b01_2022-07-25.tif",
+                        "Arctic_Ocean_sur_refl_b01_2022-07-27.tif",
+                        "Arctic_Ocean_sur_refl_b01_2022-07-29.tif",
+                        "Arctic_Ocean_sur_refl_b04_2022-07-01.tif",
+                        "Arctic_Ocean_sur_refl_b04_2022-07-03.tif",
+                        "Arctic_Ocean_sur_refl_b04_2022-07-05.tif",
+                        "Arctic_Ocean_sur_refl_b04_2022-07-07.tif",
+                        "Arctic_Ocean_sur_refl_b04_2022-07-09.tif",
+                        "Arctic_Ocean_sur_refl_b04_2022-07-11.tif",
+                        "Arctic_Ocean_sur_refl_b04_2022-07-13.tif",
+                        "Arctic_Ocean_sur_refl_b04_2022-07-15.tif",
+                        "Arctic_Ocean_sur_refl_b04_2022-07-17.tif",
+                        "Arctic_Ocean_sur_refl_b04_2022-07-19.tif",
+                        "Arctic_Ocean_sur_refl_b04_2022-07-21.tif",
+                        "Arctic_Ocean_sur_refl_b04_2022-07-23.tif",
+                        "Arctic_Ocean_sur_refl_b04_2022-07-25.tif",
+                        "Arctic_Ocean_sur_refl_b04_2022-07-27.tif",
+                        "Arctic_Ocean_sur_refl_b04_2022-07-29.tif"
                     ]
                 }
             },
@@ -64122,9 +64472,83 @@
                         "function": {
                             "name": "calculate_ndti",
                             "arguments": {
-                                "input_red_path": "benchmark/data/question183/Arctic_sur_refl_b01_2022-07-01.tif",
-                                "input_green_path": "benchmark/data/question183/Arctic_sur_refl_b04_2022-07-01.tif",
-                                "output_path": "ndti_2022-07-01.tif"
+                                "input_pairs": [
+                                    {
+                                        "input_red_path": "benchmark/data/question183/Arctic_Ocean_sur_refl_b01_2022-07-01.tif",
+                                        "input_green_path": "benchmark/data/question183/Arctic_Ocean_sur_refl_b04_2022-07-01.tif",
+                                        "output_filename": "ndti_2022-07-01.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question183/Arctic_Ocean_sur_refl_b01_2022-07-03.tif",
+                                        "input_green_path": "benchmark/data/question183/Arctic_Ocean_sur_refl_b04_2022-07-03.tif",
+                                        "output_filename": "ndti_2022-07-03.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question183/Arctic_Ocean_sur_refl_b01_2022-07-05.tif",
+                                        "input_green_path": "benchmark/data/question183/Arctic_Ocean_sur_refl_b04_2022-07-05.tif",
+                                        "output_filename": "ndti_2022-07-05.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question183/Arctic_Ocean_sur_refl_b01_2022-07-07.tif",
+                                        "input_green_path": "benchmark/data/question183/Arctic_Ocean_sur_refl_b04_2022-07-07.tif",
+                                        "output_filename": "ndti_2022-07-07.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question183/Arctic_Ocean_sur_refl_b01_2022-07-09.tif",
+                                        "input_green_path": "benchmark/data/question183/Arctic_Ocean_sur_refl_b04_2022-07-09.tif",
+                                        "output_filename": "ndti_2022-07-09.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question183/Arctic_Ocean_sur_refl_b01_2022-07-11.tif",
+                                        "input_green_path": "benchmark/data/question183/Arctic_Ocean_sur_refl_b04_2022-07-11.tif",
+                                        "output_filename": "ndti_2022-07-11.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question183/Arctic_Ocean_sur_refl_b01_2022-07-13.tif",
+                                        "input_green_path": "benchmark/data/question183/Arctic_Ocean_sur_refl_b04_2022-07-13.tif",
+                                        "output_filename": "ndti_2022-07-13.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question183/Arctic_Ocean_sur_refl_b01_2022-07-15.tif",
+                                        "input_green_path": "benchmark/data/question183/Arctic_Ocean_sur_refl_b04_2022-07-15.tif",
+                                        "output_filename": "ndti_2022-07-15.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question183/Arctic_Ocean_sur_refl_b01_2022-07-17.tif",
+                                        "input_green_path": "benchmark/data/question183/Arctic_Ocean_sur_refl_b04_2022-07-17.tif",
+                                        "output_filename": "ndti_2022-07-17.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question183/Arctic_Ocean_sur_refl_b01_2022-07-19.tif",
+                                        "input_green_path": "benchmark/data/question183/Arctic_Ocean_sur_refl_b04_2022-07-19.tif",
+                                        "output_filename": "ndti_2022-07-19.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question183/Arctic_Ocean_sur_refl_b01_2022-07-21.tif",
+                                        "input_green_path": "benchmark/data/question183/Arctic_Ocean_sur_refl_b04_2022-07-21.tif",
+                                        "output_filename": "ndti_2022-07-21.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question183/Arctic_Ocean_sur_refl_b01_2022-07-23.tif",
+                                        "input_green_path": "benchmark/data/question183/Arctic_Ocean_sur_refl_b04_2022-07-23.tif",
+                                        "output_filename": "ndti_2022-07-23.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question183/Arctic_Ocean_sur_refl_b01_2022-07-25.tif",
+                                        "input_green_path": "benchmark/data/question183/Arctic_Ocean_sur_refl_b04_2022-07-25.tif",
+                                        "output_filename": "ndti_2022-07-25.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question183/Arctic_Ocean_sur_refl_b01_2022-07-27.tif",
+                                        "input_green_path": "benchmark/data/question183/Arctic_Ocean_sur_refl_b04_2022-07-27.tif",
+                                        "output_filename": "ndti_2022-07-27.tif"
+                                    },
+                                    {
+                                        "input_red_path": "benchmark/data/question183/Arctic_Ocean_sur_refl_b01_2022-07-29.tif",
+                                        "input_green_path": "benchmark/data/question183/Arctic_Ocean_sur_refl_b04_2022-07-29.tif",
+                                        "output_filename": "ndti_2022-07-29.tif"
+                                    }
+                                ]
                             }
                         }
                     }
@@ -64135,132 +64559,23 @@
                 "name": "calculate_ndti",
                 "content": {
                     "type": null,
-                    "content": "ndti_2022-07-01.tif"
-                }
-            },
-            {
-                "role": "assistant",
-                "thought": null,
-                "tool_calls": [
-                    {
-                        "type": "function",
-                        "function": {
-                            "name": "calculate_ndti",
-                            "arguments": {
-                                "input_red_path": "benchmark/data/question183/Arctic_sur_refl_b01_2022-07-05.tif",
-                                "input_green_path": "benchmark/data/question183/Arctic_sur_refl_b04_2022-07-05.tif",
-                                "output_path": "ndti_2022-07-05.tif"
-                            }
-                        }
-                    }
-                ]
-            },
-            {
-                "role": "tool",
-                "name": "calculate_ndti",
-                "content": {
-                    "type": null,
-                    "content": "ndti_2022-07-05.tif"
-                }
-            },
-            {
-                "role": "assistant",
-                "thought": null,
-                "tool_calls": [
-                    {
-                        "type": "function",
-                        "function": {
-                            "name": "calculate_ndti",
-                            "arguments": {
-                                "input_red_path": "benchmark/data/question183/Arctic_sur_refl_b01_2022-07-11.tif",
-                                "input_green_path": "benchmark/data/question183/Arctic_sur_refl_b04_2022-07-11.tif",
-                                "output_path": "ndti_2022-07-11.tif"
-                            }
-                        }
-                    }
-                ]
-            },
-            {
-                "role": "tool",
-                "name": "calculate_ndti",
-                "content": {
-                    "type": null,
-                    "content": "ndti_2022-07-11.tif"
-                }
-            },
-            {
-                "role": "assistant",
-                "thought": null,
-                "tool_calls": [
-                    {
-                        "type": "function",
-                        "function": {
-                            "name": "calculate_ndti",
-                            "arguments": {
-                                "input_red_path": "benchmark/data/question183/Arctic_sur_refl_b01_2022-07-17.tif",
-                                "input_green_path": "benchmark/data/question183/Arctic_sur_refl_b04_2022-07-17.tif",
-                                "output_path": "ndti_2022-07-17.tif"
-                            }
-                        }
-                    }
-                ]
-            },
-            {
-                "role": "tool",
-                "name": "calculate_ndti",
-                "content": {
-                    "type": null,
-                    "content": "ndti_2022-07-17.tif"
-                }
-            },
-            {
-                "role": "assistant",
-                "thought": null,
-                "tool_calls": [
-                    {
-                        "type": "function",
-                        "function": {
-                            "name": "calculate_ndti",
-                            "arguments": {
-                                "input_red_path": "benchmark/data/question183/Arctic_sur_refl_b01_2022-07-19.tif",
-                                "input_green_path": "benchmark/data/question183/Arctic_sur_refl_b04_2022-07-19.tif",
-                                "output_path": "ndti_2022-07-19.tif"
-                            }
-                        }
-                    }
-                ]
-            },
-            {
-                "role": "tool",
-                "name": "calculate_ndti",
-                "content": {
-                    "type": null,
-                    "content": "ndti_2022-07-19.tif"
-                }
-            },
-            {
-                "role": "assistant",
-                "thought": null,
-                "tool_calls": [
-                    {
-                        "type": "function",
-                        "function": {
-                            "name": "calculate_ndti",
-                            "arguments": {
-                                "input_red_path": "benchmark/data/question183/Arctic_sur_refl_b01_2022-07-25.tif",
-                                "input_green_path": "benchmark/data/question183/Arctic_sur_refl_b04_2022-07-25.tif",
-                                "output_path": "ndti_2022-07-25.tif"
-                            }
-                        }
-                    }
-                ]
-            },
-            {
-                "role": "tool",
-                "name": "calculate_ndti",
-                "content": {
-                    "type": null,
-                    "content": "ndti_2022-07-25.tif"
+                    "content": [
+                        "ndti_2022-07-01.tif",
+                        "ndti_2022-07-03.tif",
+                        "ndti_2022-07-05.tif",
+                        "ndti_2022-07-07.tif",
+                        "ndti_2022-07-09.tif",
+                        "ndti_2022-07-11.tif",
+                        "ndti_2022-07-13.tif",
+                        "ndti_2022-07-15.tif",
+                        "ndti_2022-07-17.tif",
+                        "ndti_2022-07-19.tif",
+                        "ndti_2022-07-21.tif",
+                        "ndti_2022-07-23.tif",
+                        "ndti_2022-07-25.tif",
+                        "ndti_2022-07-27.tif",
+                        "ndti_2022-07-29.tif"
+                    ]
                 }
             },
             {
@@ -64273,7 +64588,21 @@
                             "name": "calc_batch_image_mean",
                             "arguments": {
                                 "file_list": [
-                                    "ndti_2022-07-01.tif"
+                                    "ndti_2022-07-01.tif",
+                                    "ndti_2022-07-03.tif",
+                                    "ndti_2022-07-05.tif",
+                                    "ndti_2022-07-07.tif",
+                                    "ndti_2022-07-09.tif",
+                                    "ndti_2022-07-11.tif",
+                                    "ndti_2022-07-13.tif",
+                                    "ndti_2022-07-15.tif",
+                                    "ndti_2022-07-17.tif",
+                                    "ndti_2022-07-19.tif",
+                                    "ndti_2022-07-21.tif",
+                                    "ndti_2022-07-23.tif",
+                                    "ndti_2022-07-25.tif",
+                                    "ndti_2022-07-27.tif",
+                                    "ndti_2022-07-29.tif"
                                 ]
                             }
                         }
@@ -64286,7 +64615,21 @@
                 "content": {
                     "type": null,
                     "content": [
-                        -70.03
+                        -0.069272,
+                        -0.057762,
+                        -0.053583,
+                        -0.048742,
+                        -0.053095,
+                        -0.045134,
+                        -0.049498,
+                        -0.040266,
+                        -0.037868,
+                        -0.035175,
+                        -0.044699,
+                        -0.041704,
+                        -0.046307,
+                        -0.039898,
+                        -0.044336
                     ]
                 }
             },
@@ -64297,10 +64640,24 @@
                     {
                         "type": "function",
                         "function": {
-                            "name": "calc_batch_image_mean",
+                            "name": "argmax",
                             "arguments": {
-                                "file_list": [
-                                    "ndti_2022-07-05.tif"
+                                "x": [
+                                    -0.069272,
+                                    -0.057762,
+                                    -0.053583,
+                                    -0.048742,
+                                    -0.053095,
+                                    -0.045134,
+                                    -0.049498,
+                                    -0.040266,
+                                    -0.037868,
+                                    -0.035175,
+                                    -0.044699,
+                                    -0.041704,
+                                    -0.046307,
+                                    -0.039898,
+                                    -0.044336
                                 ]
                             }
                         }
@@ -64309,132 +64666,19 @@
             },
             {
                 "role": "tool",
-                "name": "calc_batch_image_mean",
+                "name": "argmax",
                 "content": {
                     "type": null,
-                    "content": [
-                        -226.29
-                    ]
+                    "content": 9
                 }
-            },
-            {
-                "role": "assistant",
-                "thought": null,
-                "tool_calls": [
-                    {
-                        "type": "function",
-                        "function": {
-                            "name": "calc_batch_image_mean",
-                            "arguments": {
-                                "file_list": [
-                                    "ndti_2022-07-11.tif"
-                                ]
-                            }
-                        }
-                    }
-                ]
-            },
-            {
-                "role": "tool",
-                "name": "calc_batch_image_mean",
-                "content": {
-                    "type": null,
-                    "content": [
-                        -11.89
-                    ]
-                }
-            },
-            {
-                "role": "assistant",
-                "thought": null,
-                "tool_calls": [
-                    {
-                        "type": "function",
-                        "function": {
-                            "name": "calc_batch_image_mean",
-                            "arguments": {
-                                "file_list": [
-                                    "ndti_2022-07-17.tif"
-                                ]
-                            }
-                        }
-                    }
-                ]
-            },
-            {
-                "role": "tool",
-                "name": "calc_batch_image_mean",
-                "content": {
-                    "type": null,
-                    "content": [
-                        -0.011
-                    ]
-                }
-            },
-            {
-                "role": "assistant",
-                "thought": null,
-                "tool_calls": [
-                    {
-                        "type": "function",
-                        "function": {
-                            "name": "calc_batch_image_mean",
-                            "arguments": {
-                                "file_list": [
-                                    "ndti_2022-07-19.tif"
-                                ]
-                            }
-                        }
-                    }
-                ]
-            },
-            {
-                "role": "tool",
-                "name": "calc_batch_image_mean",
-                "content": {
-                    "type": null,
-                    "content": [
-                        -0.035
-                    ]
-                }
-            },
-            {
-                "role": "assistant",
-                "thought": null,
-                "tool_calls": [
-                    {
-                        "type": "function",
-                        "function": {
-                            "name": "calc_batch_image_mean",
-                            "arguments": {
-                                "file_list": [
-                                    "ndti_2022-07-25.tif"
-                                ]
-                            }
-                        }
-                    }
-                ]
-            },
-            {
-                "role": "tool",
-                "name": "calc_batch_image_mean",
-                "content": {
-                    "type": null,
-                    "content": -28.25
-                }
-            },
-            {
-                "role": "assistant",
-                "content": "A"
             }
         ],
         "choices": [
-            "2022-07-19, with a maximum NDTI of about -0.035",
-            "2022-07-11, with a maximum NDTI of about -11.89",
-            "2022-07-25, with a maximum NDTI of about -28.25",
-            "2022-07-01, with a maximum NDTI of about -70.03",
-            "2022-07-05, with a maximum NDTI of about -226.29",
-            "2022-07-17, with a maximum NDTI of about -0.011"
+            "2022-07-19 has the highest NDTI (about -0.0352), indicating the most serious pollution.",
+            "2022-07-17 shows the maximum NDTI at roughly -0.0379.",
+            "2022-07-11 records the largest NDTI near -0.0451.",
+            "2022-07-07 yields the peak NDTI value close to -0.0487.",
+            "2022-07-01 exhibits the highest NDTI around -0.0693."
         ],
         "evaluation": [
             {
@@ -64511,7 +64755,7 @@
                                     "benchmark/data/question184/Arctic_sur_refl_b01_2012-07-01.tif",
                                     "benchmark/data/question184/Arctic_sur_refl_b01_2012-07-15.tif"
                                 ],
-                                "output_path": "output_filename"
+                                "output_path": "question184/arctic_avg_2022_b01.tif"
                             }
                         }
                     }
@@ -64521,8 +64765,8 @@
                 "role": "tool",
                 "name": "calculate_tif_average",
                 "content": {
-                    "type": null,
-                    "content": "arctic_avg_2012_b01.tif"
+                    "type": "str",
+                    "content": "Result save at benchmark/out/question184/arctic_avg_2022_b01.tif"
                 }
             },
             {
@@ -64538,7 +64782,7 @@
                                     "benchmark/data/question184/Arctic_sur_refl_b04_2012-07-01.tif",
                                     "benchmark/data/question184/Arctic_sur_refl_b04_2012-07-15.tif"
                                 ],
-                                "output_path": "output_filename"
+                                "output_path": "question184/arctic_avg_2022_b04.tif"
                             }
                         }
                     }
@@ -64548,8 +64792,8 @@
                 "role": "tool",
                 "name": "calculate_tif_average",
                 "content": {
-                    "type": null,
-                    "content": "arctic_avg_2012_b04.tif"
+                    "type": "str",
+                    "content": "Result save at benchmark/out/question184/arctic_avg_2022_b04.tif"
                 }
             },
             {
@@ -64563,7 +64807,7 @@
                             "arguments": {
                                 "input_red_path": "arctic_avg_2012_b01.tif",
                                 "input_green_path": "arctic_avg_2012_b04.tif",
-                                "output_path": "arctic_ndti_2012.tif"
+                                "output_path": "question184/arctic_ndti_2012.tif"
                             }
                         }
                     }
@@ -64573,8 +64817,8 @@
                 "role": "tool",
                 "name": "calculate_ndti",
                 "content": {
-                    "type": null,
-                    "content": "arctic_ndti_2012.tif"
+                    "type": "str",
+                    "content": "Result save at benchmark/out/question184/arctic_ndti_2012.tif"
                 }
             },
             {
@@ -64590,7 +64834,7 @@
                                     "benchmark/data/question184/Arctic_sur_refl_b01_2022-07-01.tif",
                                     "benchmark/data/question184/Arctic_sur_refl_b01_2022-07-15.tif"
                                 ],
-                                "output_path": "output_filename"
+                                "output_path": "question184/arctic_avg_2022_b01.tif"
                             }
                         }
                     }
@@ -64600,8 +64844,8 @@
                 "role": "tool",
                 "name": "calculate_tif_average",
                 "content": {
-                    "type": null,
-                    "content": "arctic_avg_2022_b01.tif"
+                    "type": "str",
+                    "content": "Result save at benchmark/out/question184/arctic_avg_2022_b01.tif"
                 }
             },
             {
@@ -64617,7 +64861,7 @@
                                     "benchmark/data/question184/Arctic_sur_refl_b04_2022-07-01.tif",
                                     "benchmark/data/question184/Arctic_sur_refl_b04_2022-07-15.tif"
                                 ],
-                                "output_path": "output_filename"
+                                "output_path": "question184/arctic_avg_2012_b04.tif"
                             }
                         }
                     }
@@ -64627,8 +64871,8 @@
                 "role": "tool",
                 "name": "calculate_tif_average",
                 "content": {
-                    "type": null,
-                    "content": "arctic_avg_2022_b04.tif"
+                    "type": "str",
+                    "content": "Result save at benchmark/out/question184/arctic_avg_2012_b04.tif"
                 }
             },
             {
@@ -64642,7 +64886,7 @@
                             "arguments": {
                                 "input_red_path": "arctic_avg_2022_b01.tif",
                                 "input_green_path": "arctic_avg_2022_b04.tif",
-                                "output_path": "arctic_ndti_2022.tif"
+                                "output_path": "question184/arctic_ndti_2022.tif"
                             }
                         }
                     }
@@ -64652,8 +64896,8 @@
                 "role": "tool",
                 "name": "calculate_ndti",
                 "content": {
-                    "type": null,
-                    "content": "arctic_ndti_2022.tif"
+                    "type": "str",
+                    "content": "Result save at benchmark/out/question184/arctic_ndti_2022.tif"
                 }
             },
             {
@@ -64679,7 +64923,7 @@
                 "content": {
                     "type": null,
                     "content": [
-                        -666.47
+                        -0.042857
                     ]
                 }
             },
@@ -64706,7 +64950,7 @@
                 "content": {
                     "type": null,
                     "content": [
-                        -61.17
+                        -0.043697
                     ]
                 }
             },
@@ -64740,11 +64984,11 @@
             }
         ],
         "choices": [
-            "2022, with a high turbidity area proportion of 99.93%, which is 1.01% higher than 2012",
-            "2012, with a high turbidity area proportion of 98.92%, which is 1.01% higher than 2022",
-            "2022, with a high turbidity area proportion of 97.80%, which is 2.13% higher than 2012",
-            "2012, with a high turbidity area proportion of 99.93%, which is 1.01% higher than 2022",
-            "2022, with a high turbidity area proportion of 96.85%, which is 2.07% higher than 2012"
+            "2022, with a high-turbidity proportion of about 99.93%, which is roughly 1.01% higher than 2012 (98.92%).",
+            "2012, with a high-turbidity proportion of about 99.93%, which is roughly 1.01% higher than 2022 (98.92%).",
+            "2022, with a high-turbidity proportion of about 97.80%, which is about 2.13% higher than 2012.",
+            "2012, with a high-turbidity proportion of about 96.85%, exceeding 2022 by ~2.07%.",
+            "Both years show a high-turbidity proportion near 90%, so neither year is higher."
         ],
         "evaluation": [
             {
