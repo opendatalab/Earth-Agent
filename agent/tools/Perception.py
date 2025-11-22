@@ -389,26 +389,26 @@ def calculate_bbox_area(bboxes, gsd=None):
 def get_model_output(model_name: str, input_image_path: str, **args):
     import pandas as pd
 
-    results = pd.read_csv('../model_results.csv')
+    results = pd.read_csv('/mnt/dhwfile/zhuleqi/ICLR/Earth-Agent/benchmark/model_results.csv', sep=';')
     result = None
     try:
         # classification
         if model_name in ['MSCN', 'RemoteCLIP']:
-            result = results[(results['model'] == model_name) & (results['input_image_path'] == input_image_path)].values[0]
+            result = results[(results['model'] == model_name) & (results['file_path'] == input_image_path)].values[0]
         # detection
         elif model_name == 'Strip-R-CNN':
-            result = results[(results['model'] == model_name) & (results['input_image_path'] == input_image_path)].values[0]
+            result = results[(results['model'] == model_name) & (results['file_path'] == input_image_path)].values[0]
         # visual grounding
         elif model_name == 'RemoteSAM':
-            result = results[(results['model'] == model_name) & (results['input_image_path'] == input_image_path)].values[0]
+            result = results[(results['model'] == model_name) & (results['file_path'] == input_image_path)].values[0]
             result = result[args['text_prompt']]
         # counting
         elif model_name == 'InstructSAM':
-            result = results[(results['model'] == model_name) & (results['input_image_path'] == input_image_path)].values[0]
+            result = results[(results['model'] == model_name) & (results['file_path'] == input_image_path)].values[0]
             result = result[args['text_prompt']]
         # segmentation
         elif model_name == 'SAM2':
-            result = results[(results['model'] == model_name) & (results['input_image_path'] == input_image_path)].values[0]
+            result = results[(results['model'] == model_name) & (results['file_path'] == input_image_path)].values[0]
             result = result[args['bbox']]
     except:
         pass
