@@ -62,26 +62,6 @@ We introduce Earth-Agent, an EO agent framework cast as a **ReAct-style** Partia
 
 Download the benchmark dataset from Hugging Face:
 
-<!-- ```bash
-# Install huggingface-hub if not already installed
-pip install huggingface-hub
-
-# Download the dataset
-huggingface-cli download wqjklej/safkhj --local-dir ./benchmark/data --repo-type dataset
-``` -->
-
-<!-- Alternatively, you can download manually:
-
-```python
-from huggingface_hub import snapshot_download
-
-snapshot_download(
-    repo_id="wqjklej/safkhj",
-    repo_type="dataset",
-    local_dir="./benchmark/data"
-)
-``` -->
-
 ```bash
 # Install huggingface-hub if not already installed
 pip install huggingface-hub

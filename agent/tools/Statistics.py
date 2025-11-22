@@ -1207,7 +1207,7 @@ def mean(x: list):
 @mcp.tool(description=
     """
     Description:
-        Calculate the average percentage of pixels above a given threshold for 
+        Calculate the average percentage of pixels relative to a given threshold for
         one or more images and a specified band.
 
     Parameters:
@@ -1215,23 +1215,26 @@ def mean(x: list):
             Path or list of image file paths.
         threshold (float, optional):
             Threshold value. Default = 0.75.
+        mode (str, optional):
+            Comparison mode: 'above' (>), 'below' (<), 'equal' (==),
+            'above_equal' (>=), 'below_equal' (<=). Default = 'above'.
         band_index (int, optional):
             Band index to use (0-based). Default = 0 (first band).
 
     Returns:
         percentage (float):
-            Average percentage of pixels above the threshold across all images.
+            Average percentage of pixels matching the threshold condition across all images.
 
     Example:
-        >>> calculate_threshold_ratio("image1.tif", threshold=0.5)
+        >>> calculate_threshold_ratio("image1.tif", threshold=0.5, mode='above')
         42.37
-        >>> calculate_threshold_ratio(["img1.tif", "img2.tif"], threshold=0.8, band_index=1)
+        >>> calculate_threshold_ratio(["img1.tif", "img2.tif"], threshold=0.8, mode='below', band_index=1)
         33.12
     """)
-def calculate_threshold_ratio(image_paths: str | list[str], threshold: float = 0.75, band_index: int = 0) -> float:
+def calculate_threshold_ratio(image_paths: str | list[str], threshold: float = 0.75, mode: str = 'above', band_index: int = 0) -> float:
     """
     Description:
-        Calculate the average percentage of pixels above a given threshold for 
+        Calculate the average percentage of pixels relative to a given threshold for
         one or more images and a specified band.
 
     Parameters:
@@ -1239,17 +1242,20 @@ def calculate_threshold_ratio(image_paths: str | list[str], threshold: float = 0
             Path or list of image file paths.
         threshold (float, optional):
             Threshold value. Default = 0.75.
+        mode (str, optional):
+            Comparison mode: 'above' (>), 'below' (<), 'equal' (==),
+            'above_equal' (>=), 'below_equal' (<=). Default = 'above'.
         band_index (int, optional):
             Band index to use (0-based). Default = 0 (first band).
 
     Returns:
         percentage (float):
-            Average percentage of pixels above the threshold across all images.
+            Average percentage of pixels matching the threshold condition across all images.
 
     Example:
-        >>> calculate_threshold_ratio("image1.tif", threshold=0.5)
+        >>> calculate_threshold_ratio("image1.tif", threshold=0.5, mode='above')
         42.37
-        >>> calculate_threshold_ratio(["img1.tif", "img2.tif"], threshold=0.8, band_index=1)
+        >>> calculate_threshold_ratio(["img1.tif", "img2.tif"], threshold=0.8, mode='below', band_index=1)
         33.12
     """
     import numpy as np
@@ -1275,8 +1281,21 @@ def calculate_threshold_ratio(image_paths: str | list[str], threshold: float = 0
             ratios.append(0.0)
             continue
 
-        pixels_above_threshold = np.sum((band > threshold) & valid_pixels)
-        percentage = (pixels_above_threshold / total_valid_pixels) * 100
+        # Apply threshold comparison based on mode
+        if mode == 'above':
+            matching_pixels = np.sum((band > threshold) & valid_pixels)
+        elif mode == 'below':
+            matching_pixels = np.sum((band < threshold) & valid_pixels)
+        elif mode == 'equal':
+            matching_pixels = np.sum((band == threshold) & valid_pixels)
+        elif mode == 'above_equal':
+            matching_pixels = np.sum((band >= threshold) & valid_pixels)
+        elif mode == 'below_equal':
+            matching_pixels = np.sum((band <= threshold) & valid_pixels)
+        else:
+            raise ValueError(f"Invalid mode '{mode}'. Must be one of: 'above', 'below', 'equal', 'above_equal', 'below_equal'")
+
+        percentage = (matching_pixels / total_valid_pixels) * 100
         ratios.append(float(percentage))
 
     return float(np.mean(ratios)) if ratios else 0.0
@@ -2762,7 +2781,7 @@ def calculate_tif_average(file_list: list[str], output_path: str, uint8: bool = 
             img = np.transpose(img, (1, 2, 0))
         ds = None
         sum_img = sum_img + img
-    
+
     # Calculate average
     avg_img = sum_img / count
     
