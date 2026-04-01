@@ -1,0 +1,37 @@
+{
+    "mcpServers": {
+        "Analysis": {
+            "url": "http://localhost:20000/mcp",
+            "transport": "http"
+        },
+        "Index": {
+            "url": "http://localhost:20001/mcp",
+            "transport": "http"
+        },
+        "Inversion": {
+            "url": "http://localhost:20002/mcp",
+            "transport": "http"
+        },
+        "Perception": {
+            "url": "http://localhost:20003/mcp",
+            "transport": "http"
+        },
+        "Statistics": {
+            "url": "http://localhost:20004/mcp",
+            "transport": "http"
+        }
+    },
+    "models": [
+        {
+            "model_name": "gpt-4o",
+            "api_key": "sk-",
+            "base_url": "",
+            "temperature": 0.1
+        }
+    ]
+}
+
+
+
+
+
