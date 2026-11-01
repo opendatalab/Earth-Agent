@@ -3,6 +3,11 @@ import os
 from pathlib import Path
 from typing import Dict, List, Any, Tuple
 
+if __package__:
+    from .reference_trajectory import InvalidReferenceError, normalize_reference_trajectory
+else:
+    from reference_trajectory import InvalidReferenceError, normalize_reference_trajectory
+
 def load_json_data(file_path: str) -> List[Dict]:
     """Load JSON file data"""
     with open(file_path, 'r', encoding='utf-8') as f:
@@ -217,6 +222,12 @@ def evaluate_single_question(predicted_data: Dict, ground_truth_data: Dict) -> D
     """
     Perform complete evaluation for a single question
     """
+    reference = normalize_reference_trajectory(ground_truth_data)
+    return _score_normalized_question(predicted_data, reference)
+
+
+def _score_normalized_question(predicted_data: Dict, ground_truth_data: Dict) -> Dict:
+    """Score a reference after batch normalization."""
     results = {}
 
     # Execute evaluation metrics (removed exact_match)
@@ -250,6 +261,8 @@ def run_step_by_step_evaluation(predicted_file: str, ground_truth_file: str) -> 
     summary_stats = {
         "total_questions": 0,
         "evaluated_questions": 0,
+        "eligible_questions": 0,
+        "invalid_references": [],
         "missing_predictions": [],
         "metrics_summary": {
             "contains_all_tool_calls_any_order": {"total_score": 0, "count": 0},
@@ -262,6 +275,17 @@ def run_step_by_step_evaluation(predicted_file: str, ground_truth_file: str) -> 
     # Traverse the first 100 questions
     for question_index, gt_item in list(gt_dict.items())[188:]:
         summary_stats["total_questions"] += 1
+
+        # Determine reference eligibility before checking this model's output.
+        try:
+            gt_item = normalize_reference_trajectory(gt_item)
+        except InvalidReferenceError as error:
+            summary_stats["invalid_references"].append({
+                "question_index": question_index,
+                "reason": str(error),
+            })
+            continue
+        summary_stats["eligible_questions"] += 1
         
         if question_index not in pred_dict:
             summary_stats["missing_predictions"].append(question_index)
@@ -271,7 +295,7 @@ def run_step_by_step_evaluation(predicted_file: str, ground_truth_file: str) -> 
         summary_stats["evaluated_questions"] += 1
         
         # Evaluate single question
-        question_results = evaluate_single_question(pred_item, gt_item)
+        question_results = _score_normalized_question(pred_item, gt_item)
         all_results[question_index] = question_results
         
         # Update summary statistics
@@ -285,7 +309,7 @@ def run_step_by_step_evaluation(predicted_file: str, ground_truth_file: str) -> 
         if metric_stats["count"] > 0:
             metric_stats["average_score"] = metric_stats["total_score"] / metric_stats["count"]
         else:
-            metric_stats["average_score"] = 0
+            metric_stats["average_score"] = None
     
     return {
         "individual_results": all_results,
@@ -304,7 +328,11 @@ def print_evaluation_summary(results: Dict, model_name: str = ""):
         print("Step-by-Step Evaluation Results Summary")
     print("=" * 60)
     print(f"Total questions: {summary['total_questions']}")
+    print(f"Eligible references: {summary['eligible_questions']}")
     print(f"Evaluated questions: {summary['evaluated_questions']}")
+    print(f"Excluded invalid references: {len(summary['invalid_references'])}")
+    for reference in summary["invalid_references"]:
+        print(f"  {reference['reason']}")
     print(f"Missing predictions: {len(summary['missing_predictions'])}")
 
     if summary['missing_predictions']:
@@ -315,7 +343,8 @@ def print_evaluation_summary(results: Dict, model_name: str = ""):
     for metric_name, metric_stats in summary["metrics_summary"].items():
         avg_score = metric_stats.get("average_score", 0)
         count = metric_stats.get("count", 0)
-        print(f"{metric_name}: {avg_score:.4f} (based on {count} questions)")
+        score_text = "N/A" if avg_score is None else f"{avg_score:.4f}"
+        print(f"{metric_name}: {score_text} (based on {count} questions)")
 
     print("=" * 60)
 
@@ -399,12 +428,21 @@ def run_batch_evaluation(root_dir: str, ground_truth_file: str) -> Dict[str, Dic
     print(f"{'Model Name':<25} {'Tool_Any_Order':<15} {'Tool_In_Order':<15} {'Tool_Exact_Match':<18} {'Parameter':<12}")
     print("-" * 100)
 
-    for summary in sorted(summary_results, key=lambda x: x["parameter_accuracy"], reverse=True):
+    for summary in sorted(
+        summary_results,
+        key=lambda x: x["parameter_accuracy"] if x["parameter_accuracy"] is not None else -1,
+        reverse=True,
+    ):
+        score_texts = [
+            "N/A" if summary[metric] is None else f"{summary[metric]:.4f}"
+            for metric in (
+                "contains_all_tool_calls_any_order", "contains_all_tool_calls_in_order",
+                "trajectory_step_wise_score", "parameter_accuracy",
+            )
+        ]
         print(f"{summary['model_name']:<25} "
-              f"{summary['contains_all_tool_calls_any_order']:.4f}          "
-              f"{summary['contains_all_tool_calls_in_order']:.4f}          "
-              f"{summary['trajectory_step_wise_score']:.4f}             "
-              f"{summary['parameter_accuracy']:.4f}")
+              f"{score_texts[0]:<15} {score_texts[1]:<15} "
+              f"{score_texts[2]:<18} {score_texts[3]}")
 
     print("=" * 100)
 

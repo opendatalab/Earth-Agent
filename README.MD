@@ -258,6 +258,35 @@ for question_index, gt_item in list(gt_dict.items())[100:188]:
 
 The ground truth file `extracted_tool_calls_GT.json` contains reference tool usage patterns and correct answers for comparison.
 
+Legacy reference batches are normalized using the input type declarations of
+exported MCP tools in `agent/tools`. Lists supplied to scalar parameters become
+individual reference calls in their original order. Fixed scalar settings are
+shared across those calls. Parameters that accept lists, including scalar/list
+unions, retain their original values; unknown or untyped inputs are not inferred
+to be batches. Reading the declarations does not import or execute tool servers.
+The tool-definition directory must contain exported tools; duplicate tool
+names cause an error.
+
+Only references are normalized. Recorded agent calls retain their actual count
+and order, and final-answer accuracy is unchanged. Empty batches, inconsistent
+lengths, missing required inputs, or invalid scalar values are reported in
+`invalid_references` with the question, step, and reason. Evaluation continues;
+excluded references receive no tool-use or efficiency score and do not enter
+the averages. `eligible_questions` counts references eligible after batch
+normalization independently of a model's available predictions.
+`evaluated_questions` counts the questions actually scored. When none can be scored, the average is `null` (printed as
+`N/A`). Efficiency `total_questions` counts the selected evaluation range.
+The default RGB evaluation range is unchanged.
+
+Question 1's stale `2022-10-16` LST entry has been removed from both the source
+annotation and exported reference after verification against the published
+dataset inventory and archived tool observations. Its 91 NDVI/LST pairs can now
+be scored normally.
+
+See [offline evaluator regression tests](tests/README.md) for real saved-run
+before/after examples and the test command.
+
+
 ## 📝 File Descriptions
 
 - `main.py` - Main evaluation script for single models

@@ -5,6 +5,11 @@ import re
 import os
 from typing import Dict, List, Any, Tuple
 
+if __package__:
+    from .reference_trajectory import InvalidReferenceError, normalize_reference_trajectory
+else:
+    from reference_trajectory import InvalidReferenceError, normalize_reference_trajectory
+
 def load_json_data(file_path: str) -> List[Dict]:
     """Load JSON file data"""
     with open(file_path, 'r', encoding='utf-8') as f:
@@ -144,15 +149,39 @@ def calculate_efficiency_with_tool_calls(ground_truth_data: List[Dict],
     gt_dict = {item["question_index"]: item for item in ground_truth_data}
     
     results = {
-        "total_questions": len(gt_dict),
+        "total_questions": 0,
         "evaluated_questions": 0,
+        "eligible_questions": 0,
+        "invalid_references": [],
         "efficiency_scores": [],
-        "average_efficiency": 0.0,
+        "average_efficiency": None,
         "detailed_results": []
     }
 
     for question_index, gt_item in list(gt_dict.items())[188:]:
-        gt_tool_count = count_tool_calls(gt_item)
+        results["total_questions"] += 1
+        # Invalid annotations are excluded independently of model predictions.
+        try:
+            gt_reference = normalize_reference_trajectory(gt_item)
+        except InvalidReferenceError as error:
+            results["invalid_references"].append({
+                "question_index": question_index,
+                "reason": str(error),
+            })
+            results["detailed_results"].append({
+                "question_index": question_index,
+                "gt_tool_count": None,
+                "model_tool_count": (
+                    count_tool_calls(model_tool_calls_data[question_index])
+                    if question_index in model_tool_calls_data else None
+                ),
+                "efficiency": None,
+                "status": "invalid_reference",
+                "reason": str(error),
+            })
+            continue
+        results["eligible_questions"] += 1
+        gt_tool_count = count_tool_calls(gt_reference)
         
         if question_index not in model_tool_calls_data:
             results["detailed_results"].append({
@@ -216,7 +245,7 @@ def run_end_to_end_evaluation(ground_truth_file: str,
         "summary": {
             "total_questions": accuracy_results["total_questions"],
             "accuracy_rate": accuracy_results["accuracy"],
-            "average_efficiency": efficiency_results.get("average_efficiency", 0.0)
+            "average_efficiency": efficiency_results.get("average_efficiency")
         }
     }
 
@@ -247,7 +276,13 @@ def print_evaluation_summary(results: Dict, model_name: str = ""):
     if efficiency:
         print("\nEfficiency statistics:")
         print("-" * 40)
-        print(f"Average efficiency: {efficiency['average_efficiency']:.4f}")
+        average = efficiency["average_efficiency"]
+        average_text = "N/A" if average is None else f"{average:.4f}"
+        print(f"Average efficiency: {average_text}")
+        print(f"Efficiency eligible references: {efficiency['eligible_questions']}/{efficiency['total_questions']}")
+        print(f"Excluded invalid references: {len(efficiency['invalid_references'])}")
+        for reference in efficiency["invalid_references"]:
+            print(f"  {reference['reason']}")
         print(f"Efficiency evaluated questions: {efficiency['evaluated_questions']}")
 
     if accuracy['missing_predictions']:
@@ -344,7 +379,9 @@ def run_batch_evaluation(root_dir: str, ground_truth_file: str) -> Dict[str, Dic
     print("-" * 70)
 
     for summary in sorted(summary_results, key=lambda x: x["accuracy"], reverse=True):
-        print(f"{summary['model_name']:<30} {summary['efficiency']:.4f}      {summary['accuracy']*100:.2f}%")
+        efficiency = summary["efficiency"]
+        efficiency_text = "N/A" if efficiency is None else f"{efficiency:.4f}"
+        print(f"{summary['model_name']:<30} {efficiency_text:<10} {summary['accuracy']*100:.2f}%")
 
     print("=" * 70)
 

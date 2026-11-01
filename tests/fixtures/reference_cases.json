@@ -1,0 +1,83 @@
+{
+  "upstream_commit": "ca1dfaef750654331308a434966d307f1728fd90",
+  "description": "Regression case identifiers. Tests read repository reference annotations and archived runs directly; no generated agent observations or copied benchmark records.",
+  "cases": {
+    "question5_gpt5_IF": {
+      "question_index": "question5",
+      "reference_source": "extracted_tool_calls_GT.json",
+      "prediction_source": "evaluate_langchain/gpt5_IF/extracted_tool_calls.json"
+    },
+    "question3_gpt5_IF": {
+      "question_index": "question3",
+      "reference_source": "extracted_tool_calls_GT.json",
+      "prediction_source": "evaluate_langchain/gpt5_IF/extracted_tool_calls.json"
+    },
+    "question2_gpt5_IF": {
+      "question_index": "question2",
+      "reference_source": "extracted_tool_calls_GT.json",
+      "prediction_source": "evaluate_langchain/gpt5_IF/extracted_tool_calls.json"
+    },
+    "question190_deepseek_AP": {
+      "question_index": "question190",
+      "reference_source": "extracted_tool_calls_GT.json",
+      "prediction_source": "evaluate_langchain/deepseek-V3_1_AP/extracted_tool_calls.json"
+    },
+    "question1_deepseek_IF": {
+      "question_index": "question1",
+      "reference_source": "extracted_tool_calls_GT.json",
+      "prediction_source": "evaluate_langchain/deepseek-V3_1_IF/extracted_tool_calls.json"
+    },
+    "question69_deepseek_IF": {
+      "question_index": "question69",
+      "reference_source": "extracted_tool_calls_GT.json",
+      "prediction_source": "evaluate_langchain/deepseek-V3_1_IF/extracted_tool_calls.json"
+    },
+    "question7_gpt5_IF": {
+      "question_index": "question7",
+      "reference_source": "extracted_tool_calls_GT.json",
+      "prediction_source": "evaluate_langchain/gpt5_IF/extracted_tool_calls.json"
+    },
+    "question13_gpt5_IF": {
+      "question_index": "question13",
+      "reference_source": "extracted_tool_calls_GT.json",
+      "prediction_source": "evaluate_langchain/gpt5_IF/extracted_tool_calls.json"
+    },
+    "question17_gpt5_IF": {
+      "question_index": "question17",
+      "reference_source": "extracted_tool_calls_GT.json",
+      "prediction_source": "evaluate_langchain/gpt5_IF/extracted_tool_calls.json"
+    },
+    "question32_gpt5_IF": {
+      "question_index": "question32",
+      "reference_source": "extracted_tool_calls_GT.json",
+      "prediction_source": "evaluate_langchain/gpt5_IF/extracted_tool_calls.json"
+    },
+    "question36_gpt5_IF": {
+      "question_index": "question36",
+      "reference_source": "extracted_tool_calls_GT.json",
+      "prediction_source": "evaluate_langchain/gpt5_IF/extracted_tool_calls.json"
+    },
+    "question42_gpt5_IF": {
+      "question_index": "question42",
+      "reference_source": "extracted_tool_calls_GT.json",
+      "prediction_source": "evaluate_langchain/gpt5_IF/extracted_tool_calls.json"
+    }
+  },
+  "question1_dataset": {
+    "revision": "49ce6b784c038b63b0817cbfa8211eb053b47e37",
+    "tree_url": "https://huggingface.co/api/datasets/Sssunset/Earth-Bench/tree/49ce6b784c038b63b0817cbfa8211eb053b47e37/question1?limit=1000",
+    "file_count": 182,
+    "ndvi_count": 91,
+    "lst_count": 91,
+    "removed_reference_filename": "Xinjiang_2022-10-16_LST.tif"
+  },
+  "invalid_reference_questions": [
+    "question6",
+    "question12",
+    "question18",
+    "question34",
+    "question44",
+    "question57",
+    "question88"
+  ]
+}
